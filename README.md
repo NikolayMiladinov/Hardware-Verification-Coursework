@@ -15,9 +15,10 @@ Module: ELEC70056 - Hardware and Software Verification
 8. Demonstrate integration and verification at the Cortex-M0 SOC level
 
 
-##GPIO Architecture
+## GPIO Architecture
+
 ![GPIO Architecture](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/GPIO%20Architecture.jpg)
 
 
-##VGA Architecture
+## VGA Architecture
 ![VGA Architecture](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/VGA%20Architecture.jpg)
