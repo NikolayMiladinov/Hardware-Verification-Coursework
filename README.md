@@ -16,8 +16,8 @@ Module: ELEC70056 - Hardware and Software Verification
 
 
 ##GPIO Architecture
-![GPIO Architecture](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/GPIO-Architecture.jpg)
+![GPIO Architecture](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/GPIO%20Architecture.jpg)
 
 
 ##VGA Architecture
-![VGA Architecture](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/VGA-Architecture.jpg)
+![VGA Architecture](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/VGA%20Architecture.jpg)
