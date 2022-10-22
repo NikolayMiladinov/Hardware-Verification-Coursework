@@ -13,3 +13,11 @@ Module: ELEC70056 - Hardware and Software Verification
 6. Develop checkers for the GPIO and VGA peripheral behaviour
 7. Write functional coverage and demonstrate it has been achieved
 8. Demonstrate integration and verification at the Cortex-M0 SOC level
+
+
+##GPIO Architecture
+![GPIO Architecture](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/GPIO-Architecture.jpg)
+
+
+##VGA Architecture
+![VGA Architecture](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/VGA-Architecture.jpg)
