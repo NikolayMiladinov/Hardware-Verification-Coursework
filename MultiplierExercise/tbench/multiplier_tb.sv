@@ -39,9 +39,9 @@ endclass
 
 interface mult_if  
    #(parameter WIDTH = 5) 
-       (input logic clk, rst_n);
+       (input logic clk);
 
-        logic req, rdy, done;
+        logic req, rdy, done, rst_n;
  	logic [WIDTH-1:0]	a, b;
 	logic [2*WIDTH-1:0]  	ab;
 
@@ -113,9 +113,9 @@ class Driver;
     task reset();
         mult_vif.rst_n = 0;
         $display("--------- [DRIVER] Reset Started ---------");
-        mult_vif.DRIVER.driver_cb.a <= 0;
-        mult_vif.DRIVER.driver_cb.b <= 0;
-        mult_vif.DRIVER.driver_cb.req  <= 0;   
+        mult_vif.driver_cb.a <= 0;
+        mult_vif.driver_cb.b <= 0;
+        mult_vif.driver_cb.req  <= 0;   
         @mult_vif.driver_cb;
         @mult_vif.driver_cb;
         mult_vif.rst_n = 1;
@@ -127,17 +127,17 @@ class Driver;
     task drive();
         //forever begin
         Transaction trans;
-        mult_vif.DRIVER.driver_cb.req <= 0;
+        mult_vif.driver_cb.req <= 0;
         mult_mail.get(trans);
         $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
-        @(posedge mult_vif.DRIVER.clk) begin
-            mult_vif.DRIVER.driver_cb.a <= trans.i;
-            mult_vif.DRIVER.driver_cb.b <= trans.j;
+        @(posedge mult_vif.clk) begin
+            mult_vif.driver_cb.a <= trans.i;
+            mult_vif.driver_cb.b <= trans.j;
         end
 
-        mult_vif.DRIVER.driver_cb.req <= 1;
-        wait (mult_vif.DRIVER.driver_cb.done == 1);
-        mult_vif.DRIVER.driver_cb.req <= 0;
+        mult_vif.driver_cb.req <= 1;
+        wait (mult_vif.driver_cb.done == 1);
+        mult_vif.driver_cb.req <= 0;
 
         $display("-----------------------------------------");
         no_transactions++;
@@ -146,18 +146,18 @@ class Driver;
 
     task initial_check();                         // Initial check of multiplier
 	begin
-        wait (multif.cb.rdy);		      // Wait for multiplier to be idle
-        mult_vif.DRIVER.driver_cb.a = 5;
-        mult_vif.DRIVER.driver_cb.b = 6;
-        mult_vif.DRIVER.driver_cb.req <= 1;		      // Initiate the multiplication
+        wait (mult_vif.driver_cb.rdy);		      // Wait for multiplier to be idle
+        mult_vif.driver_cb.a = 5;
+        mult_vif.driver_cb.b = 6;
+        mult_vif.driver_cb.req <= 1;		      // Initiate the multiplication
 
-        wait (mult_vif.DRIVER.driver_cb.done == 1);           // And wait for it to finish
+        wait (mult_vif.driver_cb.done == 1);           // And wait for it to finish
 
-        assert (mult_vif.DRIVER.driver_cb.ab == 30)
-	    else $fatal ("Initial check of multiplier failed. Multiplier result = %0d, expected result is 30", mult_vif.DRIVER.driver_cb.ab);
-	    $display ("Initial check of multiplier passed. Multiplier result = %0d, expected result is 30", mult_vif.DRIVER.driver_cb.ab);
+        assert (mult_vif.driver_cb.ab == 30)
+	    else $fatal ("Initial check of multiplier failed. Multiplier result = %0d, expected result is 30", mult_vif.driver_cb.ab);
+	    $display ("Initial check of multiplier passed. Multiplier result = %0d, expected result is 30", mult_vif.driver_cb.ab);
 
-        mult_vif.DRIVER.driver_cb.req <= 0;
+        mult_vif.driver_cb.req <= 0;
 	end
 	endtask
 
@@ -229,11 +229,10 @@ endprogram
 
 
 
-module tbench_top;
+module multiplier_tb;
   
     //clock and reset signal declaration
     bit clk;
-    bit reset;
 
     //clock generation
     always #10 clk = ~clk;
@@ -244,7 +243,7 @@ module tbench_top;
     // end
 
     //creatinng instance of interface, inorder to connect DUT and testcase
-    mult_if intf(clk,reset);
+    mult_if intf(clk);
 
     //DUT instance, interface signals are connected to the DUT ports
     multiplier DUT (intf);

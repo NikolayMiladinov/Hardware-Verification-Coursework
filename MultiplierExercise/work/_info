@@ -10,31 +10,31 @@ cModel Technology
 Z0 d/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/MultiplierExercise
 Ymult_if
 Z1 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-Z2 DXx4 work 21 multiplier_tb_sv_unit 0 22 5ADLY6mQT[c@NnjfHY;9I2
+Z2 DXx4 work 21 multiplier_tb_sv_unit 0 22 06XWAG]o_^TQCXbMHPGJL2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 !i10b 1
-!s100 >LKdHSmTzVXnh5N[DGgX13
-IaR[beAdn2bbLlC;GfRDiQ1
+!s100 SC8S^UWloH@^4]mMF>l2g0
+IMa>bK7PFA]K;5d0I=dOnI2
 Z4 !s105 multiplier_tb_sv_unit
 S1
 R0
-Z5 w1667952838
+Z5 w1667953927
 Z6 8tbench/multiplier_tb.sv
 Z7 Ftbench/multiplier_tb.sv
 L0 40
 Z8 OL;L;10.7c;67
 31
-Z9 !s108 1667952885.000000
-!s107 rtl/multiplier.sv|tbench/multiplier_tb.sv|
-Z10 !s90 -work|work|+acc=blnr|-noincr|-timescale|1ns/1ps|tbench/multiplier_tb.sv|rtl/multiplier.sv|
+Z9 !s108 1667953738.000000
+Z10 !s107 rtl/multiplier.sv|tbench/multiplier_tb.sv|
+Z11 !s90 -work|work|+acc=blnr|-noincr|-timescale|1ns/1ps|tbench/multiplier_tb.sv|rtl/multiplier.sv|
 !i113 0
-Z11 o-work work +acc=blnr -timescale 1ns/1ps -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z12 tCvgOpt 0
+Z12 o-work work +acc=blnr -timescale 1ns/1ps -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z13 tCvgOpt 0
 vmultiplier
 R1
-!s110 1667952886
+Z14 !s110 1667953738
 !i10b 1
 !s100 n`7?n^U8Ej2dj894BIKo82
 IWUj_e8C:n1z3Y2CVfi_QP0
@@ -51,20 +51,44 @@ r1
 !s85 0
 31
 R9
-Z13 !s107 rtl/multiplier.sv|tbench/multiplier_tb.sv|
 R10
-!i113 0
 R11
+!i113 0
 R12
-Xmultiplier_tb_sv_unit
-!s115 mult_if
+R13
+vmultiplier_tb
 R1
-V5ADLY6mQT[c@NnjfHY;9I2
+R2
+R3
 r1
 !s85 0
 !i10b 1
-!s100 2OPgCURek:4=W3AS`929S2
-I5ADLY6mQT[c@NnjfHY;9I2
+!s100 I?]F3>BcLoRC@5FhPJW>E1
+ILKEA^JL_31M]XzOgc`jVU3
+R4
+S1
+R0
+R5
+R6
+R7
+Z15 L0 232
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Xmultiplier_tb_sv_unit
+!s115 mult_if
+R1
+V06XWAG]o_^TQCXbMHPGJL2
+r1
+!s85 0
+!i10b 1
+!s100 zBTFk3>7hC^Q;fb51C:0z0
+I06XWAG]o_^TQCXbMHPGJL2
 !i103 1
 S1
 R0
@@ -75,14 +99,14 @@ L0 1
 R8
 31
 R9
-R13
 R10
-!i113 0
 R11
+!i113 0
 R12
+R13
 vtbench_top
 R1
-R2
+DXx4 work 21 multiplier_tb_sv_unit 0 22 5ADLY6mQT[c@NnjfHY;9I2
 R3
 r1
 !s85 0
@@ -92,18 +116,18 @@ IFlR]BVWz<7ZIc[ZKIo9FQ0
 R4
 S1
 R0
-R5
+w1667952838
 R6
 R7
-L0 232
+R15
 R8
 31
-R9
-R13
+!s108 1667953308.000000
 R10
-!i113 0
 R11
+!i113 0
 R12
+R13
 4test
 R1
 R2
@@ -123,8 +147,16 @@ L0 213
 R8
 31
 R9
-R13
 R10
-!i113 0
 R11
+!i113 0
 R12
+R13
+Twork_opt
+R14
+V?[@eEZ]AN50_L<>gKaLNR0
+04 13 4 work multiplier_tb fast 0
+o-work work
+R13
+nwork_opt
+OL;O;10.7c;67
