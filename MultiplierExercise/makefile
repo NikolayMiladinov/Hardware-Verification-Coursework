@@ -1,8 +1,6 @@
 connect-nick:
 	source /usr/local/mentor/QUESTA-CORE-PRIME_10.7c/settings.sh
-	cd nfshome/HSV/
-	export DISPLAY=localhost:29.0
-#connect to MobaXterm local server
+#cd nfshome/HSV/
 
 #compile the necessary files
 comp-opt:

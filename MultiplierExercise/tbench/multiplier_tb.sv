@@ -86,7 +86,7 @@ interface mult_if
 
 // Define modports for TEST (the testbench) and DUT (the multiplier)
 
-    modport DRIVER (input ab, rdy, done, clk, rst_n, output rst_n, req, a, b,
+    modport DRIVER (input ab, rdy, done, clk, output rst_n, req, a, b,
                  clocking driver_cb);
 
     modport MONITOR (input a , b, rst_n, ab, done, req, rdy, clk,
@@ -110,7 +110,7 @@ class Driver;
     endfunction
 
     //Reset task, Reset the Interface signals to default/initial values
-    task reset;
+    task reset();
         mult_vif.rst_n = 0;
         $display("--------- [DRIVER] Reset Started ---------");
         mult_vif.DRIVER.driver_cb.a <= 0;
@@ -124,9 +124,9 @@ class Driver;
 
 
     //drive the transaction items to interface signals
-    task drive;
+    task drive();
         //forever begin
-        transaction trans;
+        Transaction trans;
         mult_vif.DRIVER.driver_cb.req <= 0;
         mult_mail.get(trans);
         $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
@@ -167,53 +167,53 @@ endclass
 
 class Environment;
 
-Generator gen;
-Driver driv;
-mailbox mult_mail;
-event ended_gen;
-virtual mult_if mult_vif;
+    Generator gen;
+    Driver driv;
+    mailbox mult_mail;
+    event ended_gen;
+    virtual mult_if mult_vif;
 
-function new(virtual mult_if mult_vif);
-    this.mult_vif = mult_vif;
-    mult_mail = new();
+    function new(virtual mult_if mult_vif);
+        this.mult_vif = mult_vif;
+        mult_mail = new();
 
-    gen = new(mult_mail, ended_gen);
-    driv = new(mult_vif, mult_mail);
-endfunction
+        gen = new(mult_mail, ended_gen);
+        driv = new(mult_vif, mult_mail);
+    endfunction
 
-task reset_test();
-    driv.reset();
-endtask
+    task reset_test();
+        driv.reset();
+    endtask
 
-task test();
-    fork
-        gen.gen();
-        driv.drive();
-    join_none
-endtask
+    task test();
+        fork
+            gen.gen();
+            driv.drive();
+        join_none
+    endtask
 
-task wait_test_end
-    wait(gen.ended_gen.triggered);
-    wait(gen.trans_count == driv.no_transactions); 
-endtask
+    task wait_test_end();
+        wait(gen.ended_gen.triggered);
+        wait(gen.trans_count == driv.no_transactions); 
+    endtask
 
-task run_reset();
-    reset_test();
-    test();
-    wait_test_end();
-endtask
+    task run_reset();
+        reset_test();
+        test();
+        wait_test_end();
+    endtask
 
-task run();
-    test();
-    wait_test_end();
-endtask
+    task run();
+        test();
+        wait_test_end();
+    endtask
 
 endclass
 
-program test(mult_intf intf);
+program test(mult_if intf);
   
     //declaring environment instance
-    environment env;
+    Environment env;
 
     initial begin
     //creating environment
@@ -244,7 +244,7 @@ module tbench_top;
     // end
 
     //creatinng instance of interface, inorder to connect DUT and testcase
-    mult_intf intf(clk,reset);
+    mult_if intf(clk,reset);
 
     //DUT instance, interface signals are connected to the DUT ports
     multiplier DUT (intf);

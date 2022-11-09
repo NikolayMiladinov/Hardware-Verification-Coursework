@@ -1,0 +1,130 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/MultiplierExercise
+Ymult_if
+Z1 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z2 DXx4 work 21 multiplier_tb_sv_unit 0 22 5ADLY6mQT[c@NnjfHY;9I2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 >LKdHSmTzVXnh5N[DGgX13
+IaR[beAdn2bbLlC;GfRDiQ1
+Z4 !s105 multiplier_tb_sv_unit
+S1
+R0
+Z5 w1667952838
+Z6 8tbench/multiplier_tb.sv
+Z7 Ftbench/multiplier_tb.sv
+L0 40
+Z8 OL;L;10.7c;67
+31
+Z9 !s108 1667952649.000000
+!s107 rtl/multiplier.sv|tbench/multiplier_tb.sv|
+Z10 !s90 -work|work|+acc=blnr|-noincr|-timescale|1ns/1ps|tbench/multiplier_tb.sv|rtl/multiplier.sv|
+!i113 0
+Z11 o-work work +acc=blnr -timescale 1ns/1ps -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 tCvgOpt 0
+vmultiplier
+R1
+!s110 1667952649
+!i10b 1
+!s100 n`7?n^U8Ej2dj894BIKo82
+IWUj_e8C:n1z3Y2CVfi_QP0
+R3
+!s105 multiplier_sv_unit
+S1
+R0
+w1666605049
+8rtl/multiplier.sv
+Frtl/multiplier.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+Z13 !s107 rtl/multiplier.sv|tbench/multiplier_tb.sv|
+R10
+!i113 0
+R11
+R12
+Xmultiplier_tb_sv_unit
+!s115 mult_if
+R1
+V5ADLY6mQT[c@NnjfHY;9I2
+r1
+!s85 0
+!i10b 1
+!s100 2OPgCURek:4=W3AS`929S2
+I5ADLY6mQT[c@NnjfHY;9I2
+!i103 1
+S1
+R0
+R5
+R6
+R7
+L0 1
+R8
+31
+R9
+R13
+R10
+!i113 0
+R11
+R12
+vtbench_top
+R1
+R2
+R3
+r1
+!s85 0
+!i10b 1
+!s100 iQ3lOI88NDV`OLNlY0lBL0
+IFlR]BVWz<7ZIc[ZKIo9FQ0
+R4
+S1
+R0
+R5
+R6
+R7
+L0 232
+R8
+31
+R9
+R13
+R10
+!i113 0
+R11
+R12
+4test
+R1
+R2
+R3
+r1
+!s85 0
+!i10b 1
+!s100 OTQDAY0b;:M@QDB8<ZUGn0
+I394HY<I3z]Ej_J5eD0@5X2
+R4
+S1
+R0
+R5
+R6
+R7
+L0 213
+R8
+31
+R9
+R13
+R10
+!i113 0
+R11
+R12
