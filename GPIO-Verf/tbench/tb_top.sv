@@ -1,3 +1,12 @@
+// `include "my_pkg.sv"
+// import my_pkg::*;
+`include "transaction.sv"
+`include "generator.sv"
+`include "gpio_intf.sv"
+`include "driver.sv"
+`include "env.sv"
+`include "test.sv"
+
 module tb_top;
   
     //clock and reset signal declaration
@@ -16,20 +25,19 @@ module tb_top;
 
     //DUT instance, interface signals are connected to the DUT ports
     AHBGPIO DUT(
-        .HCLK(intf.DUT.HCLK),
-        .HRESETn(intf.DUT.HRESETn),
-        .HADDR(intf.DUT.HADDR),
-        .HTRANS(intf.DUT.HTRANS),
-        .HWDATA(intf.DUT.HWDATA),
-        .HWRITE(intf.DUT.HWRITE),
-        .HSEL(intf.DUT.HSEL),
-        .HREADY(intf.DUT.HREADY),
-        .GPIOIN(intf.DUT.GPIOIN),
-        .PARITYSEL(intf.DUT.PARITYSEL),
-        .HREADYOUT(intf.DUT.HREADYOUT),
-        .HRDATA(intf.DUT.HRDATA),
-        .GPIOOUT(intf.DUT.GPIOOUT),
-        .PARITYERR(intf.DUT.PARITYERR)
+        .HCLK(intf.HCLK),
+        .HRESETn(intf.HRESETn),
+        .HADDR(intf.HADDR),
+        .HTRANS(intf.HTRANS),
+        .HWDATA(intf.HWDATA),
+        .HWRITE(intf.HWRITE),
+        .HSEL(intf.HSEL),
+        .HREADY(intf.HREADY),
+        .GPIOIN(intf.GPIOIN),
+        .HREADYOUT(intf.HREADYOUT),
+        .HRDATA(intf.HRDATA),
+        .GPIOOUT(intf.GPIOOUT),
+        .gpio_dir(intf.gpio_dir)
     );
 
     //Testcase instance, interface handle is passed to test as an argument

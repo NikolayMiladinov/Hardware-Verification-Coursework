@@ -22,7 +22,7 @@ class generator;
         repeat(trans_count) begin
             trans = new();
             if( !trans.randomize() ) $fatal("Gen:: trans randomization failed");
-            mult_mail.put(trans);
+            gpio_mail.put(trans);
         end
         -> ended_gen;
     endtask

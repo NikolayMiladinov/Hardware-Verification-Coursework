@@ -4,7 +4,7 @@ class Environment;
     driver driv;
     mailbox gpio_mail;
     event ended_gen;
-    virtual gpio_if gpio_vif;
+    virtual gpio_intf.DRIV gpio_vif;
 
     function new(virtual gpio_intf.DRIV gpio_vif);
         this.gpio_vif = gpio_vif;

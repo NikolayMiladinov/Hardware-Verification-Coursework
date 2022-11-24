@@ -5,7 +5,7 @@ interface gpio_intf
     //logic HRESETn, HWRITE, HSEL, HREADY, PARITYSEL, HREADYOUT, PARITYERR;
     logic HRESETn, HWRITE, HSEL, HREADY, HREADYOUT;
     logic [2*WIDTH-1:0]       HADDR, HWDATA, HRDATA;
-    logic [WIDTH-1:0]       GPIOIN, GPIOOUT;
+    logic [WIDTH-1:0]       GPIOIN, GPIOOUT, gpio_dir;
     logic [1:0] HTRANS;
 
     clocking cb_DRIV @(posedge HCLK);
@@ -24,6 +24,7 @@ interface gpio_intf
         // input  PARITYERR; // output
         output GPIOIN;
         input GPIOOUT;
+        input gpio_dir;
 
     endclocking
 
@@ -43,13 +44,14 @@ interface gpio_intf
         // input PARITYERR; // output
         input GPIOIN;
         input GPIOOUT;
+        input gpio_dir;
 
     endclocking
 
-    modport DUT (input HCLK, HRESETn, HWRITE, HSEL, HREADY, HADDR, HWDATA, HTRANS, GPIOIN 
-                output HRDATA, GPIOOUT, HREADYOUT);
+    // modport DUT (input HCLK, HRESETn, HWRITE, HSEL, HREADY, HADDR, HWDATA, HTRANS, GPIOIN, 
+    //             output HRDATA, GPIOOUT, HREADYOUT);
 
-    modport DRIV (clocking cb_DRIV, input HCLK, HRESETn, output GPIOIN, PARITYSEL);
-    modport MON (clocking cb_MON, input HCLK, HRESETn, GPIOIN, PARITYSEL);
+    modport DRIV (clocking cb_DRIV, input HCLK, HRESETn, output GPIOIN);
+    modport MON (clocking cb_MON, input HCLK, HRESETn, GPIOIN);
 
 endinterface
