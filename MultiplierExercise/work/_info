@@ -8,37 +8,57 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/MultiplierExercise
+T_opt
+!s110 1668013115
+V`741;_@_MMC9Gd^Cz:8EB2
+Z1 04 13 4 work multiplier_tb fast 0
+=1-dcf401e5da80-636bdc3b-a5100-128da
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.7c;67
+R0
+T_opt1
+!s110 1668014133
+VaNhW2hDU2RH@U7BK]D2ZQ2
+R1
+=1-dcf401e5da80-636be034-e578b-296d8
+o-quiet -auto_acc_if_foreign -work work
+R2
+n@_opt1
+R3
+R0
 Ymult_if
-Z1 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-Z2 DXx4 work 21 multiplier_tb_sv_unit 0 22 06XWAG]o_^TQCXbMHPGJL2
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z5 DXx4 work 21 multiplier_tb_sv_unit 0 22 YF^NaVlK^TFQ949Gj[oj^2
+Z6 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 !i10b 1
 !s100 SC8S^UWloH@^4]mMF>l2g0
 IMa>bK7PFA]K;5d0I=dOnI2
-Z4 !s105 multiplier_tb_sv_unit
+Z7 !s105 multiplier_tb_sv_unit
 S1
 R0
-Z5 w1667953927
-Z6 8tbench/multiplier_tb.sv
-Z7 Ftbench/multiplier_tb.sv
+Z8 w1668181180
+Z9 8tbench/multiplier_tb.sv
+Z10 Ftbench/multiplier_tb.sv
 L0 40
-Z8 OL;L;10.7c;67
+Z11 OL;L;10.7c;67
 31
-Z9 !s108 1667953738.000000
-Z10 !s107 rtl/multiplier.sv|tbench/multiplier_tb.sv|
-Z11 !s90 -work|work|+acc=blnr|-noincr|-timescale|1ns/1ps|tbench/multiplier_tb.sv|rtl/multiplier.sv|
+Z12 !s108 1668181001.000000
+Z13 !s107 rtl/multiplier.sv|tbench/multiplier_tb.sv|
+Z14 !s90 -work|work|+acc=blnr|-noincr|-timescale|1ns/1ps|tbench/multiplier_tb.sv|rtl/multiplier.sv|
 !i113 0
-Z12 o-work work +acc=blnr -timescale 1ns/1ps -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z13 tCvgOpt 0
+Z15 o-work work +acc=blnr -timescale 1ns/1ps -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
 vmultiplier
-R1
-Z14 !s110 1667953738
+R4
+Z16 !s110 1668181001
 !i10b 1
 !s100 n`7?n^U8Ej2dj894BIKo82
 IWUj_e8C:n1z3Y2CVfi_QP0
-R3
+R6
 !s105 multiplier_sv_unit
 S1
 R0
@@ -46,117 +66,117 @@ w1666605049
 8rtl/multiplier.sv
 Frtl/multiplier.sv
 L0 1
-R8
+R11
 r1
 !s85 0
 31
-R9
-R10
-R11
-!i113 0
 R12
 R13
-vmultiplier_tb
-R1
+R14
+!i113 0
+R15
 R2
-R3
-r1
-!s85 0
-!i10b 1
-!s100 I?]F3>BcLoRC@5FhPJW>E1
-ILKEA^JL_31M]XzOgc`jVU3
+vmultiplier_tb
 R4
-S1
-R0
 R5
 R6
-R7
-Z15 L0 232
-R8
-31
-R9
-R10
-R11
-!i113 0
-R12
-R13
-Xmultiplier_tb_sv_unit
-!s115 mult_if
-R1
-V06XWAG]o_^TQCXbMHPGJL2
 r1
 !s85 0
 !i10b 1
-!s100 zBTFk3>7hC^Q;fb51C:0z0
-I06XWAG]o_^TQCXbMHPGJL2
+!s100 joAzjGB[6KYDanGJ6UKQF1
+I__f^[XgJdVnA;L[O9HDRe3
+R7
+S1
+R0
+R8
+R9
+R10
+L0 240
+R11
+31
+R12
+R13
+R14
+!i113 0
+R15
+R2
+Xmultiplier_tb_sv_unit
+!s115 mult_if
+R4
+VYF^NaVlK^TFQ949Gj[oj^2
+r1
+!s85 0
+!i10b 1
+!s100 hV17@^DOln]9710F6PjYm0
+IYF^NaVlK^TFQ949Gj[oj^2
 !i103 1
 S1
 R0
-R5
-R6
-R7
-L0 1
 R8
-31
 R9
 R10
+L0 1
 R11
-!i113 0
+31
 R12
 R13
+R14
+!i113 0
+R15
+R2
 vtbench_top
-R1
+R4
 DXx4 work 21 multiplier_tb_sv_unit 0 22 5ADLY6mQT[c@NnjfHY;9I2
-R3
+R6
 r1
 !s85 0
 !i10b 1
 !s100 iQ3lOI88NDV`OLNlY0lBL0
 IFlR]BVWz<7ZIc[ZKIo9FQ0
-R4
+R7
 S1
 R0
 w1667952838
-R6
-R7
-R15
-R8
+R9
+R10
+L0 232
+R11
 31
 !s108 1667953308.000000
-R10
-R11
-!i113 0
-R12
 R13
-4test
-R1
+R14
+!i113 0
+R15
 R2
-R3
+4test
+R4
+R5
+R6
 r1
 !s85 0
 !i10b 1
-!s100 OTQDAY0b;:M@QDB8<ZUGn0
-I394HY<I3z]Ej_J5eD0@5X2
-R4
+!s100 o[K9zFRbT]L1PR>@M;gZ23
+I4kIY_B3FG1jizz=2]M5G21
+R7
 S1
 R0
-R5
-R6
-R7
-L0 213
 R8
-31
 R9
 R10
+L0 220
 R11
-!i113 0
+31
 R12
 R13
-Twork_opt
 R14
-V?[@eEZ]AN50_L<>gKaLNR0
-04 13 4 work multiplier_tb fast 0
+!i113 0
+R15
+R2
+Twork_opt
+R16
+VBSz_V`DH8zV[jI2n]Y^d20
+R1
 o-work work
-R13
+R2
 nwork_opt
-OL;O;10.7c;67
+R3

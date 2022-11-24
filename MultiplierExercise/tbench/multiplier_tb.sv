@@ -125,30 +125,33 @@ class Driver;
 
     //drive the transaction items to interface signals
     task drive();
-        //forever begin
-        Transaction trans;
-        mult_vif.driver_cb.req <= 0;
-        mult_mail.get(trans);
-        $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
-        @(posedge mult_vif.clk) begin
-            mult_vif.driver_cb.a <= trans.i;
-            mult_vif.driver_cb.b <= trans.j;
+        forever begin
+            Transaction trans;
+            mult_vif.driver_cb.req <= 0;
+            mult_mail.get(trans);
+            $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
+            @(posedge mult_vif.clk) begin
+                mult_vif.driver_cb.a <= trans.i;
+                mult_vif.driver_cb.b <= trans.j;
+            end
+            if(mult_vif.driver_cb.rdy==1)begin
+                $display("--------------REQUESTING--------------");
+                mult_vif.driver_cb.req <= 1;
+                wait (mult_vif.driver_cb.done == 1);
+                mult_vif.driver_cb.req <= 0;
+            end
+            
+
+            $display("-----------------------------------------");
+            no_transactions++;
         end
-
-        mult_vif.driver_cb.req <= 1;
-        wait (mult_vif.driver_cb.done == 1);
-        mult_vif.driver_cb.req <= 0;
-
-        $display("-----------------------------------------");
-        no_transactions++;
-        //end
     endtask
 
     task initial_check();                         // Initial check of multiplier
 	begin
         wait (mult_vif.driver_cb.rdy);		      // Wait for multiplier to be idle
-        mult_vif.driver_cb.a = 5;
-        mult_vif.driver_cb.b = 6;
+        mult_vif.driver_cb.a <= 5;
+        mult_vif.driver_cb.b <= 6;
         mult_vif.driver_cb.req <= 1;		      // Initiate the multiplication
 
         wait (mult_vif.driver_cb.done == 1);           // And wait for it to finish
@@ -183,6 +186,10 @@ class Environment;
 
     task reset_test();
         driv.reset();
+    endtask
+
+    task initial_check();
+        driv.initial_check();
     endtask
 
     task test();
@@ -222,6 +229,7 @@ program test(mult_if intf);
     //setting the repeat count of generator as 10, means to generate 10 packets
     env.gen.trans_count = 10;
     env.reset_test();
+    env.initial_check();
     //calling run of env, it interns calls generator and driver main tasks.
     env.run();
     end
@@ -246,7 +254,16 @@ module multiplier_tb;
     mult_if intf(clk);
 
     //DUT instance, interface signals are connected to the DUT ports
-    multiplier DUT (intf);
+    multiplier DUT (
+        .clk(intf.DUT.clk),
+        .req(intf.DUT.req),
+        .a(intf.DUT.a),
+        .b(intf.DUT.b),
+        .ab(intf.DUT.ab),
+        .rst_n(intf.DUT.rst_n),
+        .rdy(intf.DUT.rdy),
+        .done(intf.DUT.done)
+    );
 
     //Testcase instance, interface handle is passed to test as an argument
     test t1(intf);

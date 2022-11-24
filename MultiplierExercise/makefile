@@ -2,7 +2,7 @@ connect-nick:
 	source /usr/local/mentor/QUESTA-CORE-PRIME_10.7c/settings.sh
 #cd nfshome/HSV/
 #Connect to Moba host
-	export DISPLAY=:0
+	export DISPLAY=localhost:12.0
 
 #compile the necessary files
 comp-opt:
