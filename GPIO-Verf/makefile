@@ -6,8 +6,8 @@ connect-nick:
 
 #compile the necessary files
 comp-opt:
-	vlog -work work +acc=blnr -noincr -timescale 1ns/1ps tbench/multiplier_tb.sv rtl/multiplier.sv
-	vopt -work work multiplier_tb -o work_opt
+	vlog -work work +acc=blnr -noincr -timescale 1ns/1ps tbench/tb_top.sv rtl/AHB_VGA/vga_console.v
+	vopt -work work tb_top -o work_opt
 #Apply optimisation if no error
 
 #If no error open QuestaSim
