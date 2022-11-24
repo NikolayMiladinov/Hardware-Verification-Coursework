@@ -57,8 +57,9 @@ class driver;
 
     task initial_check();                         // Initial check of gpioiplier
 	begin
+        $display("----------[DRIVER-INITIAL-CHECK-START]----------");
         //-------Check Write command--------
-
+        
         //Setup variables for write cycle
         gpio_vif.cb_DRIV.HREADY <= 'b1;
         @gpio_vif.cb_DRIV;
@@ -74,14 +75,37 @@ class driver;
         @gpio_vif.cb_DRIV;
 
         //Write value to output register, should appear on GPIOOUT next cycle
-        gpio_vif.cb_DRIV.HWDATA <= 32'hBEEF;
-        $display ("Initial check of GPIO write. GPIOOUT = %0d, expected result is 32'hBEEF", gpio_vif.cb_DRIV.GPIOOUT);
+        gpio_vif.cb_DRIV.HWDATA <= 'hBEEF;
 
         @gpio_vif.cb_DRIV;
-        $display ("Initial check of GPIO write. GPIOOUT = %0d, expected result is 32'hBEEF", gpio_vif.cb_DRIV.GPIOOUT);
+        @gpio_vif.cb_DRIV;
+        assert (gpio_vif.cb_DRIV.GPIOOUT == 'hBEEF)
+	    else $fatal ("Initial check of gpio write failed. GPIOOUT = %0d, expected result is 32'hBEEF", gpio_vif.cb_DRIV.GPIOOUT);
+        
+        @gpio_vif.cb_DRIV;
+        assert (gpio_vif.cb_DRIV.HRDATA == 'hBEEF)
+	    else $fatal ("Initial check of gpio write failed. GPIOOUT = %0d, HRDATA = %0d, expected result is 32'hBEEF", gpio_vif.cb_DRIV.GPIOOUT, gpio_vif.cb_DRIV.HRDATA);
+        $display ("Initial check of GPIO write successful. GPIOOUT = %0d, HRDATA = %0d, expected result is 32'hBEEF", gpio_vif.cb_DRIV.GPIOOUT, gpio_vif.cb_DRIV.HRDATA);
+
+        //Setup variables for read cycle
+        gpio_vif.cb_DRIV.HADDR <= 32'h5300_0004;
+
+        @gpio_vif.cb_DRIV;
+
+        //Write 0 to direction register for input direction and indicate data cycle will follow
+        gpio_vif.cb_DRIV.HWDATA <= 'b0;
+        gpio_vif.cb_DRIV.HADDR <= 32'h53000000;
+        @gpio_vif.cb_DRIV;
+
+        gpio_vif.cb_DRIV.GPIOIN <= 'hFAB;
+
         @gpio_vif.cb_DRIV;
         @gpio_vif.cb_DRIV;
+        assert (gpio_vif.cb_DRIV.HRDATA == 'hFAB)
+	    else $fatal ("Initial check of gpio read failed. HRDATA = %0d, expected result is 32'hFAB", gpio_vif.cb_DRIV.HRDATA);
+        $display ("Initial check of GPIO read successful. HRDATA = %0d, expected result is 32'hFAB", gpio_vif.cb_DRIV.HRDATA);
         @gpio_vif.cb_DRIV;
+        $display("----------[DRIVER-INITIAL-CHECK-END]----------");
         
 	end
 	endtask

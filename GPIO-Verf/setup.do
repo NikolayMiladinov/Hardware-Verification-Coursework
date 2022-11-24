@@ -1,3 +1,10 @@
 log -r /*
 run 2000ns
-add wave *
+wave zoom out
+wave zoom out
+wave zoom out
+wave zoom out
+wave zoom out
+wave zoom out
+wave zoom out
+add wave tb_top/intf/*

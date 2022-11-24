@@ -117,7 +117,8 @@ module AHBGPIO(
     else if (gpio_dir == 16'h0001)
       gpio_datain <= GPIOOUT;
   end
-         
+  
+  assign HRDATA[31:16] = 16'h0000;
   assign HRDATA[15:0] = gpio_datain;  
   assign GPIOOUT = gpio_dataout;
 

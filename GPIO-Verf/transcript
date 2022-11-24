@@ -1,7 +1,7 @@
 # Reading pref.tcl
 # ** Warning: License feature 'msimviewer' will expire in 6 days.
 # vsim work_opt -gui 
-# Start time: 15:27:36 on Nov 24,2022
+# Start time: 17:05:31 on Nov 24,2022
 # ** Warning: License feature 'msimhdlsim' will expire in 6 days.
 # Loading sv_std.std
 # Loading work.tb_top_sv_unit(fast)
@@ -14,24 +14,28 @@
 do setup.do
 # --------- [DRIVER] Reset Started ---------
 # --------- [DRIVER] Reset Ended ---------
-# Initial check of GPIO write. GPIOOUT = 0, expected result is 32'hBEEF
-# Initial check of GPIO write. GPIOOUT = 0, expected result is 32'hBEEF
-# ** Note: implicit $finish from program    : tbench/driver.sv(81)
-#    Time: 170 ns  Iteration: 1  Instance: /tb_top/t1
+# ----------[DRIVER-INITIAL-CHECK-START]----------
+# Initial check of GPIO write successful. GPIOOUT = 48879, HRDATA = 48879, expected result is 32'hBEEF
+# Initial check of GPIO read successful. HRDATA = 4011, expected result is 32'hFAB
+# ----------[DRIVER-INITIAL-CHECK-END]----------
+# ** Note: implicit $finish from program    : tbench/driver.sv(106)
+#    Time: 250 ns  Iteration: 1  Instance: /tb_top/t1
 # 1
 # Simulation stop requested.
-add wave -position insertpoint  \
-sim:/tb_top/intf/WIDTH \
-sim:/tb_top/intf/HCLK \
-sim:/tb_top/intf/HRESETn \
-sim:/tb_top/intf/HWRITE \
-sim:/tb_top/intf/HSEL \
-sim:/tb_top/intf/HREADY \
-sim:/tb_top/intf/HREADYOUT \
-sim:/tb_top/intf/HADDR \
-sim:/tb_top/intf/HWDATA \
-sim:/tb_top/intf/HRDATA \
-sim:/tb_top/intf/GPIOIN \
-sim:/tb_top/intf/GPIOOUT \
-sim:/tb_top/intf/gpio_dir \
-sim:/tb_top/intf/HTRANS
+# 248550 ps
+# 250550 ps
+# 247550 ps
+# 251550 ps
+# 245550 ps
+# 253550 ps
+# 241550 ps
+# 257550 ps
+# 233550 ps
+# 265550 ps
+# 217550 ps
+# 281550 ps
+# 185550 ps
+# 313550 ps
+add wave tb_top/DUT/*
+# End time: 17:10:37 on Nov 24,2022, Elapsed time: 0:05:06
+# Errors: 0, Warnings: 0
