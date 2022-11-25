@@ -7,4 +7,4 @@ wave zoom out
 wave zoom out
 wave zoom out
 wave zoom out
-add wave tb_top/intf/*
+add wave tb_top/DUT/*

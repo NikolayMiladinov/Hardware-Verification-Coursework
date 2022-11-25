@@ -1,7 +1,6 @@
-connect-nick:
-	source /usr/local/mentor/QUESTA-CORE-PRIME_10.7c/settings.sh
-	export DISPLAY=11:0
-
+connect:
+	export DISPLAY=localhost:25.0
+#source /usr/local/mentor/QUESTA-CORE-PRIME_10.7c/settings.sh
 #compile the necessary files
 comp-opt:
 	vlog -work work +acc=blnr -noincr -timescale 1ns/1ps tbench/tb_top.sv rtl/AHB_GPIO/AHBGPIO.v

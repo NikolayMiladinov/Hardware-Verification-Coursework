@@ -36,33 +36,33 @@ class driver;
 
     //drive the transaction items to interface signals
     task drive();
-        //forever begin
-        transaction trans;
+        forever begin
+            transaction trans;
 
-        if(gpio_vif.cb_DRIV.HREADY!=1'b1) begin
-            gpio_vif.cb_DRIV.HREADY <= 1'b1;
+            if(gpio_vif.cb_DRIV.HREADY!=1'b1) begin
+                gpio_vif.cb_DRIV.HREADY <= 1'b1;
+                @gpio_vif.cb_DRIV;
+            end
+
+            gpio_mail.get(trans);
+            $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
+            //prepare to write to direction register
+            gpio_vif.cb_DRIV.HTRANS <= 'd2;
+            gpio_vif.cb_DRIV.HWRITE <= 'b1;
+            gpio_vif.cb_DRIV.HSEL <= 'b1;
+            gpio_vif.cb_DRIV.HADDR <= 32'h5300_0004; 
+            @gpio_vif.cb_DRIV; 
+
+            gpio_vif.cb_DRIV.HWDATA <= {15'b0, trans.write_cycle};
+            gpio_vif.cb_DRIV.HADDR <= 32'h53000000;
             @gpio_vif.cb_DRIV;
+            
+            if(trans.write_cycle == 1'b1) gpio_vif.cb_DRIV.HWDATA <= trans.HWDATA;
+            else gpio_vif.cb_DRIV.GPIOIN <= trans.GPIOIN;
+
+            $display("----------[DRIVER-END-OF-TRANSFER]----------");
+            no_transactions++;
         end
-
-        gpio_mail.get(trans);
-        $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
-        //prepare to write to direction register
-        gpio_vif.cb_DRIV.HTRANS <= 'd2;
-        gpio_vif.cb_DRIV.HWRITE <= 'b1;
-        gpio_vif.cb_DRIV.HSEL <= 'b1;
-        gpio_vif.cb_DRIV.HADDR <= 32'h5300_0004; 
-        @gpio_vif.cb_DRIV; 
-
-        gpio_vif.cb_DRIV.HWDATA <= {15'b0, trans.write_cycle};
-        gpio_vif.cb_DRIV.HADDR <= 32'h53000000;
-        @gpio_vif.cb_DRIV;
-        
-        if(trans.write_cycle == 1'b1) gpio_vif.cb_DRIV.HWDATA <= trans.HWDATA;
-        else gpio_vif.cb_DRIV.GPIOIN <= trans.GPIOIN;
-
-        $display("----------[DRIVER-END-OF-TRANSFER]----------");
-        no_transactions++;
-        //end
     endtask
 
     task initial_check();                         // Initial check of gpioiplier
@@ -90,12 +90,12 @@ class driver;
         @gpio_vif.cb_DRIV;
         @gpio_vif.cb_DRIV;
         assert (gpio_vif.cb_DRIV.GPIOOUT == 'hBEEF)
-	    else $fatal ("Initial check of gpio write failed. GPIOOUT = %0d, expected result is 32'hBEEF", gpio_vif.cb_DRIV.GPIOOUT);
+	    else $fatal ("Initial check of gpio write failed. GPIOOUT = %0h, expected result is 32'hBEEF", gpio_vif.cb_DRIV.GPIOOUT);
         
         @gpio_vif.cb_DRIV;
         assert (gpio_vif.cb_DRIV.HRDATA == 'hBEEF)
-	    else $fatal ("Initial check of gpio write failed. GPIOOUT = %0d, HRDATA = %0d, expected result is 32'hBEEF", gpio_vif.cb_DRIV.GPIOOUT, gpio_vif.cb_DRIV.HRDATA);
-        $display ("Initial check of GPIO write successful. GPIOOUT = %0d, HRDATA = %0d, expected result is 32'hBEEF", gpio_vif.cb_DRIV.GPIOOUT, gpio_vif.cb_DRIV.HRDATA);
+	    else $fatal ("Initial check of gpio write failed. GPIOOUT = %0h, HRDATA = %0h, expected result is 32'hBEEF", gpio_vif.cb_DRIV.GPIOOUT, gpio_vif.cb_DRIV.HRDATA);
+        $display ("Initial check of GPIO write successful. GPIOOUT = %0h, HRDATA = %0h, expected result is 32'hBEEF", gpio_vif.cb_DRIV.GPIOOUT, gpio_vif.cb_DRIV.HRDATA);
 
         //Setup variables for read cycle
         gpio_vif.cb_DRIV.HADDR <= 32'h5300_0004;
