@@ -38,17 +38,27 @@ class driver;
     task drive();
         //forever begin
         transaction trans;
-        // gpio_vif.cb_DRIV.req <= 0;
-        // gpio_mail.get(trans);
-        // $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
-        // @(posedge gpio_vif.clk) begin
-        //     gpio_vif.cb_DRIV.a <= trans.i;
-        //     gpio_vif.cb_DRIV.b <= trans.j;
-        // end
 
-        // gpio_vif.cb_DRIV.req <= 1;
-        // wait (gpio_vif.cb_DRIV.done == 1);
-        // gpio_vif.cb_DRIV.req <= 0;
+        if(gpio_vif.cb_DRIV.HREADY!=1'b1) begin
+            gpio_vif.cb_DRIV.HREADY <= 1'b1;
+            @gpio_vif.cb_DRIV;
+        end
+
+        gpio_mail.get(trans);
+        $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
+        //prepare to write to direction register
+        gpio_vif.cb_DRIV.HTRANS <= 'd2;
+        gpio_vif.cb_DRIV.HWRITE <= 'b1;
+        gpio_vif.cb_DRIV.HSEL <= 'b1;
+        gpio_vif.cb_DRIV.HADDR <= 32'h5300_0004; 
+        @gpio_vif.cb_DRIV; 
+
+        gpio_vif.cb_DRIV.HWDATA <= {15'b0, trans.write_cycle};
+        gpio_vif.cb_DRIV.HADDR <= 32'h53000000;
+        @gpio_vif.cb_DRIV;
+        
+        if(trans.write_cycle == 1'b1) gpio_vif.cb_DRIV.HWDATA <= trans.HWDATA;
+        else gpio_vif.cb_DRIV.GPIOIN <= trans.GPIOIN;
 
         $display("----------[DRIVER-END-OF-TRANSFER]----------");
         no_transactions++;
