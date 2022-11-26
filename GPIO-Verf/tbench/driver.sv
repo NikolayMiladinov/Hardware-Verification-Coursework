@@ -57,6 +57,7 @@ class driver;
             //write to direction register, direction determined by write_cycle variable
             gpio_vif.cb_DRIV.HWDATA <= {31'b0, trans.write_cycle};
             gpio_vif.cb_DRIV.HADDR <= 32'h53000000; //start data phase
+            gpio_vif.cb_DRIV.PARITYSEL <= trans.PARITYSEL;
             if(trans.write_cycle == 1'b0) gpio_vif.cb_DRIV.HWRITE <= 'b0; //write signal can be low during data phase of input direction
             @gpio_vif.cb_DRIV;
             
@@ -94,13 +95,13 @@ class driver;
 
         @gpio_vif.cb_DRIV;
         @gpio_vif.cb_DRIV;
-        assert (gpio_vif.cb_DRIV.GPIOOUT == {PARITYSEL ? ~^16'h0FAB : ^16'h0FAB, 16'hBEEF})
-	    else $fatal ("Initial check of gpio write failed. GPIOOUT = %0h, expected result is 32'hBEEF", gpio_vif.cb_DRIV.GPIOOUT);
+        assert (gpio_vif.cb_DRIV.GPIOOUT == {gpio_vif.cb_DRIV.PARITYSEL ? ~^16'h0FAB : ^16'h0FAB, 16'hBEEF})
+	    else $fatal ("Initial check of gpio write failed. GPIOOUT = %0h, expected result is 17'h1BEEF", gpio_vif.cb_DRIV.GPIOOUT);
         
         @gpio_vif.cb_DRIV;
-        assert (gpio_vif.cb_DRIV.HRDATA == {15'b0, PARITYSEL ? ~^16'h0FAB : ^16'h0FAB, 16'hBEEF})
-	    else $fatal ("Initial check of gpio write failed. GPIOOUT = %0h, HRDATA = %0h, expected result is 32'hBEEF", gpio_vif.cb_DRIV.GPIOOUT, gpio_vif.cb_DRIV.HRDATA);
-        $display ("Initial check of GPIO write successful. GPIOOUT = %0h, HRDATA = %0h, expected result is 32'hBEEF", gpio_vif.cb_DRIV.GPIOOUT, gpio_vif.cb_DRIV.HRDATA);
+        assert (gpio_vif.cb_DRIV.HRDATA == {15'b0, gpio_vif.cb_DRIV.PARITYSEL ? ~^16'h0FAB : ^16'h0FAB, 16'hBEEF})
+	    else $fatal ("Initial check of gpio write failed. GPIOOUT = %0h, HRDATA = %0h, expected result is 33'h1BEEF", gpio_vif.cb_DRIV.GPIOOUT, gpio_vif.cb_DRIV.HRDATA);
+        $display ("Initial check of GPIO write successful. GPIOOUT = %0h, HRDATA = %0h, expected result is 'h1BEEF", gpio_vif.cb_DRIV.GPIOOUT, gpio_vif.cb_DRIV.HRDATA);
 
         //Setup variables for address phase
         gpio_vif.cb_DRIV.HADDR <= 32'h5300_0004;
@@ -112,13 +113,13 @@ class driver;
         gpio_vif.cb_DRIV.HADDR <= 32'h53000000;
         @gpio_vif.cb_DRIV;
 
-        gpio_vif.cb_DRIV.GPIOIN <= {PARITYSEL ? ~^16'h0FAB : ^16'h0FAB, 16'h0FAB};
+        gpio_vif.cb_DRIV.GPIOIN <= {gpio_vif.cb_DRIV.PARITYSEL ? ~^16'h0FAB : ^16'h0FAB, 16'h0FAB};
 
         @gpio_vif.cb_DRIV;
         @gpio_vif.cb_DRIV;
-        assert (gpio_vif.cb_DRIV.HRDATA == {PARITYSEL ? ~^16'h0FAB : ^16'h0FAB, 16'h0FAB})
-	    else $fatal ("Initial check of gpio read failed. HRDATA = %0d, expected result is 32'hFAB", gpio_vif.cb_DRIV.HRDATA);
-        $display ("Initial check of GPIO read successful. HRDATA = %0d, expected result is 32'hFAB", gpio_vif.cb_DRIV.HRDATA);
+        assert (gpio_vif.cb_DRIV.HRDATA == {gpio_vif.cb_DRIV.PARITYSEL ? ~^16'h0FAB : ^16'h0FAB, 16'h0FAB})
+	    else $fatal ("Initial check of gpio read failed. HRDATA = %0h, expected result is 33'h10FAB", gpio_vif.cb_DRIV.HRDATA);
+        $display ("Initial check of GPIO read successful. HRDATA = %0h, expected result is 33'h10FAB", gpio_vif.cb_DRIV.HRDATA);
         @gpio_vif.cb_DRIV;
         $display("----------[DRIVER-INITIAL-CHECK-END]----------");
         

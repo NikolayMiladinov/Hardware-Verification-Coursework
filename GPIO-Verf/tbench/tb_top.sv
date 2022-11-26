@@ -37,7 +37,8 @@ module tb_top;
         .HREADYOUT(intf.HREADYOUT),
         .HRDATA(intf.HRDATA),
         .GPIOOUT(intf.GPIOOUT),
-        .gpio_dir(intf.gpio_dir)
+        .PARITYSEL(intf.PARITYSEL),
+        .PARITYERR(intf.PARITYERR)
     );
 
     //Testcase instance, interface handle is passed to test as an argument

@@ -1,26 +1,59 @@
 # Reading pref.tcl
-# ** Warning: License feature 'msimviewer' will expire in 5 days.
+# ** Warning: License feature 'msimviewer' will expire in 4 days.
 # vsim work_opt -gui 
-# Start time: 15:10:40 on Nov 25,2022
-# ** Warning: License feature 'msimhdlsim' will expire in 5 days.
+# Start time: 14:23:05 on Nov 26,2022
+# ** Warning: License feature 'msimhdlsim' will expire in 4 days.
 # Loading sv_std.std
 # Loading work.tb_top_sv_unit(fast)
 # Loading work.tb_top(fast)
 # Loading work.gpio_intf(fast)
 # Loading work.AHBGPIO(fast)
-# ** Warning: License feature 'svverification' will expire in 5 days.
+# ** Warning: License feature 'svverification' will expire in 4 days.
 # Loading work.test(fast)
 # Loading work.gpio_intf(fast)
 # ** Warning: (vsim-8441) Clocking block output gpio_vif.cb_DRIV.HREADY is not legal in this
 # or another expression.
-#    Time: 0 ps  Iteration: 0  Region: /tb_top_sv_unit File: tbench/driver.sv Line: 42
+#    Time: 0 ps  Iteration: 0  Region: /tb_top_sv_unit File: tbench/driver.sv Line: 43
+# ** Warning: (vsim-8441) Clocking block output gpio_vif.cb_DRIV.PARITYSEL is not legal in this
+# or another expression.
+#    Time: 0 ps  Iteration: 0  Region: /tb_top_sv_unit File: tbench/driver.sv Line: 93
 do setup.do
 # --------- [DRIVER] Reset Started ---------
 # --------- [DRIVER] Reset Ended ---------
 # ----------[DRIVER-INITIAL-CHECK-START]----------
-# Initial check of GPIO write successful. GPIOOUT = beef, HRDATA = beef, expected result is 32'hBEEF
-# Initial check of GPIO read successful. HRDATA = 4011, expected result is 32'hFAB
+# Initial check of GPIO write successful. GPIOOUT = 1beef, HRDATA = 1beef, expected result is 'h1BEEF
+# Initial check of GPIO read successful. HRDATA = 10fab, expected result is 33'h10FAB
 # ----------[DRIVER-INITIAL-CHECK-END]----------
+# GPIOIN is set
+# a = 4a55
+# GPIOIN = 14a55
+# GPIOIN is set
+# a = b9ab
+# GPIOIN = 1b9ab
+# GPIOIN is set
+# a = 47b7
+# GPIOIN = 47b7
+# GPIOIN is set
+# a = e99
+# GPIOIN = e99
+# GPIOIN is set
+# a = 7c54
+# GPIOIN = 17c54
+# GPIOIN is set
+# a = ab69
+# GPIOIN = 1ab69
+# GPIOIN is set
+# a = 5a14
+# GPIOIN = 5a14
+# GPIOIN is set
+# a = 9ea9
+# GPIOIN = 9ea9
+# GPIOIN is set
+# a = caf2
+# GPIOIN = 1caf2
+# GPIOIN is set
+# a = 845
+# GPIOIN = 845
 # --------- [DRIVER-TRANSFER: 0] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 1] ---------
@@ -41,7 +74,7 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 9] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
-# ** Note: implicit $finish from program    : tbench/driver.sv(48)
+# ** Note: implicit $finish from program    : tbench/driver.sv(49)
 #    Time: 650 ns  Iteration: 1  Instance: /tb_top/t1
 # 1
 # Simulation stop requested.
@@ -59,5 +92,3 @@ do setup.do
 # 681550 ps
 # 585550 ps
 # 713550 ps
-# End time: 15:22:44 on Nov 25,2022, Elapsed time: 0:12:04
-# Errors: 0, Warnings: 1

@@ -115,12 +115,12 @@ module AHBGPIO(
     begin
       gpio_datain <= 16'h0000;
     end
-    else if (gpio_dir == 16'h0000)
+    else if (gpio_dir == 16'h0000) begin
       //Check parity bit of GPIOIN, flag PARITYERR if incorrect
       if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITYERR <= 1'b1;
       //Transfer proceeds even if parity bit is wrong
       gpio_datain <= GPIOIN;
-    else if (gpio_dir == 16'h0001)
+    end else if (gpio_dir == 16'h0001)
       gpio_datain <= GPIOOUT;
   end
   
