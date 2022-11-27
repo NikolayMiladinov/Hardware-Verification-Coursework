@@ -2,16 +2,25 @@ class Environment;
 
     generator gen;
     driver driv;
+    monitor mon;
+    scoreboard scor;
+
     mailbox gpio_mail;
+    mailbox gpio_mon_mail;
     event ended_gen;
     virtual gpio_intf.DRIV gpio_vif;
+    virtual gpio_intf.MON gpio_mon_vif;
 
-    function new(virtual gpio_intf.DRIV gpio_vif);
+    function new(virtual gpio_intf.DRIV gpio_vif, virtual gpio_intf.MON gpio_mon_vif);
         this.gpio_vif = gpio_vif;
+        this.gpio_mon_vif = gpio_mon_vif;
         gpio_mail = new();
+        gpio_mon_mail = new();
 
         gen = new(gpio_mail, ended_gen);
         driv = new(gpio_vif, gpio_mail);
+        mon = new(gpio_mon_vif, gpio_mon_mail);
+        scor = new(gpio_mon_mail);
     endfunction
 
     task reset_test();
@@ -26,6 +35,8 @@ class Environment;
         fork
             gen.gen();
             driv.drive();
+            mon.run();
+            scor.run();
         join_none
     endtask
 
