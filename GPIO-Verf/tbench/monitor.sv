@@ -23,6 +23,7 @@ class monitor;
     endfunction
 
     task run();
+        $display("------[MONITOR STARTED]------");
         always @(posedge gpio_vif.HCLK or negedge gpio_vif.HRESETn) begin
             if(!gpio_vif.HRESETn) begin
                 last_HWRITE <= 'b0;
