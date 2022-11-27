@@ -4,6 +4,8 @@
 `include "generator.sv"
 `include "gpio_intf.sv"
 `include "driver.sv"
+`include "monitor.sv"
+`include "scoreboard.sv"
 `include "env.sv"
 `include "test.sv"
 
@@ -42,6 +44,6 @@ module tb_top;
     );
 
     //Testcase instance, interface handle is passed to test as an argument
-    test t1(intf.DRIV);
+    test t1(intf.DRIV, intf.MON);
   
 endmodule

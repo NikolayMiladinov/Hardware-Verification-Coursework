@@ -1,22 +1,16 @@
 # Reading pref.tcl
-# ** Warning: License feature 'msimviewer' will expire in 4 days.
+# ** Warning: License feature 'msimviewer' will expire in 3 days.
 # vsim work_opt -gui 
-# Start time: 14:23:05 on Nov 26,2022
-# ** Warning: License feature 'msimhdlsim' will expire in 4 days.
+# Start time: 17:11:17 on Nov 27,2022
+# ** Warning: License feature 'msimhdlsim' will expire in 3 days.
 # Loading sv_std.std
 # Loading work.tb_top_sv_unit(fast)
 # Loading work.tb_top(fast)
 # Loading work.gpio_intf(fast)
 # Loading work.AHBGPIO(fast)
-# ** Warning: License feature 'svverification' will expire in 4 days.
+# ** Warning: License feature 'svverification' will expire in 3 days.
 # Loading work.test(fast)
 # Loading work.gpio_intf(fast)
-# ** Warning: (vsim-8441) Clocking block output gpio_vif.cb_DRIV.HREADY is not legal in this
-# or another expression.
-#    Time: 0 ps  Iteration: 0  Region: /tb_top_sv_unit File: tbench/driver.sv Line: 43
-# ** Warning: (vsim-8441) Clocking block output gpio_vif.cb_DRIV.PARITYSEL is not legal in this
-# or another expression.
-#    Time: 0 ps  Iteration: 0  Region: /tb_top_sv_unit File: tbench/driver.sv Line: 93
 do setup.do
 # --------- [DRIVER] Reset Started ---------
 # --------- [DRIVER] Reset Ended ---------
@@ -24,58 +18,69 @@ do setup.do
 # Initial check of GPIO write successful. GPIOOUT = 1beef, HRDATA = 1beef, expected result is 'h1BEEF
 # Initial check of GPIO read successful. HRDATA = 10fab, expected result is 33'h10FAB
 # ----------[DRIVER-INITIAL-CHECK-END]----------
-# GPIOIN is set
-# a = 4a55
-# GPIOIN = 14a55
-# GPIOIN is set
-# a = b9ab
-# GPIOIN = 1b9ab
-# GPIOIN is set
-# a = 47b7
-# GPIOIN = 47b7
-# GPIOIN is set
-# a = e99
-# GPIOIN = e99
-# GPIOIN is set
-# a = 7c54
-# GPIOIN = 17c54
-# GPIOIN is set
-# a = ab69
-# GPIOIN = 1ab69
-# GPIOIN is set
-# a = 5a14
-# GPIOIN = 5a14
-# GPIOIN is set
-# a = 9ea9
-# GPIOIN = 9ea9
-# GPIOIN is set
-# a = caf2
-# GPIOIN = 1caf2
-# GPIOIN is set
-# a = 845
-# GPIOIN = 845
 # --------- [DRIVER-TRANSFER: 0] ---------
+# ------[MONITOR STARTED]------
+# ------[SCOREBOARD STARTED]------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 1] ---------
+# State sample 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 2] ---------
+# GPIOIN = 1128, last_GPIOIN = 1128
+# State sample 1
+# ------[SCOREBOARD CHECK]------
+# GPIOIN = 1128, last_GPIOIN = 1128
+# State sample 1
+# ------[SCOREBOARD CHECK]------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 3] ---------
+# HWDATA = 1, last_HWDATA = b137
+# ------[SCOREBOARD CHECK]------
+# State sample 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 4] ---------
+# HWDATA = 0, last_HWDATA = 5ca2
+# ------[SCOREBOARD CHECK]------
+# State sample 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 5] ---------
+# GPIOIN = 1456a, last_GPIOIN = 1456a
+# State sample 1
+# ------[SCOREBOARD CHECK]------
+# GPIOIN = 1456a, last_GPIOIN = 1456a
+# State sample 1
+# ------[SCOREBOARD CHECK]------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 6] ---------
+# HWDATA = 0, last_HWDATA = bc5a
+# ------[SCOREBOARD CHECK]------
+# State sample 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 7] ---------
+# GPIOIN = 1d1c5, last_GPIOIN = 1d1c5
+# State sample 1
+# ------[SCOREBOARD CHECK]------
+# GPIOIN = 2da6, last_GPIOIN = 1d1c5
+# State sample 1
+# ------[SCOREBOARD CHECK]------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 8] ---------
+# GPIOIN = 2da6, last_GPIOIN = 2da6
+# State sample 1
+# ------[SCOREBOARD CHECK]------
+# GPIOIN = 2da6, last_GPIOIN = 2da6
+# State sample 1
+# ------[SCOREBOARD CHECK]------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 9] ---------
+# HWDATA = 1, last_HWDATA = 37d8
+# ------[SCOREBOARD CHECK]------
+# State sample 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
-# ** Note: implicit $finish from program    : tbench/driver.sv(49)
-#    Time: 650 ns  Iteration: 1  Instance: /tb_top/t1
+# HWDATA = 1, last_HWDATA = 1f42
+# ------[SCOREBOARD CHECK]------
+# ** Note: implicit $finish from program    : tbench/monitor.sv(86)
+#    Time: 650 ns  Iteration: 2  Instance: /tb_top/t1
 # 1
 # Simulation stop requested.
 # 648550 ps

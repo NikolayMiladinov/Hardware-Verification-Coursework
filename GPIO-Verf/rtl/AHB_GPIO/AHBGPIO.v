@@ -68,8 +68,6 @@ module AHBGPIO(
   reg last_HWRITE;
   reg last_HSEL;
   
-  integer i;
-  
   assign HREADYOUT = 1'b1;
   
 // Set Registers from address phase  

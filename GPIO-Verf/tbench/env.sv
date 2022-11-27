@@ -8,17 +8,17 @@ class Environment;
     mailbox gpio_mail;
     mailbox gpio_mon_mail;
     event ended_gen;
-    virtual gpio_intf.DRIV gpio_vif;
+    virtual gpio_intf.DRIV gpio_driv_vif;
     virtual gpio_intf.MON gpio_mon_vif;
 
-    function new(virtual gpio_intf.DRIV gpio_vif, virtual gpio_intf.MON gpio_mon_vif);
-        this.gpio_vif = gpio_vif;
+    function new(virtual gpio_intf.DRIV gpio_driv_vif, virtual gpio_intf.MON gpio_mon_vif);
+        this.gpio_driv_vif = gpio_driv_vif;
         this.gpio_mon_vif = gpio_mon_vif;
         gpio_mail = new();
         gpio_mon_mail = new();
 
         gen = new(gpio_mail, ended_gen);
-        driv = new(gpio_vif, gpio_mail);
+        driv = new(gpio_driv_vif, gpio_mail);
         mon = new(gpio_mon_vif, gpio_mon_mail);
         scor = new(gpio_mon_mail);
     endfunction

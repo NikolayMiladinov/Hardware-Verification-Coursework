@@ -1,5 +1,5 @@
 connect:
-	export DISPLAY=localhost:15.0
+	export DISPLAY=localhost:29.0
 #source /usr/local/mentor/QUESTA-CORE-PRIME_10.7c/settings.sh
 #compile the necessary files
 comp-opt:

@@ -90,7 +90,7 @@ class driver;
         @gpio_vif.cb_DRIV;
 
         //Write value to output register, should appear on GPIOOUT next cycle
-        gpio_vif.cb_DRIV.PARITYSEL <= 'b0; //generate even parity
+        gpio_vif.cb_DRIV.PARITYSEL <= 1'b0; //generate even parity
         gpio_vif.cb_DRIV.HWDATA <= 'hBEEF;
 
         @gpio_vif.cb_DRIV;

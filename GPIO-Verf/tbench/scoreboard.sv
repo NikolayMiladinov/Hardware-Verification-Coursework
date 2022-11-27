@@ -11,7 +11,6 @@ class scoreboard;
         forever begin
             mon_trans trans;
             gpio_mon_mail.get(trans);
-            $display("------[SCOREBOARD CHECK]------");
             if(trans.io) begin
                 if(trans.GPIOOUT[15:0]!=trans.HWDATA[15:0])
                     $display("[Scoreboard] ERROR during output cycle: GPIOOUT = %0h, HWDATA = %0h", trans.GPIOOUT[15:0], trans.HWDATA[15:0]);

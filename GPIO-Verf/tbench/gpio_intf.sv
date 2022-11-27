@@ -15,14 +15,14 @@ interface gpio_intf
         output HWDATA; 
         output HWRITE; 
         output HSEL; 
-        output HREADY; 
+        inout HREADY; 
         input  HREADYOUT;
         input  HRDATA;
         
         output GPIOIN;
         input GPIOOUT;
         // Parity checking interface
-        output PARITYSEL;
+        inout PARITYSEL;
         input  PARITYERR;
 
     endclocking
