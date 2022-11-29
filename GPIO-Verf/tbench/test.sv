@@ -1,7 +1,7 @@
 program test(gpio_intf.DRIV intf_driv, gpio_intf.MON intf_mon);
   
     //declaring environment instance
-    Environment env;
+    environment env;
 
     initial begin
     //creating environment

@@ -17,11 +17,6 @@ module tb_top;
     //clock generation
     always #10 clk = ~clk;
 
-    //reset Generation
-    // initial begin
-    //     test.env.reset_test();
-    // end
-
     //creatinng instance of interface, inorder to connect DUT and testcase
     gpio_intf intf(clk);
 

@@ -1,4 +1,4 @@
-class Environment;
+class environment;
 
     generator gen;
     driver driv;
