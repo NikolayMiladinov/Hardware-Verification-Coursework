@@ -99,7 +99,7 @@ module AHBGPIO(
   begin
     if(!HRESETn)
     begin
-      gpio_dataout <= 16'h0000;
+      gpio_dataout <= 17'h0000;
     end
     else if ((gpio_dir == 16'h0001) & (last_HADDR[7:0] == gpio_data_addr) & last_HSEL & last_HWRITE & last_HTRANS[1])
       //Generate parity bit, PARITYSEL = 1 is for odd parity (XNOR), 0 for even parity (XOR)
@@ -111,7 +111,7 @@ module AHBGPIO(
   begin
     if(!HRESETn)
     begin
-      gpio_datain <= 16'h0000;
+      gpio_datain <= 17'h0000;
     end
     else if (gpio_dir == 16'h0000) begin
       //Check parity bit of GPIOIN, flag PARITYERR if incorrect
@@ -125,5 +125,63 @@ module AHBGPIO(
   assign HRDATA[31:17] = 15'h0000;
   assign HRDATA[16:0] = gpio_datain;  
   assign GPIOOUT = gpio_dataout;
+
+  assert (GPIOOUT == gpio_dataout) else $error("GPIOOUT is different from gpio_dataout")
+  assert (HRDATA[16:0] == gpio_datain) else $error("HRDATA is different from gpio_datain")
+
+  update_input: assert property(
+                                @(posedge HCLK) disable iff(!HRESETn)
+                                (gpio_dir == 16'h0000) |=> (gpio_datain == GPIOIN)
+                              );
+
+  update_output: assert property(
+                                @(posedge HCLK) disable iff(!HRESETn)
+                                ((gpio_dir == 16'h0001) & (last_HADDR[7:0] == 8'h00) 
+                                & last_HSEL & last_HWRITE & last_HTRANS[1]) |=> (gpio_dataout[15:0] == HWDATA[15:0])
+                              );
+
+  output_update_if: assert property(
+                                @(posedge HCLK) disable iff(!HRESETn)
+                                ($changed(gpio_dataout)) |-> 
+                                (($past(gpio_dir)==16'h0001) && ($past(last_HADDR[7:0])==8'h00) && 
+                                $past(last_HSEL) && $past(last_HWRITE) && $past(last_HTRANS[1]))
+                              );
+
+  update_direction: assert property(
+                                @(posedge HCLK) disable iff(!HRESETn)
+                                ((last_HADDR[7:0] == 8'h04) & last_HSEL & last_HWRITE & last_HTRANS[1]) 
+                                |=> (gpio_dir == HWDATA[15:0])
+                              );
+
+  direction_update_if: assert property(
+                                @(posedge HCLK) disable iff(!HRESETn)
+                                ($changed(gpio_dir)) |-> 
+                                (($past(last_HADDR[7:0])==8'h04) && $past(last_HSEL) && 
+                                $past(last_HWRITE) && $past(last_HTRANS[1]))
+                              );
+
+  parity_gen: assert property(
+                                @(posedge HCLK) disable iff(!HRESETn)
+                                ($changed(gpio_dataout)) |-> 
+                                (gpio_dataout[16]==($past(PARITYSEL) ? ~^gpio_dataout[15:0] : ^gpio_dataout[15:0]))
+                              );
+
+  parity_checking_true: assert property(
+                                @(posedge HCLK) disable iff(!HRESETn)
+                                (!PARITYERR && $past(gpio_dir)==16'h0000) |-> 
+                                ($past(GPIOIN[16])==($past(PARITYSEL) ? ~^$past(GPIOIN[15:0]) : ^$past(GPIOIN[15:0])))
+                              );
+
+  parity_checking_false: assert property(
+                                @(posedge HCLK) disable iff(!HRESETn)
+                                (PARITYERR) |-> 
+                                ($past(GPIOIN[16])!=($past(PARITYSEL) ? ~^$past(GPIOIN[15:0]) : ^$past(GPIOIN[15:0])))
+                              );
+
+  reset_property: assert property(
+                                @(posedge HCLK) 
+                                (!HRESETn) |=> (gpio_datain <= 17'h0000 && gpio_dataout <= 17'h0000 && 
+                                gpio_dir <= 16'h0000 && PARITYERR <= 1'b0)
+                              );
 
 endmodule
