@@ -62,7 +62,7 @@ interface gpio_intf
     //     }
     // endgroup
 
-
+    // Checks whether PARITYERR is (not) flagged correctly
     function bit gpio_in_parity_flag_check(input logic PARITYSEL, PARITYERR, input logic[16:0] GPIOIN)
         if (GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) begin
             return (PARITYERR==1'b1);
@@ -71,6 +71,7 @@ interface gpio_intf
         end
     endfunction
 
+    // Checks whether there is a parity error in GPIOIN
     function bit gpio_in_parity_error(input logic PARITYSEL, input logic[16:0] GPIOIN)
         if (GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) begin
             return 1'b1;
@@ -79,6 +80,7 @@ interface gpio_intf
         end
     endfunction
 
+    // Returns the parity bit of any input <= 32 bits wide
     function bit parity_bit(input logic[31:0] INPUT)
         return INPUT[16];
     endfunction
@@ -97,6 +99,7 @@ interface gpio_intf
             bins correct_flag = {1};
             illegal_bins incorrect_flag_error = {0};
         }
+        // Checks whether parity error was injected during a reset
         IN_PARITY: coverpoint gpio_in_parity_error(PARITYSEL, GPIOIN){
             bins no_err = {0};
             bins error = {1};
@@ -133,9 +136,9 @@ interface gpio_intf
     endgroup
 
     // Cover scenarios of HREADY, HTRANS, HWRITE, HSEL
-    covergroup command_signals
+    // covergroup command_signals
 
-    endgroup
+    // endgroup
 
     // Cover important cases when direction is input
     covergroup input_stage

@@ -39,30 +39,38 @@ class driver;
     task drive();
         forever begin
             transaction trans;
+            
+            gpio_mail.get(trans);
+            $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
 
-            if(gpio_vif.cb_DRIV.HREADY!=1'b1) begin
-                gpio_vif.cb_DRIV.HREADY <= 1'b1;
+            // first if HREADY needs to change because it needs an additional clock cycle
+            if(gpio_vif.cb_DRIV.HREADY!=trans.command_signals[0]) begin
+                gpio_vif.cb_DRIV.HREADY <= trans.command_signals[0];
                 @gpio_vif.cb_DRIV;
             end
 
-            gpio_mail.get(trans);
-            $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
             //start address phase
-            gpio_vif.cb_DRIV.HTRANS <= 'd2;
+            gpio_vif.cb_DRIV.HSEL <= trans.command_signals[1];
+            gpio_vif.cb_DRIV.HTRANS <= {trans.command_signals[2],1'b0};
             gpio_vif.cb_DRIV.HWRITE <= 'b1;
-            gpio_vif.cb_DRIV.HSEL <= 'b1;
-            gpio_vif.cb_DRIV.HADDR <= 32'h5300_0004; 
+
+            if(trans.inject_wrong_address[0]) gpio_vif.cb_DRIV.HADDR <= trans.HADDR_inject;
+            else gpio_vif.cb_DRIV.HADDR <= 32'h5300_0004; 
             @gpio_vif.cb_DRIV; 
 
             //write to direction register, direction determined by write_cycle variable
-            gpio_vif.cb_DRIV.HWDATA <= {31'b0, trans.write_cycle};
-            gpio_vif.cb_DRIV.HADDR <= 32'h53000000; //start data phase
+            if(trans.dir_inject) gpio_vif.cb_DRIV.HWDATA <= trans.HWDATA_dir_inject;
+            else gpio_vif.cb_DRIV.HWDATA <= {31'b0, trans.write_cycle};
+
+            if(trans.inject_wrong_address[1]) gpio_vif.cb_DRIV.HADDR <= trans.HADDR_inject;
+            else gpio_vif.cb_DRIV.HADDR <= 32'h5300_0000; //start data phase
+
             gpio_vif.cb_DRIV.PARITYSEL <= trans.PARITYSEL;
             if(trans.write_cycle == 1'b0) gpio_vif.cb_DRIV.HWRITE <= 'b0; //write signal can be low during data phase of input direction
             @gpio_vif.cb_DRIV;
             
             //transfer data
-            if(trans.write_cycle == 1'b1) gpio_vif.cb_DRIV.HWDATA <= {16'b0,trans.HWDATA};
+            if(trans.write_cycle == 1'b1) gpio_vif.cb_DRIV.HWDATA <= {16'b0,trans.HWDATA_data};
             else gpio_vif.cb_DRIV.GPIOIN <= trans.GPIOIN;
 
             $display("----------[DRIVER-END-OF-TRANSFER]----------");
