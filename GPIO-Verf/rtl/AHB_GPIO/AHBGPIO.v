@@ -122,12 +122,12 @@ module AHBGPIO(
       gpio_datain <= GPIOOUT;
   end
   
-  assign HRDATA[31:17] = 15'h0000;
-  assign HRDATA[16:0] = gpio_datain;  
+  assign HRDATA[31:16] = 16'h0000;
+  assign HRDATA[15:0] = gpio_datain[15:0];  
   assign GPIOOUT = gpio_dataout;
 
   assert (GPIOOUT == gpio_dataout) else $error("GPIOOUT is different from gpio_dataout")
-  assert (HRDATA[16:0] == gpio_datain) else $error("HRDATA is different from gpio_datain")
+  assert (HRDATA[15:0] == gpio_datain[15:0]) else $error("HRDATA is different from gpio_datain")
 
   update_input: assert property(
                                 @(posedge HCLK) disable iff(!HRESETn)

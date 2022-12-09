@@ -19,7 +19,9 @@ module tb_top;
 
     //creatinng instance of interface, inorder to connect DUT and testcase
     gpio_intf intf(clk);
-    intf.sample_coverage();
+    initial begin
+        intf.sample_coverage();    
+    end
 
     //DUT instance, interface signals are connected to the DUT ports
     AHBGPIO DUT(

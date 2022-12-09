@@ -34,7 +34,7 @@ class environment;
     task test();
         fork
             gen.gen();
-            driv.drive();
+            driv.drive(1);
             mon.run();
             scor.run();
         join_none

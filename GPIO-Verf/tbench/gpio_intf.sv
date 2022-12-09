@@ -52,8 +52,7 @@ interface gpio_intf
 
     // Always at clock edge, save last values of the following signals
     logic last_PARITYSEL;
-    logic [2*WIDTH-1:0] last_HADDR, last_HWDATA, last_HRDATA;
-    logic [WIDTH:0]     last_GPIOIN, last_GPIOOUT;
+    logic [WIDTH:0]     last_GPIOIN;
     // Cover reset in all situations
     // covergroup reset
     //     coverpoint HRESETn{
@@ -126,44 +125,25 @@ interface gpio_intf
             bins null = {0};
             bins one = {1};
         }
-        HRDATA: coverpoint parity_bit(HRDATA){
-            bins null = {0};
-            bins one = {1};
-        }
         cross_sel_out: cross PARITYSEL, GPIOOUT;
         cross_sel_in: cross PARITYSEL, GPIOIN;
-        cross_sel_in: cross PARITYSEL, HRDATA;
     endgroup
 
-    // Cover scenarios of HREADY, HTRANS, HWRITE, HSEL
-    // covergroup command_signals
-
-    // endgroup
-
-    // Cover important cases when direction is input
-    covergroup input_stage
+    covergroup gpioin
         coverpoint GPIOIN{
             bins one_par[10] = {'h10000:'h1FFFF};
             bins zero_par[10] = {'h00000:'h0FFFF};
             bins min = {0};
             bins max = {'h1FFFF};
         }
-        coverpoint HRDATA{
-            bins one_par[10] = {'h10000:'h1FFFF};
-            bins zero_par[10] = {'h00000:'h0FFFF};
-            bins min = {0};
-            bins max = {'h1FFFF};
-            illegal_bins zero_par[10] = {'h20000:'hFFFF_FFFF};
-        }
     endgroup
 
-    // Cover important cases when direction is output
-    covergroup output_stage
-        coverpoint HWDATA{
+    covergroup outputs
+        coverpoint HRDATA{
             bins valid[10] = {'h0000:'hFFFF};
-            bins unregistered[3] = {'h10000:'hFFFF_FFFF};
             bins min = {0};
             bins max = {'hFFFF};
+            illegal_bins invalid_hrdata = {'h10000:'hFFFF_FFFF};
         }
         coverpoint GPIOOUT{
             bins one_par[10] = {'h10000:'h1FFFF};
@@ -173,14 +153,33 @@ interface gpio_intf
         }
     endgroup
 
-    // Cover functionality of addressing, that the only functional addresses are 'h00 and 'h04
+    // Cover functionality of addressing, that the only functional addresses are 'h5300_0000 and 'h5300_0004
     // Only bottom 8 bits are used in rtl
-    covergroup addressing
+    covergroup haddr
         coverpoint HADDR{
-            bins dir_addr = {'h04[*2:4]};
-            bins data_addr = {'h00[*2:4]};
-            bins trans = {'h04 => 'h00 => 'h04 => 'h00};
-            bins others[10] = default;
+            bins dir_addr = {'h5300_0004[*2:4]};
+            bins data_addr = {'h5300_0000[*2:4]};
+            bins trans = {'h5300_0004 => 'h5300_0000 => 'h5300_0004 => 'h5300_0000};
+            bins others[10] = {'h5300_0000:'h53FF_FFFF};
+            illegal_bins invalid_gpio_addr = {0:'h52FF_FFFF, 'h5400_0000:'hFFFF_FFFF};
+        }
+    endgroup
+
+    covergroup hwdata
+        coverpoint HWDATA{
+            bins valid[10] = {'h0000:'hFFFF};
+            bins unregistered[3] = {'h10000:'hFFFF_FFFF};
+            bins min = {0};
+            bins max = {'hFFFF};
+        }
+    endgroup
+
+    logic sample_dir;
+    covergroup dir_reg
+        coverpoint HWDATA{
+            bins in_dir[10] = {0};
+            bins out_dir[10] = {1};
+            bins others[3] = default;
         }
     endgroup
 
@@ -189,37 +188,28 @@ interface gpio_intf
 
         parity_injection parity_inj = new();
         parity_gen_and_check parity_gc = new();
-        input_stage inp_stage = new();
-        output_stage outp_stage = new();
+        input_stage gpioin = new();
+        output_stage outputs = new();
         addressing addr = new();
+        hwdata hwdata = new();
+        dir_reg dir_reg = new();
 
         always @(posedge HCLK) begin
             parity_inj.sample();
             if(HRESETn) begin
-                if(GPIOOUT!=last_GPIOOUT || HWDATA!=last_HWDATA) begin
-                    outp_stage.sample();
-                end
-                if(GPIOIN!=last_GPIOIN || HRDATA!=last_HRDATA) begin
-                    inp_stage.sample();
-                end
-                if(HADDR!=last_HADDR) begin
-                    outp_stage.sample();
-                end
-                
-                if(GPIOOUT!=last_GPIOOUT || GPIOIN!=last_GPIOIN || HRDATA!=last_HRDATA) begin
-                    parity_gc.sample();
-                end
+                outputs.sample();
+                gpioin.sample();
+                parity_gc.sample();
+                if(HSEL) haddr.sample();
+                if((HADDR == 32'h5300_0004) & HSEL & HWRITE & HTRANS[1]) sample_dir <= 1'b1;
+                else sample_dir <= 1'b0;
 
+                if(sample_dir) dir_reg.sample();
             end else begin
 
             end
 
-            
-            last_GPIOOUT   <= GPIOOUT;
-            last_HWDATA    <= HWDATA;
             last_GPIOIN    <= GPIOIN;
-            last_HRDATA    <= HRDATA;
-            last_HADDR     <= HADDR;
             last_PARITYSEL <= PARITYSEL;
         end
 
