@@ -9,40 +9,44 @@ z2
 cModel Technology
 Z0 d/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf
 vAHBGPIO
-Z1 !s110 1669569035
+Z1 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+!s110 1670668525
 !i10b 1
-!s100 :V4LN6c3Pbf76>HGD8YVM1
-ICccP5@f8?8_CHGi7;z1T_1
+!s100 a2mI:08L;e`[mN1d6Eh;e2
+IILFdTAIS8_Z0azA?jY[Qa2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 AHBGPIO_sv_unit
+S1
 R0
-w1669470562
-8rtl/AHB_GPIO/AHBGPIO.v
-Frtl/AHB_GPIO/AHBGPIO.v
+w1670664195
+8rtl/AHB_GPIO/AHBGPIO.sv
+Frtl/AHB_GPIO/AHBGPIO.sv
 L0 38
 Z3 OL;L;10.7c;67
 r1
 !s85 0
 31
-Z4 !s108 1669569035.000000
-Z5 !s107 tbench/test.sv|tbench/env.sv|tbench/scoreboard.sv|tbench/monitor.sv|tbench/driver.sv|tbench/gpio_intf.sv|tbench/generator.sv|tbench/transaction.sv|rtl/AHB_GPIO/AHBGPIO.v|tbench/tb_top.sv|
-Z6 !s90 -work|work|+acc=blnr|-noincr|-timescale|1ns/1ps|tbench/tb_top.sv|rtl/AHB_GPIO/AHBGPIO.v|
+Z4 !s108 1670668525.000000
+Z5 !s107 tbench/test.sv|tbench/env.sv|tbench/scoreboard.sv|tbench/monitor.sv|tbench/driver.sv|tbench/gpio_intf.sv|tbench/generator.sv|tbench/transaction.sv|rtl/AHB_GPIO/AHBGPIO.sv|tbench/tb_top.sv|
+Z6 !s90 -work|work|+cover|+fcover|+acc=blnr|-noincr|-timescale|1ns/1ps|tbench/tb_top.sv|rtl/AHB_GPIO/AHBGPIO.sv|
 !i113 0
-Z7 o-work work +acc=blnr -timescale 1ns/1ps -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z8 tCvgOpt 0
+Z7 !s102 +cover
+Z8 o-work work +cover +fcover +acc=blnr -timescale 1ns/1ps -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 tCvgOpt 0
 n@a@h@b@g@p@i@o
 Ygpio_intf
-Z9 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-Z10 DXx4 work 14 tb_top_sv_unit 0 22 hRSmU]d1f<3HdUjaLe4CJ0
+R1
+Z10 DXx4 work 14 tb_top_sv_unit 0 22 ^0Rl4XSj9C^VHQHMcib4h0
 R2
 r1
 !s85 0
 !i10b 1
-!s100 60kBWjajFL`OL`d`?4A]E1
-Iz<jNCKl?jDfTg_QDF0SiQ3
+!s100 jMcKee<BhIm_TF1@g8Yz01
+I^Q;VMLPfS^0[YbT8hfFel0
 Z11 !s105 tb_top_sv_unit
 S1
 R0
-w1669564627
+w1670611330
 8tbench/gpio_intf.sv
 Z12 Ftbench/gpio_intf.sv
 L0 1
@@ -54,19 +58,20 @@ R6
 !i113 0
 R7
 R8
-vtb_top
 R9
+vtb_top
+R1
 R10
 R2
 r1
 !s85 0
 !i10b 1
-!s100 TS5l4mPcQAM;AamCj1`_I3
-I`1d9;:_@2TU0H0R4]6GN:3
+!s100 _TTF[MUI>a<jMcjHc:eKc1
+ISab<LB_OdPQQ3cE6NVYdN3
 R11
 S1
 R0
-w1669564134
+w1670597932
 Z13 8tbench/tb_top.sv
 Z14 Ftbench/tb_top.sv
 L0 12
@@ -78,19 +83,20 @@ R6
 !i113 0
 R7
 R8
+R9
 Xtb_top_sv_unit
 !s115 gpio_intf
-R9
-VhRSmU]d1f<3HdUjaLe4CJ0
+R1
+V^0Rl4XSj9C^VHQHMcib4h0
 r1
 !s85 0
 !i10b 1
-!s100 9dUI?AzE:>Kh8=4=3O5Ec1
-IhRSmU]d1f<3HdUjaLe4CJ0
+!s100 7WFUZ=l9jGdPH]99>h`gX0
+I^0Rl4XSj9C^VHQHMcib4h0
 !i103 1
 S1
 R0
-w1669569207
+w1670668212
 R13
 R14
 Ftbench/transaction.sv
@@ -110,19 +116,20 @@ R6
 !i113 0
 R7
 R8
-4test
 R9
+4test
+R1
 R10
 R2
 r1
 !s85 0
 !i10b 1
-!s100 2725SFM`6^g;kJ8WiP6z[1
-ILIc<<3g?L]mTRRRB10MHC0
+!s100 MVN98T5BGMzk79h`:mK;i2
+IK9R>ATG2HE@eA2S8Tg4^;2
 R11
 S1
 R0
-w1669564118
+w1670595816
 8tbench/test.sv
 R15
 L0 1
@@ -134,11 +141,12 @@ R6
 !i113 0
 R7
 R8
+R9
 Twork_opt
-R1
-V;j:SlLTB]O3c_=M7AmbRf1
+!s110 1670668526
+Vh1AR=kV;0kzO4GFD:?RB73
 04 6 4 work tb_top fast 0
 o-work work
-R8
+R9
 nwork_opt
 OL;O;10.7c;67

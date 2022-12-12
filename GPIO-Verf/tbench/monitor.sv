@@ -17,7 +17,7 @@ class monitor;
     localparam WIDTH = 16;
     logic last_HWRITE, last_HSEL, last_PARITYSEL, last_PARITYERR;
     logic [2*WIDTH-1:0] last_HADDR, last_HWDATA, last_HRDATA;
-    logic [WIDTH-1:0] cur_gpio_dir;
+    logic [WIDTH-1:0] last_gpio_dir, cur_gpio_dir;
     logic [WIDTH:0] last_GPIOIN, last_GPIOOUT;
     logic [1:0] last_HTRANS;
 
@@ -42,6 +42,7 @@ class monitor;
                 last_GPIOOUT   <= 'b0;
                 last_HRDATA    <= 'b0;
                 last_PARITYERR <= 'b0;
+                last_gpio_dir  <= 'b0;
 
                 state_sample<= 'b0; // when 0, checks whether it will need to sample on next clock cycle
                 io          <= 'b0; // used to track whether to sample input or output
@@ -64,9 +65,12 @@ class monitor;
                         else if((cur_gpio_dir=='b1) & (last_HADDR[7:0] == 'b0) & last_HSEL & last_HWRITE & last_HTRANS[1]) begin 
                             io <= 1'b1;
                             state_sample <= 1'b1;
-                        end else if(last_GPIOOUT!=gpio_vif.cb_MON.GPIOOUT || last_HRDATA!=gpio_vif.cb_MON.HRDATA || last_PARITYERR!=gpio_vif.cb_MON.PARITYERR) begin
+                        end else if(last_GPIOOUT!=gpio_vif.cb_MON.GPIOOUT || last_PARITYERR!=gpio_vif.cb_MON.PARITYERR) begin
                             sample(1);
-                            $display("[Monitor] Unexpected change in output");
+                            $display("[Monitor] Unexpected change in GPIOOUT or parityerr");
+                        end else if(last_HRDATA!=gpio_vif.cb_MON.HRDATA && last_gpio_dir==cur_gpio_dir && gpio_vif.cb_MON.HRDATA[15:0]!=last_GPIOOUT[15:0]) begin
+                            sample(1);
+                            $display("[Monitor] Unexpected change in HRDATA");
                         end
                     1: begin 
                         sample(0);
@@ -86,6 +90,7 @@ class monitor;
             last_GPIOOUT <= gpio_vif.cb_MON.GPIOOUT;
             last_PARITYSEL <= gpio_vif.cb_MON.PARITYSEL;
             last_PARITYERR <= gpio_vif.cb_MON.PARITYERR;
+            last_gpio_dir <= cur_gpio_dir;
 
         end end 
     endtask
@@ -97,11 +102,11 @@ class monitor;
         if(io) begin
             trans.HWDATA = last_HWDATA;
             trans.GPIOOUT = gpio_vif.cb_MON.GPIOOUT;
-            trans.PARITYSEL = last_PARITYSEL;
         end else begin 
             trans.HRDATA = gpio_vif.cb_MON.HRDATA;
             trans.GPIOIN = last_GPIOIN;
             trans.PARITYERR = gpio_vif.cb_MON.PARITYERR;
+            trans.PARITYSEL = last_PARITYSEL;
         end
         gpio_mon_mail.put(trans);
     endtask

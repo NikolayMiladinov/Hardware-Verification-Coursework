@@ -42,7 +42,8 @@ class environment;
 
     task wait_test_end();
         wait(gen.ended_gen.triggered);
-        wait(gen.trans_count == driv.no_transactions); 
+        wait(gen.trans_count == driv.no_transactions);
+        $stop;
     endtask
 
     task run_reset();

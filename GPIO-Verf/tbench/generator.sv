@@ -1,7 +1,7 @@
 class generator;
 
     rand transaction trans;
-
+    transaction trans_copy;
     //declaring mailbox
     mailbox gpio_mail;
 
@@ -18,11 +18,12 @@ class generator;
     endfunction
 
     task gen();
+        trans = new();
 
         repeat(trans_count) begin
-            trans = new();
-            if( !trans.randomize() ) $fatal("Gen:: trans randomization failed");
-            gpio_mail.put(trans);
+            assert (trans.randomize()) else $fatal("Gen:: trans randomization failed");
+            trans_copy = trans.copy();
+            gpio_mail.put(trans_copy);
         end
         -> ended_gen;
     endtask
