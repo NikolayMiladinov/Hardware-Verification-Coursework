@@ -1,5 +1,5 @@
 log -r /*
-run 6000ns
+run -all
 wave zoom out
 wave zoom out
 wave zoom out

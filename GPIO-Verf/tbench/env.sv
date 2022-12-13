@@ -52,12 +52,14 @@ class environment;
     task wait_test_end();
         wait(gen.ended_gen.triggered);
         wait(gen.trans_count == driv.no_transactions);
+        mon.print_error();
+        scor.print_error();
         $stop;
     endtask
 
-    task run_reset();
+    task run_reset(int drive_type);
         reset_test();
-        test();
+        test(drive_type);
         wait_test_end();
     endtask
 

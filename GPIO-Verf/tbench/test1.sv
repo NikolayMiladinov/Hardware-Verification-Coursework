@@ -1,4 +1,4 @@
-program test(gpio_intf.DRIV intf_driv, gpio_intf.MON intf_mon);
+program test1(gpio_intf.DRIV intf_driv, gpio_intf.MON intf_mon);
   
     //declaring environment instance
     environment env;
@@ -11,7 +11,7 @@ program test(gpio_intf.DRIV intf_driv, gpio_intf.MON intf_mon);
     env.gen.trans_count = 100;
     env.reset_test();
     env.initial_check();
-    
+    env.reset_test();
     env.run(1);
     end
 endprogram

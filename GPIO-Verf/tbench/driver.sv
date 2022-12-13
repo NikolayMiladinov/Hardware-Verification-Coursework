@@ -5,6 +5,7 @@ class driver;
 
     //used to count the number of transactions
     int no_transactions = 1;
+    logic driver_rstn = 1'b1;
 
     function new(virtual gpio_intf.DRIV gpio_vif, mailbox gpio_mail);
         this.gpio_vif = gpio_vif;
@@ -16,8 +17,9 @@ class driver;
     task reset(int n=2);
 
         gpio_vif.HRESETn = 0; //assert reset
+        driver_rstn = 1'b0;
 
-        $display("--------- [DRIVER] Reset Started ---------");
+        $display("--------- [DRIVER] Reset Started --------- at %0t", $time);
         gpio_vif.cb_DRIV.HTRANS <= 'b0;
         gpio_vif.cb_DRIV.HWRITE <= 'b0;
         gpio_vif.cb_DRIV.HSEL <= 'b1;
@@ -26,30 +28,41 @@ class driver;
         gpio_vif.cb_DRIV.HWDATA <= 'b0;
         gpio_vif.cb_DRIV.GPIOIN <= 'b0;
         gpio_vif.cb_DRIV.PARITYSEL <= 'b0;
-
+        @gpio_vif.cb_DRIV;
+        driver_rstn = 1'b1;
+        
+        $display("--------- [DRIVER] Reset driver end --------- at %0t", $time);
         //hold reset for n cycles
-        repeat (n) @gpio_vif.cb_DRIV;
-
+        repeat (n-1) @gpio_vif.cb_DRIV;
+        #1
         gpio_vif.HRESETn = 1; //deassert reset
-        $display("--------- [DRIVER] Reset Ended ---------");
+        $display("--------- [DRIVER] Reset Ended --------- at %0t", $time);
     endtask
 
     task random_reset();
         int rand_delay;
         int reset_cycles;
         forever begin
-            std::randomize(rand_delay, reset_cycles) with {
+            assert (std::randomize(rand_delay, reset_cycles) with {
                 rand_delay < 500;
                 rand_delay > 20;
                 rand_delay dist {[0:100]:/45, [101:200]:/30, [201:300]:/20, [301:500]:/10};
                 reset_cycles < 16;
                 reset_cycles > 1;
                 reset_cycles dist {[1:5]:/45, [6:8]:/30, [9:12]:/20, [13:15]:/10};
-            };
-            $display("[Reset in %0d s", rand_delay);
+            }) else $fatal("Driver:: reset randomization failed");
+            // std::randomize(rand_delay, reset_cycles) with {
+            //     rand_delay < 500;
+            //     rand_delay > 20;
+            //     rand_delay dist {[0:100]:/45, [101:200]:/30, [201:300]:/20, [301:500]:/10};
+            //     reset_cycles < 16;
+            //     reset_cycles > 1;
+            //     reset_cycles dist {[1:5]:/45, [6:8]:/30, [9:12]:/20, [13:15]:/10};
+            // };
+            $display("[Reset in %0d ns", rand_delay);
             $display("[Reset for %0d cycles", reset_cycles);
             # (rand_delay*1ns);
-            reset(n);
+            reset(reset_cycles);
         end
     endtask
 
@@ -71,43 +84,63 @@ class driver;
             
             gpio_mail.get(trans);
             $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
-            if(trans.inject_parity_error && !trans.write_cycle) $display("[Driver] Parity error injection in transaction %0d, GPIOIN: %0h", no_transactions, trans.GPIOIN);
-            // first if HREADY needs to change because it needs an additional clock cycle
-            if(gpio_vif.cb_DRIV.HREADY!=trans.command_signals[0]) begin
-                gpio_vif.cb_DRIV.HREADY <= trans.command_signals[0];
-                @gpio_vif.cb_DRIV;
+
+            if(driver_rstn) begin
+                if(trans.inject_parity_error && !trans.write_cycle) $display("[Driver] Parity error injection in transaction %0d, GPIOIN: %0h", no_transactions, trans.GPIOIN);
+                // first if HREADY needs to change because it needs an additional clock cycle
+                if(gpio_vif.cb_DRIV.HREADY!=trans.command_signals[0]) begin
+                    gpio_vif.cb_DRIV.HREADY <= trans.command_signals[0];
+                    @gpio_vif.cb_DRIV;
+                end
+            end else begin
+                $display("[DRIVER] Driver is being reset");
             end
 
-            //start address phase
-            gpio_vif.cb_DRIV.HSEL <= trans.command_signals[1];
-            gpio_vif.cb_DRIV.HTRANS <= {trans.command_signals[2],1'b0};
-            gpio_vif.cb_DRIV.HWRITE <= 'b1;
+            if(driver_rstn) begin
+                //start address phase
+                gpio_vif.cb_DRIV.HSEL <= trans.command_signals[1];
+                gpio_vif.cb_DRIV.HTRANS <= {trans.command_signals[2],1'b0};
+                gpio_vif.cb_DRIV.HWRITE <= 'b1;
 
-            if(trans.inject_wrong_address[0]) begin
-                gpio_vif.cb_DRIV.HADDR <= trans.HADDR_inject;
-                $display("[Driver] Wrong HADDR injection in address phase: transaction %0d", no_transactions);
-            end else gpio_vif.cb_DRIV.HADDR <= 32'h5300_0004; 
+                if(trans.inject_wrong_address[0]) begin
+                    gpio_vif.cb_DRIV.HADDR <= trans.HADDR_inject;
+                    $display("[Driver] Wrong HADDR injection in address phase: transaction %0d", no_transactions);
+                end else gpio_vif.cb_DRIV.HADDR <= 32'h5300_0004; 
+            end else begin
+                $display("[DRIVER] Driver is being reset");
+            end
+            
             @gpio_vif.cb_DRIV; 
 
-            //write to direction register, direction determined by write_cycle variable
-            if(trans.dir_inject) begin
-                gpio_vif.cb_DRIV.HWDATA <= trans.HWDATA_dir_inject;
-                $display("[Driver] Wrong direction injection in transaction %0d", no_transactions);
-            end else gpio_vif.cb_DRIV.HWDATA <= {31'b0, trans.write_cycle};
+            if(driver_rstn) begin
+                //write to direction register, direction determined by write_cycle variable
+                if(trans.dir_inject) begin
+                    gpio_vif.cb_DRIV.HWDATA <= trans.HWDATA_dir_inject;
+                    $display("[Driver] Wrong direction injection in transaction %0d", no_transactions);
+                end else gpio_vif.cb_DRIV.HWDATA <= {31'b0, trans.write_cycle};
 
-            if(trans.inject_wrong_address[1]) begin 
-                gpio_vif.cb_DRIV.HADDR <= trans.HADDR_inject;
-                $display("[Driver] Wrong HADDR injection in data phase: transaction %0d", no_transactions);
-            end else gpio_vif.cb_DRIV.HADDR <= 32'h5300_0000; //start data phase
+                if(trans.inject_wrong_address[1]) begin 
+                    gpio_vif.cb_DRIV.HADDR <= trans.HADDR_inject;
+                    $display("[Driver] Wrong HADDR injection in data phase: transaction %0d", no_transactions);
+                end else gpio_vif.cb_DRIV.HADDR <= 32'h5300_0000; //start data phase
 
-            if(trans.write_cycle == 1'b0) gpio_vif.cb_DRIV.HWRITE <= 'b0; //write signal can be low during data phase of input direction
+                if(trans.write_cycle == 1'b0) gpio_vif.cb_DRIV.HWRITE <= 'b0; //write signal can be low during data phase of input direction
+            end else begin
+                $display("[DRIVER] Driver is being reset");
+            end
+
             @gpio_vif.cb_DRIV;
             
-            //transfer data
-            if(trans.write_cycle == 1'b1) gpio_vif.cb_DRIV.HWDATA <= {16'b0,trans.HWDATA_data};
-            else begin 
-                gpio_vif.cb_DRIV.PARITYSEL <= trans.PARITYSEL;
-                gpio_vif.cb_DRIV.GPIOIN <= trans.GPIOIN;
+
+            if(driver_rstn) begin
+                //transfer data
+                if(trans.write_cycle == 1'b1) gpio_vif.cb_DRIV.HWDATA <= {16'b0,trans.HWDATA_data};
+                else begin 
+                    gpio_vif.cb_DRIV.PARITYSEL <= trans.PARITYSEL;
+                    gpio_vif.cb_DRIV.GPIOIN <= trans.GPIOIN;
+                end
+            end else begin
+                $display("[DRIVER] Driver is being reset");
             end
 
             $display("----------[DRIVER-END-OF-TRANSFER]----------");
@@ -229,7 +262,7 @@ class driver;
             $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
 
             // initial setup
-            if(no_transactions==0) begin
+            if(no_transactions==1) begin
                 gpio_vif.cb_DRIV.HREADY <= 1'b1;
                 @gpio_vif.cb_DRIV;
                 gpio_vif.cb_DRIV.HSEL <= 1'b1;

@@ -13,42 +13,62 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# vsim -coverage -voptargs="+cover=bcefst" -onfinish stop work_opt -gui 
-# Start time: 10:35:52 on Dec 10,2022
+# vsim -onfinish stop work_opt -gui 
+# Start time: 20:55:44 on Dec 13,2022
 # Loading sv_std.std
 # Loading work.tb_top_sv_unit(fast)
 # Loading work.tb_top(fast)
 # Loading work.gpio_intf(fast)
 # Loading work.AHBGPIO(fast)
-# Loading work.test(fast)
+# Loading work.test5(fast)
 # Loading work.gpio_intf(fast)
 do setup.do
-# --------- [DRIVER] Reset Started ---------
-# --------- [DRIVER] Reset Ended ---------
+# --------- [DRIVER] Reset Started --------- at 0
+# --------- [DRIVER] Reset driver end --------- at 10000
+# --------- [DRIVER] Reset Ended --------- at 31000
 # ----------[DRIVER-INITIAL-CHECK-START]----------
-# Initial check of GPIO write successful. GPIOOUT = 1beef, HRDATA = beef, expected result is 'hBEEF
-# Initial check of GPIO read successful. HRDATA = fab, expected result is 32'hFAB
+# ** Error: (vsim-8565) Illegal state bin was hit at value=0. The bin counter for the illegal bin '\/tb_top/intf/parity_inj .FLAG_CHECK.incorrect_flag_error' is 1.
+#    Time: 130 ns  Iteration: 1  Instance: /tb_top/intf
+# Initial check of GPIO write successful. GPIOOUT = beef, HRDATA = beef, expected result is 'hBEEF
+# Initial check of GPIO read successful. HRDATA = ffff, expected result is 32'hFFFF
 # ----------[DRIVER-INITIAL-CHECK-END]----------
+# --------- [DRIVER] Reset Started --------- at 250000
+# --------- [DRIVER] Reset driver end --------- at 270000
+# --------- [DRIVER] Reset Ended --------- at 291000
 # [Transaction] Parity error injection: GPIOIN = 1b3f3, transaction = 20
 # [Transaction] Parity error injection: GPIOIN = 5e96, transaction = 31
 # [Transaction] Parity error injection: GPIOIN = 1b882, transaction = 72
 # --------- [DRIVER-TRANSFER: 1] ---------
+# [Reset in 69 ns
+# [Reset for 5 cycles
 # ------[MONITOR STARTED]------
 # ------[SCOREBOARD STARTED]------
 # [Driver] Wrong direction injection in transaction 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 2] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 2
+# --------- [DRIVER] Reset Started --------- at 360000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 370000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 3] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 4] ---------
+# --------- [DRIVER] Reset Ended --------- at 451000
+# [Reset in 110 ns
+# [Reset for 15 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 5] ---------
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 1e14f, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: 5f54, dir: 1, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 6] ---------
+# [MONITOR] Going to sample output cycle in state 0, HWDATA: de4a, dir: 1, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 7] ---------
+# --------- [DRIVER] Reset Started --------- at 561000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 570000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 8] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -61,16 +81,29 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 12] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 13] ---------
+# --------- [DRIVER] Reset Ended --------- at 851000
+# [Reset in 168 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 14] ---------
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: f430, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: d6d8, dir: 1, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 15] ---------
+# [MONITOR] Going to sample output cycle in state 0, HWDATA: dec9, dir: 1, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 16] ---------
+# [MONITOR] Going to sample output cycle in state 0, HWDATA: b998, dir: 1, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 17] ---------
+# [MONITOR] Going to sample output cycle in state 0, HWDATA: 58ff, dir: 1, last_dir: 1
+# --------- [DRIVER] Reset Started --------- at 1019000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 18] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 1030000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 19] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -78,20 +111,38 @@ do setup.do
 # [Driver] Parity error injection in transaction 20, GPIOIN: 1b3f3
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 21] ---------
+# --------- [DRIVER] Reset Ended --------- at 1151000
+# [Reset in 281 ns
+# [Reset for 7 cycles
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 1b3f3, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 22] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 1b3f3, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: a8f7, dir: 1, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 23] ---------
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 13a97, dir: 0, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 24] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 13a97, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: b969, dir: 1, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 25] ---------
+# [MONITOR] Going to sample output cycle in state 0, HWDATA: c8f, dir: 1, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 26] ---------
+# [MONITOR] Going to sample output cycle in state 0, HWDATA: 5bc7, dir: 1, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 27] ---------
+# [MONITOR] Going to sample output cycle in state 0, HWDATA: a5ad, dir: 1, last_dir: 1
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: a5ad, dir: 1, last_dir: 1
+# --------- [DRIVER] Reset Started --------- at 1432000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 28] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 1450000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 29] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -100,25 +151,44 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 31] ---------
 # [Driver] Parity error injection in transaction 31, GPIOIN: 5e96
 # [Driver] Wrong HADDR injection in address phase: transaction 31
+# --------- [DRIVER] Reset Ended --------- at 1571000
+# [Reset in 89 ns
+# [Reset for 7 cycles
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 639a, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 32] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 639a, dir: 0, last_dir: 0
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 5e96, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 33] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 5e96, dir: 0, last_dir: 0
+# --------- [DRIVER] Reset Started --------- at 1660000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 1670000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 34] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 35] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 36] ---------
+# --------- [DRIVER] Reset Ended --------- at 1791000
+# [Reset in 155 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 37] ---------
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 0, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: c528, dir: 1, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 38] ---------
+# [MONITOR] Going to sample output cycle in state 0, HWDATA: 209b, dir: 1, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 39] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 39
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 40] ---------
+# --------- [DRIVER] Reset Started --------- at 1946000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 1950000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 41] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 41
@@ -127,58 +197,112 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 42] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 43] ---------
+# --------- [DRIVER] Reset Ended --------- at 2071000
+# [Reset in 87 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 44] ---------
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 15f99, dir: 0, last_dir: 0
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 67ae, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 45] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 67ae, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: 4152, dir: 1, last_dir: 0
+# --------- [DRIVER] Reset Started --------- at 2158000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 46] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 2170000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 47] ---------
+# --------- [DRIVER] Reset Ended --------- at 2211000
+# [Reset in 201 ns
+# [Reset for 4 cycles
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: eb08, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 48] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: eb08, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: 1cd5, dir: 1, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 49] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 49
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 545b, dir: 0, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 50] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 545b, dir: 0, last_dir: 0
 # [Driver] Wrong HADDR injection in data phase: transaction 50
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 3972, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 51] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 3972, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 52] ---------
-# [Driver] Wrong HADDR injection in data phase: transaction 52
+# --------- [DRIVER] Reset Started --------- at 2412000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 2430000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 53] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 54] ---------
+# --------- [DRIVER] Reset Ended --------- at 2491000
+# [Reset in 49 ns
+# [Reset for 3 cycles
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 63b5, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 55] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 63b5, dir: 0, last_dir: 0
+# --------- [DRIVER] Reset Started --------- at 2540000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 2550000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 56] ---------
+# --------- [DRIVER] Reset Ended --------- at 2591000
+# [Reset in 406 ns
+# [Reset for 10 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 57] ---------
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 0, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: 0, dir: 1, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 58] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 59] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 59
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: a2f6, dir: 0, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 60] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: a2f6, dir: 0, last_dir: 0
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 13be5, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 61] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 13be5, dir: 0, last_dir: 0
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: b081, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 62] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: b081, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: 6d2a, dir: 1, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 63] ---------
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 10e8f, dir: 0, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 64] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 10e8f, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: 93c3, dir: 1, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 65] ---------
+# [MONITOR] Going to sample output cycle in state 0, HWDATA: f45a, dir: 1, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 66] ---------
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: f54e, dir: 0, last_dir: 1
+# --------- [DRIVER] Reset Started --------- at 2997000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 67] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 3010000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 68] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 68
@@ -189,57 +313,108 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 71] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 71
+# --------- [DRIVER] Reset Ended --------- at 3191000
+# [Reset in 412 ns
+# [Reset for 6 cycles
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 82b7, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 72] ---------
 # [Driver] Parity error injection in transaction 72, GPIOIN: 1b882
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 82b7, dir: 0, last_dir: 0
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 82b7, dir: 0, last_dir: 0
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 82b7, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 73] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 73
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 82b7, dir: 0, last_dir: 0
 # [Driver] Wrong direction injection in transaction 73
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 1b882, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 74] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 74
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 1b882, dir: 0, last_dir: 0
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 1b882, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 75] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 1b882, dir: 0, last_dir: 0
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 1b882, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 76] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 1b882, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: 6f52, dir: 1, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 77] ---------
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 18026, dir: 0, last_dir: 1
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 18026, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 78] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 18026, dir: 0, last_dir: 0
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 18026, dir: 0, last_dir: 0
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 18026, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 79] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 18026, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: 240c, dir: 1, last_dir: 0
+# --------- [DRIVER] Reset Started --------- at 3603000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 80] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 3610000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 81] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 82] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 82
+# --------- [DRIVER] Reset Ended --------- at 3711000
+# [Reset in 399 ns
+# [Reset for 9 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 83] ---------
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 0, dir: 0, last_dir: 0
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 0, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 84] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 0, dir: 0, last_dir: 0
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 6514, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 85] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 6514, dir: 0, last_dir: 0
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 909b, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 86] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 86
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 909b, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: 82f8, dir: 1, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 87] ---------
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: 1, dir: 1, last_dir: 1
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: 2933, dir: 1, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 88] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 88
+# [MONITOR] Going to sample output cycle in state 0, HWDATA: 60fa, dir: 1, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 89] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 90] ---------
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 3508, dir: 0, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 91] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 3508, dir: 0, last_dir: 0
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: c52e, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 92] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: c52e, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: 91b6, dir: 1, last_dir: 0
+# --------- [DRIVER] Reset Started --------- at 4110000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 93] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 4130000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 94] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -248,20 +423,40 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 96] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 97] ---------
+# --------- [DRIVER] Reset Ended --------- at 4291000
+# [Reset in 280 ns
+# [Reset for 4 cycles
+# [MONITOR] Going to sample input cycle in state 0, GPIOIN: 1f37, dir: 0, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 98] ---------
+# [MONITOR] Going to sample input cycle in state 1, GPIOIN: 1f37, dir: 0, last_dir: 0
+# [MONITOR] Going to sample output cycle in state 1, HWDATA: 18cc, dir: 1, last_dir: 0
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 99] ---------
+# [MONITOR] Going to sample output cycle in state 0, HWDATA: 18fd, dir: 1, last_dir: 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 100] ---------
-# ** Note: $stop    : tbench/env.sv(46)
-#    Time: 4450 ns  Iteration: 2  Instance: /tb_top/t1
-# Break in Task tb_top_sv_unit/environment::wait_test_end at tbench/env.sv line 46
-# ** Error: could not find wave window
-# Error in macro ./setup.do line 3
-# could not find wave window
+# [MONITOR] Error count: 0
+# [SCOREBOARD] Error count: 0
+# ** Note: $stop    : tbench/env.sv(57)
+#    Time: 4410 ns  Iteration: 2  Instance: /tb_top/t5
+# Break in Task tb_top_sv_unit/environment::wait_test_end at tbench/env.sv line 57
+# 4408550 ps
+# 4410550 ps
+# 4407550 ps
+# 4411550 ps
+# 4405550 ps
+# 4413550 ps
+# 4401550 ps
+# 4417550 ps
+# 4393550 ps
+# 4425550 ps
+# 4377550 ps
+# 4441550 ps
+# 4345550 ps
+# 4473550 ps
+# ** Error: (vish-4014) No objects found matching 'tb_top/t5/env/mon/*'.
+# Error in macro ./setup.do line 11
+# (vish-4014) No objects found matching 'tb_top/t5/env/mon/*'.
 #     while executing
-# "wave::zoomout {*}$args"
-#     (procedure "::wave::zoom::out" line 2)
-#     invoked from within
-# "wave zoom out"
+# "add wave tb_top/DUT/*"

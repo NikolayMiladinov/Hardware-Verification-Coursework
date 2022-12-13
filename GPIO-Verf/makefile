@@ -1,5 +1,5 @@
 connect:
-	export DISPLAY=localhost:12.0
+	export DISPLAY=localhost:22.0
 #source /usr/local/mentor/QUESTA-CORE-PRIME_10.7c/settings.sh
 #compile the necessary files
 comp-opt:
@@ -9,7 +9,8 @@ comp-opt:
 
 #If no error open QuestaSim
 open-sim:
-	vsim -coverage -voptargs="+cover=bcefst" -onfinish stop work_opt -gui
+# vsim -coverage -voptargs="+cover=bcefst" -onfinish stop work_opt -gui
+	vsim -onfinish stop work_opt -gui
 
 #Setup the simulation
 setup-sim:

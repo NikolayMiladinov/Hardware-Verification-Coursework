@@ -1,7 +1,7 @@
 clear -all
 analyze -clear
 analyze -sv rtl/AHB_GPIO/AHBGPIO.sv
-elaborate -bbox_gpio 64 -top AHBGPIO
+elaborate -top AHBGPIO
 
 clock HCLK
 reset -expression !(HRESETn)

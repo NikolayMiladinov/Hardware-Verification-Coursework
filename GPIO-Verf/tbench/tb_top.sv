@@ -1,5 +1,3 @@
-// `include "my_pkg.sv"
-// import my_pkg::*;
 `include "transaction.sv"
 `include "generator.sv"
 `include "gpio_intf.sv"
@@ -7,7 +5,11 @@
 `include "monitor.sv"
 `include "scoreboard.sv"
 `include "env.sv"
-`include "test.sv"
+`include "test1.sv"
+`include "test2.sv"
+`include "test3.sv"
+`include "test4.sv"
+`include "test5.sv"
 
 module tb_top;
   
@@ -49,6 +51,7 @@ module tb_top;
     );
 
     //Testcase instance, interface handle is passed to test as an argument
-    test t1(intf.DRIV, intf.MON);
+    // test1 t1(intf.DRIV, intf.MON);
+    test5 t5(intf.DRIV, intf.MON);
   
 endmodule
