@@ -31,10 +31,19 @@ class environment;
         driv.initial_check();
     endtask
 
-    task test();
+    task test(int drive_type);
         fork
             gen.gen();
-            driv.drive(1);
+            driv.drive(drive_type, 1'b0);
+            mon.run();
+            scor.run();
+        join_none
+    endtask
+
+    task test_rand_reset(int drive_type);
+        fork
+            gen.gen();
+            driv.drive(drive_type, 1'b1);
             mon.run();
             scor.run();
         join_none
@@ -52,8 +61,13 @@ class environment;
         wait_test_end();
     endtask
 
-    task run();
-        test();
+    task run(int drive_type);
+        test(drive_type);
+        wait_test_end();
+    endtask
+
+    task run_rst_rand(int drive_type);
+        test_rand_reset(drive_type);
         wait_test_end();
     endtask
 

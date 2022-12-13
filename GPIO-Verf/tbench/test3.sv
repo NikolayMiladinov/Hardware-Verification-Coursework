@@ -12,6 +12,6 @@ program test(gpio_intf.DRIV intf_driv, gpio_intf.MON intf_mon);
     env.reset_test();
     env.initial_check();
     
-    env.run();
+    env.run(3);
     end
 endprogram

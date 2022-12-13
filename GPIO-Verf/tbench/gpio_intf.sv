@@ -46,8 +46,8 @@ interface gpio_intf
 
     endclocking
 
-    modport DRIV (clocking cb_DRIV, input HCLK, HRESETn, output GPIOIN);
-    modport MON (clocking cb_MON, input HCLK, HRESETn, GPIOIN);
+    modport DRIV (clocking cb_DRIV, input HCLK);
+    modport MON (clocking cb_MON, input HCLK);
 
 
     // Always at clock edge, save last values of the following signals
