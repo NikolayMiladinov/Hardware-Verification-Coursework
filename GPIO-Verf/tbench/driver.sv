@@ -134,7 +134,7 @@ class driver;
 
             if(driver_rstn) begin
                 //transfer data
-                if(trans.write_cycle == 1'b1) gpio_vif.cb_DRIV.HWDATA <= {16'b0,trans.HWDATA_data};
+                if(trans.write_cycle == 1'b1) gpio_vif.cb_DRIV.HWDATA <= {trans.HWDATA_data_upper_bits,trans.HWDATA_data};
                 else begin 
                     gpio_vif.cb_DRIV.PARITYSEL <= trans.PARITYSEL;
                     gpio_vif.cb_DRIV.GPIOIN <= trans.GPIOIN;
@@ -188,7 +188,7 @@ class driver;
             @gpio_vif.cb_DRIV;
             
             //transfer data
-            if(trans.write_cycle == 1'b1) gpio_vif.cb_DRIV.HWDATA <= {16'b0,trans.HWDATA_data};
+            if(trans.write_cycle == 1'b1) gpio_vif.cb_DRIV.HWDATA <= {trans.HWDATA_data_upper_bits,trans.HWDATA_data};
             else begin 
                 gpio_vif.cb_DRIV.PARITYSEL <= trans.PARITYSEL;
                 gpio_vif.cb_DRIV.GPIOIN <= trans.GPIOIN;
@@ -242,7 +242,7 @@ class driver;
             
             //transfer data
             // Drive both, only one should be registered since direction is set and hwrite is low during GPIOIN input
-            gpio_vif.cb_DRIV.HWDATA <= {16'b0,trans.HWDATA_data};
+            gpio_vif.cb_DRIV.HWDATA <= {trans.HWDATA_data_upper_bits,trans.HWDATA_data};
             gpio_vif.cb_DRIV.GPIOIN <= trans.GPIOIN;
             gpio_vif.cb_DRIV.PARITYSEL <= trans.PARITYSEL;
 
@@ -291,7 +291,7 @@ class driver;
             end
             
             //transfer data
-            if(trans.write_cycle == 1'b1) gpio_vif.cb_DRIV.HWDATA <= {16'b0,trans.HWDATA_data};
+            if(trans.write_cycle == 1'b1) gpio_vif.cb_DRIV.HWDATA <= {trans.HWDATA_data_upper_bits,trans.HWDATA_data};
             else begin 
                 gpio_vif.cb_DRIV.PARITYSEL <= trans.PARITYSEL;
                 gpio_vif.cb_DRIV.GPIOIN <= trans.GPIOIN;
@@ -361,7 +361,7 @@ class driver;
         @gpio_vif.cb_DRIV;
         @gpio_vif.cb_DRIV;
         assert (gpio_vif.cb_DRIV.GPIOOUT == {gpio_vif.cb_DRIV.PARITYSEL ? ~^16'h0FAB : ^16'h0FAB, 16'hBEEF})
-	    else $fatal ("Initial check of gpio write failed. GPIOOUT = %0h, expected result is 17'h1BEEF", gpio_vif.cb_DRIV.GPIOOUT);
+	    else $fatal ("Initial check of gpio write failed. GPIOOUT = %0h, expected result is 17'h0BEEF", gpio_vif.cb_DRIV.GPIOOUT);
         
         @gpio_vif.cb_DRIV;
         assert (gpio_vif.cb_DRIV.HRDATA == {16'b0, 16'hBEEF})

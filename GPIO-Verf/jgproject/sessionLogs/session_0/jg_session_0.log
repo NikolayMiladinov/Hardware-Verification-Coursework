@@ -5,10 +5,10 @@
 # version   : 2018.06p002 64 bits
 # build date: 2018.08.27 18:04:53 PDT
 #----------------------------------------
-# started Mon Dec 12 09:06:10 GMT 2022
+# started Tue Dec 13 22:31:42 GMT 2022
 # hostname  : ee-mill3.ee.ic.ac.uk
-# pid       : 111489
-# arguments : '-label' 'session_0' '-console' 'ee-mill3.ee.ic.ac.uk:38090' '-style' 'windows' '-data' 'AQAAADx/////AAAAAAAAA3oBAAAAEABMAE0AUgBFAE0ATwBWAEU=' '-proj' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/.tmp/.initCmds.tcl' 'AHBGPIO.tcl'
+# pid       : 117606
+# arguments : '-label' 'session_0' '-console' 'ee-mill3.ee.ic.ac.uk:40446' '-style' 'windows' '-data' 'AQAAADx/////AAAAAAAAA3oBAAAAEABMAE0AUgBFAE0ATwBWAEU=' '-proj' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/.tmp/.initCmds.tcl' 'AHBGPIO.tcl'
 
 Any disclosure about the Cadence Design Systems software or its use
 model to any third party violates the written Non-Disclosure Agreement
@@ -71,14 +71,14 @@ INFO (IRS006): Current reset condition is "HRESETn".
 [<embedded>] % set_proofgrid_max_local_jobs 4
 [<embedded>] % 
 [<embedded>] % # cover -name test_cover_from_tcl {@(posedge HCLK) disable iff (HRESETn) done }
-[<embedded>] % prove -bg -task {<embedded>}
-INFO (IPF036): Starting proof on task: "<embedded>", 18 properties to prove with 0 already proven/unreachable
+[<embedded>] % prove -bg -property {<embedded>::AHBGPIO.parity_checking_false}
+INFO (IPF036): Starting proof on task: "<embedded>", 1 properties to prove with 0 already proven/unreachable
 INFO (IRS029): Starting reset analysis: phase 1 of 4.
 INFO (IRS030): Running reset analysis: phase 2 of 4.
 INFO (IRS031): Running reset analysis: phase 3 of 4.
 INFO (IRS020): Starting the reset analysis simulation with a limit of 100 iterations (phase 4 of 4).
 INFO (IRS024): Reset iterations 0 to 4 analyzed.
-INFO (IRS018): Reset analysis simulation executed for 3 iterations. Assigned values for 50 of 86 design flops, 0 of 0 design latches, 114 of 255 internal elements.
+INFO (IRS018): Reset analysis simulation executed for 3 iterations. Assigned values for 50 of 86 design flops, 0 of 0 design latches, 150 of 327 internal elements.
 INFO (IRS039): Reset analysis complete.
 INFO (IPF031): Settings used for proof thread 0:
     orchestration                 = on (auto)
@@ -90,281 +90,360 @@ INFO (IPF031): Settings used for proof thread 0:
     max engine jobs               = auto (max 4)
     proofgrid_mode                = local
     proofgrid_restarts            = 10
-0.0.PRE: A proof was found: No trace exists. [0.00 s]
-INFO (IPF051): 0.0.PRE: The cover property "AHBGPIO.reset_property:precondition1" was proven unreachable in 0.00 s.
-0: Found proofs for 1 properties in preprocessing
 0: Using multistage preprocessing
 0: Starting reduce
-0: Finished reduce in 0.002s
-0.0.PRE: A proof was found: No trace exists. [0.00 s]
-INFO (IPF057): 0.0.PRE: The property "AHBGPIO.reset_property" was proven in 0.00 s.
-0: Found proofs for 1 properties in preprocessing
+0: Finished reduce in 0.001s
 0.0.PRE: Performing Proof Simplification...
 0.0.N: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
 0.0.N: Proof Simplification Iteration 1	[0.00 s]
 0.0.N: Proof Simplification Iteration 2	[0.00 s]
 0.0.N: Proof Simplification Iteration 3	[0.00 s]
 0.0.N: Proof Simplification Iteration 4	[0.00 s]
-background 0
 0.0.N: Proof Simplification Iteration 5	[0.00 s]
-0.0.N: Proof Simplification Iteration 6	[0.01 s]
-0.0.N: Proof Simplification Iteration 7	[0.01 s]
-0.0.N: Proof Simplification Iteration 8	[0.01 s]
-0.0.N: Proof Simplification Iteration 9	[0.01 s]
-0.0.N: Proof Simplification Iteration 10	[0.02 s]
-0.0.N: Proof Simplification Iteration 11	[0.02 s]
-0.0.N: Proof Simplification Iteration 12	[0.02 s]
-0.0.N: Proof Simplification Iteration 13	[0.03 s]
-0.0.N: Proof Simplification Iteration 14	[0.03 s]
-0.0.N: Proof Simplification Iteration 15	[0.03 s]
-0.0.N: Proof Simplification Iteration 16	[0.03 s]
-0.0.N: Proof Simplification Iteration 17	[0.03 s]
-0.0.N: Proof Simplification Iteration 18	[0.03 s]
-0.0.N: Proof Simplification Iteration 19	[0.03 s]
+0.0.N: Proof Simplification Iteration 6	[0.00 s]
+0.0.N: Proof Simplification Iteration 7	[0.00 s]
+0.0.N: Proof Simplification Iteration 8	[0.00 s]
+0.0.N: Proof Simplification Iteration 9	[0.00 s]
+0.0.N: Proof Simplification Iteration 10	[0.00 s]
+0.0.N: Proof Simplification Iteration 11	[0.00 s]
+0.0.N: Proof Simplification Iteration 12	[0.01 s]
+0.0.N: Proof Simplification Iteration 13	[0.01 s]
+0.0.N: Proof Simplification Iteration 14	[0.01 s]
+background 0
+0.0.N: Proof Simplification Iteration 15	[0.01 s]
+0.0.N: Proof Simplification Iteration 16	[0.01 s]
 0.0.PRE: A proof was found: No trace exists. [0.00 s]
 INFO (IPF057): 0.0.PRE: The property ":noDeadEnd" was proven in 0.00 s.
 use check_assumptions -show to show this property in the property table
 0.0.PRE: A proof was found: No trace exists. [0.00 s]
 INFO (IPF057): 0.0.PRE: The property ":noConflict" was proven in 0.00 s.
 use check_assumptions -show to show this property in the property table
-0.0.PRE: Proof Simplification completed in 0.04 s
-0.0.N: Identified and disabled 1 duplicated target.
+0.0.PRE: Proof Simplification completed in 0.01 s
 0: About to start centralized ProofGrid in its own thread with a limit of 10000 pending notifications and a limit of 10 traces.
 0: =============================== ProofGrid start ===============================
-0: ProofGrid usable level: 4
-0: ProofGrid is starting event handling
-0: ProofGrid usable level: 3
-0.0.N: Proofgrid shell started at 112806@ee-mill3.ee.ic.ac.uk(local) jg_111489_ee-mill3.ee.ic.ac.uk_1
-0: ProofGrid usable level: 2
-0.0.N: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
-0.0.N: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
-0.0.N: Starting proof for property "AHBGPIO.update_input"	[0.00 s].
 0: ProofGrid usable level: 1
+0: ProofGrid is starting event handling
+0.0.N: Proofgrid shell started at 148127@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_1
+0.0.N: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.N: Last scan. Per property time limit: 0s
+0.0.N: Starting proof for property "AHBGPIO.parity_checking_false"	[0.00 s].
 0.0.N: Trace Attempt  1	[0.00 s]
-0.0.N: Trace Attempt  2	[0.00 s]
-0.0.N: Trace Attempt  2	[0.00 s]
-0.0.N: Trace Attempt  3	[0.00 s]
-0.0.N: Trace Attempt  4	[0.00 s]
-0.0.N: Trace Attempt  5	[0.00 s]
-0.0.Hp: Proofgrid shell started at 112807@ee-mill3.ee.ic.ac.uk(local) jg_111489_ee-mill3.ee.ic.ac.uk_1
-0.0.Hp: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
-0.0.Hp: Trace Attempt  1	[0.00 s]
-0.0.Hp: A trace with 1 cycles was found. [0.00 s]
-INFO (IPF047): 0.0.Hp: The cover property "AHBGPIO.update_input:precondition1" was covered in 1 cycles in 0.05 s.
-INFO (IPF055): 0.0.Hp: A counterexample (cex) with 1 cycles was found for the property "AHBGPIO.parity_checking_false" in 0.05 s.
-INFO (IPF047): 0.0.Hp: The cover property "AHBGPIO.parity_checking_false:precondition1" was covered in 1 cycles in 0.05 s.
-0.0.Hp: A trace with 1 cycles was found. [0.00 s]
-INFO (IPF047): 0.0.Hp: The cover property "AHBGPIO.update_direction:precondition1" was covered in 1 cycles in 0.05 s.
-0.0.Hp: A trace with 1 cycles was found. [0.00 s]
-INFO (IPF055): 0.0.Hp: A counterexample (cex) with 1 cycles was found for the property "AHBGPIO.parity_checking_true" in 0.06 s.
-INFO (IPF047): 0.0.Hp: The cover property "AHBGPIO.parity_checking_true:precondition1" was covered in 1 cycles in 0.06 s.
-0.0.N: Trace Attempt  1	[0.02 s]
-0.0.N: Trace Attempt  2	[0.02 s]
-0.0.B: Proofgrid shell started at 112821@ee-mill3.ee.ic.ac.uk(local) jg_111489_ee-mill3.ee.ic.ac.uk_1
-0.0.B: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
-0.0.N: Validation of fixpoint was successful. Time = 0.00
-0.0.N: A proof was found: No trace exists. [0.02 s]
-INFO (IPF057): 0.0.N: The property "AHBGPIO.update_input" was proven in 0.08 s.
-0.0.N: Stopped processing property "AHBGPIO.update_input"	[0.08 s].
-0.0.N: Starting proof for property "AHBGPIO.update_output"	[0.00 s].
-0.0.N: Trace Attempt  1	[0.00 s]
-0.0.B: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
-0.0.B: Starting proof for property "AHBGPIO.update_output"	[0.00 s].
-0.0.N: Trace Attempt  2	[0.00 s]
-0.0.N: Trace Attempt  3	[0.00 s]
-0.0.N: Trace Attempt  3	[0.00 s]
-0.0.B: Trace Attempt  1	[0.00 s]
-0.0.B: Trace Attempt  2	[0.00 s]
-0.0.B: Trace Attempt  3	[0.00 s]
-0.0.Ht: Proofgrid shell started at 112820@ee-mill3.ee.ic.ac.uk(local) jg_111489_ee-mill3.ee.ic.ac.uk_1
-0.0.N: Trace Attempt  4	[0.00 s]
-0.0.N: Trace Attempt  5	[0.00 s]
-0.0.Hp: A proof was found: No trace exists. [0.02 s]
-INFO (IPF057): 0.0.Hp: The property "AHBGPIO.update_output" was proven in 0.06 s.
-0.0.Hp: A proof was found: No trace exists. [0.02 s]
-INFO (IPF057): 0.0.Hp: The property "AHBGPIO.output_update_if" was proven in 0.06 s.
-0.0.Hp: A proof was found: No trace exists. [0.02 s]
-INFO (IPF057): 0.0.Hp: The property "AHBGPIO.update_direction" was proven in 0.06 s.
-0.0.Hp: A proof was found: No trace exists. [0.02 s]
-INFO (IPF057): 0.0.Hp: The property "AHBGPIO.direction_update_if" was proven in 0.06 s.
-0.0.Hp: A proof was found: No trace exists. [0.02 s]
-INFO (IPF057): 0.0.Hp: The property "AHBGPIO.parity_gen" was proven in 0.06 s.
-0.0.Ht: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
-0.0.Hp: Trace Attempt  2	[0.02 s]
-0.0.N: Stopped processing property "AHBGPIO.update_output"	[0.00 s].
-0.0.N: Starting proof for property "AHBGPIO.update_output:precondition1"	[0.00 s].
-0.0.Hp: A trace with 2 cycles was found. [0.02 s]
-INFO (IPF047): 0.0.Hp: The cover property "AHBGPIO.update_output:precondition1" was covered in 2 cycles in 0.06 s.
-INFO (IPF047): 0.0.Hp: The cover property "AHBGPIO.direction_update_if:precondition1" was covered in 2 cycles in 0.06 s.
-0.0.N: Trace Attempt  1	[0.00 s]
-0.0.N: Trace Attempt  2	[0.00 s]
-0.0.N: Stopped processing property "AHBGPIO.update_output:precondition1"	[0.00 s].
-0.0.N: Starting proof for property "AHBGPIO.output_update_if:precondition1"	[0.00 s].
-0.0.N: Starting proof for property "AHBGPIO.parity_gen:precondition1"	[0.00 s].
-0.0.N: Trace Attempt  1	[0.00 s]
-0.0.N: Trace Attempt  2	[0.00 s]
-0.0.N: Trace Attempt  3	[0.00 s]
-0.0.B: Stopped processing property "AHBGPIO.update_output"	[0.00 s].
-0.0.B: Starting proof for property "AHBGPIO.output_update_if:precondition1"	[0.00 s].
-0.0.B: Starting proof for property "AHBGPIO.parity_gen:precondition1"	[0.00 s].
-0.0.B: Trace Attempt  1	[0.00 s]
-0.0.N: Trace Attempt  3	[0.00 s]
 0.0.N: Requesting engine job to stop
-0.0.B: Requesting engine job to stop
-0.0.Hp: Requesting engine job to terminate
-0.0.Ht: Requesting engine job to terminate
-INFO (IPF144): 0: Initiating shutdown of proof [0.03]
-0.0.N: A trace with 3 cycles was found. [0.00 s]
-INFO (IPF047): 0.0.N: The cover property "AHBGPIO.output_update_if:precondition1" was covered in 3 cycles in 0.00 s.
-INFO (IPF047): 0.0.N: The cover property "AHBGPIO.parity_gen:precondition1" was covered in 3 cycles in 0.00 s.
-0.0.N: Stopped processing property "AHBGPIO.output_update_if:precondition1"	[0.01 s].
-0.0.N: Stopped processing property "AHBGPIO.parity_gen:precondition1"	[0.01 s].
-0.0.Ht: Trace Attempt  1	[0.00 s]
-0.0.Ht: Trace Attempt  2	[0.00 s]
-0.0.Ht: Trace Attempt  3	[0.00 s]
-0.0.B: Trace Attempt  2	[0.00 s]
-0.0.N: All properties either determined or skipped. [0.03 s]
-0.0.Hp: Interrupted (multi)
-0.0.Ht: Interrupted (multi)
-0.0.Hp: Interrupted. [0.02 s]
-0.0.Ht: Interrupted. [0.00 s]
-0.0.N: Exited with Success (@ 0.03 s)
+INFO (IPF144): 0: Initiating shutdown of proof [0.00]
+0.0.N: A trace with 1 cycles was found. [0.00 s]
+INFO (IPF055): 0.0.N: A counterexample (cex) with 1 cycles was found for the property "AHBGPIO.parity_checking_false" in 0.03 s.
+0.0.N: Stopped processing property "AHBGPIO.parity_checking_false"	[0.03 s].
+0.0.N: All properties determined. [0.00 s]
+0.0.N: Exited with Success (@ 0.00 s)
 0: ProofGrid usable level: 0
-0.0.B: Stopped processing property "AHBGPIO.output_update_if:precondition1"	[0.01 s].
-0.0.B: Stopped processing property "AHBGPIO.parity_gen:precondition1"	[0.01 s].
-0.0.B: All properties either determined or skipped. [0.01 s]
-0.0.Hp: Exited with Success (@ 0.03 s)
-0.0.Ht: Exited with Success (@ 0.03 s)
-0.0.B: Exited with Success (@ 0.03 s)
+0.0.Hp: Proofgrid shell started at 148128@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_1
+0.0.Hp: Requesting engine job to terminate
+0.0.Hp: Interrupted. [0.00 s]
+0.0.B: Proofgrid shell started at 148142@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_1
+0.0.B: Requesting engine job to terminate
+0.0.Hp: Exited with Success (@ 0.02 s)
+0.0.B: Interrupted. [0.00 s]
+0.0.Ht: Proofgrid shell started at 148141@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_1
+0.0.Ht: Requesting engine job to terminate
+0.0.B: Exited with Success (@ 0.02 s)
+0.0.Ht: Interrupted. [0.00 s]
+0.0.Ht: Exited with Success (@ 0.02 s)
 0: --------------------------------------------------------------
 ProofGrid Summary
 --------------------------------------------------------------
      engines started                               :   4
      engine jobs started                           :   4
+     times jobs never connected to ProofGrid       :   3
      jobs where 1 minute load exceeded core count  :   4
-     jobs where 5 minute load exceeded core count  :   4
      jobs where 15 minute load exceeded core count :   4
 
     Average time in state (seconds)
     ------------------------------------------------------
     Engine  Pending     Running        Dead    Utilization
     ------------------------------------------------------
-      N        0.03        0.03        0.00       52.04 %
-     Hp        0.02        0.02        0.00       48.78 %
-     Ht        0.02        0.00        0.00        9.56 %
-      B        0.02        0.01        0.00       22.79 %
-    all        0.02        0.01        0.00       38.39 %
+      N        0.02        0.00        0.00        5.08 %
+     Hp        0.02        0.00        0.00        0.00 %
+     Ht        0.02        0.00        0.00        0.00 %
+      B        0.02        0.00        0.00        0.00 %
+    all        0.02        0.00        0.00        1.55 %
 
-    Data read    : 10.55 kiB
-    Data written : 2.93 kiB
+    Data read    : 1.37 kiB
+    Data written : 582.00 B
 
 0: ProofGrid usable level: 0
 0: All pending notifications were processed.
 INFO (IPF059): Completed proof on task: "<embedded>"
-
-==============================================================
-SUMMARY
-==============================================================
-           Properties Considered              : 18
-                 assertions                   : 9
-                  - proven                    : 7 (77.7778%)
-                  - bounded_proven (user)     : 0 (0%)
-                  - bounded_proven (auto)     : 0 (0%)
-                  - marked_proven             : 0 (0%)
-                  - cex                       : 2 (22.2222%)
-                  - ar_cex                    : 0 (0%)
-                  - undetermined              : 0 (0%)
-                  - unknown                   : 0 (0%)
-                  - error                     : 0 (0%)
-                 covers                       : 9
-                  - unreachable               : 1 (11.1111%)
-                  - bounded_unreachable (user): 0 (0%)
-                  - covered                   : 8 (88.8889%)
-                  - ar_covered                : 0 (0%)
-                  - undetermined              : 0 (0%)
-                  - unknown                   : 0 (0%)
-                  - error                     : 0 (0%)
-[<embedded>] % visualize -violation -property <embedded>::AHBGPIO.parity_checking_true -new_window
-INFO (IVS015): Setting Visualize task to "<embedded>".
-INFO (IVS008): Expanding analysis region to enable visualization of "<embedded>::AHBGPIO.parity_checking_true".
-cex
-[<embedded>] % visualize -quiet true -window {visualize:0}
-[<embedded>] % visualize -replot -bg -window {visualize:0} -prompt
-INFO (IVS008): Expanding analysis region to enable visualization of "<embedded>::AHBGPIO.parity_checking_true".
+[<embedded>] % prove -bg -property {<embedded>::AHBGPIO.parity_checking_true}
+INFO (IPF036): Starting proof on task: "<embedded>", 1 properties to prove with 0 already proven/unreachable
 INFO (IPF031): Settings used for proof thread 1:
-    orchestration                 = off (auto)
+    orchestration                 = on (auto)
     time_limit                    = 86400s
     per_property_time_limit       = 1s * 10 ^ scan
-    engine_mode                   = QT 
+    engine_mode                   = auto
     proofgrid_per_engine_max_jobs = 1
     proofgrid_max_jobs            = 4
-    max engine jobs               = QT, total 0 (max 4)
+    max engine jobs               = auto (max 4)
     proofgrid_mode                = local
     proofgrid_restarts            = 10
-    prefer_quiet                  = on
 1: Using multistage preprocessing
-background 1
+1: Starting reduce
+1: Finished reduce in 0s
 1.0.PRE: Performing Proof Simplification...
-1.0.QT: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
-1.0.QT: Proof Simplification Iteration 1	[0.00 s]
-1.0.QT: Proof Simplification Iteration 2	[0.00 s]
-1.0.QT: Proof Simplification Iteration 3	[0.00 s]
-1.0.QT: Proof Simplification Iteration 4	[0.00 s]
-1.0.QT: Proof Simplification Iteration 5	[0.01 s]
-1.0.QT: Proof Simplification Iteration 6	[0.01 s]
-1.0.QT: Proof Simplification Iteration 7	[0.01 s]
-1.0.QT: Proof Simplification Iteration 8	[0.01 s]
-1.0.QT: Proof Simplification Iteration 9	[0.01 s]
-1.0.QT: Proof Simplification Iteration 10	[0.01 s]
-1.0.QT: Proof Simplification Iteration 11	[0.01 s]
-1.0.QT: Proof Simplification Iteration 12	[0.01 s]
-1.0.QT: Proof Simplification Iteration 13	[0.01 s]
-1.0.QT: Proof Simplification Iteration 14	[0.01 s]
-1.0.QT: Proof Simplification Iteration 15	[0.01 s]
-1.0.QT: Proof Simplification Iteration 16	[0.01 s]
+1.0.N: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+background 1
+1.0.N: Proof Simplification Iteration 1	[0.00 s]
+1.0.N: Proof Simplification Iteration 2	[0.00 s]
+1.0.N: Proof Simplification Iteration 3	[0.01 s]
+1.0.N: Proof Simplification Iteration 4	[0.01 s]
+1.0.N: Proof Simplification Iteration 5	[0.01 s]
+1.0.N: Proof Simplification Iteration 6	[0.01 s]
+1.0.N: Proof Simplification Iteration 7	[0.02 s]
+1.0.N: Proof Simplification Iteration 8	[0.02 s]
+1.0.N: Proof Simplification Iteration 9	[0.02 s]
+1.0.N: Proof Simplification Iteration 10	[0.02 s]
+1.0.N: Proof Simplification Iteration 11	[0.03 s]
+1.0.N: Proof Simplification Iteration 12	[0.03 s]
+1.0.N: Proof Simplification Iteration 13	[0.03 s]
+1.0.N: Proof Simplification Iteration 14	[0.03 s]
+1.0.N: Proof Simplification Iteration 15	[0.03 s]
+1.0.N: Proof Simplification Iteration 16	[0.04 s]
 1.0.PRE: A proof was found: No trace exists. [0.00 s]
-1.0.PRE: A proof was found: No trace exists. [0.00 s]
-1.0.PRE: Proof Simplification completed in 0.02 s
+INFO (IPF057): 1.0.PRE: The property ":noDeadEnd" was proven in 0.00 s.
+use check_assumptions -show to show this property in the property table
+1.0.PRE: Proof Simplification completed in 0.04 s
 1: About to start centralized ProofGrid in its own thread with a limit of 10000 pending notifications and a limit of 10 traces.
 1: =============================== ProofGrid start ===============================
 1: ProofGrid usable level: 1
 1: ProofGrid is starting event handling
-1.0.QT: Proofgrid shell started at 150082@ee-mill3.ee.ic.ac.uk(local) jg_111489_ee-mill3.ee.ic.ac.uk_2
-1.0.QT: There is 1 property to work on
-1.0.QT: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
-1.0.QT: Last scan. Per property time limit: 0s
-1.0.QT: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
-1.0.QT: Requesting engine job to terminate
+1.0.Hp: Proofgrid shell started at 148889@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_2
+1.0.N: Proofgrid shell started at 148888@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_2
+1.0.Hp: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+1.0.N: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+1.0.N: Last scan. Per property time limit: 0s
+1.0.N: Starting proof for property "AHBGPIO.parity_checking_true"	[0.00 s].
+1.0.N: Trace Attempt  1	[0.00 s]
+1.0.N: Requesting engine job to stop
+1.0.Hp: Requesting engine job to terminate
 INFO (IPF144): 1: Initiating shutdown of proof [0.00]
-1.0.QT: A trace with 1 cycles was found. [0.00 s]
-1.0.QT: There are 0 properties to work on
-1.0.QT: Requesting engine job to terminate
-1.0.QT: All properties determined. [0.00 s]
-1.0.QT: Exited with Success (@ 0.00 s)
+1.0.N: A trace with 1 cycles was found. [0.00 s]
+INFO (IPF055): 1.0.N: A counterexample (cex) with 1 cycles was found for the property "AHBGPIO.parity_checking_true" in 0.01 s.
+1.0.Hp: Trace Attempt  1	[0.00 s]
+1.0.N: Stopped processing property "AHBGPIO.parity_checking_true"	[0.02 s].
+1.0.Hp: Interrupted (multi)
+1.0.N: All properties determined. [0.00 s]
+1.0.Hp: All properties determined. [0.00 s]
+1.0.N: Exited with Success (@ 0.00 s)
 1: ProofGrid usable level: 0
+1.0.Ht: Proofgrid shell started at 148902@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_2
+1.0.Ht: Requesting engine job to terminate
+1.0.Hp: Exited with Success (@ 0.02 s)
+1.0.Ht: Interrupted. [0.00 s]
+1.0.Ht: Exited with Success (@ 0.02 s)
+1.0.B: Proofgrid shell started at 148903@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_2
+1.0.B: Requesting engine job to terminate
+1.0.B: Interrupted. [0.00 s]
+1.0.B: Exited with Success (@ 0.02 s)
 1: --------------------------------------------------------------
 ProofGrid Summary
 --------------------------------------------------------------
-     engines started                               :   1
-     engine jobs started                           :   1
-     jobs where 5 minute load exceeded core count  :   1
-     jobs where 15 minute load exceeded core count :   1
+     engines started                               :   4
+     engine jobs started                           :   4
+     times jobs never connected to ProofGrid       :   2
+     jobs where 15 minute load exceeded core count :   4
 
     Average time in state (seconds)
     ------------------------------------------------------
     Engine  Pending     Running        Dead    Utilization
     ------------------------------------------------------
-     QT        0.06        0.00        0.00        2.70 %
-    all        0.06        0.00        0.00        2.70 %
+      N        0.03        0.00        0.00        5.01 %
+     Hp        0.02        0.00        0.00        9.04 %
+     Ht        0.02        0.00        0.00        0.00 %
+      B        0.02        0.00        0.00        0.00 %
+    all        0.02        0.00        0.00        4.01 %
 
-    Data read    : 1.17 kiB
-    Data written : 575.00 B
+    Data read    : 1.64 kiB
+    Data written : 1.10 kiB
 
 1: ProofGrid usable level: 0
 1: All pending notifications were processed.
-[<embedded>] % visualize -violation -property <embedded>::AHBGPIO.parity_checking_false -new_window
+INFO (IPF059): Completed proof on task: "<embedded>"
+[<embedded>] % prove -bg -property {<embedded>::AHBGPIO.parity_checking_dir}
+INFO (IPF036): Starting proof on task: "<embedded>", 1 properties to prove with 0 already proven/unreachable
+INFO (IPF031): Settings used for proof thread 2:
+    orchestration                 = on (auto)
+    time_limit                    = 86400s
+    per_property_time_limit       = 1s * 10 ^ scan
+    engine_mode                   = auto
+    proofgrid_per_engine_max_jobs = 1
+    proofgrid_max_jobs            = 4
+    max engine jobs               = auto (max 4)
+    proofgrid_mode                = local
+    proofgrid_restarts            = 10
+2: Using multistage preprocessing
+2: Starting reduce
+2: Finished reduce in 0s
+2.0.PRE: Performing Proof Simplification...
+2.0.N: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.N: Proof Simplification Iteration 1	[0.00 s]
+2.0.N: Proof Simplification Iteration 2	[0.00 s]
+2.0.N: Proof Simplification Iteration 3	[0.00 s]
+2.0.N: Proof Simplification Iteration 4	[0.00 s]
+2.0.N: Proof Simplification Iteration 5	[0.00 s]
+2.0.N: Proof Simplification Iteration 6	[0.00 s]
+2.0.N: Proof Simplification Iteration 7	[0.00 s]
+2.0.N: Proof Simplification Iteration 8	[0.00 s]
+2.0.N: Proof Simplification Iteration 9	[0.00 s]
+2.0.N: Proof Simplification Iteration 10	[0.00 s]
+2.0.N: Proof Simplification Iteration 11	[0.01 s]
+2.0.N: Proof Simplification Iteration 12	[0.01 s]
+2.0.N: Proof Simplification Iteration 13	[0.01 s]
+background 2
+2.0.N: Proof Simplification Iteration 14	[0.01 s]
+2.0.N: Proof Simplification Iteration 15	[0.01 s]
+2.0.N: Proof Simplification Iteration 16	[0.01 s]
+2.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 2.0.PRE: The property ":noDeadEnd" was proven in 0.00 s.
+use check_assumptions -show to show this property in the property table
+2.0.PRE: Proof Simplification completed in 0.01 s
+2: About to start centralized ProofGrid in its own thread with a limit of 10000 pending notifications and a limit of 10 traces.
+2: =============================== ProofGrid start ===============================
+2: ProofGrid usable level: 1
+2: ProofGrid is starting event handling
+2.0.N: Proofgrid shell started at 149511@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_3
+2.0.Hp: Proofgrid shell started at 149512@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_3
+2.0.N: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.N: Last scan. Per property time limit: 0s
+2.0.N: Starting proof for property "AHBGPIO.parity_checking_dir"	[0.00 s].
+2.0.Hp: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.N: Trace Attempt  1	[0.00 s]
+2.0.N: Trace Attempt  2	[0.00 s]
+2.0.N: Trace Attempt  3	[0.00 s]
+2.0.N: Requesting engine job to stop
+2.0.Hp: Requesting engine job to terminate
+INFO (IPF144): 2: Initiating shutdown of proof [0.00]
+2.0.Hp: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 2.0.Hp: The property "AHBGPIO.parity_checking_dir" was proven in 0.01 s.
+2.0.N: Trace Attempt  3	[0.00 s]
+2.0.Hp: All properties determined. [0.00 s]
+2.0.N: Stopped processing property "AHBGPIO.parity_checking_dir"	[0.03 s].
+2.0.Hp: Exited with Success (@ 0.00 s)
+2: ProofGrid usable level: 0
+2.0.N: All properties determined. [0.00 s]
+2.0.N: Exited with Success (@ 0.00 s)
+2.0.Ht: Proofgrid shell started at 149525@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_3
+2.0.Ht: Requesting engine job to terminate
+2.0.Ht: Interrupted. [0.00 s]
+2.0.Ht: Exited with Success (@ 0.01 s)
+2.0.B: Proofgrid shell started at 149526@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_3
+2.0.B: Requesting engine job to terminate
+2.0.B: Interrupted. [0.00 s]
+2.0.B: Exited with Success (@ 0.02 s)
+2: --------------------------------------------------------------
+ProofGrid Summary
+--------------------------------------------------------------
+     engines started                               :   4
+     engine jobs started                           :   4
+     times jobs never connected to ProofGrid       :   2
+     jobs where 15 minute load exceeded core count :   4
+
+    Average time in state (seconds)
+    ------------------------------------------------------
+    Engine  Pending     Running        Dead    Utilization
+    ------------------------------------------------------
+      N        0.03        0.00        0.00        5.64 %
+     Hp        0.02        0.00        0.00        6.06 %
+     Ht        0.01        0.00        0.00        0.00 %
+      B        0.02        0.00        0.00        0.00 %
+    all        0.02        0.00        0.00        3.64 %
+
+    Data read    : 1.11 kiB
+    Data written : 1.13 kiB
+
+2: ProofGrid usable level: 0
+2: All pending notifications were processed.
+INFO (IPF059): Completed proof on task: "<embedded>"
+[<embedded>] % prove -bg -property {<embedded>::AHBGPIO.parity_checking}
+background 3
+INFO (IPF036): Starting proof on task: "<embedded>", 1 properties to prove with 0 already proven/unreachable
+INFO (IPF031): Settings used for proof thread 3:
+    orchestration                 = on (auto)
+    time_limit                    = 86400s
+    per_property_time_limit       = 1s * 10 ^ scan
+    engine_mode                   = auto
+    proofgrid_per_engine_max_jobs = 1
+    proofgrid_max_jobs            = 4
+    max engine jobs               = auto (max 4)
+    proofgrid_mode                = local
+    proofgrid_restarts            = 10
+3: Using multistage preprocessing
+3: Starting reduce
+3: Finished reduce in 0s
+3.0.PRE: Performing Proof Simplification...
+3.0.N: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+3.0.N: Proof Simplification Iteration 1	[0.00 s]
+3.0.N: Proof Simplification Iteration 2	[0.00 s]
+3.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 3.0.PRE: The property ":noDeadEnd" was proven in 0.00 s.
+use check_assumptions -show to show this property in the property table
+3.0.PRE: Proof Simplification completed in 0.00 s
+3: About to start centralized ProofGrid in its own thread with a limit of 10000 pending notifications and a limit of 10 traces.
+3: =============================== ProofGrid start ===============================
+3: ProofGrid usable level: 1
+3: ProofGrid is starting event handling
+3.0.Hp: Proofgrid shell started at 150260@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_4
+3.0.N: Proofgrid shell started at 150259@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_4
+3.0.Hp: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+3.0.N: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+3.0.N: Last scan. Per property time limit: 0s
+3.0.N: Starting proof for property "AHBGPIO.parity_checking"	[0.00 s].
+3.0.N: Trace Attempt  1	[0.00 s]
+3.0.Hp: Trace Attempt  1	[0.00 s]
+3.0.N: Requesting engine job to stop
+3.0.Hp: Requesting engine job to terminate
+INFO (IPF144): 3: Initiating shutdown of proof [0.00]
+3.0.Hp: A trace with 1 cycles was found. [0.00 s]
+INFO (IPF055): 3.0.Hp: A counterexample (cex) with 1 cycles was found for the property "AHBGPIO.parity_checking" in 0.02 s.
+3.0.N: Stopped processing property "AHBGPIO.parity_checking"	[0.02 s].
+3.0.Hp: All properties determined. [0.00 s]
+3.0.N: All properties determined. [0.00 s]
+3.0.Hp: Exited with Success (@ 0.00 s)
+3: ProofGrid usable level: 0
+3.0.N: Exited with Success (@ 0.00 s)
+3.0.Ht: Proofgrid shell started at 150274@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_4
+3.0.Ht: Requesting engine job to terminate
+3.0.Ht: Interrupted. [0.00 s]
+3.0.Ht: Exited with Success (@ 0.02 s)
+3.0.B: Proofgrid shell started at 150275@ee-mill3.ee.ic.ac.uk(local) jg_117606_ee-mill3.ee.ic.ac.uk_4
+3.0.B: Requesting engine job to terminate
+3.0.B: Interrupted. [0.00 s]
+3.0.B: Exited with Success (@ 0.02 s)
+3: --------------------------------------------------------------
+ProofGrid Summary
+--------------------------------------------------------------
+     engines started                               :   4
+     engine jobs started                           :   4
+     times jobs never connected to ProofGrid       :   2
+     jobs where 15 minute load exceeded core count :   4
+
+    Average time in state (seconds)
+    ------------------------------------------------------
+    Engine  Pending     Running        Dead    Utilization
+    ------------------------------------------------------
+      N        0.03        0.00        0.00        4.82 %
+     Hp        0.02        0.00        0.00        8.48 %
+     Ht        0.02        0.00        0.00        0.00 %
+      B        0.02        0.00        0.00        0.00 %
+    all        0.02        0.00        0.00        3.80 %
+
+    Data read    : 2.12 kiB
+    Data written : 1.10 kiB
+
+3: ProofGrid usable level: 0
+3: All pending notifications were processed.
+INFO (IPF059): Completed proof on task: "<embedded>"
+[<embedded>] % visualize -violation -property <embedded>::AHBGPIO.parity_checking -new_window
 INFO (IVS015): Setting Visualize task to "<embedded>".
-INFO (IVS008): Expanding analysis region to enable visualization of "<embedded>::AHBGPIO.parity_checking_false".
+INFO (IVS008): Expanding analysis region to enable visualization of "<embedded>::AHBGPIO.parity_checking".
 cex
 INFO (IPL005): Received request to exit from the console.
 INFO: Waiting for proof threads to stop...

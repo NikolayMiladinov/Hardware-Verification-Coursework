@@ -5,10 +5,10 @@
 # version   : 2018.06p002 64 bits
 # build date: 2018.08.27 18:04:53 PDT
 #----------------------------------------
-# started Mon Dec 12 09:05:15 GMT 2022
+# started Tue Dec 13 22:29:11 GMT 2022
 # hostname  : ee-mill3.ee.ic.ac.uk
-# pid       : 107004
-# arguments : '-label' 'session_0' '-console' 'ee-mill3.ee.ic.ac.uk:46429' '-style' 'windows' '-data' 'AQAAADx/////AAAAAAAAA3oBAAAAEABMAE0AUgBFAE0ATwBWAEU=' '-proj' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/.tmp/.initCmds.tcl' 'AHBGPIO.tcl'
+# pid       : 102160
+# arguments : '-label' 'session_0' '-console' 'ee-mill3.ee.ic.ac.uk:44325' '-style' 'windows' '-data' 'AQAAADx/////AAAAAAAAA3oBAAAAEABMAE0AUgBFAE0ATwBWAEU=' '-proj' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/.tmp/.initCmds.tcl' 'AHBGPIO.tcl'
 
 Any disclosure about the Cadence Design Systems software or its use
 model to any third party violates the written Non-Disclosure Agreement
@@ -53,13 +53,15 @@ INFO (IPF121): Cleared environment completely for new design analysis.
 % analyze -sv rtl/AHB_GPIO/AHBGPIO.sv
 [-- (VERI-1482)] Analyzing Verilog file '/usr/local/cadence/JASPER_2018.06.002/lib/verilog/packages/std/std.sv' into library 'std'
 [-- (VERI-1482)] Analyzing Verilog file 'rtl/AHB_GPIO/AHBGPIO.sv'
-% elaborate -parameter bits 8 -top AHBGPIO
+% elaborate -top AHBGPIO
 INFO (ISW003): Top module name is "AHBGPIO".
-[ERROR (VERI-1928)] rtl/AHB_GPIO/AHBGPIO.sv(38): module 'AHBGPIO' does not have a parameter named 'bits' to override
-[ERROR] Module AHBGPIO could not be elaborated
+[INFO (VERI-1018)] rtl/AHB_GPIO/AHBGPIO.sv(38): compiling module 'AHBGPIO'
+[ERROR (VERI-2072)] rtl/AHB_GPIO/AHBGPIO.sv(184): unknown system function call 'change' not supported
+[INFO (VERI-1073)] rtl/AHB_GPIO/AHBGPIO.sv(38): module 'AHBGPIO' remains a blackbox, due to errors in its contents
+ERROR (ENL134): Unable to elaborate design as top module "AHBGPIO" is black boxed.
 Summary of errors detected:
-	[ERROR (VERI-1928)] rtl/AHB_GPIO/AHBGPIO.sv(38): module 'AHBGPIO' does not have a parameter named 'bits' to override
-	[ERROR] Module AHBGPIO could not be elaborated
+	[ERROR (VERI-2072)] rtl/AHB_GPIO/AHBGPIO.sv(184): unknown system function call 'change' not supported
+	ERROR (ENL134): Unable to elaborate design as top module "AHBGPIO" is black boxed.
 ERROR (ENL034): 2 errors detected in the design file(s).
 
 ERROR: problem encountered at line 4 in file AHBGPIO.tcl

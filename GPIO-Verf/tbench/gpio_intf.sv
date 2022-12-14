@@ -56,7 +56,7 @@ interface gpio_intf
     
     // Track dir_reg of GPIO
     logic change_dir, sample_parity_inj;
-    logic [WIDTH-1:0] last_gpio_dir, gpio_dir;
+    logic [WIDTH-1:0] gpio_dir;
 
     // Cover reset in all situations
     // covergroup reset
@@ -210,12 +210,12 @@ interface gpio_intf
             if(HSEL) addr.sample();
             if(HSEL) hwdata_inst.sample();
 
-            if(last_gpio_dir=='b0) sample_parity_inj <= 1'b1;
+            if(gpio_dir=='b0) sample_parity_inj <= 1'b1;
             else sample_parity_inj <= 1'b0;
             
             if(sample_parity_inj) parity_inj.sample();
 
-            if((HADDR == 32'h5300_0004) & HSEL & HWRITE & HTRANS[1]) change_dir <= 1'b1;
+            if((HADDR == 32'h5300_0004) & HSEL & HWRITE & HTRANS[1] & HREADY) change_dir <= 1'b1;
             else change_dir <= 1'b0;
 
             if(change_dir) gpio_dir <= HWDATA[15:0];
@@ -226,8 +226,6 @@ interface gpio_intf
             sample_parity_inj <= 'b0;
         end
 
-        
-        last_gpio_dir  <= gpio_dir;
         last_GPIOIN    <= GPIOIN;
         last_PARITYSEL <= PARITYSEL;
         

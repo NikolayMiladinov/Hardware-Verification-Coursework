@@ -8,6 +8,7 @@ class transaction;
     rand logic [2:0] command_signals; //[0]->HREADY, [1]->HSEL, [2]->HTRANS[1]
 
     rand logic [WIDTH-1:0] HWDATA_data; //only first 16 bits are used for HWDATA
+    rand logic [WIDTH-1:0] HWDATA_data_upper_bits; //those are the unused bits, most of the time they will be 0
     rand logic [WIDTH-1:0] HWDATA_dir_inject; //inject wrong direction 
     rand logic dir_inject;
 
@@ -33,6 +34,7 @@ class transaction;
 
     constraint HWDATA_max{(count_iter%55==0) -> HWDATA_data==max_val;}
     constraint HWDATA_min{soft (count_iter%56==0) -> HWDATA_data==0;}
+    constraint HWDATA_upper_bits{HWDATA_data_upper_bits dist {0:=95, [1:'hFFFF]:/5};}
 
     constraint max_delay{delay_bn_cycles<16;}
     constraint weighted_delay{delay_bn_cycles dist {[0:3]:/40, [4:7]:/30, [8:11]:/20, [12:15]:/10};}

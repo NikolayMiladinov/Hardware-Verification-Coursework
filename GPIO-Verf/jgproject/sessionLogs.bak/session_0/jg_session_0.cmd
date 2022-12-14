@@ -5,11 +5,11 @@
 # version   : 2018.06p002 64 bits
 # build date: 2018.08.27 18:04:53 PDT
 #----------------------------------------
-# started Mon Dec 12 09:05:15 GMT 2022
+# started Tue Dec 13 22:29:11 GMT 2022
 # hostname  : ee-mill3.ee.ic.ac.uk
-# pid       : 107004
-# arguments : '-label' 'session_0' '-console' 'ee-mill3.ee.ic.ac.uk:46429' '-style' 'windows' '-data' 'AQAAADx/////AAAAAAAAA3oBAAAAEABMAE0AUgBFAE0ATwBWAEU=' '-proj' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/.tmp/.initCmds.tcl' 'AHBGPIO.tcl'
+# pid       : 102160
+# arguments : '-label' 'session_0' '-console' 'ee-mill3.ee.ic.ac.uk:44325' '-style' 'windows' '-data' 'AQAAADx/////AAAAAAAAA3oBAAAAEABMAE0AUgBFAE0ATwBWAEU=' '-proj' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/.tmp/.initCmds.tcl' 'AHBGPIO.tcl'
 clear -all
 analyze -clear
 analyze -sv rtl/AHB_GPIO/AHBGPIO.sv
-elaborate -parameter bits 8 -top AHBGPIO
+elaborate -top AHBGPIO

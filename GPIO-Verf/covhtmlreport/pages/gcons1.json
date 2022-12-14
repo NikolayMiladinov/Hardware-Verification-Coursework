@@ -1,0 +1,19 @@
+var g_db_data = [
+{dummy:0},
+{name:'parity_injection',f:1,type:6,id:215,tb:'9',h:'9',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hdlPath:'/\tb_top /intf',parent:'8'},
+{name:'parity_injection_in_reset',f:1,type:6,id:225,tb:'8',h:'7',m:'1',hp:'87.50%',cov:['91.66%','G'],g:'100.00%',gp:['91.66%','G'],hdlPath:'/\tb_top /intf',parent:'8'},
+{name:'parity_gen_and_check',f:1,type:6,id:233,tb:'14',h:'14',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hdlPath:'/\tb_top /intf',parent:'8'},
+{name:'gpioin',f:1,type:6,id:245,tb:'22',h:'22',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hdlPath:'/\tb_top /intf',parent:'8'},
+{name:'outputs',f:1,type:6,id:249,tb:'34',h:'34',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hdlPath:'/\tb_top /intf',parent:'8'},
+{name:'haddr',f:1,type:6,id:255,tb:'13',h:'13',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hdlPath:'/\tb_top /intf',parent:'8'},
+{name:'hwdata',f:1,type:6,id:259,tb:'15',h:'11',m:'4',hp:'73.33%',cov:['73.33%','Y'],g:'100.00%',gp:['73.33%','Y'],hdlPath:'/\tb_top /intf',parent:'8'},
+{name:'dir_reg',f:1,type:6,id:263,tb:'2',h:'2',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hdlPath:'/\tb_top /intf',parent:'8'},
+{name:'parity_injection',f:1,type:6,id:745,tb:'9',h:'9',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hdlPath:'work.gpio_intf',parent:'3'},
+{name:'parity_injection_in_reset',f:1,type:6,id:755,tb:'8',h:'7',m:'1',hp:'87.50%',cov:['91.66%','G'],g:'100.00%',gp:['91.66%','G'],hdlPath:'work.gpio_intf',parent:'3'},
+{name:'parity_gen_and_check',f:1,type:6,id:763,tb:'14',h:'14',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hdlPath:'work.gpio_intf',parent:'3'},
+{name:'gpioin',f:1,type:6,id:775,tb:'22',h:'22',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hdlPath:'work.gpio_intf',parent:'3'},
+{name:'outputs',f:1,type:6,id:779,tb:'34',h:'34',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hdlPath:'work.gpio_intf',parent:'3'},
+{name:'haddr',f:1,type:6,id:785,tb:'13',h:'13',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hdlPath:'work.gpio_intf',parent:'3'},
+{name:'hwdata',f:1,type:6,id:789,tb:'15',h:'11',m:'4',hp:'73.33%',cov:['73.33%','Y'],g:'100.00%',gp:['73.33%','Y'],hdlPath:'work.gpio_intf',parent:'3'},
+{name:'dir_reg',f:1,type:6,id:793,tb:'2',h:'2',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hdlPath:'work.gpio_intf',parent:'3'}];
+processConsCovergroupsData(g_db_data);
