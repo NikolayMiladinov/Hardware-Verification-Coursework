@@ -16,3 +16,6 @@ open-sim:
 #Setup the simulation
 setup-sim:
 	do setup.do
+
+cover-report:
+	vcover report -details -html merged.ucdb

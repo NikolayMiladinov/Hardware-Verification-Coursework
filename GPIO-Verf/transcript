@@ -14,7 +14,7 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -coverage -voptargs="+cover=bcefst" -onfinish stop work_opt -gui 
-# Start time: 09:00:08 on Dec 14,2022
+# Start time: 09:39:56 on Dec 14,2022
 # Loading sv_std.std
 # Loading work.tb_top_sv_unit(fast)
 # Loading work.tb_top(fast)
@@ -2316,22 +2316,12 @@ do setup.do
 # ** Note: $stop    : tbench/env.sv(57)
 #    Time: 42290 ns  Iteration: 1  Instance: /tb_top/t1
 # Break in Task tb_top_sv_unit/environment::wait_test_end at tbench/env.sv line 57
-# ** Error: could not find wave window
+# ** Error: invalid command name "*wave"
 # Error in macro ./setup.do line 3
-# could not find wave window
+# invalid command name "*wave"
 #     while executing
-# "wave::zoomout {*}$args"
-#     (procedure "::wave::zoom::out" line 2)
-#     invoked from within
-# "wave zoom out"
-[09:03] Miladinov, Nick
-# invalid command name "[09:03]"
-coverage save -du work.tb_top -onexit test1_coverage.ucdb
-# ** Error: (coverage save-6830) DU name is not found.
-
-
-
+# "*wave zoom out"
 coverage save -du work.tb_top -onexit test1_coverage.ucdb
 # Saving coverage database on exit...
-# End time: 09:05:28 on Dec 14,2022, Elapsed time: 0:05:20
-# Errors: 4, Warnings: 0
+# End time: 09:44:17 on Dec 14,2022, Elapsed time: 0:04:21
+# Errors: 3, Warnings: 0
