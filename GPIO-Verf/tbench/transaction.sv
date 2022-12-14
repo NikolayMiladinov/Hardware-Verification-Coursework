@@ -3,7 +3,7 @@ class transaction;
     localparam WIDTH = 16;
     parameter max_val = (2**WIDTH) - 1;
     rand logic PARITYSEL;
-    rand logic inject_parity_error; // inject if high
+    rand logic inject_parity_error; // inject if high 
     rand logic write_cycle; //0 is for input cycle, 1 is for output cycle
     rand logic [2:0] command_signals; //[0]->HREADY, [1]->HSEL, [2]->HTRANS[1]
 
