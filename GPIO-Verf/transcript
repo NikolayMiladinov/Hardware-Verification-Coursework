@@ -14,15 +14,34 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -coverage -voptargs="+cover=bcefst" -onfinish stop work_opt -gui 
-# Start time: 09:39:56 on Dec 14,2022
+# Start time: 11:18:15 on Dec 14,2022
 # Loading sv_std.std
 # Loading work.tb_top_sv_unit(fast)
 # Loading work.tb_top(fast)
 # Loading work.gpio_intf(fast)
 # Loading work.AHBGPIO(fast)
-# Loading work.test1(fast)
+# Loading work.test5(fast)
 # Loading work.gpio_intf(fast)
-do setup.do
+log -r /*
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: nnm19  Hostname: ee-mill3.ee.ic.ac.uk  ProcessID: 115607
+#           Attempting to use alternate WLF file "./wlftyTdEvp".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftyTdEvp
+log -r /*
+toggle disable tb_top/DUT/HRDATA[31:16]
+toggle disable tb_top/DUT/HTRANS[0]
+toggle disable tb_top/intf/HTRANS[0]
+toggle disable tb_top/intf/HREADYOUT
+toggle disable tb_top/DUT/HADDR[31:24]
+toggle disable tb_top/DUT/last_HADDR[31:24]
+toggle disable tb_top/intf/HADDR[31:24]
+run -all
 # --------- [DRIVER] Reset Started --------- at 0
 # --------- [DRIVER] Reset driver end --------- at 10000
 # --------- [DRIVER] Reset Ended --------- at 31000
@@ -57,22 +76,33 @@ do setup.do
 # [Transaction] Parity error injection: GPIOIN = 1625e, transaction = 940
 # [Transaction] Parity error injection: GPIOIN = 121e9, transaction = 942
 # --------- [DRIVER-TRANSFER: 1] ---------
+# [Reset in 69 ns
+# [Reset for 5 cycles
 # ------[MONITOR STARTED]------
 # ------[SCOREBOARD STARTED]------
 # [Driver] Wrong direction injection in transaction 1
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 2] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 2
+# --------- [DRIVER] Reset Started --------- at 360000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 370000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 3] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 4] ---------
+# --------- [DRIVER] Reset Ended --------- at 451000
+# [Reset in 110 ns
+# [Reset for 15 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 5] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 6] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 7] ---------
+# --------- [DRIVER] Reset Started --------- at 561000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 570000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 8] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -85,6 +115,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 12] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 13] ---------
+# --------- [DRIVER] Reset Ended --------- at 851000
+# [Reset in 168 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 14] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -93,8 +126,13 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 16] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 17] ---------
+# --------- [DRIVER] Reset Started --------- at 1019000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 18] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 1030000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 19] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -102,6 +140,9 @@ do setup.do
 # [Driver] Parity error injection in transaction 20, GPIOIN: 1b3f3
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 21] ---------
+# --------- [DRIVER] Reset Ended --------- at 1151000
+# [Reset in 281 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 22] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -114,8 +155,13 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 26] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 27] ---------
+# --------- [DRIVER] Reset Started --------- at 1432000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 28] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 1450000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 29] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -124,16 +170,25 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 31] ---------
 # [Driver] Parity error injection in transaction 31, GPIOIN: 5e96
 # [Driver] Wrong HADDR injection in address phase: transaction 31
+# --------- [DRIVER] Reset Ended --------- at 1571000
+# [Reset in 89 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 32] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 33] ---------
+# --------- [DRIVER] Reset Started --------- at 1660000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 1670000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 34] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 35] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 36] ---------
+# --------- [DRIVER] Reset Ended --------- at 1791000
+# [Reset in 155 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 37] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -143,6 +198,9 @@ do setup.do
 # [Driver] Wrong HADDR injection in address phase: transaction 39
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 40] ---------
+# --------- [DRIVER] Reset Started --------- at 1946000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 1950000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 41] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 41
@@ -151,14 +209,25 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 42] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 43] ---------
+# --------- [DRIVER] Reset Ended --------- at 2071000
+# [Reset in 87 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 44] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 45] ---------
+# --------- [DRIVER] Reset Started --------- at 2158000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 46] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 2170000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 47] ---------
+# --------- [DRIVER] Reset Ended --------- at 2211000
+# [Reset in 201 ns
+# [Reset for 4 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 48] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -171,15 +240,26 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 51] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 52] ---------
-# [Driver] Wrong HADDR injection in data phase: transaction 52
+# --------- [DRIVER] Reset Started --------- at 2412000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 2430000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 53] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 54] ---------
+# --------- [DRIVER] Reset Ended --------- at 2491000
+# [Reset in 49 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 55] ---------
+# --------- [DRIVER] Reset Started --------- at 2540000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 2550000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 56] ---------
+# --------- [DRIVER] Reset Ended --------- at 2591000
+# [Reset in 406 ns
+# [Reset for 10 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 57] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -201,8 +281,13 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 65] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 66] ---------
+# --------- [DRIVER] Reset Started --------- at 2997000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 67] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 3010000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 68] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 68
@@ -213,6 +298,9 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 71] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 71
+# --------- [DRIVER] Reset Ended --------- at 3191000
+# [Reset in 412 ns
+# [Reset for 6 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 72] ---------
 # [Driver] Parity error injection in transaction 72, GPIOIN: 1b882
@@ -233,13 +321,21 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 78] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 79] ---------
+# --------- [DRIVER] Reset Started --------- at 3603000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 80] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 3610000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 81] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 82] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 82
+# --------- [DRIVER] Reset Ended --------- at 3711000
+# [Reset in 399 ns
+# [Reset for 9 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 83] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -262,8 +358,13 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 91] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 92] ---------
+# --------- [DRIVER] Reset Started --------- at 4110000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 93] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 4130000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 94] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -272,6 +373,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 96] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 97] ---------
+# --------- [DRIVER] Reset Ended --------- at 4291000
+# [Reset in 280 ns
+# [Reset for 4 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 98] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -287,10 +391,16 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 103] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 104] ---------
+# --------- [DRIVER] Reset Started --------- at 4571000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 4590000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 105] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 106] ---------
+# --------- [DRIVER] Reset Ended --------- at 4651000
+# [Reset in 411 ns
+# [Reset for 9 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 107] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -311,26 +421,46 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 115] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 115
+# --------- [DRIVER] Reset Started --------- at 5062000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 116] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 5070000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 117] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 118] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 119] ---------
+# --------- [DRIVER] Reset Ended --------- at 5231000
+# [Reset in 58 ns
+# [Reset for 6 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 120] ---------
+# --------- [DRIVER] Reset Started --------- at 5289000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 5290000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 121] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 122] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 123] ---------
+# --------- [DRIVER] Reset Ended --------- at 5391000
+# [Reset in 85 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 124] ---------
+# --------- [DRIVER] Reset Started --------- at 5476000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 5490000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 125] ---------
+# --------- [DRIVER] Reset Ended --------- at 5531000
+# [Reset in 459 ns
+# [Reset for 2 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 126] ---------
 # [Driver] Wrong direction injection in transaction 126
@@ -359,10 +489,21 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 135] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 136] ---------
+# --------- [DRIVER] Reset Started --------- at 5990000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 6010000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 137] ---------
+# --------- [DRIVER] Reset Ended --------- at 6031000
+# [Reset in 25 ns
+# [Reset for 12 cycles
+# --------- [DRIVER] Reset Started --------- at 6056000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 138] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 6070000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 139] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -373,12 +514,20 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 141] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 142] ---------
+# --------- [DRIVER] Reset Ended --------- at 6291000
+# [Reset in 79 ns
+# [Reset for 9 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 143] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 144] ---------
+# --------- [DRIVER] Reset Started --------- at 6370000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 145] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 6390000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 146] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -388,6 +537,9 @@ do setup.do
 # [Driver] Wrong HADDR injection in address phase: transaction 148
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 149] ---------
+# --------- [DRIVER] Reset Ended --------- at 6551000
+# [Reset in 250 ns
+# [Reset for 12 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 150] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -400,6 +552,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 154] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 155] ---------
+# --------- [DRIVER] Reset Started --------- at 6801000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 6810000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 156] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -414,6 +569,9 @@ do setup.do
 # [Driver] Wrong HADDR injection in data phase: transaction 160
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 161] ---------
+# --------- [DRIVER] Reset Ended --------- at 7031000
+# [Reset in 177 ns
+# [Reset for 2 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 162] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -425,8 +583,14 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 165] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 165
+# --------- [DRIVER] Reset Started --------- at 7208000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 7210000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 166] ---------
+# --------- [DRIVER] Reset Ended --------- at 7231000
+# [Reset in 488 ns
+# [Reset for 4 cycles
 # [Driver] Wrong HADDR injection in address phase: transaction 166
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 167] ---------
@@ -449,11 +613,17 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 175] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 176] ---------
+# --------- [DRIVER] Reset Started --------- at 7719000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 7730000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 177] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 178] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 178
+# --------- [DRIVER] Reset Ended --------- at 7791000
+# [Reset in 222 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 179] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -466,14 +636,22 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 182] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 183] ---------
+# --------- [DRIVER] Reset Started --------- at 8013000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 184] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 8030000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 185] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 186] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 187] ---------
+# --------- [DRIVER] Reset Ended --------- at 8151000
+# [Reset in 140 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 188] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -481,10 +659,18 @@ do setup.do
 # [Driver] Wrong HADDR injection in address phase: transaction 189
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 190] ---------
+# --------- [DRIVER] Reset Started --------- at 8291000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 191] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 8310000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 192] ---------
+# --------- [DRIVER] Reset Ended --------- at 8351000
+# [Reset in 248 ns
+# [Reset for 10 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 193] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -497,6 +683,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 197] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 198] ---------
+# --------- [DRIVER] Reset Started --------- at 8599000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 8610000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 199] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -506,10 +695,20 @@ do setup.do
 # [Driver] Parity error injection in transaction 201, GPIOIN: 1eceb
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 202] ---------
+# --------- [DRIVER] Reset Ended --------- at 8791000
+# [Reset in 36 ns
+# [Reset for 2 cycles
 # [Driver] Wrong HADDR injection in data phase: transaction 202
+# --------- [DRIVER] Reset Started --------- at 8827000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 203] ---------
-# [Driver] Wrong HADDR injection in address phase: transaction 203
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 8830000
+# --------- [DRIVER] Reset Ended --------- at 8851000
+# [Reset in 141 ns
+# [Reset for 6 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 204] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -520,12 +719,18 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 207] ---------
 # [Driver] Parity error injection in transaction 207, GPIOIN: 170f9
+# --------- [DRIVER] Reset Started --------- at 8992000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 9010000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 208] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 209] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 210] ---------
+# --------- [DRIVER] Reset Ended --------- at 9111000
+# [Reset in 183 ns
+# [Reset for 3 cycles
 # [Driver] Wrong direction injection in transaction 210
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 211] ---------
@@ -535,10 +740,18 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 213] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 214] ---------
+# --------- [DRIVER] Reset Started --------- at 9294000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 215] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 9310000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 216] ---------
+# --------- [DRIVER] Reset Ended --------- at 9351000
+# [Reset in 182 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 217] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -548,8 +761,13 @@ do setup.do
 # [Driver] Wrong HADDR injection in address phase: transaction 219
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 220] ---------
+# --------- [DRIVER] Reset Started --------- at 9533000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 221] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 9550000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 222] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 222
@@ -557,6 +775,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 223] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 224] ---------
+# --------- [DRIVER] Reset Ended --------- at 9691000
+# [Reset in 249 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 225] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -569,8 +790,14 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 229] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 230] ---------
+# --------- [DRIVER] Reset Started --------- at 9940000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 9950000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 231] ---------
+# --------- [DRIVER] Reset Ended --------- at 9991000
+# [Reset in 419 ns
+# [Reset for 4 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 232] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -594,23 +821,37 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 240] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 241] ---------
+# --------- [DRIVER] Reset Started --------- at 10410000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 242] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 10430000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 243] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 243
+# --------- [DRIVER] Reset Ended --------- at 10491000
+# [Reset in 118 ns
+# [Reset for 6 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 244] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 245] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 246] ---------
+# --------- [DRIVER] Reset Started --------- at 10609000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 10610000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 247] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 248] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 249] ---------
+# --------- [DRIVER] Reset Ended --------- at 10711000
+# [Reset in 135 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 250] ---------
 # [Driver] Wrong direction injection in transaction 250
@@ -620,16 +861,27 @@ do setup.do
 # [Driver] Wrong HADDR injection in address phase: transaction 251
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 252] ---------
+# --------- [DRIVER] Reset Started --------- at 10846000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 10850000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 253] ---------
+# --------- [DRIVER] Reset Ended --------- at 10891000
+# [Reset in 89 ns
+# [Reset for 9 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 254] ---------
 # [Driver] Wrong direction injection in transaction 254
 # [Driver] Wrong HADDR injection in data phase: transaction 254
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 255] ---------
+# --------- [DRIVER] Reset Started --------- at 10980000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 256] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 10990000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 257] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 257
@@ -640,17 +892,29 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 259] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 260] ---------
+# --------- [DRIVER] Reset Ended --------- at 11151000
+# [Reset in 86 ns
+# [Reset for 5 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 261] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 262] ---------
+# --------- [DRIVER] Reset Started --------- at 11237000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 11250000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 263] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 263
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 264] ---------
+# --------- [DRIVER] Reset Ended --------- at 11331000
+# [Reset in 25 ns
+# [Reset for 14 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 265] ---------
+# --------- [DRIVER] Reset Started --------- at 11356000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 11370000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 266] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -664,6 +928,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 270] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 271] ---------
+# --------- [DRIVER] Reset Ended --------- at 11631000
+# [Reset in 261 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 272] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -677,8 +944,13 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 277] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 277
+# --------- [DRIVER] Reset Started --------- at 11892000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 278] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 11910000
 # [Driver] Wrong HADDR injection in data phase: transaction 278
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 279] ---------
@@ -687,6 +959,9 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 281] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 281
+# --------- [DRIVER] Reset Ended --------- at 12031000
+# [Reset in 260 ns
+# [Reset for 13 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 282] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -700,8 +975,13 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 287] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 287
+# --------- [DRIVER] Reset Started --------- at 12291000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 288] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 12310000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 289] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -716,6 +996,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 293] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 294] ---------
+# --------- [DRIVER] Reset Ended --------- at 12551000
+# [Reset in 172 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 295] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -724,31 +1007,53 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 297] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 298] ---------
+# --------- [DRIVER] Reset Started --------- at 12723000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 12730000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 299] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 300] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 301] ---------
+# --------- [DRIVER] Reset Ended --------- at 12851000
+# [Reset in 42 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 302] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 302
+# --------- [DRIVER] Reset Started --------- at 12893000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 303] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 12910000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 304] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 305] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 306] ---------
+# --------- [DRIVER] Reset Ended --------- at 13031000
+# [Reset in 73 ns
+# [Reset for 5 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 307] ---------
+# --------- [DRIVER] Reset Started --------- at 13104000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 308] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 13110000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 309] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 310] ---------
+# --------- [DRIVER] Reset Ended --------- at 13191000
+# [Reset in 222 ns
+# [Reset for 10 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 311] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -759,8 +1064,13 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 314] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 315] ---------
+# --------- [DRIVER] Reset Started --------- at 13413000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 316] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 13430000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 317] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -770,9 +1080,15 @@ do setup.do
 # [Driver] Wrong HADDR injection in data phase: transaction 319
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 320] ---------
+# --------- [DRIVER] Reset Ended --------- at 13611000
+# [Reset in 22 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 321] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 321
+# --------- [DRIVER] Reset Started --------- at 13633000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 13650000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 322] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -781,6 +1097,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 324] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 325] ---------
+# --------- [DRIVER] Reset Ended --------- at 13791000
+# [Reset in 202 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 326] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -791,6 +1110,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 329] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 330] ---------
+# --------- [DRIVER] Reset Started --------- at 13993000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 14010000
 # [Driver] Wrong HADDR injection in data phase: transaction 330
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 331] ---------
@@ -799,6 +1121,9 @@ do setup.do
 # [Driver] Wrong HADDR injection in data phase: transaction 332
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 333] ---------
+# --------- [DRIVER] Reset Ended --------- at 14151000
+# [Reset in 276 ns
+# [Reset for 11 cycles
 # [Driver] Wrong HADDR injection in data phase: transaction 333
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 334] ---------
@@ -816,6 +1141,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 338] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 339] ---------
+# --------- [DRIVER] Reset Started --------- at 14427000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 14430000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 340] ---------
 # [Driver] Wrong direction injection in transaction 340
@@ -828,12 +1156,20 @@ do setup.do
 # [Driver] Wrong HADDR injection in address phase: transaction 343
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 344] ---------
+# --------- [DRIVER] Reset Ended --------- at 14631000
+# [Reset in 121 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 345] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 346] ---------
+# --------- [DRIVER] Reset Started --------- at 14752000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 347] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 14770000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 348] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -841,16 +1177,30 @@ do setup.do
 # [Driver] Wrong direction injection in transaction 349
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 350] ---------
+# --------- [DRIVER] Reset Ended --------- at 14891000
+# [Reset in 62 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 351] ---------
+# --------- [DRIVER] Reset Started --------- at 14953000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 352] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 14970000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 353] ---------
+# --------- [DRIVER] Reset Ended --------- at 15011000
+# [Reset in 94 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 354] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 355] ---------
+# --------- [DRIVER] Reset Started --------- at 15105000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 15110000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 356] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 356
@@ -859,12 +1209,20 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 358] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 358
+# --------- [DRIVER] Reset Ended --------- at 15231000
+# [Reset in 138 ns
+# [Reset for 10 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 359] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 360] ---------
+# --------- [DRIVER] Reset Started --------- at 15369000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 361] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 15370000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 362] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -873,12 +1231,21 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 364] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 365] ---------
+# --------- [DRIVER] Reset Ended --------- at 15551000
+# [Reset in 45 ns
+# [Reset for 6 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 366] ---------
+# --------- [DRIVER] Reset Started --------- at 15596000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 15610000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 367] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 368] ---------
+# --------- [DRIVER] Reset Ended --------- at 15711000
+# [Reset in 419 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 369] ---------
 # [Driver] Wrong direction injection in transaction 369
@@ -903,8 +1270,16 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 379] ---------
 # [Driver] Parity error injection in transaction 379, GPIOIN: db58
+# --------- [DRIVER] Reset Started --------- at 16130000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 16150000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 380] ---------
+# --------- [DRIVER] Reset Ended --------- at 16191000
+# [Reset in 381 ns
+# [Reset for 12 cycles
+# ** Error: Assertion error.
+#    Time: 16210 ns Started: 16210 ns  Scope: tb_top.DUT.parity_checking_true File: rtl/AHB_GPIO/AHBGPIO.sv Line: 170
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 381] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -925,6 +1300,9 @@ do setup.do
 # [Driver] Parity error injection in transaction 388, GPIOIN: 1b70
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 389] ---------
+# --------- [DRIVER] Reset Started --------- at 16572000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 16590000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 390] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -939,6 +1317,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 394] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 395] ---------
+# --------- [DRIVER] Reset Ended --------- at 16811000
+# [Reset in 157 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 396] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 396
@@ -946,12 +1327,18 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 397] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 398] ---------
+# --------- [DRIVER] Reset Started --------- at 16968000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 16970000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 399] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 400] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 401] ---------
+# --------- [DRIVER] Reset Ended --------- at 17091000
+# [Reset in 138 ns
+# [Reset for 4 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 402] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 402
@@ -959,10 +1346,18 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 403] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 404] ---------
+# --------- [DRIVER] Reset Started --------- at 17229000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 405] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 17230000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 406] ---------
+# --------- [DRIVER] Reset Ended --------- at 17291000
+# [Reset in 159 ns
+# [Reset for 12 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 407] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -974,8 +1369,13 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 410] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 410
+# --------- [DRIVER] Reset Started --------- at 17450000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 411] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 17470000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 412] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -987,6 +1387,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 415] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 416] ---------
+# --------- [DRIVER] Reset Ended --------- at 17691000
+# [Reset in 177 ns
+# [Reset for 13 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 417] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 417
@@ -998,8 +1401,13 @@ do setup.do
 # [Driver] Wrong HADDR injection in address phase: transaction 419
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 420] ---------
+# --------- [DRIVER] Reset Started --------- at 17868000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 421] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 17870000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 422] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1014,18 +1422,28 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 426] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 427] ---------
+# --------- [DRIVER] Reset Ended --------- at 18111000
+# [Reset in 95 ns
+# [Reset for 5 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 428] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 429] ---------
-# [Driver] Wrong direction injection in transaction 429
+# --------- [DRIVER] Reset Started --------- at 18206000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 18210000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 430] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 431] ---------
+# --------- [DRIVER] Reset Ended --------- at 18291000
+# [Reset in 36 ns
+# [Reset for 11 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 432] ---------
-# [Driver] Wrong HADDR injection in data phase: transaction 432
+# --------- [DRIVER] Reset Started --------- at 18327000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 18330000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 433] ---------
 # [Driver] Parity error injection in transaction 433, GPIOIN: 13293
@@ -1037,16 +1455,27 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 436] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 437] ---------
+# --------- [DRIVER] Reset Ended --------- at 18531000
+# [Reset in 135 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 438] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 439] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 440] ---------
+# --------- [DRIVER] Reset Started --------- at 18666000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 441] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 18670000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 442] ---------
+# --------- [DRIVER] Reset Ended --------- at 18711000
+# [Reset in 156 ns
+# [Reset for 13 cycles
 # [Driver] Wrong HADDR injection in data phase: transaction 442
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 443] ---------
@@ -1054,8 +1483,13 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 444] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 445] ---------
+# --------- [DRIVER] Reset Started --------- at 18867000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 446] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 18870000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 447] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1068,6 +1502,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 451] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 452] ---------
+# --------- [DRIVER] Reset Ended --------- at 19111000
+# [Reset in 194 ns
+# [Reset for 11 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 453] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1077,6 +1514,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 455] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 456] ---------
+# --------- [DRIVER] Reset Started --------- at 19305000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 19310000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 457] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1087,12 +1527,20 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 460] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 461] ---------
+# --------- [DRIVER] Reset Ended --------- at 19511000
+# [Reset in 80 ns
+# [Reset for 14 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 462] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 463] ---------
+# --------- [DRIVER] Reset Started --------- at 19591000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 464] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 19610000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 465] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1107,6 +1555,9 @@ do setup.do
 # [Driver] Wrong HADDR injection in address phase: transaction 469
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 470] ---------
+# --------- [DRIVER] Reset Ended --------- at 19871000
+# [Reset in 150 ns
+# [Reset for 14 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 471] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1116,6 +1567,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 473] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 474] ---------
+# --------- [DRIVER] Reset Started --------- at 20021000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 20030000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 475] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 475
@@ -1133,6 +1587,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 480] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 481] ---------
+# --------- [DRIVER] Reset Ended --------- at 20291000
+# [Reset in 183 ns
+# [Reset for 9 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 482] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1141,8 +1598,13 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 484] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 485] ---------
+# --------- [DRIVER] Reset Started --------- at 20474000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 486] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 20490000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 487] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1150,13 +1612,21 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 489] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 489
+# --------- [DRIVER] Reset Ended --------- at 20651000
+# [Reset in 30 ns
+# [Reset for 5 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 490] ---------
-# [Driver] Wrong HADDR injection in address phase: transaction 490
+# --------- [DRIVER] Reset Started --------- at 20681000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 20690000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 491] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 492] ---------
+# --------- [DRIVER] Reset Ended --------- at 20771000
+# [Reset in 300 ns
+# [Reset for 6 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 493] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 493
@@ -1174,13 +1644,21 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 498] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 499] ---------
+# --------- [DRIVER] Reset Started --------- at 21071000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 500] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 21090000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 501] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 501
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 502] ---------
+# --------- [DRIVER] Reset Ended --------- at 21191000
+# [Reset in 482 ns
+# [Reset for 2 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 503] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1209,9 +1687,16 @@ do setup.do
 # [Driver] Wrong HADDR injection in address phase: transaction 513
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 514] ---------
+# --------- [DRIVER] Reset Started --------- at 21673000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 515] ---------
-# [Driver] Wrong HADDR injection in address phase: transaction 515
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 21690000
+# --------- [DRIVER] Reset Ended --------- at 21711000
+# [Reset in 149 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 516] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1221,6 +1706,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 518] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 519] ---------
+# --------- [DRIVER] Reset Started --------- at 21860000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 21870000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 520] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1229,6 +1717,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 522] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 523] ---------
+# --------- [DRIVER] Reset Ended --------- at 22011000
+# [Reset in 154 ns
+# [Reset for 2 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 524] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1236,12 +1727,23 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 526] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 526
+# --------- [DRIVER] Reset Started --------- at 22165000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 527] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 22170000
+# --------- [DRIVER] Reset Ended --------- at 22191000
+# [Reset in 77 ns
+# [Reset for 10 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 528] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 529] ---------
+# --------- [DRIVER] Reset Started --------- at 22268000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 22270000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 530] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1251,6 +1753,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 532] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 533] ---------
+# --------- [DRIVER] Reset Ended --------- at 22451000
+# [Reset in 187 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 534] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 534
@@ -1261,14 +1766,21 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 536] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 537] ---------
+# --------- [DRIVER] Reset Started --------- at 22638000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 538] ---------
-# [Driver] Wrong HADDR injection in address phase: transaction 538
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 22650000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 539] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 540] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 540
+# --------- [DRIVER] Reset Ended --------- at 22791000
+# [Reset in 155 ns
+# [Reset for 6 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 541] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1278,6 +1790,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 543] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 544] ---------
+# --------- [DRIVER] Reset Started --------- at 22946000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 22950000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 545] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 545
@@ -1286,12 +1801,20 @@ do setup.do
 # [Driver] Wrong HADDR injection in address phase: transaction 546
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 547] ---------
+# --------- [DRIVER] Reset Ended --------- at 23051000
+# [Reset in 114 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 548] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 549] ---------
+# --------- [DRIVER] Reset Started --------- at 23165000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 550] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 23170000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 551] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1299,6 +1822,9 @@ do setup.do
 # [Driver] Wrong HADDR injection in data phase: transaction 552
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 553] ---------
+# --------- [DRIVER] Reset Ended --------- at 23311000
+# [Reset in 141 ns
+# [Reset for 14 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 554] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1309,6 +1835,9 @@ do setup.do
 # [Driver] Wrong HADDR injection in address phase: transaction 556
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 557] ---------
+# --------- [DRIVER] Reset Started --------- at 23452000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 23470000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 558] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1324,6 +1853,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 563] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 564] ---------
+# --------- [DRIVER] Reset Ended --------- at 23731000
+# [Reset in 204 ns
+# [Reset for 10 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 565] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1336,7 +1868,9 @@ do setup.do
 # [Driver] Wrong HADDR injection in data phase: transaction 568
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 569] ---------
-# [Driver] Wrong HADDR injection in data phase: transaction 569
+# --------- [DRIVER] Reset Started --------- at 23935000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 23950000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 570] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1345,6 +1879,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 572] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 573] ---------
+# --------- [DRIVER] Reset Ended --------- at 24131000
+# [Reset in 195 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 574] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1353,10 +1890,18 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 576] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 577] ---------
+# --------- [DRIVER] Reset Started --------- at 24326000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 578] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 24330000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 579] ---------
+# --------- [DRIVER] Reset Ended --------- at 24371000
+# [Reset in 225 ns
+# [Reset for 10 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 580] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1367,8 +1912,13 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 583] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 584] ---------
+# --------- [DRIVER] Reset Started --------- at 24596000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 585] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 24610000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 586] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1378,23 +1928,35 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 589] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 589
+# --------- [DRIVER] Reset Ended --------- at 24791000
+# [Reset in 143 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 590] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 591] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 592] ---------
+# --------- [DRIVER] Reset Started --------- at 24934000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 24950000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 593] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 594] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 595] ---------
+# --------- [DRIVER] Reset Ended --------- at 25071000
+# [Reset in 67 ns
+# [Reset for 11 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 596] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 597] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 597
+# --------- [DRIVER] Reset Started --------- at 25138000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 25150000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 598] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1406,6 +1968,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 601] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 602] ---------
+# --------- [DRIVER] Reset Ended --------- at 25351000
+# [Reset in 172 ns
+# [Reset for 13 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 603] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1414,8 +1979,13 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 605] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 606] ---------
+# --------- [DRIVER] Reset Started --------- at 25523000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 607] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 25530000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 608] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1427,6 +1997,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 611] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 612] ---------
+# --------- [DRIVER] Reset Ended --------- at 25771000
+# [Reset in 390 ns
+# [Reset for 5 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 613] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1445,15 +2018,26 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 619] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 620] ---------
+# --------- [DRIVER] Reset Started --------- at 26161000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 621] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 26170000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 622] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 622
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 623] ---------
+# --------- [DRIVER] Reset Ended --------- at 26251000
+# [Reset in 50 ns
+# [Reset for 10 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 624] ---------
+# --------- [DRIVER] Reset Started --------- at 26301000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 26310000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 625] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1464,26 +2048,49 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 628] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 629] ---------
+# --------- [DRIVER] Reset Ended --------- at 26491000
+# [Reset in 41 ns
+# [Reset for 4 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 630] ---------
+# --------- [DRIVER] Reset Started --------- at 26532000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 26550000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 631] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 632] ---------
+# --------- [DRIVER] Reset Ended --------- at 26611000
+# [Reset in 96 ns
+# [Reset for 2 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 633] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 634] ---------
+# --------- [DRIVER] Reset Started --------- at 26707000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 26710000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 635] ---------
+# --------- [DRIVER] Reset Ended --------- at 26731000
+# [Reset in 153 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 636] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 637] ---------
+# --------- [DRIVER] Reset Started --------- at 26884000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 638] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 26890000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 639] ---------
+# --------- [DRIVER] Reset Ended --------- at 26931000
+# [Reset in 210 ns
+# [Reset for 13 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 640] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 640
@@ -1494,6 +2101,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 642] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 643] ---------
+# --------- [DRIVER] Reset Started --------- at 27141000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 27150000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 644] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1506,23 +2116,39 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 648] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 649] ---------
+# --------- [DRIVER] Reset Ended --------- at 27391000
+# [Reset in 47 ns
+# [Reset for 6 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 650] ---------
+# --------- [DRIVER] Reset Started --------- at 27438000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 27450000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 651] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 652] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 653] ---------
+# --------- [DRIVER] Reset Ended --------- at 27551000
+# [Reset in 35 ns
+# [Reset for 10 cycles
+# --------- [DRIVER] Reset Started --------- at 27586000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 654] ---------
-# [Driver] Wrong HADDR injection in address phase: transaction 654
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 27590000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 655] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 656] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 657] ---------
+# --------- [DRIVER] Reset Ended --------- at 27771000
+# [Reset in 263 ns
+# [Reset for 4 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 658] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1538,11 +2164,17 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 663] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 664] ---------
+# --------- [DRIVER] Reset Started --------- at 28034000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 28050000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 665] ---------
 # [Driver] Parity error injection in transaction 665, GPIOIN: 1d496
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 666] ---------
+# --------- [DRIVER] Reset Ended --------- at 28111000
+# [Reset in 311 ns
+# [Reset for 9 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 667] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1558,6 +2190,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 672] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 673] ---------
+# --------- [DRIVER] Reset Started --------- at 28422000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 28430000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 674] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1567,14 +2202,23 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 677] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 677
+# --------- [DRIVER] Reset Ended --------- at 28591000
+# [Reset in 111 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 678] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 679] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 680] ---------
+# --------- [DRIVER] Reset Started --------- at 28702000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 28710000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 681] ---------
+# --------- [DRIVER] Reset Ended --------- at 28751000
+# [Reset in 261 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 682] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1590,6 +2234,9 @@ do setup.do
 # [Driver] Wrong HADDR injection in address phase: transaction 686
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 687] ---------
+# --------- [DRIVER] Reset Started --------- at 29012000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 29030000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 688] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 688
@@ -1597,17 +2244,27 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 689] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 690] ---------
+# --------- [DRIVER] Reset Ended --------- at 29151000
+# [Reset in 55 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 691] ---------
+# --------- [DRIVER] Reset Started --------- at 29206000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 692] ---------
-# [Driver] Wrong HADDR injection in address phase: transaction 692
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 29210000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 693] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 694] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 695] ---------
+# --------- [DRIVER] Reset Ended --------- at 29331000
+# [Reset in 198 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 696] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 696
@@ -1618,8 +2275,13 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 699] ---------
 # [Driver] Parity error injection in transaction 699, GPIOIN: 1b74c
+# --------- [DRIVER] Reset Started --------- at 29529000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 700] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 29530000
 # [Driver] Wrong HADDR injection in data phase: transaction 700
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 701] ---------
@@ -1627,6 +2289,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 702] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 703] ---------
+# --------- [DRIVER] Reset Ended --------- at 29651000
+# [Reset in 253 ns
+# [Reset for 2 cycles
 # [Driver] Wrong direction injection in transaction 703
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 704] ---------
@@ -1641,10 +2306,19 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 709] ---------
 # [Driver] Parity error injection in transaction 709, GPIOIN: cc67
+# --------- [DRIVER] Reset Started --------- at 29904000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 29910000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 710] ---------
+# --------- [DRIVER] Reset Ended --------- at 29931000
+# [Reset in 52 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 711] ---------
+# --------- [DRIVER] Reset Started --------- at 29983000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 29990000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 712] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1654,6 +2328,11 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 714] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 715] ---------
+# --------- [DRIVER] Reset Ended --------- at 30131000
+# [Reset in 126 ns
+# [Reset for 3 cycles
+# ** Error: Assertion error.
+#    Time: 30150 ns Started: 30150 ns  Scope: tb_top.DUT.parity_checking_true File: rtl/AHB_GPIO/AHBGPIO.sv Line: 170
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 716] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1661,8 +2340,14 @@ do setup.do
 # [Driver] Wrong HADDR injection in address phase: transaction 717
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 718] ---------
+# --------- [DRIVER] Reset Started --------- at 30257000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 30270000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 719] ---------
+# --------- [DRIVER] Reset Ended --------- at 30311000
+# [Reset in 189 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 720] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1674,6 +2359,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 723] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 724] ---------
+# --------- [DRIVER] Reset Started --------- at 30500000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 30510000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 725] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1682,16 +2370,27 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 727] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 728] ---------
+# --------- [DRIVER] Reset Ended --------- at 30651000
+# [Reset in 100 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 729] ---------
 # [Driver] Wrong direction injection in transaction 729
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 730] ---------
+# --------- [DRIVER] Reset Started --------- at 30751000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 731] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 30770000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 732] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 732
+# --------- [DRIVER] Reset Ended --------- at 30811000
+# [Reset in 286 ns
+# [Reset for 2 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 733] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1706,14 +2405,25 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 737] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 738] ---------
+# --------- [DRIVER] Reset Started --------- at 31097000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 739] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 31110000
+# --------- [DRIVER] Reset Ended --------- at 31131000
+# [Reset in 111 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 740] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 741] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 742] ---------
+# --------- [DRIVER] Reset Started --------- at 31242000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 31250000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 743] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1723,6 +2433,9 @@ do setup.do
 # [Driver] Parity error injection in transaction 745, GPIOIN: 531d
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 746] ---------
+# --------- [DRIVER] Reset Ended --------- at 31391000
+# [Reset in 132 ns
+# [Reset for 2 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 747] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1730,15 +2443,27 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 749] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 749
+# --------- [DRIVER] Reset Started --------- at 31523000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 31530000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 750] ---------
+# --------- [DRIVER] Reset Ended --------- at 31551000
+# [Reset in 89 ns
+# [Reset for 2 cycles
 # [Driver] Wrong direction injection in transaction 750
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 751] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 752] ---------
+# --------- [DRIVER] Reset Started --------- at 31640000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 31650000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 753] ---------
+# --------- [DRIVER] Reset Ended --------- at 31671000
+# [Reset in 211 ns
+# [Reset for 4 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 754] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1750,15 +2475,26 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 758] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 758
+# --------- [DRIVER] Reset Started --------- at 31882000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 31890000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 759] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 760] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 760
+# --------- [DRIVER] Reset Ended --------- at 31951000
+# [Reset in 59 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 761] ---------
+# --------- [DRIVER] Reset Started --------- at 32010000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 762] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 32030000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 763] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1766,15 +2502,29 @@ do setup.do
 # [Driver] Wrong direction injection in transaction 764
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 765] ---------
+# --------- [DRIVER] Reset Ended --------- at 32171000
+# [Reset in 86 ns
+# [Reset for 2 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 766] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 767] ---------
+# --------- [DRIVER] Reset Started --------- at 32257000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 768] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 32270000
 # [Driver] Wrong HADDR injection in data phase: transaction 768
+# --------- [DRIVER] Reset Ended --------- at 32291000
+# [Reset in 34 ns
+# [Reset for 11 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 769] ---------
+# --------- [DRIVER] Reset Started --------- at 32325000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 32330000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 770] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1786,6 +2536,9 @@ do setup.do
 # [Driver] Wrong HADDR injection in data phase: transaction 773
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 774] ---------
+# --------- [DRIVER] Reset Ended --------- at 32531000
+# [Reset in 104 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 775] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1793,8 +2546,14 @@ do setup.do
 # [Driver] Wrong HADDR injection in data phase: transaction 776
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 777] ---------
+# --------- [DRIVER] Reset Started --------- at 32635000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 32650000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 778] ---------
+# --------- [DRIVER] Reset Ended --------- at 32691000
+# [Reset in 242 ns
+# [Reset for 14 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 779] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1811,8 +2570,13 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 784] ---------
 # [Driver] Parity error injection in transaction 784, GPIOIN: 17617
 # [Driver] Wrong direction injection in transaction 784
+# --------- [DRIVER] Reset Started --------- at 32933000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 785] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 32950000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 786] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1826,6 +2590,9 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 791] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 791
+# --------- [DRIVER] Reset Ended --------- at 33211000
+# [Reset in 285 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 792] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1844,8 +2611,13 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 798] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 798
 # [Driver] Wrong direction injection in transaction 798
+# --------- [DRIVER] Reset Started --------- at 33496000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 799] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 33510000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 800] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1853,6 +2625,9 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 802] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 802
+# --------- [DRIVER] Reset Ended --------- at 33651000
+# [Reset in 157 ns
+# [Reset for 6 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 803] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 803
@@ -1860,12 +2635,18 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 804] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 805] ---------
+# --------- [DRIVER] Reset Started --------- at 33808000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 33810000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 806] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 807] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 808] ---------
+# --------- [DRIVER] Reset Ended --------- at 33911000
+# [Reset in 272 ns
+# [Reset for 15 cycles
 # [Driver] Wrong direction injection in transaction 808
 # [Driver] Wrong HADDR injection in data phase: transaction 808
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1882,8 +2663,13 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 813] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 814] ---------
+# --------- [DRIVER] Reset Started --------- at 34183000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 815] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 34190000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 816] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1897,6 +2683,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 820] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 821] ---------
+# --------- [DRIVER] Reset Ended --------- at 34471000
+# [Reset in 276 ns
+# [Reset for 13 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 822] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1910,8 +2699,13 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 826] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 827] ---------
+# --------- [DRIVER] Reset Started --------- at 34747000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 828] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 34750000
 # [Driver] Wrong HADDR injection in data phase: transaction 828
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 829] ---------
@@ -1927,17 +2721,25 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 833] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 834] ---------
+# --------- [DRIVER] Reset Ended --------- at 34991000
+# [Reset in 125 ns
+# [Reset for 6 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 835] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 836] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 837] ---------
-# [Driver] Wrong HADDR injection in data phase: transaction 837
+# --------- [DRIVER] Reset Started --------- at 35116000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 35130000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 838] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 839] ---------
+# --------- [DRIVER] Reset Ended --------- at 35231000
+# [Reset in 291 ns
+# [Reset for 5 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 840] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1953,14 +2755,22 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 845] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 846] ---------
+# --------- [DRIVER] Reset Started --------- at 35522000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 35530000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 847] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 848] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 848
+# --------- [DRIVER] Reset Ended --------- at 35611000
+# [Reset in 23 ns
+# [Reset for 14 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 849] ---------
-# [Driver] Wrong HADDR injection in data phase: transaction 849
+# --------- [DRIVER] Reset Started --------- at 35634000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 35650000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 850] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -1975,21 +2785,35 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 855] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 856] ---------
+# --------- [DRIVER] Reset Ended --------- at 35911000
+# [Reset in 111 ns
+# [Reset for 6 cycles
 # [Driver] Wrong HADDR injection in data phase: transaction 856
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 857] ---------
+# --------- [DRIVER] Reset Started --------- at 36022000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 858] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 36030000
 # [Driver] Wrong HADDR injection in data phase: transaction 858
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 859] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 860] ---------
 # [Driver] Parity error injection in transaction 860, GPIOIN: 1f963
+# --------- [DRIVER] Reset Ended --------- at 36131000
+# [Reset in 94 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 861] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 862] ---------
+# --------- [DRIVER] Reset Started --------- at 36225000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 36230000
 # [Driver] Wrong HADDR injection in data phase: transaction 862
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 863] ---------
@@ -1997,27 +2821,46 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 864] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 865] ---------
+# --------- [DRIVER] Reset Ended --------- at 36351000
+# [Reset in 93 ns
+# [Reset for 6 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 866] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 867] ---------
+# --------- [DRIVER] Reset Started --------- at 36444000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 36450000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 868] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 869] ---------
+# --------- [DRIVER] Reset Ended --------- at 36551000
+# [Reset in 105 ns
+# [Reset for 4 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 870] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 871] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 871
+# --------- [DRIVER] Reset Started --------- at 36656000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 872] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 36670000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 873] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 873
+# --------- [DRIVER] Reset Ended --------- at 36731000
+# [Reset in 28 ns
+# [Reset for 6 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 874] ---------
-# [Driver] Wrong HADDR injection in data phase: transaction 874
+# --------- [DRIVER] Reset Started --------- at 36759000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 36770000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 875] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2025,8 +2868,16 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 877] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 877
+# --------- [DRIVER] Reset Ended --------- at 36871000
+# [Reset in 27 ns
+# [Reset for 9 cycles
+# --------- [DRIVER] Reset Started --------- at 36898000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 878] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 36910000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 879] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2037,10 +2888,18 @@ do setup.do
 # [Driver] Parity error injection in transaction 881, GPIOIN: 19fd6
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 882] ---------
+# --------- [DRIVER] Reset Ended --------- at 37071000
+# [Reset in 59 ns
+# [Reset for 14 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 883] ---------
+# --------- [DRIVER] Reset Started --------- at 37130000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 884] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 37150000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 885] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2054,6 +2913,9 @@ do setup.do
 # [Driver] Wrong direction injection in transaction 889
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 890] ---------
+# --------- [DRIVER] Reset Ended --------- at 37411000
+# [Reset in 286 ns
+# [Reset for 7 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 891] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 891
@@ -2071,12 +2933,18 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 897] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 897
+# --------- [DRIVER] Reset Started --------- at 37697000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 37710000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 898] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 899] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 900] ---------
+# --------- [DRIVER] Reset Ended --------- at 37831000
+# [Reset in 475 ns
+# [Reset for 2 cycles
 # [Driver] Wrong HADDR injection in address phase: transaction 900
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 901] ---------
@@ -2102,10 +2970,15 @@ do setup.do
 # [Driver] Wrong HADDR injection in data phase: transaction 910
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 911] ---------
-# [Driver] Wrong HADDR injection in data phase: transaction 911
+# --------- [DRIVER] Reset Started --------- at 38306000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 38310000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 912] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 912
+# --------- [DRIVER] Reset Ended --------- at 38331000
+# [Reset in 177 ns
+# [Reset for 2 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 913] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 913
@@ -2115,16 +2988,29 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 915] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 916] ---------
+# --------- [DRIVER] Reset Started --------- at 38508000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 38510000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 917] ---------
+# --------- [DRIVER] Reset Ended --------- at 38531000
+# [Reset in 46 ns
+# [Reset for 4 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 918] ---------
-# [Driver] Wrong HADDR injection in data phase: transaction 918
+# --------- [DRIVER] Reset Started --------- at 38577000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 38590000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 919] ---------
+# --------- [DRIVER] Reset Ended --------- at 38651000
+# [Reset in 26 ns
+# [Reset for 12 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 920] ---------
-# [Driver] Wrong HADDR injection in address phase: transaction 920
+# --------- [DRIVER] Reset Started --------- at 38677000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 38690000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 921] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2137,19 +3023,33 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 925] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 925
+# --------- [DRIVER] Reset Ended --------- at 38911000
+# [Reset in 117 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 926] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 927] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 927
+# --------- [DRIVER] Reset Started --------- at 39028000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 39030000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 928] ---------
+# --------- [DRIVER] Reset Ended --------- at 39071000
+# [Reset in 97 ns
+# [Reset for 15 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 929] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 930] ---------
+# --------- [DRIVER] Reset Started --------- at 39168000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 931] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 39170000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 932] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2165,6 +3065,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 937] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 938] ---------
+# --------- [DRIVER] Reset Ended --------- at 39451000
+# [Reset in 174 ns
+# [Reset for 2 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 939] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2175,13 +3078,24 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 942] ---------
 # [Driver] Parity error injection in transaction 942, GPIOIN: 121e9
+# --------- [DRIVER] Reset Started --------- at 39625000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 39630000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 943] ---------
+# --------- [DRIVER] Reset Ended --------- at 39651000
+# [Reset in 71 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 944] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 944
+# --------- [DRIVER] Reset Started --------- at 39722000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 945] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 39730000
 # [Driver] Wrong HADDR injection in data phase: transaction 945
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 946] ---------
@@ -2192,11 +3106,19 @@ do setup.do
 # [Driver] Wrong direction injection in transaction 947
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 948] ---------
+# --------- [DRIVER] Reset Ended --------- at 39871000
+# [Reset in 51 ns
+# [Reset for 12 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 949] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 949
+# --------- [DRIVER] Reset Started --------- at 39922000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 950] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 39930000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 951] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2207,6 +3129,9 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 954] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 955] ---------
+# --------- [DRIVER] Reset Ended --------- at 40151000
+# [Reset in 165 ns
+# [Reset for 6 cycles
 # [Driver] Wrong HADDR injection in address phase: transaction 955
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 956] ---------
@@ -2215,24 +3140,42 @@ do setup.do
 # [Driver] Wrong direction injection in transaction 957
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 958] ---------
+# --------- [DRIVER] Reset Started --------- at 40316000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 959] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 40330000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 960] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 961] ---------
+# --------- [DRIVER] Reset Ended --------- at 40431000
+# [Reset in 75 ns
+# [Reset for 5 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 962] ---------
-# [Driver] Wrong HADDR injection in data phase: transaction 962
+# --------- [DRIVER] Reset Started --------- at 40506000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 40510000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 963] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 964] ---------
+# --------- [DRIVER] Reset Ended --------- at 40591000
+# [Reset in 58 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 965] ---------
 # [Driver] Wrong HADDR injection in data phase: transaction 965
+# --------- [DRIVER] Reset Started --------- at 40649000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 966] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 40650000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 967] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2241,8 +3184,14 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 969] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 969
+# --------- [DRIVER] Reset Ended --------- at 40791000
+# [Reset in 35 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 970] ---------
+# --------- [DRIVER] Reset Started --------- at 40826000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 40830000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 971] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 971
@@ -2253,9 +3202,17 @@ do setup.do
 # --------- [DRIVER-TRANSFER: 973] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 974] ---------
+# --------- [DRIVER] Reset Ended --------- at 40971000
+# [Reset in 34 ns
+# [Reset for 10 cycles
 # [Driver] Wrong HADDR injection in data phase: transaction 974
+# --------- [DRIVER] Reset Started --------- at 41005000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 975] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 41010000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 976] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 976
@@ -2266,18 +3223,32 @@ do setup.do
 # [Driver] Wrong HADDR injection in address phase: transaction 978
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 979] ---------
+# --------- [DRIVER] Reset Ended --------- at 41191000
+# [Reset in 76 ns
+# [Reset for 5 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 980] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 981] ---------
+# --------- [DRIVER] Reset Started --------- at 41267000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 41270000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 982] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 983] ---------
+# --------- [DRIVER] Reset Ended --------- at 41351000
+# [Reset in 57 ns
+# [Reset for 10 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 984] ---------
+# --------- [DRIVER] Reset Started --------- at 41408000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 985] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 41410000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 986] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2287,15 +3258,29 @@ do setup.do
 # [Driver] Wrong direction injection in transaction 988
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 989] ---------
+# --------- [DRIVER] Reset Ended --------- at 41591000
+# [Reset in 27 ns
+# [Reset for 3 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 990] ---------
+# --------- [DRIVER] Reset Started --------- at 41618000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 41630000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 991] ---------
+# --------- [DRIVER] Reset Ended --------- at 41671000
+# [Reset in 51 ns
+# [Reset for 8 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 992] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 992
+# --------- [DRIVER] Reset Started --------- at 41722000
+# [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 993] ---------
+# [DRIVER] Driver is being reset
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 41730000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 994] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2303,8 +3288,14 @@ do setup.do
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 996] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 996
+# --------- [DRIVER] Reset Ended --------- at 41871000
+# [Reset in 32 ns
+# [Reset for 13 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 997] ---------
+# --------- [DRIVER] Reset Started --------- at 41903000
+# [DRIVER] Driver is being reset
+# --------- [DRIVER] Reset driver end --------- at 41910000
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 998] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2314,14 +3305,9 @@ do setup.do
 # [MONITOR] Error count: 0
 # [SCOREBOARD] Error count: 0
 # ** Note: $stop    : tbench/env.sv(57)
-#    Time: 42290 ns  Iteration: 1  Instance: /tb_top/t1
+#    Time: 42010 ns  Iteration: 1  Instance: /tb_top/t1
 # Break in Task tb_top_sv_unit/environment::wait_test_end at tbench/env.sv line 57
-# ** Error: invalid command name "*wave"
-# Error in macro ./setup.do line 3
-# invalid command name "*wave"
-#     while executing
-# "*wave zoom out"
-coverage save -du work.tb_top -onexit test1_coverage.ucdb
+coverage save -du work.tb_top -onexit test5_coverage.ucdb
 # Saving coverage database on exit...
-# End time: 09:44:17 on Dec 14,2022, Elapsed time: 0:04:21
-# Errors: 3, Warnings: 0
+# End time: 11:21:31 on Dec 14,2022, Elapsed time: 0:03:16
+# Errors: 6, Warnings: 2
