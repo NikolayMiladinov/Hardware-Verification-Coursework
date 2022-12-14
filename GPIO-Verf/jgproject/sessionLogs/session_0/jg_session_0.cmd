@@ -5,10 +5,10 @@
 # version   : 2018.06p002 64 bits
 # build date: 2018.08.27 18:04:53 PDT
 #----------------------------------------
-# started Tue Dec 13 22:31:42 GMT 2022
+# started Wed Dec 14 08:35:14 GMT 2022
 # hostname  : ee-mill3.ee.ic.ac.uk
-# pid       : 117606
-# arguments : '-label' 'session_0' '-console' 'ee-mill3.ee.ic.ac.uk:40446' '-style' 'windows' '-data' 'AQAAADx/////AAAAAAAAA3oBAAAAEABMAE0AUgBFAE0ATwBWAEU=' '-proj' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/.tmp/.initCmds.tcl' 'AHBGPIO.tcl'
+# pid       : 155829
+# arguments : '-label' 'session_0' '-console' 'ee-mill3.ee.ic.ac.uk:41232' '-style' 'windows' '-data' 'AQAAADx/////AAAAAAAAA3oBAAAAEABMAE0AUgBFAE0ATwBWAEU=' '-proj' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/nnm19/nfshome/HVS/Hardware-Verification-Coursework/GPIO-Verf/jgproject/.tmp/.initCmds.tcl' 'AHBGPIO.tcl'
 clear -all
 analyze -clear
 analyze -sv rtl/AHB_GPIO/AHBGPIO.sv
@@ -22,8 +22,3 @@ set_proofgrid_max_jobs 4
 set_proofgrid_max_local_jobs 4
 
 # cover -name test_cover_from_tcl {@(posedge HCLK) disable iff (HRESETn) done }
-prove -bg -property {<embedded>::AHBGPIO.parity_checking_false}
-prove -bg -property {<embedded>::AHBGPIO.parity_checking_true}
-prove -bg -property {<embedded>::AHBGPIO.parity_checking_dir}
-prove -bg -property {<embedded>::AHBGPIO.parity_checking}
-visualize -violation -property <embedded>::AHBGPIO.parity_checking -new_window

@@ -1,59 +1,50 @@
-2022-12-13 22:31:33.243006 (116173) main____ INFO    ----------------------------------------
-2022-12-13 22:31:33.243151 (116173) main____ INFO    JasperGold version info
-2022-12-13 22:31:33.243169 (116173) main____ INFO      tool      : JasperGold 2018.06
-2022-12-13 22:31:33.243186 (116173) main____ INFO      version   : 2018.06p002 64 bits
-2022-12-13 22:31:33.243199 (116173) main____ INFO      build date: 2018.08.27 18:04:53 PDT
-2022-12-13 22:31:33.243207 (116173) main____ INFO    ----------------------------------------
-2022-12-13 22:31:33.243215 (116173) main____ INFO    Runtime info:
-2022-12-13 22:31:33.243224 (116173) main____ INFO      platform  : Linux 3.10.0-957.21.3.el7.x86_64 x86_64
-2022-12-13 22:31:33.243237 (116173) main____ INFO      hostname  : ee-mill3.ee.ic.ac.uk
-2022-12-13 22:31:33.243245 (116173) main____ INFO      pid       : 116173
-2022-12-13 22:31:33.243253 (116173) main____ INFO      arguments : '-style' 'windows' 'AHBGPIO.tcl'
-2022-12-13 22:31:33.243261 (116173) main____ INFO    ----------------------------------------
-2022-12-13 22:31:33.243268 (116173) main____ INFO    System resource limits info:
-2022-12-13 22:31:33.243276 (116173) main____ INFO      virtual memory: unlimited
-2022-12-13 22:31:33.243285 (116173) main____ INFO      cpu time      : unlimited
-2022-12-13 22:31:33.243312 (116173) main____ INFO      stack size    : 8388608 B
-2022-12-13 22:31:33.243325 (116173) main____ INFO      core file size: 0 B
-2022-12-13 22:31:33.243343 (116173) main____ INFO      open files    : 4096
-2022-12-13 22:31:33.243352 (116173) main____ INFO      file size     : unlimited
-2022-12-13 22:31:33.243359 (116173) main____ INFO    ----------------------------------------
-2022-12-13 22:31:33.243366 (116173) main____ INFO    Memory statistics:
-2022-12-13 22:31:33.243374 (116173) main____ INFO      total physical memory  : 395962436 kB
-2022-12-13 22:31:33.243387 (116173) main____ INFO      free physical memory   : 1584524 kB
-2022-12-13 22:31:33.243408 (116173) main____ INFO      committed address space: 74742704 kB
-2022-12-13 22:31:33.243418 (116173) main____ INFO    ----------------------------------------
-2022-12-13 22:31:33.243492 (116173) main____ INFO    Important environment variables:
-2022-12-13 22:31:33.243528 (116173) main____ INFO      DISPLAY        : 'localhost:35.0'
-2022-12-13 22:31:33.243545 (116173) main____ INFO      LM_LICENSE_FILE: '5280@ee-llic01.ee.ic.ac.uk'
-2022-12-13 22:31:33.243556 (116173) main____ INFO    ----------------------------------------
-2022-12-13 22:31:33.244317 (116173) lic_core INFO    Initializing license system ...
-2022-12-13 22:31:33.244975 (116173) lic_core INFO    ... license system initialized.
-2022-12-13 22:31:33.247053 (116173) lic__man INFO    Claim 'main' for <ui>.
-2022-12-13 22:31:33.247127 (116173) lic_core INFO    (1) checking out 'jasper_interactive' ...
-2022-12-13 22:31:33.275031 (116173) lic_core INFO    ... (1) checkout succeeded
-2022-12-13 22:31:33.275198 (116173) lic__man INFO    Claim 'fpv' for <ui>.
-2022-12-13 22:31:33.275248 (116173) lic_core INFO    (2) checking out 'jasper_fpv' ...
-2022-12-13 22:31:33.285089 (116173) lic_core INFO    ... (2) checkout failed (error: -5) ("FLEXnet ERROR(-5, 0, 0): No such feature exists.")
-2022-12-13 22:31:33.285126 (116173) lic_core INFO    (3) checking out 'jasper_fao' ...
-2022-12-13 22:31:33.306021 (116173) lic_core INFO    ... (3) checkout succeeded
-2022-12-13 22:31:41.366285 (116173) lic__man INFO    Claim 'fpv' for <ui>.
-2022-12-13 22:31:42.138485 (116173) lic__man INFO    Unclaim 'fpv' for <ui>.
-2022-12-13 22:31:42.138547 (116173) lic__man INFO    Claim 'fpv' for <ui>.
-2022-12-13 22:31:42.150067 (116173) session_ INFO    Starting analysis session with session id 'session_0' ...
-2022-12-13 22:31:42.152085 (116173) session_ INFO    Analysis session with session id 'session_0' started (pid: 117606)
-2022-12-13 22:31:49.854701 (116173) session_ INFO    Analysis session 'session_0' connected to the console (host: 146.179.44.6:51888)
-2022-12-13 22:31:51.784834 (116173) lic__man INFO    Unclaim everything for 'session_0'.
-2022-12-13 22:31:51.790501 (116173) lic__man INFO    Unclaim everything for 'session_0'.
-2022-12-13 22:37:02.320703 (116173) lic__man INFO    Claim 'fpv' for 'session_0/prove-0'.
-2022-12-13 22:37:03.564470 (116173) lic__man INFO    Unclaim everything for 'session_0/prove-0'.
-2022-12-13 22:37:08.814138 (116173) lic__man INFO    Claim 'fpv' for 'session_0/prove-1'.
-2022-12-13 22:37:10.691357 (116173) lic__man INFO    Unclaim everything for 'session_0/prove-1'.
-2022-12-13 22:37:15.188264 (116173) lic__man INFO    Claim 'fpv' for 'session_0/prove-2'.
-2022-12-13 22:37:16.429502 (116173) lic__man INFO    Unclaim everything for 'session_0/prove-2'.
-2022-12-13 22:37:23.068416 (116173) lic__man INFO    Claim 'fpv' for 'session_0/prove-3'.
-2022-12-13 22:37:26.198410 (116173) lic__man INFO    Unclaim everything for 'session_0/prove-3'.
-2022-12-13 22:37:42.018174 (116173) lic__man INFO    Claim 'fpv' for 'session_0'.
-2022-12-13 22:40:03.669116 (116173) main____ INFO    About to exit: requested from GUI
-2022-12-13 22:40:05.551938 (116173) session_ INFO    Analysis session 'session_0' disconnected.
-2022-12-13 22:40:05.574102 (116173) main____ INFO    Exiting with status 0.
+2022-12-14 08:35:04.841965 (154744) main____ INFO    ----------------------------------------
+2022-12-14 08:35:04.842135 (154744) main____ INFO    JasperGold version info
+2022-12-14 08:35:04.842156 (154744) main____ INFO      tool      : JasperGold 2018.06
+2022-12-14 08:35:04.842172 (154744) main____ INFO      version   : 2018.06p002 64 bits
+2022-12-14 08:35:04.844577 (154744) main____ INFO      build date: 2018.08.27 18:04:53 PDT
+2022-12-14 08:35:04.846211 (154744) main____ INFO    ----------------------------------------
+2022-12-14 08:35:04.847846 (154744) main____ INFO    Runtime info:
+2022-12-14 08:35:04.850013 (154744) main____ INFO      platform  : Linux 3.10.0-957.21.3.el7.x86_64 x86_64
+2022-12-14 08:35:04.852728 (154744) main____ INFO      hostname  : ee-mill3.ee.ic.ac.uk
+2022-12-14 08:35:04.854429 (154744) main____ INFO      pid       : 154744
+2022-12-14 08:35:04.854445 (154744) main____ INFO      arguments : '-style' 'windows' 'AHBGPIO.tcl'
+2022-12-14 08:35:04.856164 (154744) main____ INFO    ----------------------------------------
+2022-12-14 08:35:04.858012 (154744) main____ INFO    System resource limits info:
+2022-12-14 08:35:04.860279 (154744) main____ INFO      virtual memory: unlimited
+2022-12-14 08:35:04.862747 (154744) main____ INFO      cpu time      : unlimited
+2022-12-14 08:35:04.864840 (154744) main____ INFO      stack size    : 8388608 B
+2022-12-14 08:35:04.866979 (154744) main____ INFO      core file size: 0 B
+2022-12-14 08:35:04.869515 (154744) main____ INFO      open files    : 4096
+2022-12-14 08:35:04.871614 (154744) main____ INFO      file size     : unlimited
+2022-12-14 08:35:04.873494 (154744) main____ INFO    ----------------------------------------
+2022-12-14 08:35:04.875559 (154744) main____ INFO    Memory statistics:
+2022-12-14 08:35:04.877096 (154744) main____ INFO      total physical memory  : 395962436 kB
+2022-12-14 08:35:04.878911 (154744) main____ INFO      free physical memory   : 6131640 kB
+2022-12-14 08:35:04.880773 (154744) main____ INFO      committed address space: 45432636 kB
+2022-12-14 08:35:04.882588 (154744) main____ INFO    ----------------------------------------
+2022-12-14 08:35:04.884988 (154744) main____ INFO    Important environment variables:
+2022-12-14 08:35:04.886971 (154744) main____ INFO      DISPLAY        : 'localhost:12.0'
+2022-12-14 08:35:04.889053 (154744) main____ INFO      LM_LICENSE_FILE: '5280@ee-llic01.ee.ic.ac.uk'
+2022-12-14 08:35:04.890658 (154744) main____ INFO    ----------------------------------------
+2022-12-14 08:35:04.893034 (154744) lic_core INFO    Initializing license system ...
+2022-12-14 08:35:04.894967 (154744) lic_core INFO    ... license system initialized.
+2022-12-14 08:35:04.898240 (154744) lic__man INFO    Claim 'main' for <ui>.
+2022-12-14 08:35:04.898325 (154744) lic_core INFO    (1) checking out 'jasper_interactive' ...
+2022-12-14 08:35:04.934887 (154744) lic_core INFO    ... (1) checkout succeeded
+2022-12-14 08:35:04.935063 (154744) lic__man INFO    Claim 'fpv' for <ui>.
+2022-12-14 08:35:04.942321 (154744) lic_core INFO    (2) checking out 'jasper_fpv' ...
+2022-12-14 08:35:04.958247 (154744) lic_core INFO    ... (2) checkout failed (error: -5) ("FLEXnet ERROR(-5, 0, 0): No such feature exists.")
+2022-12-14 08:35:04.958302 (154744) lic_core INFO    (3) checking out 'jasper_fao' ...
+2022-12-14 08:35:04.985479 (154744) lic_core INFO    ... (3) checkout succeeded
+2022-12-14 08:35:13.232845 (154744) lic__man INFO    Claim 'fpv' for <ui>.
+2022-12-14 08:35:13.950692 (154744) lic__man INFO    Unclaim 'fpv' for <ui>.
+2022-12-14 08:35:13.950752 (154744) lic__man INFO    Claim 'fpv' for <ui>.
+2022-12-14 08:35:13.969740 (154744) session_ INFO    Starting analysis session with session id 'session_0' ...
+2022-12-14 08:35:13.971640 (154744) session_ INFO    Analysis session with session id 'session_0' started (pid: 155829)
+2022-12-14 08:35:22.953429 (154744) session_ INFO    Analysis session 'session_0' connected to the console (host: 146.179.44.6:47924)
+2022-12-14 08:35:23.073339 (154744) lic__man INFO    Unclaim everything for 'session_0'.
+2022-12-14 08:35:23.076348 (154744) lic__man INFO    Unclaim everything for 'session_0'.
+2022-12-14 08:35:27.040984 (154744) main____ INFO    About to exit: requested from GUI
+2022-12-14 08:35:27.756402 (154744) session_ INFO    Analysis session 'session_0' disconnected.
+2022-12-14 08:35:27.759688 (154744) main____ INFO    Exiting with status 0.

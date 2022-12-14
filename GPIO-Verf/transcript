@@ -14,7 +14,7 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -coverage -voptargs="+cover=bcefst" -onfinish stop work_opt -gui 
-# Start time: 08:13:05 on Dec 14,2022
+# Start time: 09:00:08 on Dec 14,2022
 # Loading sv_std.std
 # Loading work.tb_top_sv_unit(fast)
 # Loading work.tb_top(fast)
@@ -2324,11 +2324,14 @@ do setup.do
 #     (procedure "::wave::zoom::out" line 2)
 #     invoked from within
 # "wave zoom out"
-coverage save -du work.tb_top/DUT -onexit test1_DUT_coverage.ucdb
-coverage save -du work.tb_top/intf -onexit test1_intf_coverage.ucdb
+[09:03] Miladinov, Nick
+# invalid command name "[09:03]"
+coverage save -du work.tb_top -onexit test1_coverage.ucdb
+# ** Error: (coverage save-6830) DU name is not found.
+
+
+
 coverage save -du work.tb_top -onexit test1_coverage.ucdb
-quit
-exit
 # Saving coverage database on exit...
-# End time: 08:26:01 on Dec 14,2022, Elapsed time: 0:12:56
-# Errors: 3, Warnings: 0
+# End time: 09:05:28 on Dec 14,2022, Elapsed time: 0:05:20
+# Errors: 4, Warnings: 0
