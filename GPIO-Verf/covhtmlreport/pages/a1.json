@@ -7,8 +7,8 @@ scopes:[{link:'z.htm?f=0&s=8',val:'work.AHBGPIO'}]
 ,{cr:'c',c:'g',z:'update_direction',fc:'Gr',pc:'Gr',h0:'0',h1:'4'}
 ,{cr:'c',c:'g',z:'direction_update_if',fc:'Gr',pc:'Gr',h0:'0',h1:'4'}
 ,{cr:'c',c:'g',z:'parity_gen',fc:'Gr',pc:'Gr',h0:'0',h1:'4'}
-,{cr:'m',c:'F',z:'parity_checking_true',fc:'Rr',pc:'Gr',h0:'2',h1:'4'}
-,{cr:'c',c:'g',z:'parity_checking_false',fc:'Gr',pc:'Gr',h0:'0',h1:'4'}
+,{cr:'c',c:'g',z:'parity_checking_true',fc:'Gr',pc:'Gr',h0:'0',h1:'3'}
+,{cr:'c',c:'g',z:'parity_checking_false',fc:'Gr',pc:'Gr',h0:'0',h1:'3'}
 ,{cr:'c',c:'g',z:'parity_checking_dir',fc:'Gr',pc:'Gr',h0:'0',h1:'4'}
 ,{cr:'c',c:'g',z:'parity_checking',fc:'Gr',pc:'Gr',h0:'0',h1:'4'}
 ,{cr:'c',c:'g',z:'reset_property',fc:'Gr',pc:'Gr',h0:'0',h1:'4'}
@@ -22,8 +22,8 @@ scopes:[{s:'10',b:'1',val:'\\tb_top '},{link:'z.htm?f=0&s=261',val:'DUT'}]
 ,{cr:'c',c:'g',z:'update_direction',fc:'Gr',pc:'Gr',h0:'0',h1:'4'}
 ,{cr:'c',c:'g',z:'direction_update_if',fc:'Gr',pc:'Gr',h0:'0',h1:'4'}
 ,{cr:'c',c:'g',z:'parity_gen',fc:'Gr',pc:'Gr',h0:'0',h1:'4'}
-,{cr:'m',c:'F',z:'parity_checking_true',fc:'Rr',pc:'Gr',h0:'2',h1:'4'}
-,{cr:'c',c:'g',z:'parity_checking_false',fc:'Gr',pc:'Gr',h0:'0',h1:'4'}
+,{cr:'c',c:'g',z:'parity_checking_true',fc:'Gr',pc:'Gr',h0:'0',h1:'3'}
+,{cr:'c',c:'g',z:'parity_checking_false',fc:'Gr',pc:'Gr',h0:'0',h1:'3'}
 ,{cr:'c',c:'g',z:'parity_checking_dir',fc:'Gr',pc:'Gr',h0:'0',h1:'4'}
 ,{cr:'c',c:'g',z:'parity_checking',fc:'Gr',pc:'Gr',h0:'0',h1:'4'}
 ,{cr:'c',c:'g',z:'reset_property',fc:'Gr',pc:'Gr',h0:'0',h1:'4'}

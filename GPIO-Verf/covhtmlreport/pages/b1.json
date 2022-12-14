@@ -48,101 +48,101 @@ b12:[{dummy:0},
 ]}],
 b8:[{dummy:0},
 {anchor:'cvg262',items:[{z:'    if(HREADY)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'76',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if(HREADY)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'76',h:'7494',c:'g'}
-,{cr:'c',t:'A',z:'    if(HREADY)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'76',h:'452',c:'g'}
+,{cr:'c',t:'I',z:'    if(HREADY)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'76',h:'5547',c:'g'}
+,{cr:'c',t:'A',z:'    if(HREADY)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'76',h:'311',c:'g'}
 ]},
 {anchor:'cvg263',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'88',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'88',h:'1151',c:'g'}
-,{cr:'c',t:'T',z:'    else if ((last_HADDR[7:0] == gpio_dir_addr) & last_HSEL & last_HWRITE...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'93',h:'2715',c:'g'}
-,{cr:'c',t:'A',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'88',h:'3546',c:'g'}
+,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'88',h:'18',c:'g'}
+,{cr:'c',t:'T',z:'    else if ((last_HADDR[7:0] == gpio_dir_addr) & last_HSEL & last_HWRITE...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'93',h:'2292',c:'g'}
+,{cr:'c',t:'A',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'88',h:'2929',c:'g'}
 ]},
 {anchor:'cvg264',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'100',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'100',h:'1156',c:'g'}
-,{cr:'c',t:'T',z:'    else if ((gpio_dir == 16\'h0001) & (last_HADDR[7:0] == gpio_data_addr)...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'104',h:'1948',c:'g'}
-,{cr:'c',t:'A',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'100',h:'4755',c:'g'}
+,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'100',h:'18',c:'g'}
+,{cr:'c',t:'T',z:'    else if ((gpio_dir == 16\'h0001) & (last_HADDR[7:0] == gpio_data_addr)...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'104',h:'1750',c:'g'}
+,{cr:'c',t:'A',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'100',h:'3903',c:'g'}
 ]},
 {anchor:'cvg265',items:[{z:'      gpio_dataout &lt;= {PARITYSEL ? ~^HWDATA[15:0] : ^HWDATA[15:0], HWDATA...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'106',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'      gpio_dataout &lt;= {PARITYSEL ? ~^HWDATA[15:0] : ^HWDATA[15:0], HWDATA...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'106',h:'951',c:'g'}
-,{cr:'c',t:'E',z:'      gpio_dataout &lt;= {PARITYSEL ? ~^HWDATA[15:0] : ^HWDATA[15:0], HWDATA...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'106',h:'997',c:'g'}
+,{cr:'c',t:'I',z:'      gpio_dataout &lt;= {PARITYSEL ? ~^HWDATA[15:0] : ^HWDATA[15:0], HWDATA...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'106',h:'856',c:'g'}
+,{cr:'c',t:'E',z:'      gpio_dataout &lt;= {PARITYSEL ? ~^HWDATA[15:0] : ^HWDATA[15:0], HWDATA...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'106',h:'894',c:'g'}
 ]},
 {anchor:'cvg266',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'112',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'112',h:'621',c:'g'}
-,{cr:'c',t:'T',z:'    else if (gpio_dir == 16\'h0000) begin',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'116',h:'2853',c:'g'}
-,{cr:'c',t:'T',z:'    end else if (gpio_dir == 16\'h0001)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'122',h:'3139',c:'g'}
-,{cr:'c',t:'A',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'112',h:'149',c:'g'}
+,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'112',h:'15',c:'g'}
+,{cr:'c',t:'T',z:'    else if (gpio_dir == 16\'h0000) begin',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'116',h:'2301',c:'g'}
+,{cr:'c',t:'T',z:'    end else if (gpio_dir == 16\'h0001)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'122',h:'2762',c:'g'}
+,{cr:'c',t:'A',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'112',h:'128',c:'g'}
 ]},
 {anchor:'cvg267',items:[{z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',h:'123',c:'g'}
-,{cr:'c',t:'E',z:'      else PARITYERR &lt;= 1\'b0;',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'119',h:'2730',c:'g'}
+,{cr:'c',t:'I',z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',h:'92',c:'g'}
+,{cr:'c',t:'E',z:'      else PARITYERR &lt;= 1\'b0;',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'119',h:'2209',c:'g'}
 ]},
 {anchor:'cvg268',items:[{z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',h:'1465',c:'g'}
-,{cr:'c',t:'E',z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',h:'1388',c:'g'}
+,{cr:'c',t:'I',z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',h:'1191',c:'g'}
+,{cr:'c',t:'E',z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',h:'1110',c:'g'}
 ]},
 {anchor:'cvg269',items:[{z:'                                (gpio_dataout[16]==($past(PARITYSEL) ? ~^...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'167',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'                                (gpio_dataout[16]==($past(PARITYSEL) ? ~^...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'167',h:'741',c:'g'}
-,{cr:'c',t:'E',z:'                                (gpio_dataout[16]==($past(PARITYSEL) ? ~^...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'167',h:'764',c:'g'}
+,{cr:'c',t:'I',z:'                                (gpio_dataout[16]==($past(PARITYSEL) ? ~^...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'167',h:'661',c:'g'}
+,{cr:'c',t:'E',z:'                                (gpio_dataout[16]==($past(PARITYSEL) ? ~^...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'167',h:'680',c:'g'}
 ]},
-{anchor:'cvg270',items:[{z:'                                ($past(GPIOIN[16])==($past(PARITYSEL) ? ~...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'173',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'                                ($past(GPIOIN[16])==($past(PARITYSEL) ? ~...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'173',h:'1249',c:'g'}
-,{cr:'c',t:'E',z:'                                ($past(GPIOIN[16])==($past(PARITYSEL) ? ~...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'173',h:'1219',c:'g'}
+{anchor:'cvg270',items:[{z:'                                  ) else $display(&#34;Parityerr changed on u...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'173',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'                                  ) else $display(&#34;Parityerr changed on u...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'173',h:'1037',c:'g'}
+,{cr:'c',t:'E',z:'                                  ) else $display(&#34;Parityerr changed on u...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'173',h:'984',c:'g'}
 ]},
-{anchor:'cvg271',items:[{z:'                                ($past(GPIOIN[16])!=($past(PARITYSEL) ? ~...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'179',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'                                ($past(GPIOIN[16])!=($past(PARITYSEL) ? ~...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'179',h:'59',c:'g'}
-,{cr:'c',t:'E',z:'                                ($past(GPIOIN[16])!=($past(PARITYSEL) ? ~...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'179',h:'47',c:'g'}
+{anchor:'cvg271',items:[{z:'',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'179',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'179',h:'49',c:'g'}
+,{cr:'c',t:'E',z:'',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'179',h:'37',c:'g'}
 ]},
-{anchor:'cvg272',items:[{z:'                                    ($changed(PARITYERR)) |-&gt; (PARITYERR=...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'189',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'                                    ($changed(PARITYERR)) |-&gt; (PARITYERR=...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'189',h:'70',c:'g'}
-,{cr:'c',t:'E',z:'                                    ($changed(PARITYERR)) |-&gt; (PARITYERR=...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'189',h:'58',c:'g'}
+{anchor:'cvg272',items:[{z:'If-else:',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'189',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'189',h:'59',c:'g'}
+,{cr:'c',t:'E',z:'',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'189',h:'47',c:'g'}
 ]}],
 b261:[{dummy:0},
 {anchor:'cvg262',items:[{z:'    if(HREADY)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'76',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if(HREADY)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'76',h:'7494',c:'g'}
-,{cr:'c',t:'A',z:'    if(HREADY)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'76',h:'452',c:'g'}
+,{cr:'c',t:'I',z:'    if(HREADY)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'76',h:'5547',c:'g'}
+,{cr:'c',t:'A',z:'    if(HREADY)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'76',h:'311',c:'g'}
 ]},
 {anchor:'cvg263',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'88',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'88',h:'1151',c:'g'}
-,{cr:'c',t:'T',z:'    else if ((last_HADDR[7:0] == gpio_dir_addr) & last_HSEL & last_HWRITE...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'93',h:'2715',c:'g'}
-,{cr:'c',t:'A',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'88',h:'3546',c:'g'}
+,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'88',h:'18',c:'g'}
+,{cr:'c',t:'T',z:'    else if ((last_HADDR[7:0] == gpio_dir_addr) & last_HSEL & last_HWRITE...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'93',h:'2292',c:'g'}
+,{cr:'c',t:'A',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'88',h:'2929',c:'g'}
 ]},
 {anchor:'cvg264',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'100',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'100',h:'1156',c:'g'}
-,{cr:'c',t:'T',z:'    else if ((gpio_dir == 16\'h0001) & (last_HADDR[7:0] == gpio_data_addr)...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'104',h:'1948',c:'g'}
-,{cr:'c',t:'A',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'100',h:'4755',c:'g'}
+,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'100',h:'18',c:'g'}
+,{cr:'c',t:'T',z:'    else if ((gpio_dir == 16\'h0001) & (last_HADDR[7:0] == gpio_data_addr)...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'104',h:'1750',c:'g'}
+,{cr:'c',t:'A',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'100',h:'3903',c:'g'}
 ]},
 {anchor:'cvg265',items:[{z:'      gpio_dataout &lt;= {PARITYSEL ? ~^HWDATA[15:0] : ^HWDATA[15:0], HWDATA...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'106',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'      gpio_dataout &lt;= {PARITYSEL ? ~^HWDATA[15:0] : ^HWDATA[15:0], HWDATA...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'106',h:'951',c:'g'}
-,{cr:'c',t:'E',z:'      gpio_dataout &lt;= {PARITYSEL ? ~^HWDATA[15:0] : ^HWDATA[15:0], HWDATA...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'106',h:'997',c:'g'}
+,{cr:'c',t:'I',z:'      gpio_dataout &lt;= {PARITYSEL ? ~^HWDATA[15:0] : ^HWDATA[15:0], HWDATA...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'106',h:'856',c:'g'}
+,{cr:'c',t:'E',z:'      gpio_dataout &lt;= {PARITYSEL ? ~^HWDATA[15:0] : ^HWDATA[15:0], HWDATA...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'106',h:'894',c:'g'}
 ]},
 {anchor:'cvg266',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'112',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'112',h:'621',c:'g'}
-,{cr:'c',t:'T',z:'    else if (gpio_dir == 16\'h0000) begin',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'116',h:'2853',c:'g'}
-,{cr:'c',t:'T',z:'    end else if (gpio_dir == 16\'h0001)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'122',h:'3139',c:'g'}
-,{cr:'c',t:'A',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'112',h:'149',c:'g'}
+,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'112',h:'15',c:'g'}
+,{cr:'c',t:'T',z:'    else if (gpio_dir == 16\'h0000) begin',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'116',h:'2301',c:'g'}
+,{cr:'c',t:'T',z:'    end else if (gpio_dir == 16\'h0001)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'122',h:'2762',c:'g'}
+,{cr:'c',t:'A',z:'    if(!HRESETn)',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'112',h:'128',c:'g'}
 ]},
 {anchor:'cvg267',items:[{z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',h:'123',c:'g'}
-,{cr:'c',t:'E',z:'      else PARITYERR &lt;= 1\'b0;',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'119',h:'2730',c:'g'}
+,{cr:'c',t:'I',z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',h:'92',c:'g'}
+,{cr:'c',t:'E',z:'      else PARITYERR &lt;= 1\'b0;',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'119',h:'2209',c:'g'}
 ]},
 {anchor:'cvg268',items:[{z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',h:'1465',c:'g'}
-,{cr:'c',t:'E',z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',h:'1388',c:'g'}
+,{cr:'c',t:'I',z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',h:'1191',c:'g'}
+,{cr:'c',t:'E',z:'      if(GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) PARITY...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'118',h:'1110',c:'g'}
 ]},
 {anchor:'cvg269',items:[{z:'                                (gpio_dataout[16]==($past(PARITYSEL) ? ~^...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'167',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'                                (gpio_dataout[16]==($past(PARITYSEL) ? ~^...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'167',h:'741',c:'g'}
-,{cr:'c',t:'E',z:'                                (gpio_dataout[16]==($past(PARITYSEL) ? ~^...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'167',h:'764',c:'g'}
+,{cr:'c',t:'I',z:'                                (gpio_dataout[16]==($past(PARITYSEL) ? ~^...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'167',h:'661',c:'g'}
+,{cr:'c',t:'E',z:'                                (gpio_dataout[16]==($past(PARITYSEL) ? ~^...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'167',h:'680',c:'g'}
 ]},
-{anchor:'cvg270',items:[{z:'                                ($past(GPIOIN[16])==($past(PARITYSEL) ? ~...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'173',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'                                ($past(GPIOIN[16])==($past(PARITYSEL) ? ~...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'173',h:'1249',c:'g'}
-,{cr:'c',t:'E',z:'                                ($past(GPIOIN[16])==($past(PARITYSEL) ? ~...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'173',h:'1219',c:'g'}
+{anchor:'cvg270',items:[{z:'                                  ) else $display(&#34;Parityerr changed on u...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'173',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'                                  ) else $display(&#34;Parityerr changed on u...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'173',h:'1037',c:'g'}
+,{cr:'c',t:'E',z:'                                  ) else $display(&#34;Parityerr changed on u...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'173',h:'984',c:'g'}
 ]},
-{anchor:'cvg271',items:[{z:'                                ($past(GPIOIN[16])!=($past(PARITYSEL) ? ~...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'179',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'                                ($past(GPIOIN[16])!=($past(PARITYSEL) ? ~...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'179',h:'59',c:'g'}
-,{cr:'c',t:'E',z:'                                ($past(GPIOIN[16])!=($past(PARITYSEL) ? ~...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'179',h:'47',c:'g'}
+{anchor:'cvg271',items:[{z:'',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'179',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'179',h:'49',c:'g'}
+,{cr:'c',t:'E',z:'',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'179',h:'37',c:'g'}
 ]},
-{anchor:'cvg272',items:[{z:'                                    ($changed(PARITYERR)) |-&gt; (PARITYERR=...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'189',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'                                    ($changed(PARITYERR)) |-&gt; (PARITYERR=...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'189',h:'70',c:'g'}
-,{cr:'c',t:'E',z:'                                    ($changed(PARITYERR)) |-&gt; (PARITYERR=...',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'189',h:'58',c:'g'}
+{anchor:'cvg272',items:[{z:'If-else:',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'189',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'189',h:'59',c:'g'}
+,{cr:'c',t:'E',z:'',f:'rtl/AHB_GPIO/AHBGPIO.sv',l:'189',h:'47',c:'g'}
 ]}],
 b685:[{dummy:0},
 {anchor:'cvg686',items:[{z:'        if (GPIOIN[16]!=(PARITYSEL ? ~^GPIOIN[15:0] : ^GPIOIN[15:0])) beg...',f:'tbench/gpio_intf.sv',l:'71',c:'G',p:'100.00'}

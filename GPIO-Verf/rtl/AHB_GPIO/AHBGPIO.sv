@@ -167,18 +167,6 @@ module AHBGPIO(
                                 (gpio_dataout[16]==($past(PARITYSEL) ? ~^gpio_dataout[15:0] : ^gpio_dataout[15:0]))
                               );
 
-  parity_checking_true: assert property(
-                                @(posedge HCLK) disable iff(!HRESETn)
-                                (!PARITYERR && $past(gpio_dir)==16'h0000) |-> 
-                                ($past(GPIOIN[16])==($past(PARITYSEL) ? ~^$past(GPIOIN[15:0]) : ^$past(GPIOIN[15:0])))
-                              );
-
-  parity_checking_false: assert property(
-                                @(posedge HCLK) disable iff(!HRESETn)
-                                (PARITYERR && $past(gpio_dir)==16'h0000) |-> 
-                                ($past(GPIOIN[16])!=($past(PARITYSEL) ? ~^$past(GPIOIN[15:0]) : ^$past(GPIOIN[15:0])))
-                              ) else $display("Parity check assertion failed, GPIOIN = %0h, PARITYSEL = %0b", $past(GPIOIN), $past(PARITYSEL));
-
   parity_checking_dir: assert property(
                                     @(posedge HCLK) disable iff(!HRESETn)
                                     ($changed(PARITYERR)) |-> ($past(gpio_dir)==16'h0000)

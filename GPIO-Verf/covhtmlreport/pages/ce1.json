@@ -53,14 +53,14 @@ c8:[{dummy:0}
 ,{z:'last_HWRITE',c:'g',r:'',i:''}
 ,{z:'last_HTRANS[1]',c:'g',r:'',i:''}
 ,{}
-,{n:'1',z:'(last_HADDR[7:0] == 4)_0',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL)'}
-,{n:'2',z:'(last_HADDR[7:0] == 4)_1',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL)'}
-,{n:'3',z:'last_HSEL_0',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && (last_HADDR[7:0] == 4))'}
-,{n:'4',z:'last_HSEL_1',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && (last_HADDR[7:0] == 4))'}
-,{n:'5',z:'last_HWRITE_0',h1:'3',t:'c',c1:'(last_HTRANS[1] && ((last_HADDR[7:0] == 4) & last_HSEL))'}
-,{n:'6',z:'last_HWRITE_1',h1:'4',t:'c',c1:'(last_HTRANS[1] && ((last_HADDR[7:0] == 4) & last_HSEL))'}
-,{n:'7',z:'last_HTRANS[1]_0',h1:'3',t:'c',c1:'(((last_HADDR[7:0] == 4) & last_HSEL) & last_HWRITE)'}
-,{n:'8',z:'last_HTRANS[1]_1',h1:'4',t:'c',c1:'(((last_HADDR[7:0] == 4) & last_HSEL) & last_HWRITE)'}
+,{n:'1',z:'(last_HADDR[7:0] == 4)_0',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL)'}
+,{n:'2',z:'(last_HADDR[7:0] == 4)_1',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL)'}
+,{n:'3',z:'last_HSEL_0',h1:'2',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && (last_HADDR[7:0] == 4))'}
+,{n:'4',z:'last_HSEL_1',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && (last_HADDR[7:0] == 4))'}
+,{n:'5',z:'last_HWRITE_0',h1:'2',t:'c',c1:'(last_HTRANS[1] && ((last_HADDR[7:0] == 4) & last_HSEL))'}
+,{n:'6',z:'last_HWRITE_1',h1:'3',t:'c',c1:'(last_HTRANS[1] && ((last_HADDR[7:0] == 4) & last_HSEL))'}
+,{n:'7',z:'last_HTRANS[1]_0',h1:'2',t:'c',c1:'(((last_HADDR[7:0] == 4) & last_HSEL) & last_HWRITE)'}
+,{n:'8',z:'last_HTRANS[1]_1',h1:'3',t:'c',c1:'(((last_HADDR[7:0] == 4) & last_HSEL) & last_HWRITE)'}
 ]}
 ,{anchor:'cvg276',cr:'c',items:[{s:'3',x:'FC',z:'(((((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL) & last_HWRITE) & last_HTRANS[1])',c:'G',p:'100.00',d:'0',m:'0',F:'1'}
 ,{}
@@ -70,37 +70,37 @@ c8:[{dummy:0}
 ,{z:'last_HWRITE',c:'g',r:'',i:''}
 ,{z:'last_HTRANS[1]',c:'g',r:'',i:''}
 ,{}
-,{n:'1',z:'(gpio_dir == 1)_0',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (last_HADDR[7:0] == 0))'}
-,{n:'2',z:'(gpio_dir == 1)_1',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (last_HADDR[7:0] == 0))'}
-,{n:'3',z:'(last_HADDR[7:0] == 0)_0',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (gpio_dir == 1))'}
-,{n:'4',z:'(last_HADDR[7:0] == 0)_1',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (gpio_dir == 1))'}
-,{n:'5',z:'last_HSEL_0',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && ((gpio_dir == 1) & (last_HADDR[7:0] == 0)))'}
-,{n:'6',z:'last_HSEL_1',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && ((gpio_dir == 1) & (last_HADDR[7:0] == 0)))'}
-,{n:'7',z:'last_HWRITE_0',h1:'3',t:'c',c1:'(last_HTRANS[1] && (((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL))'}
-,{n:'8',z:'last_HWRITE_1',h1:'4',t:'c',c1:'(last_HTRANS[1] && (((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL))'}
-,{n:'9',z:'last_HTRANS[1]_0',h1:'3',t:'c',c1:'((((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL) & last_HWRITE)'}
-,{n:'10',z:'last_HTRANS[1]_1',h1:'4',t:'c',c1:'((((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL) & last_HWRITE)'}
+,{n:'1',z:'(gpio_dir == 1)_0',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (last_HADDR[7:0] == 0))'}
+,{n:'2',z:'(gpio_dir == 1)_1',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (last_HADDR[7:0] == 0))'}
+,{n:'3',z:'(last_HADDR[7:0] == 0)_0',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (gpio_dir == 1))'}
+,{n:'4',z:'(last_HADDR[7:0] == 0)_1',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (gpio_dir == 1))'}
+,{n:'5',z:'last_HSEL_0',h1:'2',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && ((gpio_dir == 1) & (last_HADDR[7:0] == 0)))'}
+,{n:'6',z:'last_HSEL_1',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && ((gpio_dir == 1) & (last_HADDR[7:0] == 0)))'}
+,{n:'7',z:'last_HWRITE_0',h1:'2',t:'c',c1:'(last_HTRANS[1] && (((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL))'}
+,{n:'8',z:'last_HWRITE_1',h1:'3',t:'c',c1:'(last_HTRANS[1] && (((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL))'}
+,{n:'9',z:'last_HTRANS[1]_0',h1:'2',t:'c',c1:'((((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL) & last_HWRITE)'}
+,{n:'10',z:'last_HTRANS[1]_1',h1:'3',t:'c',c1:'((((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL) & last_HWRITE)'}
 ]}
 ,{anchor:'cvg278',cr:'c',items:[{s:'3',x:'FC',z:'(gpio_dir == 0)',c:'G',p:'100.00',d:'0',m:'0',F:'1'}
 ,{}
 ,{z:'(gpio_dir == 0)',c:'g',r:'',i:''}
 ,{}
-,{n:'1',z:'(gpio_dir == 0)_0',h1:'4',t:'c',c1:'-'}
-,{n:'2',z:'(gpio_dir == 0)_1',h1:'4',t:'c',c1:'-'}
+,{n:'1',z:'(gpio_dir == 0)_0',h1:'3',t:'c',c1:'-'}
+,{n:'2',z:'(gpio_dir == 0)_1',h1:'3',t:'c',c1:'-'}
 ]}
 ,{anchor:'cvg280',cr:'c',items:[{s:'3',x:'FC',z:'(GPIOIN[16] != (PARITYSEL? ~^GPIOIN[15:0]: ^GPIOIN[15:0]))',c:'G',p:'100.00',d:'0',m:'0',F:'1'}
 ,{}
 ,{z:'(GPIOIN[16] != (PARITYSEL? ~^GPIOIN[15:0]: ^GPIOIN[15:0]))',c:'g',r:'',i:''}
 ,{}
-,{n:'1',z:'(GPIOIN[16] != (PARITYSEL? ~^GPIOIN[15:0]: ^GPIOIN[15:0]))_0',h1:'4',t:'c',c1:'-'}
-,{n:'2',z:'(GPIOIN[16] != (PARITYSEL? ~^GPIOIN[15:0]: ^GPIOIN[15:0]))_1',h1:'4',t:'c',c1:'-'}
+,{n:'1',z:'(GPIOIN[16] != (PARITYSEL? ~^GPIOIN[15:0]: ^GPIOIN[15:0]))_0',h1:'3',t:'c',c1:'-'}
+,{n:'2',z:'(GPIOIN[16] != (PARITYSEL? ~^GPIOIN[15:0]: ^GPIOIN[15:0]))_1',h1:'3',t:'c',c1:'-'}
 ]}
 ,{anchor:'cvg282',cr:'c',items:[{s:'3',x:'FC',z:'(gpio_dir == 1)',c:'G',p:'100.00',d:'0',m:'0',F:'1'}
 ,{}
 ,{z:'(gpio_dir == 1)',c:'g',r:'',i:''}
 ,{}
-,{n:'1',z:'(gpio_dir == 1)_0',h1:'4',t:'c',c1:'-'}
-,{n:'2',z:'(gpio_dir == 1)_1',h1:'4',t:'c',c1:'-'}
+,{n:'1',z:'(gpio_dir == 1)_0',h1:'3',t:'c',c1:'-'}
+,{n:'2',z:'(gpio_dir == 1)_1',h1:'3',t:'c',c1:'-'}
 ]}
 ],
 c261:[{dummy:0}
@@ -111,14 +111,14 @@ c261:[{dummy:0}
 ,{z:'last_HWRITE',c:'g',r:'',i:''}
 ,{z:'last_HTRANS[1]',c:'g',r:'',i:''}
 ,{}
-,{n:'1',z:'(last_HADDR[7:0] == 4)_0',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL)'}
-,{n:'2',z:'(last_HADDR[7:0] == 4)_1',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL)'}
-,{n:'3',z:'last_HSEL_0',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && (last_HADDR[7:0] == 4))'}
-,{n:'4',z:'last_HSEL_1',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && (last_HADDR[7:0] == 4))'}
-,{n:'5',z:'last_HWRITE_0',h1:'3',t:'c',c1:'(last_HTRANS[1] && ((last_HADDR[7:0] == 4) & last_HSEL))'}
-,{n:'6',z:'last_HWRITE_1',h1:'4',t:'c',c1:'(last_HTRANS[1] && ((last_HADDR[7:0] == 4) & last_HSEL))'}
-,{n:'7',z:'last_HTRANS[1]_0',h1:'3',t:'c',c1:'(((last_HADDR[7:0] == 4) & last_HSEL) & last_HWRITE)'}
-,{n:'8',z:'last_HTRANS[1]_1',h1:'4',t:'c',c1:'(((last_HADDR[7:0] == 4) & last_HSEL) & last_HWRITE)'}
+,{n:'1',z:'(last_HADDR[7:0] == 4)_0',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL)'}
+,{n:'2',z:'(last_HADDR[7:0] == 4)_1',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL)'}
+,{n:'3',z:'last_HSEL_0',h1:'2',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && (last_HADDR[7:0] == 4))'}
+,{n:'4',z:'last_HSEL_1',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && (last_HADDR[7:0] == 4))'}
+,{n:'5',z:'last_HWRITE_0',h1:'2',t:'c',c1:'(last_HTRANS[1] && ((last_HADDR[7:0] == 4) & last_HSEL))'}
+,{n:'6',z:'last_HWRITE_1',h1:'3',t:'c',c1:'(last_HTRANS[1] && ((last_HADDR[7:0] == 4) & last_HSEL))'}
+,{n:'7',z:'last_HTRANS[1]_0',h1:'2',t:'c',c1:'(((last_HADDR[7:0] == 4) & last_HSEL) & last_HWRITE)'}
+,{n:'8',z:'last_HTRANS[1]_1',h1:'3',t:'c',c1:'(((last_HADDR[7:0] == 4) & last_HSEL) & last_HWRITE)'}
 ]}
 ,{anchor:'cvg276',cr:'c',items:[{s:'3',x:'FC',z:'(((((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL) & last_HWRITE) & last_HTRANS[1])',c:'G',p:'100.00',d:'0',m:'0',F:'1'}
 ,{}
@@ -128,37 +128,37 @@ c261:[{dummy:0}
 ,{z:'last_HWRITE',c:'g',r:'',i:''}
 ,{z:'last_HTRANS[1]',c:'g',r:'',i:''}
 ,{}
-,{n:'1',z:'(gpio_dir == 1)_0',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (last_HADDR[7:0] == 0))'}
-,{n:'2',z:'(gpio_dir == 1)_1',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (last_HADDR[7:0] == 0))'}
-,{n:'3',z:'(last_HADDR[7:0] == 0)_0',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (gpio_dir == 1))'}
-,{n:'4',z:'(last_HADDR[7:0] == 0)_1',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (gpio_dir == 1))'}
-,{n:'5',z:'last_HSEL_0',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && ((gpio_dir == 1) & (last_HADDR[7:0] == 0)))'}
-,{n:'6',z:'last_HSEL_1',h1:'4',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && ((gpio_dir == 1) & (last_HADDR[7:0] == 0)))'}
-,{n:'7',z:'last_HWRITE_0',h1:'3',t:'c',c1:'(last_HTRANS[1] && (((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL))'}
-,{n:'8',z:'last_HWRITE_1',h1:'4',t:'c',c1:'(last_HTRANS[1] && (((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL))'}
-,{n:'9',z:'last_HTRANS[1]_0',h1:'3',t:'c',c1:'((((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL) & last_HWRITE)'}
-,{n:'10',z:'last_HTRANS[1]_1',h1:'4',t:'c',c1:'((((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL) & last_HWRITE)'}
+,{n:'1',z:'(gpio_dir == 1)_0',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (last_HADDR[7:0] == 0))'}
+,{n:'2',z:'(gpio_dir == 1)_1',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (last_HADDR[7:0] == 0))'}
+,{n:'3',z:'(last_HADDR[7:0] == 0)_0',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (gpio_dir == 1))'}
+,{n:'4',z:'(last_HADDR[7:0] == 0)_1',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && last_HSEL && (gpio_dir == 1))'}
+,{n:'5',z:'last_HSEL_0',h1:'2',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && ((gpio_dir == 1) & (last_HADDR[7:0] == 0)))'}
+,{n:'6',z:'last_HSEL_1',h1:'3',t:'c',c1:'(last_HTRANS[1] && last_HWRITE && ((gpio_dir == 1) & (last_HADDR[7:0] == 0)))'}
+,{n:'7',z:'last_HWRITE_0',h1:'2',t:'c',c1:'(last_HTRANS[1] && (((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL))'}
+,{n:'8',z:'last_HWRITE_1',h1:'3',t:'c',c1:'(last_HTRANS[1] && (((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL))'}
+,{n:'9',z:'last_HTRANS[1]_0',h1:'2',t:'c',c1:'((((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL) & last_HWRITE)'}
+,{n:'10',z:'last_HTRANS[1]_1',h1:'3',t:'c',c1:'((((gpio_dir == 1) & (last_HADDR[7:0] == 0)) & last_HSEL) & last_HWRITE)'}
 ]}
 ,{anchor:'cvg278',cr:'c',items:[{s:'3',x:'FC',z:'(gpio_dir == 0)',c:'G',p:'100.00',d:'0',m:'0',F:'1'}
 ,{}
 ,{z:'(gpio_dir == 0)',c:'g',r:'',i:''}
 ,{}
-,{n:'1',z:'(gpio_dir == 0)_0',h1:'4',t:'c',c1:'-'}
-,{n:'2',z:'(gpio_dir == 0)_1',h1:'4',t:'c',c1:'-'}
+,{n:'1',z:'(gpio_dir == 0)_0',h1:'3',t:'c',c1:'-'}
+,{n:'2',z:'(gpio_dir == 0)_1',h1:'3',t:'c',c1:'-'}
 ]}
 ,{anchor:'cvg280',cr:'c',items:[{s:'3',x:'FC',z:'(GPIOIN[16] != (PARITYSEL? ~^GPIOIN[15:0]: ^GPIOIN[15:0]))',c:'G',p:'100.00',d:'0',m:'0',F:'1'}
 ,{}
 ,{z:'(GPIOIN[16] != (PARITYSEL? ~^GPIOIN[15:0]: ^GPIOIN[15:0]))',c:'g',r:'',i:''}
 ,{}
-,{n:'1',z:'(GPIOIN[16] != (PARITYSEL? ~^GPIOIN[15:0]: ^GPIOIN[15:0]))_0',h1:'4',t:'c',c1:'-'}
-,{n:'2',z:'(GPIOIN[16] != (PARITYSEL? ~^GPIOIN[15:0]: ^GPIOIN[15:0]))_1',h1:'4',t:'c',c1:'-'}
+,{n:'1',z:'(GPIOIN[16] != (PARITYSEL? ~^GPIOIN[15:0]: ^GPIOIN[15:0]))_0',h1:'3',t:'c',c1:'-'}
+,{n:'2',z:'(GPIOIN[16] != (PARITYSEL? ~^GPIOIN[15:0]: ^GPIOIN[15:0]))_1',h1:'3',t:'c',c1:'-'}
 ]}
 ,{anchor:'cvg282',cr:'c',items:[{s:'3',x:'FC',z:'(gpio_dir == 1)',c:'G',p:'100.00',d:'0',m:'0',F:'1'}
 ,{}
 ,{z:'(gpio_dir == 1)',c:'g',r:'',i:''}
 ,{}
-,{n:'1',z:'(gpio_dir == 1)_0',h1:'4',t:'c',c1:'-'}
-,{n:'2',z:'(gpio_dir == 1)_1',h1:'4',t:'c',c1:'-'}
+,{n:'1',z:'(gpio_dir == 1)_0',h1:'3',t:'c',c1:'-'}
+,{n:'2',z:'(gpio_dir == 1)_1',h1:'3',t:'c',c1:'-'}
 ]}
 ],
 c685:[{dummy:0}
