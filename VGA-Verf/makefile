@@ -1,19 +1,21 @@
-connect-nick:
-	source /usr/local/mentor/QUESTA-CORE-PRIME_10.7c/settings.sh
-#cd nfshome/HSV/
-#Connect to Moba host
-	export DISPLAY=16:0
-
+connect:
+	export DISPLAY=localhost:45.0
+# source /usr/local/mentor/QUESTA-CORE-PRIME_10.7c/settings.sh
+# source /usr/local/cadence/JASPER_2018.06.002/settings.sh
 #compile the necessary files
 comp-opt:
-	vlog -work work +acc=blnr -noincr -timescale 1ns/1ps tbench/tb_top.sv rtl/AHB_VGA/vga_console.v
+	vlog -work work +cover +fcover +acc=blnr -noincr -timescale 1ns/1ps tbench/tb_top.sv rtl/AHB_VGA/AHBVGASYS.sv
 	vopt -work work tb_top -o work_opt
 #Apply optimisation if no error
 
-#If no error open QuestaSim
+#If no error open QuestaSim 
 open-sim:
-	vsim work_opt -gui
+# vsim -coverage -voptargs="+cover=bcefst" -onfinish stop work_opt -gui
+	vsim -onfinish stop work_opt -gui
 
 #Setup the simulation
 setup-sim:
 	do setup.do
+
+cover-report:
+	vcover report -details -html merged.ucdb

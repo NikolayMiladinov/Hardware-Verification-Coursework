@@ -88,7 +88,7 @@ module AHBGPIO(
     if(!HRESETn)
     begin
       gpio_dir <= 16'h0000;
-      PARITYERR <= 1'b0;
+      //PARITYERR <= 1'b0;
     end
     else if ((last_HADDR[7:0] == gpio_dir_addr) & last_HSEL & last_HWRITE & last_HTRANS[1])
       gpio_dir <= HWDATA[15:0];
@@ -174,13 +174,7 @@ module AHBGPIO(
 
   parity_checking: assert property(
                                     @(posedge HCLK) disable iff(!HRESETn)
-                                    ($changed(PARITYERR)) |-> (PARITYERR==($past(GPIOIN[16])!=($past(PARITYSEL) ? ~^$past(GPIOIN[15:0]) : ^$past(GPIOIN[15:0]))))
-                                  ) else $display("Parity check assertion failed, GPIOIN = %0h, PARITYSEL = %0b", $past(GPIOIN), $past(PARITYSEL));
-
-  reset_property: assert property(
-                                @(posedge HCLK) 
-                                (!HRESETn) |=> (gpio_datain <= 17'h0000 && gpio_dataout <= 17'h0000 && 
-                                gpio_dir <= 16'h0000 && PARITYERR <= 1'b0)
-                              );
+                                    (gpio_dir == 16'h0000) |=> (PARITYERR==($past(GPIOIN[16])!=($past(PARITYSEL) ? ~^$past(GPIOIN[15:0]) : ^$past(GPIOIN[15:0]))))
+                                  ) else $display("Parity check assertion failed, GPIOIN = %0h, PARITYSEL = %0b", $past(GPIOIN), $past(PARITYSEL)); 
 
 endmodule

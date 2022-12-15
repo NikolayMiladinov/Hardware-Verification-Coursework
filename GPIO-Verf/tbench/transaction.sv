@@ -29,10 +29,12 @@ class transaction;
     constraint wrong_address{inject_wrong_address dist {0:=80, 1:=10, 2:=10};}
     constraint address{HADDR_inject dist{32'h5300_0000:=20, 32'h5300_0004:=20, [32'h5300_0000:32'h53FF_FFFF]:/60};}
 
-    constraint GPIOIN_max{(count_iter%50==0) -> GPIOIN_data==max_val;}
+    constraint GPIOIN_max{(count_iter%50==0) -> GPIOIN_data=='hFFFF;}
+    constraint GPIOIN_max{(count_iter%50==0) -> write_cycle==1'b0;}
     constraint GPIOIN_min{soft (count_iter%51==0) -> GPIOIN_data==0;}
 
     constraint HWDATA_max{(count_iter%55==0) -> HWDATA_data==max_val;}
+    constraint GPIOIN_max{(count_iter%55==0) -> write_cycle==1'b1;}
     constraint HWDATA_min{soft (count_iter%56==0) -> HWDATA_data==0;}
     constraint HWDATA_upper_bits{HWDATA_data_upper_bits dist {0:=95, [1:'hFFFF]:/5};}
 
@@ -56,6 +58,7 @@ class transaction;
         copy.write_cycle = this.write_cycle;
         copy.command_signals = this.command_signals;
         copy.HWDATA_data = this.HWDATA_data;
+        copy.HWDATA_data_upper_bits = this.HWDATA_data_upper_bits;
         copy.HWDATA_dir_inject = this.HWDATA_dir_inject;
         copy.dir_inject = this.dir_inject;
         copy.GPIOIN_data = this.GPIOIN_data;
