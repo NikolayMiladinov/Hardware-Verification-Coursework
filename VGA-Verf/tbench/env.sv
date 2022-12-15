@@ -8,6 +8,7 @@ class environment;
     mailbox vga_mail;
     mailbox vga_mon_mail;
     event ended_gen;
+    event ended_1mil;
     virtual vga_intf.DRIV vga_driv_vif;
     virtual vga_intf.MON vga_mon_vif;
 
@@ -18,7 +19,7 @@ class environment;
         vga_mon_mail = new();
 
         gen = new(vga_mail, ended_gen);
-        driv = new(vga_driv_vif, vga_mail);
+        driv = new(vga_driv_vif, vga_mail, ended_1mil);
         mon = new(vga_mon_vif, vga_mon_mail);
         // scor = new(vga_mon_mail);
     endfunction
@@ -28,10 +29,14 @@ class environment;
     endtask
 
     task initial_check();
+        mon.fd = $fopen("./out.txt","w");
         fork
             driv.initial_check();
             mon.run();
         join_none
+        wait(driv.ended_1mil.triggered);
+        $fclose(mon.fd);
+        $stop;
     endtask
 
     task test();

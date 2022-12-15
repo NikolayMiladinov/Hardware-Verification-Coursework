@@ -6,10 +6,12 @@ class driver;
     //used to count the number of transactions
     int no_transactions = 1;
     logic driver_rstn = 1'b1;
+    event ended_1mil;
 
-    function new(virtual vga_intf.DRIV vga_vif, mailbox vga_mail);
+    function new(virtual vga_intf.DRIV vga_vif, mailbox vga_mail, event ended_1mil);
         this.vga_vif = vga_vif;
         this.vga_mail = vga_mail;
+        this.ended_1mil = ended_1mil;
     endfunction
 
     //Reset task, reset the Interface signals and assert reset for vga
@@ -156,8 +158,7 @@ class driver;
 
         repeat(1000000) @vga_vif.cb_DRIV;
 
-        @vga_vif.cb_DRIV;
-        @vga_vif.cb_DRIV;
+        -> ended_1mil;
         
 	end
 	endtask

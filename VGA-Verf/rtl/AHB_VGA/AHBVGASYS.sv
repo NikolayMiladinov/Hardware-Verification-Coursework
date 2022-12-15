@@ -33,12 +33,12 @@
 //EXAMPLE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE EXAMPLE. FOR THE AVOIDANCE/
 // OF DOUBT, NO PATENT LICENSES ARE BEING LICENSED UNDER THIS LICENSE AGREEMENT.//
 //////////////////////////////////////////////////////////////////////////////////
-`include "counter.v"
-`include "dual_port_ram_sync.v"
-`include "font_rom.v"
-`include "vga_console.v"
-`include "vga_image.v"
-`include "vga_sync.v"
+`include "counter.sv"
+`include "dual_port_ram_sync.sv"
+`include "font_rom.sv"
+`include "vga_console.sv"
+`include "vga_image.sv"
+`include "vga_sync.sv"
 
 module AHBVGA(
   input wire HCLK,
