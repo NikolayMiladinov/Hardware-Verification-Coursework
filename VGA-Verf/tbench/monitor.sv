@@ -11,8 +11,8 @@ class monitor;
 
     int fd;
     // fd = $fopen("./out.txt","w");
-    if(fd) $display("File opened successfully");
-    else $display("File could not be found or opened");
+    // if(fd) $display("File opened successfully");
+    // else $display("File could not be found or opened");
 
     //Variables to know when to sample
     localparam WIDTH = 16;
@@ -42,7 +42,7 @@ class monitor;
         forever begin @(posedge vga_vif.HCLK or negedge vga_vif.HRESETn) begin
             mon_trans trans = new();
 
-            print();
+            print_out();
 
         end end 
     endtask

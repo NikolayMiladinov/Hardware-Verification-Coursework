@@ -30,12 +30,14 @@ class environment;
 
     task initial_check();
         mon.fd = $fopen("./out.txt","w");
+        if(mon.fd) $display("Opened the file");
         fork
             driv.initial_check();
             mon.run();
         join_none
         wait(driv.ended_1mil.triggered);
         $fclose(mon.fd);
+        $display("Closed the file");
         $stop;
     endtask
 

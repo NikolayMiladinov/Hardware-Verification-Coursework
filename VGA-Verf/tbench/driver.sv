@@ -156,6 +156,11 @@ class driver;
         //Write value
         vga_vif.cb_DRIV.HWDATA <= 'h0e;
 
+        repeat(10) @vga_vif.cb_DRIV;
+
+        vga_vif.cb_DRIV.HWRITE <= 'b0;
+        vga_vif.cb_DRIV.HSEL <= 'b0;
+
         repeat(1000000) @vga_vif.cb_DRIV;
 
         -> ended_1mil;
