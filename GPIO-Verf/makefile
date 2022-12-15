@@ -1,5 +1,5 @@
 connect:
-	export DISPLAY=localhost:45.0
+	export DISPLAY=localhost:12.0
 # source /usr/local/mentor/QUESTA-CORE-PRIME_10.7c/settings.sh
 # source /usr/local/cadence/JASPER_2018.06.002/settings.sh
 #compile the necessary files
@@ -18,4 +18,4 @@ setup-sim:
 	do setup.do
 
 cover-report:
-	vcover report -details -html merged.ucdb
+	vcover report -details -html merged_coverage.ucdb

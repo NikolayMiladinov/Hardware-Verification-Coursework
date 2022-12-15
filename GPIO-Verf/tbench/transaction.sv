@@ -30,11 +30,11 @@ class transaction;
     constraint address{HADDR_inject dist{32'h5300_0000:=20, 32'h5300_0004:=20, [32'h5300_0000:32'h53FF_FFFF]:/60};}
 
     constraint GPIOIN_max{(count_iter%50==0) -> GPIOIN_data=='hFFFF;}
-    constraint GPIOIN_max{(count_iter%50==0) -> write_cycle==1'b0;}
+    constraint GPIOIN_max_write{soft (count_iter%50==0) -> write_cycle==1'b0;}
     constraint GPIOIN_min{soft (count_iter%51==0) -> GPIOIN_data==0;}
 
     constraint HWDATA_max{(count_iter%55==0) -> HWDATA_data==max_val;}
-    constraint GPIOIN_max{(count_iter%55==0) -> write_cycle==1'b1;}
+    constraint HWDATA_max_write{(count_iter%55==0) -> write_cycle==1'b1;}
     constraint HWDATA_min{soft (count_iter%56==0) -> HWDATA_data==0;}
     constraint HWDATA_upper_bits{HWDATA_data_upper_bits dist {0:=95, [1:'hFFFF]:/5};}
 

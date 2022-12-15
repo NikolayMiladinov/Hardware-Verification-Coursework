@@ -14,7 +14,7 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -coverage -voptargs="+cover=bcefst" -onfinish stop work_opt -gui 
-# Start time: 12:01:27 on Dec 14,2022
+# Start time: 09:48:09 on Dec 15,2022
 # Loading sv_std.std
 # Loading work.tb_top_sv_unit(fast)
 # Loading work.tb_top(fast)
@@ -22,26 +22,7 @@
 # Loading work.AHBGPIO(fast)
 # Loading work.test5(fast)
 # Loading work.gpio_intf(fast)
-log -r /*
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
-# ** Error: Cannot lock WLF file: "vsim.wlf"
-#           errno 11: Resource temporarily unavailable.
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: nnm19  Hostname: ee-mill3.ee.ic.ac.uk  ProcessID: 115607
-#           Attempting to use alternate WLF file "./wlftC0PIFv".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftC0PIFv
-log -r /*
-toggle disable tb_top/DUT/HRDATA[31:16]
-toggle disable tb_top/DUT/HTRANS[0]
-toggle disable tb_top/intf/HTRANS[0]
-toggle disable tb_top/intf/HREADYOUT
-toggle disable tb_top/DUT/HADDR[31:24]
-toggle disable tb_top/DUT/last_HADDR[31:24]
-toggle disable tb_top/intf/HADDR[31:24]
-run -all
+do setup.do
 # --------- [DRIVER] Reset Started --------- at 0
 # --------- [DRIVER] Reset driver end --------- at 10000
 # --------- [DRIVER] Reset Ended --------- at 31000
@@ -56,25 +37,26 @@ run -all
 # [Transaction] Parity error injection: GPIOIN = 5e96, transaction = 31
 # [Transaction] Parity error injection: GPIOIN = 1b882, transaction = 72
 # [Transaction] Parity error injection: GPIOIN = 1ed57, transaction = 127
-# [Transaction] Parity error injection: GPIOIN = c2fc, transaction = 163
-# [Transaction] Parity error injection: GPIOIN = 1eceb, transaction = 201
-# [Transaction] Parity error injection: GPIOIN = 170f9, transaction = 207
+# [Transaction] Parity error injection: GPIOIN = 4f2c, transaction = 249
 # [Transaction] Parity error injection: GPIOIN = d6c6, transaction = 336
-# [Transaction] Parity error injection: GPIOIN = db58, transaction = 379
+# [Transaction] Parity error injection: GPIOIN = 15478, transaction = 349
 # [Transaction] Parity error injection: GPIOIN = 12ed5, transaction = 386
 # [Transaction] Parity error injection: GPIOIN = 1b70, transaction = 388
 # [Transaction] Parity error injection: GPIOIN = 13293, transaction = 433
+# [Transaction] Parity error injection: GPIOIN = 1915c, transaction = 541
+# [Transaction] Parity error injection: GPIOIN = ba62, transaction = 654
 # [Transaction] Parity error injection: GPIOIN = 1d496, transaction = 665
-# [Transaction] Parity error injection: GPIOIN = 1b74c, transaction = 699
+# [Transaction] Parity error injection: GPIOIN = 25a6, transaction = 706
 # [Transaction] Parity error injection: GPIOIN = cc67, transaction = 709
-# [Transaction] Parity error injection: GPIOIN = 132a, transaction = 713
-# [Transaction] Parity error injection: GPIOIN = ef8b, transaction = 736
-# [Transaction] Parity error injection: GPIOIN = 531d, transaction = 745
+# [Transaction] Parity error injection: GPIOIN = 190ba, transaction = 727
 # [Transaction] Parity error injection: GPIOIN = 17617, transaction = 784
+# [Transaction] Parity error injection: GPIOIN = fc94, transaction = 810
+# [Transaction] Parity error injection: GPIOIN = 12ad9, transaction = 813
+# [Transaction] Parity error injection: GPIOIN = 6da6, transaction = 822
 # [Transaction] Parity error injection: GPIOIN = 1f963, transaction = 860
-# [Transaction] Parity error injection: GPIOIN = 19fd6, transaction = 881
-# [Transaction] Parity error injection: GPIOIN = 1625e, transaction = 940
+# [Transaction] Parity error injection: GPIOIN = 1b180, transaction = 866
 # [Transaction] Parity error injection: GPIOIN = 121e9, transaction = 942
+# [Transaction] Parity error injection: GPIOIN = 2f59, transaction = 997
 # --------- [DRIVER-TRANSFER: 1] ---------
 # [Reset in 69 ns
 # [Reset for 5 cycles
@@ -576,7 +558,6 @@ run -all
 # --------- [DRIVER-TRANSFER: 162] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 163] ---------
-# [Driver] Parity error injection in transaction 163, GPIOIN: c2fc
 # [Driver] Wrong HADDR injection in address phase: transaction 163
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 164] ---------
@@ -692,7 +673,6 @@ run -all
 # --------- [DRIVER-TRANSFER: 200] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 201] ---------
-# [Driver] Parity error injection in transaction 201, GPIOIN: 1eceb
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 202] ---------
 # --------- [DRIVER] Reset Ended --------- at 8791000
@@ -718,7 +698,6 @@ run -all
 # --------- [DRIVER-TRANSFER: 206] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 207] ---------
-# [Driver] Parity error injection in transaction 207, GPIOIN: 170f9
 # --------- [DRIVER] Reset Started --------- at 8992000
 # [DRIVER] Driver is being reset
 # --------- [DRIVER] Reset driver end --------- at 9010000
@@ -849,6 +828,7 @@ run -all
 # --------- [DRIVER-TRANSFER: 248] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 249] ---------
+# [Driver] Parity error injection in transaction 249, GPIOIN: 4f2c
 # --------- [DRIVER] Reset Ended --------- at 10711000
 # [Reset in 135 ns
 # [Reset for 3 cycles
@@ -1174,6 +1154,7 @@ run -all
 # --------- [DRIVER-TRANSFER: 348] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 349] ---------
+# [Driver] Parity error injection in transaction 349, GPIOIN: 15478
 # [Driver] Wrong direction injection in transaction 349
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 350] ---------
@@ -1269,7 +1250,6 @@ run -all
 # --------- [DRIVER-TRANSFER: 378] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 379] ---------
-# [Driver] Parity error injection in transaction 379, GPIOIN: db58
 # --------- [DRIVER] Reset Started --------- at 16130000
 # [DRIVER] Driver is being reset
 # --------- [DRIVER] Reset driver end --------- at 16150000
@@ -1781,6 +1761,7 @@ run -all
 # [Reset for 6 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 541] ---------
+# [Driver] Parity error injection in transaction 541, GPIOIN: 1915c
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 542] ---------
 # [Driver] Wrong HADDR injection in address phase: transaction 542
@@ -2272,7 +2253,6 @@ run -all
 # --------- [DRIVER-TRANSFER: 698] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 699] ---------
-# [Driver] Parity error injection in transaction 699, GPIOIN: 1b74c
 # --------- [DRIVER] Reset Started --------- at 29529000
 # [DRIVER] Driver is being reset
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2297,6 +2277,7 @@ run -all
 # --------- [DRIVER-TRANSFER: 705] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 706] ---------
+# [Driver] Parity error injection in transaction 706, GPIOIN: 25a6
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 707] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2321,7 +2302,6 @@ run -all
 # --------- [DRIVER-TRANSFER: 712] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 713] ---------
-# [Driver] Parity error injection in transaction 713, GPIOIN: 132a
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 714] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2364,6 +2344,7 @@ run -all
 # --------- [DRIVER-TRANSFER: 726] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 727] ---------
+# [Driver] Parity error injection in transaction 727, GPIOIN: 190ba
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 728] ---------
 # --------- [DRIVER] Reset Ended --------- at 30651000
@@ -2395,7 +2376,6 @@ run -all
 # --------- [DRIVER-TRANSFER: 735] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 736] ---------
-# [Driver] Parity error injection in transaction 736, GPIOIN: ef8b
 # [Driver] Wrong direction injection in transaction 736
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 737] ---------
@@ -2426,7 +2406,6 @@ run -all
 # --------- [DRIVER-TRANSFER: 744] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 745] ---------
-# [Driver] Parity error injection in transaction 745, GPIOIN: 531d
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 746] ---------
 # --------- [DRIVER] Reset Ended --------- at 31391000
@@ -2649,6 +2628,7 @@ run -all
 # --------- [DRIVER-TRANSFER: 809] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 810] ---------
+# [Driver] Parity error injection in transaction 810, GPIOIN: fc94
 # [Driver] Wrong HADDR injection in data phase: transaction 810
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 811] ---------
@@ -2657,6 +2637,7 @@ run -all
 # [Driver] Wrong direction injection in transaction 812
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 813] ---------
+# [Driver] Parity error injection in transaction 813, GPIOIN: 12ad9
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 814] ---------
 # --------- [DRIVER] Reset Started --------- at 34183000
@@ -2684,6 +2665,7 @@ run -all
 # [Reset for 13 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 822] ---------
+# [Driver] Parity error injection in transaction 822, GPIOIN: 6da6
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 823] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -2822,6 +2804,7 @@ run -all
 # [Reset for 6 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 866] ---------
+# [Driver] Parity error injection in transaction 866, GPIOIN: 1b180
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 867] ---------
 # --------- [DRIVER] Reset Started --------- at 36444000
@@ -2881,7 +2864,6 @@ run -all
 # [Driver] Wrong HADDR injection in address phase: transaction 880
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 881] ---------
-# [Driver] Parity error injection in transaction 881, GPIOIN: 19fd6
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 882] ---------
 # --------- [DRIVER] Reset Ended --------- at 37071000
@@ -3068,7 +3050,6 @@ run -all
 # --------- [DRIVER-TRANSFER: 939] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 940] ---------
-# [Driver] Parity error injection in transaction 940, GPIOIN: 1625e
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 941] ---------
 # ----------[DRIVER-END-OF-TRANSFER]----------
@@ -3289,6 +3270,7 @@ run -all
 # [Reset for 13 cycles
 # ----------[DRIVER-END-OF-TRANSFER]----------
 # --------- [DRIVER-TRANSFER: 997] ---------
+# [Driver] Parity error injection in transaction 997, GPIOIN: 2f59
 # --------- [DRIVER] Reset Started --------- at 41903000
 # [DRIVER] Driver is being reset
 # --------- [DRIVER] Reset driver end --------- at 41910000
@@ -3305,5 +3287,5 @@ run -all
 # Break in Task tb_top_sv_unit/environment::wait_test_end at tbench/env.sv line 57
 coverage save -du work.tb_top -onexit test5_coverage.ucdb
 # Saving coverage database on exit...
-# End time: 12:07:44 on Dec 14,2022, Elapsed time: 0:06:17
-# Errors: 4, Warnings: 2
+# End time: 09:50:28 on Dec 15,2022, Elapsed time: 0:02:19
+# Errors: 0, Warnings: 0

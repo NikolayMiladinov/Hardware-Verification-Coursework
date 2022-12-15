@@ -2,4 +2,4 @@ var g_data = {'dummy':null,
 '3':'rtl/AHB_GPIO/AHBGPIO.sv',
 '1':'tbench/gpio_intf.sv',
 '2':'tbench/tb_top.sv',
-'4':'tbench/test2.sv'};
+'4':'tbench/test1.sv'};
