@@ -1,4 +1,4 @@
 rtl/AHB_GPIO/AHBGPIO.sv
 tbench/gpio_intf.sv
 tbench/tb_top.sv
-tbench/test1.sv
+tbench/test5.sv

@@ -1,26 +1,26 @@
 var g_data = {
-a5:{
-scopes:[{link:'z.htm?f=0&s=5',val:'work.AHBGPIO'}]
-,assertions:[{dummy:0},{cr:'c',c:'g',z:'update_input',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
-,{cr:'c',c:'g',z:'update_output',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
-,{cr:'c',c:'g',z:'output_update_if',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
-,{cr:'c',c:'g',z:'update_direction',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
-,{cr:'c',c:'g',z:'direction_update_if',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
-,{cr:'c',c:'g',z:'parity_gen',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
-,{cr:'c',c:'g',z:'parity_checking_dir',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
-,{cr:'c',c:'g',z:'parity_checking',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
+a4:{
+scopes:[{link:'z.htm?f=0&s=4',val:'work.AHBGPIO'}]
+,assertions:[{dummy:0},{cr:'c',c:'g',z:'update_input',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'update_output',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'output_update_if',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'update_direction',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'direction_update_if',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'parity_gen',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'parity_checking_dir',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'parity_checking',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
 ],
 },
-a242:{
-scopes:[{s:'7',b:'1',val:'\\tb_top '},{link:'z.htm?f=0&s=242',val:'DUT'}]
-,assertions:[{dummy:0},{cr:'c',c:'g',z:'update_input',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
-,{cr:'c',c:'g',z:'update_output',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
-,{cr:'c',c:'g',z:'output_update_if',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
-,{cr:'c',c:'g',z:'update_direction',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
-,{cr:'c',c:'g',z:'direction_update_if',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
-,{cr:'c',c:'g',z:'parity_gen',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
-,{cr:'c',c:'g',z:'parity_checking_dir',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
-,{cr:'c',c:'g',z:'parity_checking',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
+a241:{
+scopes:[{s:'6',b:'1',val:'\\tb_top '},{link:'z.htm?f=0&s=241',val:'DUT'}]
+,assertions:[{dummy:0},{cr:'c',c:'g',z:'update_input',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'update_output',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'output_update_if',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'update_direction',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'direction_update_if',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'parity_gen',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'parity_checking_dir',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'parity_checking',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
 ],
 },
 dummyEnd:0

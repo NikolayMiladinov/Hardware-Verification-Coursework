@@ -18,4 +18,4 @@ setup-sim:
 	do setup.do
 
 cover-report:
-	vcover report -details -html merged_coverage.ucdb
+	vcover report -details -html test5_coverage.ucdb
