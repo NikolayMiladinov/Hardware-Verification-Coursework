@@ -141,6 +141,27 @@ The following assertions were embedded in the GPIO rtl, all sampled on positive 
 ![GPIO Formal Verification](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/Formal%20Verification%20of%20GPIO%20assertions.png)
 
 
+### 6. Proof of running unit-level testbench
+
+The code coverage report has decent proof of running test as it shows whether any assertions were violated or any errors were encountered.
+Additionaly, these are the screenshots of the transcript and wave display in gui.
+Any illegal bins or assertions are always printed in transcript. Scoreboard and monitor print the error count at the end. 
+Since parity injection does not produce an error as long as PARITYERR is flagged, the expected error count is 0.
+
+Test 5 - performs drive task in cycles of 2 with random reset (random asynchronous reset can be seen):
+![GPIO TB Test 5]()
+
+Test 4 - performs drive task in cycles of 2 but drives both HWDATA and GPIOIN at the same time (can be seen in waveform):
+![GPIO TB Test 4]()
+
+Test 3 - performs drive task in cycles of 2 but has random delay between every transaction (delay can be seen in waveform):
+![GPIO TB Test 3]()
+
+Test 2 - tries to drive data every cycle (can be seen in waveform):
+![GPIO TB Test 2]()
+
+Test 1 - performs drive task in cycles of 2:
+![GPIO TB Test 1]()
 
 # VGA Verification
 ### 1. Dual lock-step
@@ -254,3 +275,16 @@ The following assertions were embedded in the VGA rtl, all sampled on positive e
 3. Console_wdata has the correct value – 0 if the write conditions are not met and HWDATA on next cycle if write conditions are met
 
 ![VGA Formal Verification](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/Formal%20Verification%20of%20VGA%20assertions.png)
+
+
+### 6. Proof of running unit-level testbench
+
+The code coverage report has decent proof of running test as it shows whether any assertions were violated or any errors were encountered.
+Additionaly, these are the screenshots of the transcript and wave display in gui.
+Any illegal bins or assertions are always printed in transcript. Final error shows that dual lock-step is working as a bug is injected.
+
+![VGA Injected Bug]()
+
+In the following run no bug was injected and the error is 0 as expected.
+
+![VGA No Bug]()
