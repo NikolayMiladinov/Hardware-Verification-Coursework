@@ -43,6 +43,8 @@ not cleared when HRESETn is asserted. It is cleared however, when a new GPIOIN i
 
 ### 2. Verification plan for GPIO
 
+[GPIO Verification Plan](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/GPIO%20Verification%20Plan.pdf)
+
 ### 3. Testbench for GPIO
 
 The testbench architecture is divided into subblocks:
