@@ -2147,3 +2147,5 @@
 # ** Note: $stop    : tbench/env.sv(57)
 #    Time: 25250 ns  Iteration: 1  Instance: /tb_top/t1
 # Break in Task tb_top_sv_unit/environment::wait_test_end at tbench/env.sv line 57
+# End time: 23:48:41 on Dec 16,2022, Elapsed time: 0:04:46
+# Errors: 0, Warnings: 0
