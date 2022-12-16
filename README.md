@@ -149,19 +149,19 @@ Any illegal bins or assertions are always printed in transcript. Scoreboard and 
 Since parity injection does not produce an error as long as PARITYERR is flagged, the expected error count is 0.
 
 Test 5 - performs drive task in cycles of 2 with random reset (random asynchronous reset can be seen):
-![GPIO TB Test 5]()
+![GPIO TB Test 5](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/GPIO%20TB%20Test%205.png)
 
 Test 4 - performs drive task in cycles of 2 but drives both HWDATA and GPIOIN at the same time (can be seen in waveform):
-![GPIO TB Test 4]()
+![GPIO TB Test 4](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/GPIO%20TB%20Test%204.png)
 
 Test 3 - performs drive task in cycles of 2 but has random delay between every transaction (delay can be seen in waveform):
-![GPIO TB Test 3]()
+![GPIO TB Test 3](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/GPIO%20TB%20Test%203.png)
 
 Test 2 - tries to drive data every cycle (can be seen in waveform):
-![GPIO TB Test 2]()
+![GPIO TB Test 2](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/GPIO%20TB%20Test%202.png)
 
 Test 1 - performs drive task in cycles of 2:
-![GPIO TB Test 1]()
+![GPIO TB Test 1](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/GPIO%20TB%20Test%201.png)
 
 # VGA Verification
 ### 1. Dual lock-step
@@ -283,8 +283,8 @@ The code coverage report has decent proof of running test as it shows whether an
 Additionaly, these are the screenshots of the transcript and wave display in gui.
 Any illegal bins or assertions are always printed in transcript. Final error shows that dual lock-step is working as a bug is injected.
 
-![VGA Injected Bug]()
+![VGA Injected Bug](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/VGA%20Unit-Level%20Bug%20Injected.png)
 
 In the following run no bug was injected and the error is 0 as expected.
 
-![VGA No Bug]()
+![VGA No Bug](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/VGA%20Unit-Level%20No%20Bug.png)
