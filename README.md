@@ -206,6 +206,8 @@ The driver has the following main tasks [Driver File](https://github.com/Nikolay
 ----
 
 The checker consists of both the monitor and the scoreboard. Monitor tracks the current position of writing to the display using pixel_x and pixel_y.
+Using pixel_x and pixel_y and data from font_rom, it checks whether 3 of the characters are displayed correctly: ')' with ascii code h29, '0' with ascii code h30,
+'F' with ascii code 46.
 The monitor also prints the output of the VGA into a file using:
 ```
 if(vga_vif.cb_MON.RGB == 'h1C) $fwrite(fd, "*");
@@ -219,7 +221,7 @@ Outputs are compared every cycle.
 
 ### 4. Functional and code coverage
 
-Coverage report can be inspected by downloading the folder VGA-Verf/covhtmlreport and opening the html file covsummary.html: [Coverage Report link]()
+Coverage report can be inspected by downloading the folder VGA-Verf/covhtmlreport and opening the html file covsummary.html: [Coverage Report link](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/tree/master/VGA-Verf/covhtmlreport)
 
 Functional coverage was done in the interface to simplify sampling and access to signals.
 The covergroups are:
@@ -234,6 +236,12 @@ Sampling of HSYNC, VSYNC and RGB happens every cycle if HRESETn is high
 Code coverage was done automatically by questasim using the command *vlog +cover +fcover* and *vsim -coverage -voptargs="+cover=bcefst"*
 Toggle coverage was diabled for HRDATA, HTRANS[0], HADDR[31:24].
 
+**Coverage is not 100% because the image display functionality is not being tested, therefore RGB does not hit every bin.**
+**Moreover, the functionality of return, backspace and scroll is also not tested**
+
+However, all covergroups except RGB are 100%, and coverage for top-level rtl file is close to 100% and other files are at 80%.
+Considering, not all the functionality is tested, these results are expected.
+
 NOTE: The coverage report contains only 1 test, which is using random reset, and produces 100% coverage. We did try to merge it with the other test coverages,
 but kept getting an error that they had different sourcing files and did not have time to fix that.
 
@@ -245,4 +253,4 @@ The following assertions were embedded in the VGA rtl, all sampled on positive e
 2. Assertions for scroll, backspace and return key (not done in this coursework, but a useful way to verify part of their functionality)
 3. Console_wdata has the correct value – 0 if the write conditions are not met and HWDATA on next cycle if write conditions are met
 
-![VGA Formal Verification]()
+![VGA Formal Verification](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/Formal%20Verification%20of%20VGA%20assertions.png)
