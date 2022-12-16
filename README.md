@@ -145,7 +145,14 @@ The following assertions were embedded in the GPIO rtl, all sampled on positive 
 # VGA Verification
 ### 1. Dual lock-step
 
-
+Two instances are created in the top-level, DUT_primary and DUT_redundant. Both have the same input, but the outputs of DUT_redundant have _redundant (HRDATA_redundant).
+To be able to inject a bug, DUT_redundant has ordinary input HWDATA, while DUT primary has:
+```
+assign HWDATA_primary = (intf.HWDATA=='h07) ? 'h17 : intf.HWDATA;
+```
+The monitor samples the outputs of both devices every cycle and puts the signals in a transaction and that transaction into a mailbox.
+The scoreboard then receives each transaction and compares the outputs. If there is any mismatch, DLS_ERROR is asserted.
+Every time DLS_ERROR is high, the error count increases, which is printed at the end of each simulation.
 
 ### 2. Verification plan for VGA
 
@@ -176,11 +183,11 @@ Indeed, most of the code was reused for the VGA verification.
 ----
 
 The transaction class randomises the following signals [Transaction File](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/VGA-Verf/tbench/transaction.sv):
-4. command_signals[2:0] ->    [0]->HREADY, [1]->HSEL, [2]->HTRANS[1]
-7. HWDATA -> data that will be put into console_wdata, HWDATA is constrained so that it does not hit the return or new line ASCII characters
-8. HWDATA_upper_bits -> upper 24 bits are not used in VGA, so most of the time they are zero, but sometimes they are not zero
-10. inject_wrong_address 
-11. HADDR_inject -> value to inject if inject_wrong_address is high
+1. command_signals[2:0] ->    [0]->HREADY, [1]->HSEL, [2]->HTRANS[1]
+2. HWDATA -> data that will be put into console_wdata, HWDATA is constrained so that it does not hit the return or new line ASCII characters
+3. HWDATA_upper_bits -> upper 24 bits are not used in VGA, so most of the time they are zero, but sometimes they are not zero
+4. inject_wrong_address 
+5. HADDR_inject -> value to inject if inject_wrong_address is high
 
 Moreover, the class has a counter, so that every X cycles, max or min of a signal is applied. To avoid constraint contradiction, min values are soft constraints.
 The generator does not create a new class everytime, but randomises the same one in order for the counter inside the class to work.
@@ -233,7 +240,7 @@ but kept getting an error that they had different sourcing files and did not hav
 ### 5. Assertions
 
 The following assertions were embedded in the VGA rtl, all sampled on positive edge of HCLK and disabled if HRESETn is low:
-[Link to VGA rtl]()
+[Link to VGA rtl](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/VGA-Verf/rtl/AHB_VGA/AHBVGASYS.sv)
 1. RGB is 0 when pixel_x and pixel_y are 0, which verifies nothing is displayed in front/back porches
 2. Assertions for scroll, backspace and return key (not done in this coursework, but a useful way to verify part of their functionality)
 3. Console_wdata has the correct value – 0 if the write conditions are not met and HWDATA on next cycle if write conditions are met
