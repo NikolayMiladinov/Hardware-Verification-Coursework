@@ -10,8 +10,8 @@ comp-opt:
 
 #If no error open QuestaSim
 open-sim:
-	vsim -coverage -voptargs="+cover=bcefst" -onfinish stop work_opt -gui
-# vsim -onfinish stop work_opt -gui
+# vsim -coverage -voptargs="+cover=bcefst" -onfinish stop work_opt -gui
+	vsim -onfinish stop work_opt -do setup.do -gui
 
 #Setup the simulation
 setup-sim:

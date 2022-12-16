@@ -52,6 +52,6 @@ module tb_top;
 
     //Testcase instance, interface handle is passed to test as an argument
     // test1 t1(intf.DRIV, intf.MON);
-    test5 t1(intf.DRIV, intf.MON);
+    test2 t1(intf.DRIV, intf.MON);
   
 endmodule

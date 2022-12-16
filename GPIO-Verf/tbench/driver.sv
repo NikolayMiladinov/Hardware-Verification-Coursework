@@ -83,7 +83,7 @@ class driver;
             transaction trans;
             
             gpio_mail.get(trans);
-            $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
+            //$display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
 
             if(driver_rstn) begin
                 if(trans.inject_parity_error && !trans.write_cycle) $display("[Driver] Parity error injection in transaction %0d, GPIOIN: %0h", no_transactions, trans.GPIOIN);
@@ -104,7 +104,7 @@ class driver;
 
                 if(trans.inject_wrong_address[0]) begin
                     gpio_vif.cb_DRIV.HADDR <= trans.HADDR_inject;
-                    $display("[Driver] Wrong HADDR injection in address phase: transaction %0d", no_transactions);
+                    $display("[Driver] HADDR injection in address phase: transaction %0d", no_transactions);
                 end else gpio_vif.cb_DRIV.HADDR <= 32'h5300_0004; 
             end else begin
                 $display("[DRIVER] Driver is being reset");
@@ -116,17 +116,17 @@ class driver;
                 //write to direction register, direction determined by write_cycle variable
                 if(trans.dir_inject) begin
                     gpio_vif.cb_DRIV.HWDATA <= trans.HWDATA_dir_inject;
-                    $display("[Driver] Wrong direction injection in transaction %0d", no_transactions);
+                    $display("[Driver] direction injection in transaction %0d", no_transactions);
                 end else gpio_vif.cb_DRIV.HWDATA <= {31'b0, trans.write_cycle};
 
                 if(trans.inject_wrong_address[1]) begin 
                     gpio_vif.cb_DRIV.HADDR <= trans.HADDR_inject;
-                    $display("[Driver] Wrong HADDR injection in data phase: transaction %0d", no_transactions);
+                    $display("[Driver] HADDR injection in data phase: transaction %0d", no_transactions);
                 end else gpio_vif.cb_DRIV.HADDR <= 32'h5300_0000; //start data phase
 
                 if(trans.write_cycle == 1'b0) gpio_vif.cb_DRIV.HWRITE <= 'b0; //write signal can be low during data phase of input direction
             end else begin
-                $display("[DRIVER] Driver is being reset");
+                //$display("[DRIVER] Driver is being reset");
             end
 
             @gpio_vif.cb_DRIV;
@@ -140,10 +140,10 @@ class driver;
                     gpio_vif.cb_DRIV.GPIOIN <= trans.GPIOIN;
                 end
             end else begin
-                $display("[DRIVER] Driver is being reset");
+                //$display("[DRIVER] Driver is being reset");
             end
 
-            $display("----------[DRIVER-END-OF-TRANSFER]----------");
+            //$display("----------[DRIVER-END-OF-TRANSFER]----------");
             no_transactions++;
         end
     endtask
