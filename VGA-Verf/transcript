@@ -14,7 +14,7 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -coverage -voptargs="+cover=bcefst" -onfinish stop work_opt -do "setup.do" -gui 
-# Start time: 21:59:10 on Dec 16,2022
+# Start time: 22:15:02 on Dec 16,2022
 # Loading sv_std.std
 # Loading work.tb_top_sv_unit(fast)
 # Loading work.tb_top(fast)
@@ -1666,5 +1666,5 @@
 #    Time: 17018690 ns  Iteration: 2  Instance: /tb_top/t1
 # Break in Task tb_top_sv_unit/environment::run at tbench/env.sv line 88
 # Saving coverage database on exit...
-# End time: 22:02:06 on Dec 16,2022, Elapsed time: 0:02:56
+# End time: 22:19:49 on Dec 16,2022, Elapsed time: 0:04:47
 # Errors: 0, Warnings: 7
