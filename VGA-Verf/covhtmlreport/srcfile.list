@@ -1,0 +1,10 @@
+rtl/AHB_VGA/AHBVGASYS.sv
+rtl/AHB_VGA/counter.sv
+rtl/AHB_VGA/dual_port_ram_sync.sv
+rtl/AHB_VGA/font_rom.sv
+rtl/AHB_VGA/vga_console.sv
+rtl/AHB_VGA/vga_image.sv
+rtl/AHB_VGA/vga_sync.sv
+tbench/tb_top.sv
+tbench/test.sv
+tbench/vga_intf.sv

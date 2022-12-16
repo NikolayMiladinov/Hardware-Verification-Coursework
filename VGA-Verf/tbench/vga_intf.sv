@@ -50,21 +50,12 @@ interface vga_intf
     modport MON (clocking cb_MON, input HCLK, HRESETn);
 
 
-    covergroup outputs;
-        coverpoint HRDATA{
-            bins valid[10] = {['h0000:'hFFFF]};
-            bins min = {0};
-            bins max = {'hFFFF};
-            illegal_bins invalid_hrdata = {['h10000:'hFFFF_FFFF]};
-        }
-    endgroup
-
     // Cover functionality of addressing, that the only functional addresses are 'h5300_0000 and 'h5300_0004
     // Only bottom 8 bits are used in rtl
     covergroup haddr;
         coverpoint HADDR{
             bins data_addr = ('h5200_0000[*2:4]);
-            bins others[10] = {['h5200_0000:'h52FF_FFFF]};
+            bins others[10] = {['h5200_0001:'h52FF_FFFF]};
             illegal_bins invalid_vga_addr = {[1:'h51FF_FFFF], ['h5300_0000:'hFFFF_FFFF]};
         }
     endgroup
@@ -78,18 +69,68 @@ interface vga_intf
         }
     endgroup
 
-    outputs outputs_inst = new();
+    covergroup rgb;
+        coverpoint RGB{
+            bins text = ('h1C[*2:4]);
+            bins unused[10] = {['h01:'hFF]};
+            bins min = {0};
+        }
+    endgroup
+
+    logic [7:0] console_wdata;
+    logic change_char;
+
+    covergroup console;
+        coverpoint console_wdata{
+            bins min = {0};
+            bins other[10] = {['h1:'hFF]};
+        }
+    endgroup
+
+    function bit rgb_correct(input logic HSYNC, VSYNC, input logic [7:0] rgb);
+        if(!HSYNC || !VSYNC) return (rgb=='h0);
+        else return 1'b1;
+    endfunction
+
+    covergroup sync;
+        HSYNC: coverpoint HSYNC{
+            bins one = {1'b1};
+            bins zero = {1'b0};
+        }
+        VSYNC: coverpoint VSYNC{
+            bins one = {1'b1};
+            bins zero = {1'b0};
+        }
+        RGB_correct: coverpoint rgb_correct(HSYNC, VSYNC, RGB){
+            bins valid_rgb = {1};
+            illegal_bins incorrect_rgb = {0};
+        }
+        cross_sync: cross HSYNC, VSYNC, RGB_correct;
+    endgroup
+
+    sync sync_inst = new();
+    rgb rgb_inst = new();
+    console console_inst = new();
     haddr addr = new();
     hwdata hwdata_inst = new();
 
     always @(posedge HCLK) begin
         if(HRESETn) begin
-            outputs_inst.sample();
+            sync_inst.sample();
+            rgb_inst.sample();
+            console_inst.sample();
             if(HSEL) addr.sample();
             if(HSEL) hwdata_inst.sample();
 
+            if((HADDR == 32'h5200_0000) & HSEL & HWRITE & HTRANS[1] & HREADY) change_char <= 1'b1;
+            else change_char <= 1'b0;
+
+            if(change_char) console_wdata <= HWDATA[7:0];
+            else console_wdata <= 'h0;
+
         end else begin
-            
+            change_char <= 'b0;
+            console_wdata <= 'h0;
         end
         
     end

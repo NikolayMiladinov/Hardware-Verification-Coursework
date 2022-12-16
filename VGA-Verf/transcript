@@ -13,8 +13,8 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# vsim -onfinish stop work_opt -do "setup.do" -gui 
-# Start time: 17:14:33 on Dec 16,2022
+# vsim -coverage -voptargs="+cover=bcefst" -onfinish stop work_opt -do "setup.do" -gui 
+# Start time: 21:59:10 on Dec 16,2022
 # Loading sv_std.std
 # Loading work.tb_top_sv_unit(fast)
 # Loading work.tb_top(fast)
@@ -31,6 +31,15 @@
 # Loading work.dual_port_ram_sync(fast__1)
 # Loading work.test(fast)
 # Loading work.vga_intf(fast)
+# ** Warning: (vsim-8441) Clocking block output vga_vif.cb_DRIV.HADDR is not legal in this
+# or another expression.
+#    Time: 0 ps  Iteration: 0  Region: /tb_top_sv_unit File: tbench/driver.sv Line: 79
+# ** Warning: (vsim-8441) Clocking block output vga_vif.cb_DRIV.HADDR is not legal in this
+# or another expression.
+#    Time: 0 ps  Iteration: 0  Region: /tb_top_sv_unit File: tbench/driver.sv Line: 79
+# ** Warning: (vsim-8441) Clocking block output vga_vif.cb_DRIV.HADDR is not legal in this
+# or another expression.
+#    Time: 0 ps  Iteration: 0  Region: /tb_top_sv_unit File: tbench/driver.sv Line: 79
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (14) for port 'address'. The port definition is at: rtl/AHB_VGA/vga_image.sv(45).
 #    Time: 0 ps  Iteration: 0  Instance: /tb_top/DUT_primary/uvga_image File: rtl/AHB_VGA/AHBVGASYS.sv Line: 125
 # ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'addr_b'. The port definition is at: rtl/AHB_VGA/dual_port_ram_sync.sv(46).
@@ -40,20 +49,6 @@
 # ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'addr_b'. The port definition is at: rtl/AHB_VGA/dual_port_ram_sync.sv(46).
 #    Time: 0 ps  Iteration: 0  Instance: /tb_top/DUT_redundant/uvga_image/uimage_ram File: rtl/AHB_VGA/vga_image.sv Line: 67
 # do setup.do
-# 0 ps
-# 2 ns
-# 0 ps
-# 4 ns
-# 0 ps
-# 8 ns
-# 0 ps
-# 16 ns
-# 0 ps
-# 32 ns
-# 0 ps
-# 64 ns
-# 0 ps
-# 128 ns
 # --------- [DRIVER] Reset Started --------- at 0
 # --------- [DRIVER] Reset driver end --------- at 10000
 # --------- [DRIVER] Reset Ended --------- at 31000
@@ -1666,9 +1661,10 @@
 # Reset row t = 16725030000
 # VSYNC t = 16725030000
 # Closed the file
-# [SCOREBOARD] Error count: 55123
+# [SCOREBOARD] Error count: 180
 # ** Note: $stop    : tbench/env.sv(88)
-#    Time: 17016090 ns  Iteration: 2  Instance: /tb_top/t1
+#    Time: 17018690 ns  Iteration: 2  Instance: /tb_top/t1
 # Break in Task tb_top_sv_unit/environment::run at tbench/env.sv line 88
-# End time: 18:17:33 on Dec 16,2022, Elapsed time: 1:03:00
-# Errors: 0, Warnings: 4
+# Saving coverage database on exit...
+# End time: 22:02:06 on Dec 16,2022, Elapsed time: 0:02:56
+# Errors: 0, Warnings: 7

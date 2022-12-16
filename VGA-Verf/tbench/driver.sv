@@ -83,8 +83,15 @@ class driver;
             
             vga_mail.get(trans);
             $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
+            if(trans.inject_wrong_address) begin
+                vga_vif.cb_DRIV.HADDR <= trans.HADDR_inject;
+                @vga_vif.cb_DRIV;
+            end else if(vga_vif.cb_DRIV.HADDR != 32'h5200_0000) begin
+                vga_vif.cb_DRIV.HADDR <= 32'h5200_0000; 
+                @vga_vif.cb_DRIV;
+            end
             if(no_transactions<899) begin
-                vga_vif.cb_DRIV.HWDATA <= trans.HWDATA;
+                vga_vif.cb_DRIV.HWDATA <= {trans.HWDATA_upper_bits, trans.HWDATA};
                 @vga_vif.cb_DRIV;
             end 
 
