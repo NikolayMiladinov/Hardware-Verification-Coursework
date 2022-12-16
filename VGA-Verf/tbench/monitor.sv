@@ -1,6 +1,8 @@
 class mon_trans;
     localparam WIDTH = 16;
-    logic [2*WIDTH-1:0] HWDATA, HRDATA;
+    logic [2*WIDTH-1:0] HRDATA, HRDATA_redundant;
+    logic               HREADYOUT, HREADYOUT_redundant, HSYNC, HSYNC_redundant, VSYNC, VSYNC_redundant;
+    logic [WIDTH/2-1:0] RGB, RGB_redundant;
 endclass
 
 
@@ -39,12 +41,9 @@ class monitor;
             $display("VSYNC t = %0t", $time);
         end
 
-        if(clock_div) begin
+        //Only print the first page
+        if(clock_div && page==0) begin
             if(vga_vif.cb_MON.RGB == 'h1C) $fwrite(fd, "*");
-            // else if(vga_vif.cb_MON.RGB == 0 && row==1 && page==0) begin
-            //     $sformat(col_string, "%0d", column);
-            //     $fwrite(fd, col_string);
-            // end
             else if(vga_vif.cb_MON.RGB == 0) $fwrite(fd, " ");
             else if(vga_vif.cb_MON.RGB === 8'hx || vga_vif.cb_MON.RGB === 8'hz) $fwrite(fd, "!");
             else $fwrite(fd, "X");
@@ -82,12 +81,32 @@ class monitor;
 
     endtask
 
+    task sample();
+        mon_trans trans = new;
+        trans.HREADYOUT = vga_vif.cb_MON.HREADYOUT;
+        trans.HREADYOUT_redundant = vga_vif.cb_MON.HREADYOUT_redundant;
+        
+        trans.HSYNC = vga_vif.cb_MON.HSYNC;
+        trans.HSYNC_redundant = vga_vif.cb_MON.HSYNC_redundant;
+        trans.VSYNC = vga_vif.cb_MON.VSYNC;
+        trans.VSYNC_redundant = vga_vif.cb_MON.VSYNC_redundant;
+        
+        trans.RGB = vga_vif.cb_MON.RGB;
+        trans.RGB_redundant = vga_vif.cb_MON.RGB_redundant;
+        
+        trans.HRDATA = vga_vif.cb_MON.HRDATA;
+        trans.HRDATA_redundant = vga_vif.cb_MON.HRDATA_redundant;
+
+        vga_mon_mail.put(trans);
+    endtask
+
     task run();
         $display("------[MONITOR STARTED]------");
         forever begin @(posedge vga_vif.HCLK) begin
             mon_trans trans = new();
             track_position();
             print_out();
+            sample();
             clock_div = ~clock_div;
             last_HSYNC = vga_vif.cb_MON.HSYNC;
             last_VSYNC = vga_vif.cb_MON.VSYNC;

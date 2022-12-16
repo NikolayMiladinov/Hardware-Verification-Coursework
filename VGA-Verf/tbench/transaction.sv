@@ -20,6 +20,7 @@ class transaction;
 
     constraint HWDATA_max{(count_iter%55==0) -> HWDATA=='h7F;}
     constraint HWDATA_min{soft (count_iter%56==0) -> HWDATA==0;}
+    constraint HWDATA_restr_symb{HWDATA!='h08;HWDATA!='h0d;HWDATA!='h0a;}
     constraint HWDATA_byte{HWDATA dist {[0:'h7F]:/95, ['h80:'hFF]:/5};}
     constraint HWDATA_bits{HWDATA_upper_bits dist {0:=95, [1:'hFFFFFF]:/5};}
 

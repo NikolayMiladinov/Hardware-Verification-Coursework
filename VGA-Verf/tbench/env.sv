@@ -3,7 +3,7 @@ class environment;
     generator gen;
     driver driv;
     monitor mon;
-    // scoreboard scor;
+    scoreboard scor;
 
     mailbox vga_mail;
     mailbox vga_mon_mail;
@@ -21,7 +21,7 @@ class environment;
         gen = new(vga_mail, ended_gen);
         driv = new(vga_driv_vif, vga_mail, ended_1mil);
         mon = new(vga_mon_vif, vga_mon_mail);
-        // scor = new(vga_mon_mail);
+        scor = new(vga_mon_mail);
     endfunction
 
     task reset_test();
@@ -53,7 +53,7 @@ class environment;
             gen.gen();
             driv.drive(1'b0);
             mon.run();
-            // scor.run();
+            scor.run();
         join_none
     endtask
 
@@ -62,7 +62,7 @@ class environment;
             gen.gen();
             driv.drive(1'b1);
             mon.run();
-            // scor.run();
+            scor.run();
         join_none
     endtask
 
@@ -84,6 +84,7 @@ class environment;
         wait_test_end();
         repeat(850000) @vga_driv_vif.cb_DRIV;
         close_file();
+        scor.print_error();
         $stop;
     endtask
 

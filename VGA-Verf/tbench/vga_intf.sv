@@ -3,9 +3,9 @@ interface vga_intf
     (input bit HCLK);
 
     //logic HRESETn, HWRITE, HSEL, HREADY, PARITYSEL, HREADYOUT, PARITYERR;
-    logic HRESETn, HWRITE, HSEL, HREADY, HREADYOUT, HSYNC, VSYNC;
-    logic [WIDTH/2-1:0]       RGB;
-    logic [2*WIDTH-1:0]       HADDR, HWDATA, HRDATA;
+    logic HRESETn, HWRITE, HSEL, HREADY, HREADYOUT, HREADYOUT_redundant, HSYNC, HSYNC_redundant, VSYNC, VSYNC_redundant;
+    logic [WIDTH/2-1:0]       RGB, RGB_redundant;
+    logic [2*WIDTH-1:0]       HADDR, HWDATA, HRDATA, HRDATA_redundant;
     logic [1:0] HTRANS;
 
     clocking cb_DRIV @(posedge HCLK);
@@ -38,6 +38,12 @@ interface vga_intf
         input RGB;
         input HSYNC;
         input VSYNC;
+        
+        input HREADYOUT_redundant;
+        input HRDATA_redundant; 
+        input RGB_redundant;
+        input HSYNC_redundant;
+        input VSYNC_redundant;
     endclocking
 
     modport DRIV (clocking cb_DRIV, input HCLK, output HRESETn);
