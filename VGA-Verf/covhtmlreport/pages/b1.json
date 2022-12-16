@@ -25,92 +25,92 @@ b50:[{dummy:0},
 ,{cr:'c',t:'I',z:'            if(change_char) console_wdata &lt;= HWDATA[7:0];',f:'tbench/vga_intf.sv',l:'128',h:'848',c:'g'}
 ,{cr:'c',t:'E',z:'            else console_wdata &lt;= \'h0;',f:'tbench/vga_intf.sv',l:'129',h:'850083',c:'g'}
 ]}],
-b429:[{dummy:0},
-{anchor:'cvg430',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',c:'G',p:'100.00'}
+b432:[{dummy:0},
+{anchor:'cvg433',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'rtl/AHB_VGA/counter.sv',l:'61',h:'850931',c:'g'}
 ]},
-{anchor:'cvg431',items:[{z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',c:'Y',p:'50.00'}
+{anchor:'cvg434',items:[{z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',c:'Y',p:'50.00'}
 ,{cr:'c',t:'I',z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',h:'850931',c:'g'}
 ,{cr:'m',t:'A',z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',h:'0',c:'r'}
 ]},
-{anchor:'cvg432',items:[{z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',c:'G',p:'100.00'}
+{anchor:'cvg435',items:[{z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',h:'425465',c:'g'}
 ,{cr:'c',t:'E',z:'				else',f:'rtl/AHB_VGA/counter.sv',l:'65',h:'425466',c:'g'}
 ]},
-{anchor:'cvg433',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',c:'G',p:'100.00'}
+{anchor:'cvg436',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'rtl/AHB_VGA/counter.sv',l:'74',h:'850931',c:'g'}
 ]},
-{anchor:'cvg434',items:[{z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',c:'G',p:'100.00'}
+{anchor:'cvg437',items:[{z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',h:'425465',c:'g'}
 ,{cr:'c',t:'E',z:'			else',f:'rtl/AHB_VGA/counter.sv',l:'77',h:'425466',c:'g'}
 ]}],
-b447:[{dummy:0},
-{anchor:'cvg448',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',c:'G',p:'100.00'}
+b450:[{dummy:0},
+{anchor:'cvg451',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'rtl/AHB_VGA/counter.sv',l:'61',h:'850930',c:'g'}
 ]},
-{anchor:'cvg449',items:[{z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',c:'G',p:'100.00'}
+{anchor:'cvg452',items:[{z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',h:'425465',c:'g'}
 ,{cr:'c',t:'A',z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',h:'425465',c:'g'}
 ]},
-{anchor:'cvg450',items:[{z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',c:'G',p:'100.00'}
+{anchor:'cvg453',items:[{z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',h:'531',c:'g'}
 ,{cr:'c',t:'E',z:'				else',f:'rtl/AHB_VGA/counter.sv',l:'65',h:'424934',c:'g'}
 ]},
-{anchor:'cvg451',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',c:'G',p:'100.00'}
+{anchor:'cvg454',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'rtl/AHB_VGA/counter.sv',l:'74',h:'850930',c:'g'}
 ]},
-{anchor:'cvg452',items:[{z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',c:'G',p:'100.00'}
+{anchor:'cvg455',items:[{z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',h:'531',c:'g'}
 ,{cr:'c',t:'E',z:'			else',f:'rtl/AHB_VGA/counter.sv',l:'77',h:'850399',c:'g'}
 ]}],
-b483:[{dummy:0},
-{anchor:'cvg484',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',c:'G',p:'100.00'}
+b486:[{dummy:0},
+{anchor:'cvg487',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'rtl/AHB_VGA/counter.sv',l:'61',h:'1063',c:'g'}
 ]},
-{anchor:'cvg485',items:[{z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',c:'G',p:'100.00'}
+{anchor:'cvg488',items:[{z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',h:'531',c:'g'}
 ,{cr:'c',t:'A',z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',h:'532',c:'g'}
 ]},
-{anchor:'cvg486',items:[{z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',c:'G',p:'100.00'}
+{anchor:'cvg489',items:[{z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',h:'1',c:'g'}
 ,{cr:'c',t:'E',z:'				else',f:'rtl/AHB_VGA/counter.sv',l:'65',h:'530',c:'g'}
 ]},
-{anchor:'cvg487',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',c:'G',p:'100.00'}
+{anchor:'cvg490',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'rtl/AHB_VGA/counter.sv',l:'74',h:'1064',c:'g'}
 ]},
-{anchor:'cvg488',items:[{z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',c:'G',p:'100.00'}
+{anchor:'cvg491',items:[{z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',h:'1',c:'g'}
 ,{cr:'c',t:'E',z:'			else',f:'rtl/AHB_VGA/counter.sv',l:'77',h:'1063',c:'g'}
 ]}],
-b346:[{dummy:0},
-{anchor:'cvg347',items:[{z:'	if(HorzCount&lt;HorzTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'100',c:'G',p:'100.00'}
+b349:[{dummy:0},
+{anchor:'cvg350',items:[{z:'	if(HorzCount&lt;HorzTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'100',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if(HorzCount&lt;HorzTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'100',h:'51604',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'102',h:'374926',c:'g'}
 ]},
-{anchor:'cvg348',items:[{z:'	if(VertCount&lt;VertTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'105',c:'G',p:'100.00'}
+{anchor:'cvg351',items:[{z:'	if(VertCount&lt;VertTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'105',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if(VertCount&lt;VertTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'105',h:'3213',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'107',h:'423317',c:'g'}
 ]},
-{anchor:'cvg349',items:[{z:'	if ( ( (HorzCount &gt;= HorzTimeToBackPorchEnd ) && (HorzCount &lt; HorzTimeTo...',f:'rtl/AHB_VGA/vga_sync.sv',l:'113',c:'G',p:'100.00'}
+{anchor:'cvg352',items:[{z:'	if ( ( (HorzCount &gt;= HorzTimeToBackPorchEnd ) && (HorzCount &lt; HorzTimeTo...',f:'rtl/AHB_VGA/vga_sync.sv',l:'113',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if ( ( (HorzCount &gt;= HorzTimeToBackPorchEnd ) && (HorzCount &lt; HorzTimeTo...',f:'rtl/AHB_VGA/vga_sync.sv',l:'113',h:'327344',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'116',h:'119429',c:'g'}
 ]},
-{anchor:'cvg350',items:[{z:'	if ((HorzCount&gt;HorzTimeToBackPorchEnd)&&(HorzCount&lt;HorzTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'122',c:'G',p:'100.00'}
+{anchor:'cvg353',items:[{z:'	if ((HorzCount&gt;HorzTimeToBackPorchEnd)&&(HorzCount&lt;HorzTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'122',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if ((HorzCount&gt;HorzTimeToBackPorchEnd)&&(HorzCount&lt;HorzTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'122',h:'678618',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'124',h:'86688',c:'g'}
 ]},
-{anchor:'cvg351',items:[{z:'	if ((VertCount&gt;VertTimeToBackPorchEnd)&&(VertCount&lt;VertTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'129',c:'G',p:'100.00'}
+{anchor:'cvg354',items:[{z:'	if ((VertCount&gt;VertTimeToBackPorchEnd)&&(VertCount&lt;VertTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'129',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if ((VertCount&gt;VertTimeToBackPorchEnd)&&(VertCount&lt;VertTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'129',h:'958',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'131',h:'55',c:'g'}
 ]}],
-b784:[{dummy:0},
-{anchor:'cvg785',items:[{z:'      case (addr_reg)',f:'rtl/AHB_VGA/font_rom.sv',l:'52',c:'G',p:'96.87'}
+b787:[{dummy:0},
+{anchor:'cvg788',items:[{z:'      case (addr_reg)',f:'rtl/AHB_VGA/font_rom.sv',l:'52',c:'G',p:'96.87'}
 ,{cr:'c',t:'T',z:'         11\'h000: data = 8\'b00000000; // ',f:'rtl/AHB_VGA/font_rom.sv',l:'54',h:'44',c:'g'}
 ,{cr:'c',t:'T',z:'         11\'h001: data = 8\'b00000000; // ',f:'rtl/AHB_VGA/font_rom.sv',l:'55',h:'22',c:'g'}
 ,{cr:'c',t:'T',z:'         11\'h002: data = 8\'b00000000; // ',f:'rtl/AHB_VGA/font_rom.sv',l:'56',h:'22',c:'g'}
@@ -2161,79 +2161,79 @@ b784:[{dummy:0},
 ,{cr:'c',t:'T',z:'         11\'h7ff: data = 8\'b00000000; // 	 ',f:'rtl/AHB_VGA/font_rom.sv',l:'2228',h:'18',c:'g'}
 ,{cr:'c',t:'A',z:'      case (addr_reg)',f:'rtl/AHB_VGA/font_rom.sv',l:'52',h:'1025',c:'g'}
 ]}],
-b819:[{dummy:0},
-{anchor:'cvg820',items:[{z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',c:'G',p:'100.00'}
+b822:[{dummy:0},
+{anchor:'cvg823',items:[{z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',h:'86663',c:'g'}
 ,{cr:'c',t:'A',z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',h:'82',c:'g'}
 ]}],
-b519:[{dummy:0},
-{anchor:'cvg520',items:[{z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'120',c:'G',p:'100.00'}
+b522:[{dummy:0},
+{anchor:'cvg523',items:[{z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'120',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'120',h:'3',c:'g'}
 ,{cr:'c',t:'E',z:'    else',f:'rtl/AHB_VGA/vga_console.sv',l:'125',h:'681928',c:'g'}
 ]},
-{anchor:'cvg521',items:[{z:'  assign cur_x_next = (new_line) ? 2 :',f:'rtl/AHB_VGA/vga_console.sv',l:'153',c:'G',p:'100.00'}
+{anchor:'cvg524',items:[{z:'  assign cur_x_next = (new_line) ? 2 :',f:'rtl/AHB_VGA/vga_console.sv',l:'153',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign cur_x_next = (new_line) ? 2 :',f:'rtl/AHB_VGA/vga_console.sv',l:'153',h:'61',c:'g'}
 ,{cr:'c',t:'E',z:'                      (back_space && cur_x_reg) ? cur_x_reg - 1 :',f:'rtl/AHB_VGA/vga_console.sv',l:'154',h:'986',c:'g'}
 ]},
-{anchor:'cvg522',items:[{z:'                      (back_space && cur_x_reg) ? cur_x_reg - 1 :',f:'rtl/AHB_VGA/vga_console.sv',l:'154',c:'Y',p:'50.00'}
+{anchor:'cvg525',items:[{z:'                      (back_space && cur_x_reg) ? cur_x_reg - 1 :',f:'rtl/AHB_VGA/vga_console.sv',l:'154',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                      (back_space && cur_x_reg) ? cur_x_reg - 1 :',f:'rtl/AHB_VGA/vga_console.sv',l:'154',h:'0',c:'r'}
 ,{cr:'c',t:'E',z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',h:'956',c:'g'}
 ]},
-{anchor:'cvg523',items:[{z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',c:'G',p:'100.00'}
+{anchor:'cvg526',items:[{z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',h:'883',c:'g'}
 ,{cr:'c',t:'E',z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',h:'106',c:'g'}
 ]},
-{anchor:'cvg524',items:[{z:'  assign cur_y_next = (cur_y_reg == MAX_Y-1) ? cur_y_reg :',f:'rtl/AHB_VGA/vga_console.sv',l:'157',c:'G',p:'100.00'}
+{anchor:'cvg527',items:[{z:'  assign cur_y_next = (cur_y_reg == MAX_Y-1) ? cur_y_reg :',f:'rtl/AHB_VGA/vga_console.sv',l:'157',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign cur_y_next = (cur_y_reg == MAX_Y-1) ? cur_y_reg :',f:'rtl/AHB_VGA/vga_console.sv',l:'157',h:'5',c:'g'}
 ,{cr:'c',t:'E',z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',h:'87',c:'g'}
 ]},
-{anchor:'cvg525',items:[{z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',c:'G',p:'100.00'}
+{anchor:'cvg528',items:[{z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',h:'57',c:'g'}
 ,{cr:'c',t:'E',z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',h:'29',c:'g'}
 ]},
-{anchor:'cvg526',items:[{z:'  assign font_rgb = (font_bit) ? 8\'b00011100 : 8\'b00000000; //green:black...',f:'rtl/AHB_VGA/vga_console.sv',l:'161',c:'G',p:'100.00'}
+{anchor:'cvg529',items:[{z:'  assign font_rgb = (font_bit) ? 8\'b00011100 : 8\'b00000000; //green:black...',f:'rtl/AHB_VGA/vga_console.sv',l:'161',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign font_rgb = (font_bit) ? 8\'b00011100 : 8\'b00000000; //green:black...',f:'rtl/AHB_VGA/vga_console.sv',l:'161',h:'26301',c:'g'}
 ,{cr:'c',t:'E',z:'  assign font_rgb = (font_bit) ? 8\'b00011100 : 8\'b00000000; //green:black...',f:'rtl/AHB_VGA/vga_console.sv',l:'161',h:'26302',c:'g'}
 ]},
-{anchor:'cvg527',items:[{z:'  assign font_inv_rgb = (font_bit) ? 8\'b0000000 : 8\'b00011100; //black:gr...',f:'rtl/AHB_VGA/vga_console.sv',l:'162',c:'G',p:'100.00'}
+{anchor:'cvg530',items:[{z:'  assign font_inv_rgb = (font_bit) ? 8\'b0000000 : 8\'b00011100; //black:gr...',f:'rtl/AHB_VGA/vga_console.sv',l:'162',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign font_inv_rgb = (font_bit) ? 8\'b0000000 : 8\'b00011100; //black:gr...',f:'rtl/AHB_VGA/vga_console.sv',l:'162',h:'26301',c:'g'}
 ,{cr:'c',t:'E',z:'  assign font_inv_rgb = (font_bit) ? 8\'b0000000 : 8\'b00011100; //black:gr...',f:'rtl/AHB_VGA/vga_console.sv',l:'162',h:'26302',c:'g'}
 ]},
-{anchor:'cvg528',items:[{z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'178',c:'G',p:'100.00'}
+{anchor:'cvg531',items:[{z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'178',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'178',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'    else',f:'rtl/AHB_VGA/vga_console.sv',l:'185',h:'963',c:'g'}
 ]},
-{anchor:'cvg529',items:[{z:'    case(current_state)',f:'rtl/AHB_VGA/vga_console.sv',l:'200',c:'Y',p:'66.66'}
+{anchor:'cvg532',items:[{z:'    case(current_state)',f:'rtl/AHB_VGA/vga_console.sv',l:'200',c:'Y',p:'66.66'}
 ,{cr:'c',t:'T',z:'      1\'b0: //Waits for a new line and the cursor on the last line of the...',f:'rtl/AHB_VGA/vga_console.sv',l:'201',h:'62',c:'g'}
 ,{cr:'c',t:'T',z:'      1\'b1: //Counts through every tile and refreshes',f:'rtl/AHB_VGA/vga_console.sv',l:'211',h:'960',c:'g'}
 ,{cr:'m',t:'A',z:'    case(current_state)',f:'rtl/AHB_VGA/vga_console.sv',l:'200',h:'0',c:'r'}
 ]},
-{anchor:'cvg530',items:[{z:'        if(new_line && (cur_y_reg == MAX_Y-1))',f:'rtl/AHB_VGA/vga_console.sv',l:'202',c:'G',p:'100.00'}
+{anchor:'cvg533',items:[{z:'        if(new_line && (cur_y_reg == MAX_Y-1))',f:'rtl/AHB_VGA/vga_console.sv',l:'202',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'        if(new_line && (cur_y_reg == MAX_Y-1))',f:'rtl/AHB_VGA/vga_console.sv',l:'202',h:'1',c:'g'}
 ,{cr:'c',t:'E',z:'        else',f:'rtl/AHB_VGA/vga_console.sv',l:'209',h:'61',c:'g'}
 ]},
-{anchor:'cvg531',items:[{z:'        if(xn_next == MAX_X)',f:'rtl/AHB_VGA/vga_console.sv',l:'213',c:'G',p:'100.00'}
+{anchor:'cvg534',items:[{z:'        if(xn_next == MAX_X)',f:'rtl/AHB_VGA/vga_console.sv',l:'213',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'        if(xn_next == MAX_X)',f:'rtl/AHB_VGA/vga_console.sv',l:'213',h:'30',c:'g'}
 ,{cr:'c',t:'E',z:'        else',f:'rtl/AHB_VGA/vga_console.sv',l:'223',h:'930',c:'g'}
 ]},
-{anchor:'cvg532',items:[{z:'            if(yn_next == MAX_Y)',f:'rtl/AHB_VGA/vga_console.sv',l:'217',c:'G',p:'100.00'}
+{anchor:'cvg535',items:[{z:'            if(yn_next == MAX_Y)',f:'rtl/AHB_VGA/vga_console.sv',l:'217',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'            if(yn_next == MAX_Y)',f:'rtl/AHB_VGA/vga_console.sv',l:'217',h:'1',c:'g'}
 ,{cr:'c',t:'A',z:'            if(yn_next == MAX_Y)',f:'rtl/AHB_VGA/vga_console.sv',l:'217',h:'29',c:'g'}
 ]},
-{anchor:'cvg533',items:[{z:'  assign addr_w = (scroll) ? {yn,xn} : {cur_y_reg, cur_x_reg}; ',f:'rtl/AHB_VGA/vga_console.sv',l:'233',c:'G',p:'100.00'}
+{anchor:'cvg536',items:[{z:'  assign addr_w = (scroll) ? {yn,xn} : {cur_y_reg, cur_x_reg}; ',f:'rtl/AHB_VGA/vga_console.sv',l:'233',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign addr_w = (scroll) ? {yn,xn} : {cur_y_reg, cur_x_reg}; ',f:'rtl/AHB_VGA/vga_console.sv',l:'233',h:'960',c:'g'}
 ,{cr:'c',t:'E',z:'  assign addr_w = (scroll) ? {yn,xn} : {cur_y_reg, cur_x_reg}; ',f:'rtl/AHB_VGA/vga_console.sv',l:'233',h:'843',c:'g'}
 ]},
-{anchor:'cvg534',items:[{z:'  assign din = (scroll) ?  dout : font_data[6:0];',f:'rtl/AHB_VGA/vga_console.sv',l:'234',c:'G',p:'100.00'}
+{anchor:'cvg537',items:[{z:'  assign din = (scroll) ?  dout : font_data[6:0];',f:'rtl/AHB_VGA/vga_console.sv',l:'234',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign din = (scroll) ?  dout : font_data[6:0];',f:'rtl/AHB_VGA/vga_console.sv',l:'234',h:'759',c:'g'}
 ,{cr:'c',t:'E',z:'  assign din = (scroll) ?  dout : font_data[6:0];',f:'rtl/AHB_VGA/vga_console.sv',l:'234',h:'14207',c:'g'}
 ]},
-{anchor:'cvg535',items:[{z:'  assign addr_r =(scroll) ? {yn+1\'b1,xn_next} : {pixel_y[8:4],pixel_x[9:3...',f:'rtl/AHB_VGA/vga_console.sv',l:'236',c:'G',p:'100.00'}
+{anchor:'cvg538',items:[{z:'  assign addr_r =(scroll) ? {yn+1\'b1,xn_next} : {pixel_y[8:4],pixel_x[9:3...',f:'rtl/AHB_VGA/vga_console.sv',l:'236',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign addr_r =(scroll) ? {yn+1\'b1,xn_next} : {pixel_y[8:4],pixel_x[9:3...',f:'rtl/AHB_VGA/vga_console.sv',l:'236',h:'1031',c:'g'}
 ,{cr:'c',t:'E',z:'  assign addr_r =(scroll) ? {yn+1\'b1,xn_next} : {pixel_y[8:4],pixel_x[9:3...',f:'rtl/AHB_VGA/vga_console.sv',l:'236',h:'42475',c:'g'}
 ]}],
-b911:[{dummy:0},
-{anchor:'cvg912',items:[{z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',c:'G',p:'100.00'}
+b914:[{dummy:0},
+{anchor:'cvg915',items:[{z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',h:'47',c:'g'}
 ,{cr:'c',t:'A',z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',h:'170179',c:'g'}
 ]}],
@@ -2257,92 +2257,92 @@ b189:[{dummy:0},
 ,{cr:'c',t:'T',z:'      if(pixel_x[9:0]&lt; 240 )',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'185',h:'149240',c:'g'}
 ,{cr:'c',t:'E',z:'      else',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'187',h:'243205',c:'g'}
 ]}],
-b1287:[{dummy:0},
-{anchor:'cvg1288',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',c:'G',p:'100.00'}
+b1293:[{dummy:0},
+{anchor:'cvg1294',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'rtl/AHB_VGA/counter.sv',l:'61',h:'850931',c:'g'}
 ]},
-{anchor:'cvg1289',items:[{z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',c:'Y',p:'50.00'}
+{anchor:'cvg1295',items:[{z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',c:'Y',p:'50.00'}
 ,{cr:'c',t:'I',z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',h:'850931',c:'g'}
 ,{cr:'m',t:'A',z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',h:'0',c:'r'}
 ]},
-{anchor:'cvg1290',items:[{z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',c:'G',p:'100.00'}
+{anchor:'cvg1296',items:[{z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',h:'425465',c:'g'}
 ,{cr:'c',t:'E',z:'				else',f:'rtl/AHB_VGA/counter.sv',l:'65',h:'425466',c:'g'}
 ]},
-{anchor:'cvg1291',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',c:'G',p:'100.00'}
+{anchor:'cvg1297',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'rtl/AHB_VGA/counter.sv',l:'74',h:'850931',c:'g'}
 ]},
-{anchor:'cvg1292',items:[{z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',c:'G',p:'100.00'}
+{anchor:'cvg1298',items:[{z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',h:'425465',c:'g'}
 ,{cr:'c',t:'E',z:'			else',f:'rtl/AHB_VGA/counter.sv',l:'77',h:'425466',c:'g'}
 ]}],
-b1306:[{dummy:0},
-{anchor:'cvg1307',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',c:'G',p:'100.00'}
+b1312:[{dummy:0},
+{anchor:'cvg1313',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'rtl/AHB_VGA/counter.sv',l:'61',h:'850930',c:'g'}
 ]},
-{anchor:'cvg1308',items:[{z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',c:'G',p:'100.00'}
+{anchor:'cvg1314',items:[{z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',h:'425465',c:'g'}
 ,{cr:'c',t:'A',z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',h:'425465',c:'g'}
 ]},
-{anchor:'cvg1309',items:[{z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',c:'G',p:'100.00'}
+{anchor:'cvg1315',items:[{z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',h:'531',c:'g'}
 ,{cr:'c',t:'E',z:'				else',f:'rtl/AHB_VGA/counter.sv',l:'65',h:'424934',c:'g'}
 ]},
-{anchor:'cvg1310',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',c:'G',p:'100.00'}
+{anchor:'cvg1316',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'rtl/AHB_VGA/counter.sv',l:'74',h:'850930',c:'g'}
 ]},
-{anchor:'cvg1311',items:[{z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',c:'G',p:'100.00'}
+{anchor:'cvg1317',items:[{z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',h:'531',c:'g'}
 ,{cr:'c',t:'E',z:'			else',f:'rtl/AHB_VGA/counter.sv',l:'77',h:'850399',c:'g'}
 ]}],
-b1343:[{dummy:0},
-{anchor:'cvg1344',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',c:'G',p:'100.00'}
+b1349:[{dummy:0},
+{anchor:'cvg1350',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'rtl/AHB_VGA/counter.sv',l:'61',h:'1063',c:'g'}
 ]},
-{anchor:'cvg1345',items:[{z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',c:'G',p:'100.00'}
+{anchor:'cvg1351',items:[{z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',h:'531',c:'g'}
 ,{cr:'c',t:'A',z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',h:'532',c:'g'}
 ]},
-{anchor:'cvg1346',items:[{z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',c:'G',p:'100.00'}
+{anchor:'cvg1352',items:[{z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',h:'1',c:'g'}
 ,{cr:'c',t:'E',z:'				else',f:'rtl/AHB_VGA/counter.sv',l:'65',h:'530',c:'g'}
 ]},
-{anchor:'cvg1347',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',c:'G',p:'100.00'}
+{anchor:'cvg1353',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'rtl/AHB_VGA/counter.sv',l:'74',h:'1064',c:'g'}
 ]},
-{anchor:'cvg1348',items:[{z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',c:'G',p:'100.00'}
+{anchor:'cvg1354',items:[{z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',h:'1',c:'g'}
 ,{cr:'c',t:'E',z:'			else',f:'rtl/AHB_VGA/counter.sv',l:'77',h:'1063',c:'g'}
 ]}],
-b1202:[{dummy:0},
-{anchor:'cvg1203',items:[{z:'	if(HorzCount&lt;HorzTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'100',c:'G',p:'100.00'}
+b1208:[{dummy:0},
+{anchor:'cvg1209',items:[{z:'	if(HorzCount&lt;HorzTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'100',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if(HorzCount&lt;HorzTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'100',h:'51604',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'102',h:'374926',c:'g'}
 ]},
-{anchor:'cvg1204',items:[{z:'	if(VertCount&lt;VertTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'105',c:'G',p:'100.00'}
+{anchor:'cvg1210',items:[{z:'	if(VertCount&lt;VertTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'105',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if(VertCount&lt;VertTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'105',h:'3213',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'107',h:'423317',c:'g'}
 ]},
-{anchor:'cvg1205',items:[{z:'	if ( ( (HorzCount &gt;= HorzTimeToBackPorchEnd ) && (HorzCount &lt; HorzTimeTo...',f:'rtl/AHB_VGA/vga_sync.sv',l:'113',c:'G',p:'100.00'}
+{anchor:'cvg1211',items:[{z:'	if ( ( (HorzCount &gt;= HorzTimeToBackPorchEnd ) && (HorzCount &lt; HorzTimeTo...',f:'rtl/AHB_VGA/vga_sync.sv',l:'113',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if ( ( (HorzCount &gt;= HorzTimeToBackPorchEnd ) && (HorzCount &lt; HorzTimeTo...',f:'rtl/AHB_VGA/vga_sync.sv',l:'113',h:'327302',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'116',h:'119429',c:'g'}
 ]},
-{anchor:'cvg1206',items:[{z:'	if ((HorzCount&gt;HorzTimeToBackPorchEnd)&&(HorzCount&lt;HorzTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'122',c:'G',p:'100.00'}
+{anchor:'cvg1212',items:[{z:'	if ((HorzCount&gt;HorzTimeToBackPorchEnd)&&(HorzCount&lt;HorzTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'122',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if ((HorzCount&gt;HorzTimeToBackPorchEnd)&&(HorzCount&lt;HorzTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'122',h:'678618',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'124',h:'86688',c:'g'}
 ]},
-{anchor:'cvg1207',items:[{z:'	if ((VertCount&gt;VertTimeToBackPorchEnd)&&(VertCount&lt;VertTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'129',c:'G',p:'100.00'}
+{anchor:'cvg1213',items:[{z:'	if ((VertCount&gt;VertTimeToBackPorchEnd)&&(VertCount&lt;VertTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'129',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if ((VertCount&gt;VertTimeToBackPorchEnd)&&(VertCount&lt;VertTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'129',h:'958',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'131',h:'55',c:'g'}
 ]}],
-b1667:[{dummy:0},
-{anchor:'cvg1668',items:[{z:'      case (addr_reg)',f:'rtl/AHB_VGA/font_rom.sv',l:'52',c:'G',p:'97.65'}
+b1673:[{dummy:0},
+{anchor:'cvg1674',items:[{z:'      case (addr_reg)',f:'rtl/AHB_VGA/font_rom.sv',l:'52',c:'G',p:'97.65'}
 ,{cr:'c',t:'T',z:'         11\'h000: data = 8\'b00000000; // ',f:'rtl/AHB_VGA/font_rom.sv',l:'54',h:'44',c:'g'}
 ,{cr:'c',t:'T',z:'         11\'h001: data = 8\'b00000000; // ',f:'rtl/AHB_VGA/font_rom.sv',l:'55',h:'22',c:'g'}
 ,{cr:'c',t:'T',z:'         11\'h002: data = 8\'b00000000; // ',f:'rtl/AHB_VGA/font_rom.sv',l:'56',h:'22',c:'g'}
@@ -4393,98 +4393,98 @@ b1667:[{dummy:0},
 ,{cr:'c',t:'T',z:'         11\'h7ff: data = 8\'b00000000; // 	 ',f:'rtl/AHB_VGA/font_rom.sv',l:'2228',h:'18',c:'g'}
 ,{cr:'c',t:'A',z:'      case (addr_reg)',f:'rtl/AHB_VGA/font_rom.sv',l:'52',h:'1025',c:'g'}
 ]}],
-b1703:[{dummy:0},
-{anchor:'cvg1704',items:[{z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',c:'G',p:'100.00'}
+b1709:[{dummy:0},
+{anchor:'cvg1710',items:[{z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',h:'86663',c:'g'}
 ,{cr:'c',t:'A',z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',h:'82',c:'g'}
 ]}],
-b1380:[{dummy:0},
-{anchor:'cvg1381',items:[{z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'120',c:'G',p:'100.00'}
+b1386:[{dummy:0},
+{anchor:'cvg1387',items:[{z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'120',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'120',h:'3',c:'g'}
 ,{cr:'c',t:'E',z:'    else',f:'rtl/AHB_VGA/vga_console.sv',l:'125',h:'681928',c:'g'}
 ]},
-{anchor:'cvg1382',items:[{z:'  assign cur_x_next = (new_line) ? 2 :',f:'rtl/AHB_VGA/vga_console.sv',l:'153',c:'G',p:'100.00'}
+{anchor:'cvg1388',items:[{z:'  assign cur_x_next = (new_line) ? 2 :',f:'rtl/AHB_VGA/vga_console.sv',l:'153',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign cur_x_next = (new_line) ? 2 :',f:'rtl/AHB_VGA/vga_console.sv',l:'153',h:'61',c:'g'}
 ,{cr:'c',t:'E',z:'                      (back_space && cur_x_reg) ? cur_x_reg - 1 :',f:'rtl/AHB_VGA/vga_console.sv',l:'154',h:'986',c:'g'}
 ]},
-{anchor:'cvg1383',items:[{z:'                      (back_space && cur_x_reg) ? cur_x_reg - 1 :',f:'rtl/AHB_VGA/vga_console.sv',l:'154',c:'Y',p:'50.00'}
+{anchor:'cvg1389',items:[{z:'                      (back_space && cur_x_reg) ? cur_x_reg - 1 :',f:'rtl/AHB_VGA/vga_console.sv',l:'154',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                      (back_space && cur_x_reg) ? cur_x_reg - 1 :',f:'rtl/AHB_VGA/vga_console.sv',l:'154',h:'0',c:'r'}
 ,{cr:'c',t:'E',z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',h:'956',c:'g'}
 ]},
-{anchor:'cvg1384',items:[{z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',c:'G',p:'100.00'}
+{anchor:'cvg1390',items:[{z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',h:'883',c:'g'}
 ,{cr:'c',t:'E',z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',h:'106',c:'g'}
 ]},
-{anchor:'cvg1385',items:[{z:'  assign cur_y_next = (cur_y_reg == MAX_Y-1) ? cur_y_reg :',f:'rtl/AHB_VGA/vga_console.sv',l:'157',c:'G',p:'100.00'}
+{anchor:'cvg1391',items:[{z:'  assign cur_y_next = (cur_y_reg == MAX_Y-1) ? cur_y_reg :',f:'rtl/AHB_VGA/vga_console.sv',l:'157',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign cur_y_next = (cur_y_reg == MAX_Y-1) ? cur_y_reg :',f:'rtl/AHB_VGA/vga_console.sv',l:'157',h:'5',c:'g'}
 ,{cr:'c',t:'E',z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',h:'87',c:'g'}
 ]},
-{anchor:'cvg1386',items:[{z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',c:'G',p:'100.00'}
+{anchor:'cvg1392',items:[{z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',h:'57',c:'g'}
 ,{cr:'c',t:'E',z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',h:'29',c:'g'}
 ]},
-{anchor:'cvg1387',items:[{z:'  assign font_rgb = (font_bit) ? 8\'b00011100 : 8\'b00000000; //green:black...',f:'rtl/AHB_VGA/vga_console.sv',l:'161',c:'G',p:'100.00'}
+{anchor:'cvg1393',items:[{z:'  assign font_rgb = (font_bit) ? 8\'b00011100 : 8\'b00000000; //green:black...',f:'rtl/AHB_VGA/vga_console.sv',l:'161',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign font_rgb = (font_bit) ? 8\'b00011100 : 8\'b00000000; //green:black...',f:'rtl/AHB_VGA/vga_console.sv',l:'161',h:'26280',c:'g'}
 ,{cr:'c',t:'E',z:'  assign font_rgb = (font_bit) ? 8\'b00011100 : 8\'b00000000; //green:black...',f:'rtl/AHB_VGA/vga_console.sv',l:'161',h:'26281',c:'g'}
 ]},
-{anchor:'cvg1388',items:[{z:'  assign font_inv_rgb = (font_bit) ? 8\'b0000000 : 8\'b00011100; //black:gr...',f:'rtl/AHB_VGA/vga_console.sv',l:'162',c:'G',p:'100.00'}
+{anchor:'cvg1394',items:[{z:'  assign font_inv_rgb = (font_bit) ? 8\'b0000000 : 8\'b00011100; //black:gr...',f:'rtl/AHB_VGA/vga_console.sv',l:'162',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign font_inv_rgb = (font_bit) ? 8\'b0000000 : 8\'b00011100; //black:gr...',f:'rtl/AHB_VGA/vga_console.sv',l:'162',h:'26280',c:'g'}
 ,{cr:'c',t:'E',z:'  assign font_inv_rgb = (font_bit) ? 8\'b0000000 : 8\'b00011100; //black:gr...',f:'rtl/AHB_VGA/vga_console.sv',l:'162',h:'26281',c:'g'}
 ]},
-{anchor:'cvg1389',items:[{z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'178',c:'G',p:'100.00'}
+{anchor:'cvg1395',items:[{z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'178',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'178',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'    else',f:'rtl/AHB_VGA/vga_console.sv',l:'185',h:'963',c:'g'}
 ]},
-{anchor:'cvg1390',items:[{z:'    case(current_state)',f:'rtl/AHB_VGA/vga_console.sv',l:'200',c:'Y',p:'66.66'}
+{anchor:'cvg1396',items:[{z:'    case(current_state)',f:'rtl/AHB_VGA/vga_console.sv',l:'200',c:'Y',p:'66.66'}
 ,{cr:'c',t:'T',z:'      1\'b0: //Waits for a new line and the cursor on the last line of the...',f:'rtl/AHB_VGA/vga_console.sv',l:'201',h:'62',c:'g'}
 ,{cr:'c',t:'T',z:'      1\'b1: //Counts through every tile and refreshes',f:'rtl/AHB_VGA/vga_console.sv',l:'211',h:'960',c:'g'}
 ,{cr:'m',t:'A',z:'    case(current_state)',f:'rtl/AHB_VGA/vga_console.sv',l:'200',h:'0',c:'r'}
 ]},
-{anchor:'cvg1391',items:[{z:'        if(new_line && (cur_y_reg == MAX_Y-1))',f:'rtl/AHB_VGA/vga_console.sv',l:'202',c:'G',p:'100.00'}
+{anchor:'cvg1397',items:[{z:'        if(new_line && (cur_y_reg == MAX_Y-1))',f:'rtl/AHB_VGA/vga_console.sv',l:'202',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'        if(new_line && (cur_y_reg == MAX_Y-1))',f:'rtl/AHB_VGA/vga_console.sv',l:'202',h:'1',c:'g'}
 ,{cr:'c',t:'E',z:'        else',f:'rtl/AHB_VGA/vga_console.sv',l:'209',h:'61',c:'g'}
 ]},
-{anchor:'cvg1392',items:[{z:'        if(xn_next == MAX_X)',f:'rtl/AHB_VGA/vga_console.sv',l:'213',c:'G',p:'100.00'}
+{anchor:'cvg1398',items:[{z:'        if(xn_next == MAX_X)',f:'rtl/AHB_VGA/vga_console.sv',l:'213',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'        if(xn_next == MAX_X)',f:'rtl/AHB_VGA/vga_console.sv',l:'213',h:'30',c:'g'}
 ,{cr:'c',t:'E',z:'        else',f:'rtl/AHB_VGA/vga_console.sv',l:'223',h:'930',c:'g'}
 ]},
-{anchor:'cvg1393',items:[{z:'            if(yn_next == MAX_Y)',f:'rtl/AHB_VGA/vga_console.sv',l:'217',c:'G',p:'100.00'}
+{anchor:'cvg1399',items:[{z:'            if(yn_next == MAX_Y)',f:'rtl/AHB_VGA/vga_console.sv',l:'217',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'            if(yn_next == MAX_Y)',f:'rtl/AHB_VGA/vga_console.sv',l:'217',h:'1',c:'g'}
 ,{cr:'c',t:'A',z:'            if(yn_next == MAX_Y)',f:'rtl/AHB_VGA/vga_console.sv',l:'217',h:'29',c:'g'}
 ]},
-{anchor:'cvg1394',items:[{z:'  assign addr_w = (scroll) ? {yn,xn} : {cur_y_reg, cur_x_reg}; ',f:'rtl/AHB_VGA/vga_console.sv',l:'233',c:'G',p:'100.00'}
+{anchor:'cvg1400',items:[{z:'  assign addr_w = (scroll) ? {yn,xn} : {cur_y_reg, cur_x_reg}; ',f:'rtl/AHB_VGA/vga_console.sv',l:'233',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign addr_w = (scroll) ? {yn,xn} : {cur_y_reg, cur_x_reg}; ',f:'rtl/AHB_VGA/vga_console.sv',l:'233',h:'960',c:'g'}
 ,{cr:'c',t:'E',z:'  assign addr_w = (scroll) ? {yn,xn} : {cur_y_reg, cur_x_reg}; ',f:'rtl/AHB_VGA/vga_console.sv',l:'233',h:'843',c:'g'}
 ]},
-{anchor:'cvg1395',items:[{z:'  assign din = (scroll) ?  dout : font_data[6:0];',f:'rtl/AHB_VGA/vga_console.sv',l:'234',c:'G',p:'100.00'}
+{anchor:'cvg1401',items:[{z:'  assign din = (scroll) ?  dout : font_data[6:0];',f:'rtl/AHB_VGA/vga_console.sv',l:'234',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign din = (scroll) ?  dout : font_data[6:0];',f:'rtl/AHB_VGA/vga_console.sv',l:'234',h:'759',c:'g'}
 ,{cr:'c',t:'E',z:'  assign din = (scroll) ?  dout : font_data[6:0];',f:'rtl/AHB_VGA/vga_console.sv',l:'234',h:'14207',c:'g'}
 ]},
-{anchor:'cvg1396',items:[{z:'  assign addr_r =(scroll) ? {yn+1\'b1,xn_next} : {pixel_y[8:4],pixel_x[9:3...',f:'rtl/AHB_VGA/vga_console.sv',l:'236',c:'G',p:'100.00'}
+{anchor:'cvg1402',items:[{z:'  assign addr_r =(scroll) ? {yn+1\'b1,xn_next} : {pixel_y[8:4],pixel_x[9:3...',f:'rtl/AHB_VGA/vga_console.sv',l:'236',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign addr_r =(scroll) ? {yn+1\'b1,xn_next} : {pixel_y[8:4],pixel_x[9:3...',f:'rtl/AHB_VGA/vga_console.sv',l:'236',h:'1031',c:'g'}
 ,{cr:'c',t:'E',z:'  assign addr_r =(scroll) ? {yn+1\'b1,xn_next} : {pixel_y[8:4],pixel_x[9:3...',f:'rtl/AHB_VGA/vga_console.sv',l:'236',h:'42475',c:'g'}
 ]}],
-b1934:[{dummy:0},
-{anchor:'cvg1935',items:[{z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',c:'G',p:'100.00'}
+b1940:[{dummy:0},
+{anchor:'cvg1941',items:[{z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',h:'47',c:'g'}
 ,{cr:'c',t:'A',z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',h:'170179',c:'g'}
 ]}],
-b958:[{dummy:0},
-{anchor:'cvg959',items:[{z:'  if(HREADY)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'89',c:'G',p:'100.00'}
+b961:[{dummy:0},
+{anchor:'cvg962',items:[{z:'  if(HREADY)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'89',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  if(HREADY)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'89',h:'164',c:'g'}
 ,{cr:'c',t:'A',z:'  if(HREADY)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'89',h:'3',c:'g'}
 ]},
-{anchor:'cvg960',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'142',c:'G',p:'100.00'}
+{anchor:'cvg963',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'142',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'142',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'    else if(last_HWRITE & last_HSEL & last_HTRANS[1] & HREADYOUT & sel_co...',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'147',h:'844',c:'g'}
 ,{cr:'c',t:'E',z:'    else',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'152',h:'87',c:'g'}
 ]},
-{anchor:'cvg961',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'162',c:'G',p:'100.00'}
+{anchor:'cvg964',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'162',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'162',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'    else if(last_HWRITE & last_HSEL & last_HTRANS[1] & HREADYOUT & sel_im...',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'167',h:'80',c:'g'}
 ,{cr:'c',t:'E',z:'    else',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'172',h:'765',c:'g'}
 ]},
-{anchor:'cvg962',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'182',c:'G',p:'100.00'}
+{anchor:'cvg965',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'182',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'182',h:'2',c:'g'}
 ,{cr:'c',t:'T',z:'      if(pixel_x[9:0]&lt; 240 )',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'185',h:'149198',c:'g'}
 ,{cr:'c',t:'E',z:'      else',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'187',h:'243205',c:'g'}
@@ -4499,162 +4499,162 @@ b12:[{dummy:0},
 ,{cr:'c',t:'I',z:'    assign HWDATA_primary = (intf.HWDATA==\'h07) ? \'h17 : intf.HWDATA;',f:'tbench/tb_top.sv',l:'23',h:'4',c:'g'}
 ,{cr:'c',t:'E',z:'    assign HWDATA_primary = (intf.HWDATA==\'h07) ? \'h17 : intf.HWDATA;',f:'tbench/tb_top.sv',l:'23',h:'794',c:'g'}
 ]}],
-b2155:[{dummy:0},
-{anchor:'cvg2156',items:[{z:'        if(!HSYNC || !VSYNC) return (rgb==\'h0);',f:'tbench/vga_intf.sv',l:'91',c:'G',p:'100.00'}
+b2161:[{dummy:0},
+{anchor:'cvg2162',items:[{z:'        if(!HSYNC || !VSYNC) return (rgb==\'h0);',f:'tbench/vga_intf.sv',l:'91',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'        if(!HSYNC || !VSYNC) return (rgb==\'h0);',f:'tbench/vga_intf.sv',l:'91',h:'107786',c:'g'}
 ,{cr:'c',t:'E',z:'        else return 1\'b1;',f:'tbench/vga_intf.sv',l:'92',h:'743145',c:'g'}
 ]}],
 b3:[{dummy:0},
-{anchor:'cvg2031',items:[{z:'        if(HRESETn) begin',f:'tbench/vga_intf.sv',l:'118',c:'G',p:'100.00'}
+{anchor:'cvg2037',items:[{z:'        if(HRESETn) begin',f:'tbench/vga_intf.sv',l:'118',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'        if(HRESETn) begin',f:'tbench/vga_intf.sv',l:'118',h:'850931',c:'g'}
 ,{cr:'c',t:'E',z:'        end else begin',f:'tbench/vga_intf.sv',l:'131',h:'4',c:'g'}
 ]},
-{anchor:'cvg2032',items:[{z:'            if(HSEL) addr.sample();',f:'tbench/vga_intf.sv',l:'122',c:'G',p:'100.00'}
+{anchor:'cvg2038',items:[{z:'            if(HSEL) addr.sample();',f:'tbench/vga_intf.sv',l:'122',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'            if(HSEL) addr.sample();',f:'tbench/vga_intf.sv',l:'122',h:'930',c:'g'}
 ,{cr:'c',t:'A',z:'            if(HSEL) addr.sample();',f:'tbench/vga_intf.sv',l:'122',h:'850001',c:'g'}
 ]},
-{anchor:'cvg2033',items:[{z:'            if(HSEL) hwdata_inst.sample();',f:'tbench/vga_intf.sv',l:'123',c:'G',p:'100.00'}
+{anchor:'cvg2039',items:[{z:'            if(HSEL) hwdata_inst.sample();',f:'tbench/vga_intf.sv',l:'123',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'            if(HSEL) hwdata_inst.sample();',f:'tbench/vga_intf.sv',l:'123',h:'930',c:'g'}
 ,{cr:'c',t:'A',z:'            if(HSEL) hwdata_inst.sample();',f:'tbench/vga_intf.sv',l:'123',h:'850001',c:'g'}
 ]},
-{anchor:'cvg2034',items:[{z:'            if((HADDR == 32\'h5200_0000) & HSEL & HWRITE & HTRANS[1] & HRE...',f:'tbench/vga_intf.sv',l:'125',c:'G',p:'100.00'}
+{anchor:'cvg2040',items:[{z:'            if((HADDR == 32\'h5200_0000) & HSEL & HWRITE & HTRANS[1] & HRE...',f:'tbench/vga_intf.sv',l:'125',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'            if((HADDR == 32\'h5200_0000) & HSEL & HWRITE & HTRANS[1] & HRE...',f:'tbench/vga_intf.sv',l:'125',h:'848',c:'g'}
 ,{cr:'c',t:'E',z:'            else change_char &lt;= 1\'b0;',f:'tbench/vga_intf.sv',l:'126',h:'850083',c:'g'}
 ]},
-{anchor:'cvg2035',items:[{z:'            if(change_char) console_wdata &lt;= HWDATA[7:0];',f:'tbench/vga_intf.sv',l:'128',c:'G',p:'100.00'}
+{anchor:'cvg2041',items:[{z:'            if(change_char) console_wdata &lt;= HWDATA[7:0];',f:'tbench/vga_intf.sv',l:'128',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'            if(change_char) console_wdata &lt;= HWDATA[7:0];',f:'tbench/vga_intf.sv',l:'128',h:'848',c:'g'}
 ,{cr:'c',t:'E',z:'            else console_wdata &lt;= \'h0;',f:'tbench/vga_intf.sv',l:'129',h:'850083',c:'g'}
 ]}],
 b4:[{dummy:0},
-{anchor:'cvg2170',items:[{z:'  if(HREADY)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'89',c:'G',p:'100.00'}
+{anchor:'cvg2176',items:[{z:'  if(HREADY)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'89',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  if(HREADY)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'89',h:'328',c:'g'}
 ,{cr:'c',t:'A',z:'  if(HREADY)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'89',h:'6',c:'g'}
 ]},
-{anchor:'cvg2171',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'142',c:'G',p:'100.00'}
+{anchor:'cvg2177',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'142',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'142',h:'6',c:'g'}
 ,{cr:'c',t:'T',z:'    else if(last_HWRITE & last_HSEL & last_HTRANS[1] & HREADYOUT & sel_co...',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'147',h:'1688',c:'g'}
 ,{cr:'c',t:'E',z:'    else',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'152',h:'174',c:'g'}
 ]},
-{anchor:'cvg2172',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'162',c:'G',p:'100.00'}
+{anchor:'cvg2178',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'162',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'162',h:'6',c:'g'}
 ,{cr:'c',t:'T',z:'    else if(last_HWRITE & last_HSEL & last_HTRANS[1] & HREADYOUT & sel_im...',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'167',h:'160',c:'g'}
 ,{cr:'c',t:'E',z:'    else',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'172',h:'1530',c:'g'}
 ]},
-{anchor:'cvg2173',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'182',c:'G',p:'100.00'}
+{anchor:'cvg2179',items:[{z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'182',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(!HRESETn)',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'182',h:'4',c:'g'}
 ,{cr:'c',t:'T',z:'      if(pixel_x[9:0]&lt; 240 )',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'185',h:'298438',c:'g'}
 ,{cr:'c',t:'E',z:'      else',f:'rtl/AHB_VGA/AHBVGASYS.sv',l:'187',h:'486410',c:'g'}
 ]}],
 b5:[{dummy:0},
-{anchor:'cvg2414',items:[{z:'	if(HorzCount&lt;HorzTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'100',c:'G',p:'100.00'}
+{anchor:'cvg2423',items:[{z:'	if(HorzCount&lt;HorzTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'100',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if(HorzCount&lt;HorzTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'100',h:'103208',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'102',h:'749852',c:'g'}
 ]},
-{anchor:'cvg2415',items:[{z:'	if(VertCount&lt;VertTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'105',c:'G',p:'100.00'}
+{anchor:'cvg2424',items:[{z:'	if(VertCount&lt;VertTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'105',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if(VertCount&lt;VertTimeToPulseWidthEnd)',f:'rtl/AHB_VGA/vga_sync.sv',l:'105',h:'6426',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'107',h:'846634',c:'g'}
 ]},
-{anchor:'cvg2416',items:[{z:'	if ( ( (HorzCount &gt;= HorzTimeToBackPorchEnd ) && (HorzCount &lt; HorzTimeTo...',f:'rtl/AHB_VGA/vga_sync.sv',l:'113',c:'G',p:'100.00'}
+{anchor:'cvg2425',items:[{z:'	if ( ( (HorzCount &gt;= HorzTimeToBackPorchEnd ) && (HorzCount &lt; HorzTimeTo...',f:'rtl/AHB_VGA/vga_sync.sv',l:'113',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if ( ( (HorzCount &gt;= HorzTimeToBackPorchEnd ) && (HorzCount &lt; HorzTimeTo...',f:'rtl/AHB_VGA/vga_sync.sv',l:'113',h:'654646',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'116',h:'238858',c:'g'}
 ]},
-{anchor:'cvg2417',items:[{z:'	if ((HorzCount&gt;HorzTimeToBackPorchEnd)&&(HorzCount&lt;HorzTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'122',c:'G',p:'100.00'}
+{anchor:'cvg2426',items:[{z:'	if ((HorzCount&gt;HorzTimeToBackPorchEnd)&&(HorzCount&lt;HorzTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'122',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if ((HorzCount&gt;HorzTimeToBackPorchEnd)&&(HorzCount&lt;HorzTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'122',h:'1357236',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'124',h:'173376',c:'g'}
 ]},
-{anchor:'cvg2418',items:[{z:'	if ((VertCount&gt;VertTimeToBackPorchEnd)&&(VertCount&lt;VertTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'129',c:'G',p:'100.00'}
+{anchor:'cvg2427',items:[{z:'	if ((VertCount&gt;VertTimeToBackPorchEnd)&&(VertCount&lt;VertTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'129',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'	if ((VertCount&gt;VertTimeToBackPorchEnd)&&(VertCount&lt;VertTimeToDisplayTime...',f:'rtl/AHB_VGA/vga_sync.sv',l:'129',h:'1916',c:'g'}
 ,{cr:'c',t:'E',z:'	else',f:'rtl/AHB_VGA/vga_sync.sv',l:'131',h:'110',c:'g'}
 ]}],
 b6:[{dummy:0},
-{anchor:'cvg2499',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',c:'G',p:'100.00'}
+{anchor:'cvg2508',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'59',h:'12',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'rtl/AHB_VGA/counter.sv',l:'61',h:'3405848',c:'g'}
 ]},
-{anchor:'cvg2500',items:[{z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',c:'G',p:'100.00'}
+{anchor:'cvg2509',items:[{z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',h:'2553854',c:'g'}
 ,{cr:'c',t:'A',z:'			if (ENABLE_IN) begin',f:'rtl/AHB_VGA/counter.sv',l:'62',h:'851994',c:'g'}
 ]},
-{anchor:'cvg2501',items:[{z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',c:'G',p:'100.00'}
+{anchor:'cvg2510',items:[{z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'				if (counter==(COUNTER_MAX)) ',f:'rtl/AHB_VGA/counter.sv',l:'63',h:'851994',c:'g'}
 ,{cr:'c',t:'E',z:'				else',f:'rtl/AHB_VGA/counter.sv',l:'65',h:'1701860',c:'g'}
 ]},
-{anchor:'cvg2502',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',c:'G',p:'100.00'}
+{anchor:'cvg2511',items:[{z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'		if (RESET)',f:'rtl/AHB_VGA/counter.sv',l:'72',h:'12',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'rtl/AHB_VGA/counter.sv',l:'74',h:'3405850',c:'g'}
 ]},
-{anchor:'cvg2503',items:[{z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',c:'G',p:'100.00'}
+{anchor:'cvg2512',items:[{z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'			if (ENABLE_IN && (counter==(COUNTER_MAX)))',f:'rtl/AHB_VGA/counter.sv',l:'75',h:'851994',c:'g'}
 ,{cr:'c',t:'E',z:'			else',f:'rtl/AHB_VGA/counter.sv',l:'77',h:'2553856',c:'g'}
 ]}],
 b7:[{dummy:0},
-{anchor:'cvg2536',items:[{z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'120',c:'G',p:'100.00'}
+{anchor:'cvg2545',items:[{z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'120',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'120',h:'6',c:'g'}
 ,{cr:'c',t:'E',z:'    else',f:'rtl/AHB_VGA/vga_console.sv',l:'125',h:'1363856',c:'g'}
 ]},
-{anchor:'cvg2537',items:[{z:'  assign cur_x_next = (new_line) ? 2 :',f:'rtl/AHB_VGA/vga_console.sv',l:'153',c:'G',p:'100.00'}
+{anchor:'cvg2546',items:[{z:'  assign cur_x_next = (new_line) ? 2 :',f:'rtl/AHB_VGA/vga_console.sv',l:'153',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign cur_x_next = (new_line) ? 2 :',f:'rtl/AHB_VGA/vga_console.sv',l:'153',h:'122',c:'g'}
 ,{cr:'c',t:'E',z:'                      (back_space && cur_x_reg) ? cur_x_reg - 1 :',f:'rtl/AHB_VGA/vga_console.sv',l:'154',h:'1972',c:'g'}
 ]},
-{anchor:'cvg2538',items:[{z:'                      (back_space && cur_x_reg) ? cur_x_reg - 1 :',f:'rtl/AHB_VGA/vga_console.sv',l:'154',c:'Y',p:'50.00'}
+{anchor:'cvg2547',items:[{z:'                      (back_space && cur_x_reg) ? cur_x_reg - 1 :',f:'rtl/AHB_VGA/vga_console.sv',l:'154',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                      (back_space && cur_x_reg) ? cur_x_reg - 1 :',f:'rtl/AHB_VGA/vga_console.sv',l:'154',h:'0',c:'r'}
 ,{cr:'c',t:'E',z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',h:'1912',c:'g'}
 ]},
-{anchor:'cvg2539',items:[{z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',c:'G',p:'100.00'}
+{anchor:'cvg2548',items:[{z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',h:'1766',c:'g'}
 ,{cr:'c',t:'E',z:'                      (font_we && ~back_space && ~scroll) ? cur_x_reg + 1...',f:'rtl/AHB_VGA/vga_console.sv',l:'155',h:'212',c:'g'}
 ]},
-{anchor:'cvg2540',items:[{z:'  assign cur_y_next = (cur_y_reg == MAX_Y-1) ? cur_y_reg :',f:'rtl/AHB_VGA/vga_console.sv',l:'157',c:'G',p:'100.00'}
+{anchor:'cvg2549',items:[{z:'  assign cur_y_next = (cur_y_reg == MAX_Y-1) ? cur_y_reg :',f:'rtl/AHB_VGA/vga_console.sv',l:'157',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign cur_y_next = (cur_y_reg == MAX_Y-1) ? cur_y_reg :',f:'rtl/AHB_VGA/vga_console.sv',l:'157',h:'10',c:'g'}
 ,{cr:'c',t:'E',z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',h:'174',c:'g'}
 ]},
-{anchor:'cvg2541',items:[{z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',c:'G',p:'100.00'}
+{anchor:'cvg2550',items:[{z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',h:'114',c:'g'}
 ,{cr:'c',t:'E',z:'                       ((new_line) ? cur_y_reg + 1 : cur_y_reg );',f:'rtl/AHB_VGA/vga_console.sv',l:'158',h:'58',c:'g'}
 ]},
-{anchor:'cvg2542',items:[{z:'  assign font_rgb = (font_bit) ? 8\'b00011100 : 8\'b00000000; //green:black...',f:'rtl/AHB_VGA/vga_console.sv',l:'161',c:'G',p:'100.00'}
+{anchor:'cvg2551',items:[{z:'  assign font_rgb = (font_bit) ? 8\'b00011100 : 8\'b00000000; //green:black...',f:'rtl/AHB_VGA/vga_console.sv',l:'161',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign font_rgb = (font_bit) ? 8\'b00011100 : 8\'b00000000; //green:black...',f:'rtl/AHB_VGA/vga_console.sv',l:'161',h:'52581',c:'g'}
 ,{cr:'c',t:'E',z:'  assign font_rgb = (font_bit) ? 8\'b00011100 : 8\'b00000000; //green:black...',f:'rtl/AHB_VGA/vga_console.sv',l:'161',h:'52583',c:'g'}
 ]},
-{anchor:'cvg2543',items:[{z:'  assign font_inv_rgb = (font_bit) ? 8\'b0000000 : 8\'b00011100; //black:gr...',f:'rtl/AHB_VGA/vga_console.sv',l:'162',c:'G',p:'100.00'}
+{anchor:'cvg2552',items:[{z:'  assign font_inv_rgb = (font_bit) ? 8\'b0000000 : 8\'b00011100; //black:gr...',f:'rtl/AHB_VGA/vga_console.sv',l:'162',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign font_inv_rgb = (font_bit) ? 8\'b0000000 : 8\'b00011100; //black:gr...',f:'rtl/AHB_VGA/vga_console.sv',l:'162',h:'52581',c:'g'}
 ,{cr:'c',t:'E',z:'  assign font_inv_rgb = (font_bit) ? 8\'b0000000 : 8\'b00011100; //black:gr...',f:'rtl/AHB_VGA/vga_console.sv',l:'162',h:'52583',c:'g'}
 ]},
-{anchor:'cvg2544',items:[{z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'178',c:'G',p:'100.00'}
+{anchor:'cvg2553',items:[{z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'178',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(!resetn)',f:'rtl/AHB_VGA/vga_console.sv',l:'178',h:'4',c:'g'}
 ,{cr:'c',t:'E',z:'    else',f:'rtl/AHB_VGA/vga_console.sv',l:'185',h:'1926',c:'g'}
 ]},
-{anchor:'cvg2545',items:[{z:'    case(current_state)',f:'rtl/AHB_VGA/vga_console.sv',l:'200',c:'Y',p:'66.66'}
+{anchor:'cvg2554',items:[{z:'    case(current_state)',f:'rtl/AHB_VGA/vga_console.sv',l:'200',c:'Y',p:'66.66'}
 ,{cr:'c',t:'T',z:'      1\'b0: //Waits for a new line and the cursor on the last line of the...',f:'rtl/AHB_VGA/vga_console.sv',l:'201',h:'124',c:'g'}
 ,{cr:'c',t:'T',z:'      1\'b1: //Counts through every tile and refreshes',f:'rtl/AHB_VGA/vga_console.sv',l:'211',h:'1920',c:'g'}
 ,{cr:'m',t:'A',z:'    case(current_state)',f:'rtl/AHB_VGA/vga_console.sv',l:'200',h:'0',c:'r'}
 ]},
-{anchor:'cvg2546',items:[{z:'        if(new_line && (cur_y_reg == MAX_Y-1))',f:'rtl/AHB_VGA/vga_console.sv',l:'202',c:'G',p:'100.00'}
+{anchor:'cvg2555',items:[{z:'        if(new_line && (cur_y_reg == MAX_Y-1))',f:'rtl/AHB_VGA/vga_console.sv',l:'202',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'        if(new_line && (cur_y_reg == MAX_Y-1))',f:'rtl/AHB_VGA/vga_console.sv',l:'202',h:'2',c:'g'}
 ,{cr:'c',t:'E',z:'        else',f:'rtl/AHB_VGA/vga_console.sv',l:'209',h:'122',c:'g'}
 ]},
-{anchor:'cvg2547',items:[{z:'        if(xn_next == MAX_X)',f:'rtl/AHB_VGA/vga_console.sv',l:'213',c:'G',p:'100.00'}
+{anchor:'cvg2556',items:[{z:'        if(xn_next == MAX_X)',f:'rtl/AHB_VGA/vga_console.sv',l:'213',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'        if(xn_next == MAX_X)',f:'rtl/AHB_VGA/vga_console.sv',l:'213',h:'60',c:'g'}
 ,{cr:'c',t:'E',z:'        else',f:'rtl/AHB_VGA/vga_console.sv',l:'223',h:'1860',c:'g'}
 ]},
-{anchor:'cvg2548',items:[{z:'            if(yn_next == MAX_Y)',f:'rtl/AHB_VGA/vga_console.sv',l:'217',c:'G',p:'100.00'}
+{anchor:'cvg2557',items:[{z:'            if(yn_next == MAX_Y)',f:'rtl/AHB_VGA/vga_console.sv',l:'217',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'            if(yn_next == MAX_Y)',f:'rtl/AHB_VGA/vga_console.sv',l:'217',h:'2',c:'g'}
 ,{cr:'c',t:'A',z:'            if(yn_next == MAX_Y)',f:'rtl/AHB_VGA/vga_console.sv',l:'217',h:'58',c:'g'}
 ]},
-{anchor:'cvg2549',items:[{z:'  assign addr_w = (scroll) ? {yn,xn} : {cur_y_reg, cur_x_reg}; ',f:'rtl/AHB_VGA/vga_console.sv',l:'233',c:'G',p:'100.00'}
+{anchor:'cvg2558',items:[{z:'  assign addr_w = (scroll) ? {yn,xn} : {cur_y_reg, cur_x_reg}; ',f:'rtl/AHB_VGA/vga_console.sv',l:'233',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign addr_w = (scroll) ? {yn,xn} : {cur_y_reg, cur_x_reg}; ',f:'rtl/AHB_VGA/vga_console.sv',l:'233',h:'1920',c:'g'}
 ,{cr:'c',t:'E',z:'  assign addr_w = (scroll) ? {yn,xn} : {cur_y_reg, cur_x_reg}; ',f:'rtl/AHB_VGA/vga_console.sv',l:'233',h:'1686',c:'g'}
 ]},
-{anchor:'cvg2550',items:[{z:'  assign din = (scroll) ?  dout : font_data[6:0];',f:'rtl/AHB_VGA/vga_console.sv',l:'234',c:'G',p:'100.00'}
+{anchor:'cvg2559',items:[{z:'  assign din = (scroll) ?  dout : font_data[6:0];',f:'rtl/AHB_VGA/vga_console.sv',l:'234',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign din = (scroll) ?  dout : font_data[6:0];',f:'rtl/AHB_VGA/vga_console.sv',l:'234',h:'1518',c:'g'}
 ,{cr:'c',t:'E',z:'  assign din = (scroll) ?  dout : font_data[6:0];',f:'rtl/AHB_VGA/vga_console.sv',l:'234',h:'28414',c:'g'}
 ]},
-{anchor:'cvg2551',items:[{z:'  assign addr_r =(scroll) ? {yn+1\'b1,xn_next} : {pixel_y[8:4],pixel_x[9:3...',f:'rtl/AHB_VGA/vga_console.sv',l:'236',c:'G',p:'100.00'}
+{anchor:'cvg2560',items:[{z:'  assign addr_r =(scroll) ? {yn+1\'b1,xn_next} : {pixel_y[8:4],pixel_x[9:3...',f:'rtl/AHB_VGA/vga_console.sv',l:'236',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'  assign addr_r =(scroll) ? {yn+1\'b1,xn_next} : {pixel_y[8:4],pixel_x[9:3...',f:'rtl/AHB_VGA/vga_console.sv',l:'236',h:'2062',c:'g'}
 ,{cr:'c',t:'E',z:'  assign addr_r =(scroll) ? {yn+1\'b1,xn_next} : {pixel_y[8:4],pixel_x[9:3...',f:'rtl/AHB_VGA/vga_console.sv',l:'236',h:'84950',c:'g'}
 ]}],
 b8:[{dummy:0},
-{anchor:'cvg2823',items:[{z:'      case (addr_reg)',f:'rtl/AHB_VGA/font_rom.sv',l:'52',c:'G',p:'97.65'}
+{anchor:'cvg2832',items:[{z:'      case (addr_reg)',f:'rtl/AHB_VGA/font_rom.sv',l:'52',c:'G',p:'97.65'}
 ,{cr:'c',t:'T',z:'         11\'h000: data = 8\'b00000000; // ',f:'rtl/AHB_VGA/font_rom.sv',l:'54',h:'88',c:'g'}
 ,{cr:'c',t:'T',z:'         11\'h001: data = 8\'b00000000; // ',f:'rtl/AHB_VGA/font_rom.sv',l:'55',h:'44',c:'g'}
 ,{cr:'c',t:'T',z:'         11\'h002: data = 8\'b00000000; // ',f:'rtl/AHB_VGA/font_rom.sv',l:'56',h:'44',c:'g'}
@@ -6706,7 +6706,7 @@ b8:[{dummy:0},
 ,{cr:'c',t:'A',z:'      case (addr_reg)',f:'rtl/AHB_VGA/font_rom.sv',l:'52',h:'2050',c:'g'}
 ]}],
 b9:[{dummy:0},
-{anchor:'cvg2859',items:[{z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',c:'G',p:'100.00'}
+{anchor:'cvg2868',items:[{z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',h:'173420',c:'g'}
 ,{cr:'c',t:'A',z:'    if(we)',f:'rtl/AHB_VGA/dual_port_ram_sync.sv',l:'59',h:'340522',c:'g'}
 ]}],

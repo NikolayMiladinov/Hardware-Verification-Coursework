@@ -188,6 +188,21 @@ module AHBVGA(
         cin <= image_rgb;
   end
 
+  rgb_sync: assert property(
+                              @(posedge HCLK) disable iff(!HRESETn)
+                              (!HSYNC || !VSYNC) |-> ((RGB==8'h0) | (RGB==8'hx))
+                            ) else $display("RGB not zero during sync RGB = %0h, time is %0t", RGB, $time);
+
+  console_data: assert property(
+                                  @(posedge HCLK) disable iff(!HRESETn)
+                                  (last_HWRITE & last_HSEL & last_HTRANS[1] & HREADYOUT & sel_console) |=> (console_wdata == $past(HWDATA[7:0]))
+                                ) else $display("Incorrect write to console_wdata = %0h, HWDATA = %0h, time is %0t", RGB, $past(HWDATA[7:0]), $time);
+
+  console_data0: assert property(
+                                  @(posedge HCLK) disable iff(!HRESETn)
+                                  (!last_HWRITE || !last_HSEL || !last_HTRANS[1] || !HREADYOUT || !sel_console) |=> (console_wdata == 'h0)
+                                ) else $display("Incorrect write to console_wdata = %0h, time is %0t", RGB, $time);
+
 endmodule
   
   

@@ -10,6 +10,7 @@ z1.json = NON_SCOPE
 sdb1.json = NON_SCOPE
 t1.json = NON_SCOPE
 gcons1.json = NON_SCOPE
+a1.json = NON_SCOPE
 testlist.html = NON_SCOPE
 globattrlist.html = NON_SCOPE
 dulist.html = NON_SCOPE

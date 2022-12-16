@@ -24,131 +24,131 @@ t50:{items:[{dummy:0}
 ,{id:'cvg151',s:'2',cr:'c',z:'console_wdata[7-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 },
-t429:{items:[{dummy:0}
-,{id:'cvg440',s:'2',cr:'c',z:'COUNT[0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg441',s:'2',cr:'m',z:'ENABLE_IN',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg442',s:'2',t:'/\\tb_top /DUT_primary/uVGAInterface/reset',z:'RESET',h1:'0',h2:'1',c:'Y',p:'50.00'}
-,{id:'cvg443',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uVGAInterface/TrigDiv',z:'TRIG_OUT',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg445',s:'2',cr:'c',z:'counter[0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg446',s:'2',cr:'c',z:'triggerout',h1:'1',h2:'1',c:'G',p:'100.00'}
+t432:{items:[{dummy:0}
+,{id:'cvg443',s:'2',cr:'c',z:'COUNT[0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg444',s:'2',cr:'m',z:'ENABLE_IN',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg445',s:'2',t:'/\\tb_top /DUT_primary/uVGAInterface/reset',z:'RESET',h1:'0',h2:'1',c:'Y',p:'50.00'}
+,{id:'cvg446',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uVGAInterface/TrigDiv',z:'TRIG_OUT',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg448',s:'2',cr:'c',z:'counter[0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg449',s:'2',cr:'c',z:'triggerout',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
-t447:{items:[{dummy:0}
-,{id:'cvg458',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uVGAInterface/HorzCount[0-9]',z:'COUNT[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg468',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uVGAInterface/TrigDiv',z:'ENABLE_IN',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg469',s:'2',t:'/\\tb_top /DUT_primary/uVGAInterface/reset',z:'RESET',h1:'0',h2:'1',c:'Y',p:'50.00'}
-,{id:'cvg470',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uVGAInterface/TrigHOut',z:'TRIG_OUT',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg472',s:'2',cr:'c',z:'counter[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg482',s:'2',cr:'c',z:'triggerout',h1:'1',h2:'1',c:'G',p:'100.00'}
+t450:{items:[{dummy:0}
+,{id:'cvg461',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uVGAInterface/HorzCount[0-9]',z:'COUNT[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg471',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uVGAInterface/TrigDiv',z:'ENABLE_IN',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg472',s:'2',t:'/\\tb_top /DUT_primary/uVGAInterface/reset',z:'RESET',h1:'0',h2:'1',c:'Y',p:'50.00'}
+,{id:'cvg473',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uVGAInterface/TrigHOut',z:'TRIG_OUT',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg475',s:'2',cr:'c',z:'counter[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg485',s:'2',cr:'c',z:'triggerout',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
-t483:{items:[{dummy:0}
-,{id:'cvg494',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uVGAInterface/VertCount[0-9]',z:'COUNT[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg504',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uVGAInterface/TrigHOut',z:'ENABLE_IN',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg505',s:'2',t:'/\\tb_top /DUT_primary/uVGAInterface/reset',z:'RESET',h1:'0',h2:'1',c:'Y',p:'50.00'}
-,{id:'cvg506',s:'2',cr:'c',z:'TRIG_OUT',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg508',s:'2',cr:'c',z:'counter[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg518',s:'2',cr:'c',z:'triggerout',h1:'1',h2:'1',c:'G',p:'100.00'}
+t486:{items:[{dummy:0}
+,{id:'cvg497',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uVGAInterface/VertCount[0-9]',z:'COUNT[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg507',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uVGAInterface/TrigHOut',z:'ENABLE_IN',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg508',s:'2',t:'/\\tb_top /DUT_primary/uVGAInterface/reset',z:'RESET',h1:'0',h2:'1',c:'Y',p:'50.00'}
+,{id:'cvg509',s:'2',cr:'c',z:'TRIG_OUT',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg511',s:'2',cr:'c',z:'counter[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg521',s:'2',cr:'c',z:'triggerout',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
-t346:{items:[{dummy:0}
-,{id:'cvg363',s:'2',cr:'m',z:'COLOUR_IN[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg365',s:'2',cr:'c',z:'COLOUR_IN[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg368',s:'2',cr:'m',z:'COLOUR_IN[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg372',s:'2',cr:'c',z:'HorzCount[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg382',s:'2',cr:'c',z:'TrigDiv',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg383',s:'2',cr:'c',z:'TrigHOut',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg385',s:'2',cr:'c',z:'VertCount[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg396',s:'2',cr:'c',z:'addrh[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg407',s:'2',cr:'m',z:'addrv[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg408',s:'2',cr:'c',z:'addrv[8-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg418',s:'2',cr:'m',z:'cout[7-5]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg421',s:'2',cr:'c',z:'cout[4-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg424',s:'2',cr:'m',z:'cout[1-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg426',s:'2',cr:'c',z:'hs',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg427',s:'2',z:'reset',h1:'0',h2:'1',c:'Y',p:'50.00'}
-,{id:'cvg428',s:'2',cr:'c',z:'vs',h1:'1',h2:'1',c:'G',p:'100.00'}
+t349:{items:[{dummy:0}
+,{id:'cvg366',s:'2',cr:'m',z:'COLOUR_IN[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg368',s:'2',cr:'c',z:'COLOUR_IN[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg371',s:'2',cr:'m',z:'COLOUR_IN[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg375',s:'2',cr:'c',z:'HorzCount[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg385',s:'2',cr:'c',z:'TrigDiv',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg386',s:'2',cr:'c',z:'TrigHOut',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg388',s:'2',cr:'c',z:'VertCount[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg399',s:'2',cr:'c',z:'addrh[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg410',s:'2',cr:'m',z:'addrv[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg411',s:'2',cr:'c',z:'addrv[8-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg421',s:'2',cr:'m',z:'cout[7-5]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg424',s:'2',cr:'c',z:'cout[4-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg427',s:'2',cr:'m',z:'cout[1-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg429',s:'2',cr:'c',z:'hs',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg430',s:'2',z:'reset',h1:'0',h2:'1',c:'Y',p:'50.00'}
+,{id:'cvg431',s:'2',cr:'c',z:'vs',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 },
-t784:{items:[{dummy:0}
-,{id:'cvg787',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uvga_console/rom_addr[0-10]',z:'addr[0-10]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg799',s:'2',cr:'c',z:'addr_reg[10-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg811',s:'2',cr:'c',z:'data[7-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-]
-,footnote:1
-},
-t819:{items:[{dummy:0}
-,{id:'cvg822',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uvga_console/addr_w[0-11]',z:'addr_a[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg835',s:'2',cr:'c',z:'addr_a_reg[11-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg848',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uvga_console/addr_r[0-11]',z:'addr_b[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg861',s:'2',cr:'c',z:'addr_b_reg[11-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg874',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uvga_console/din[0-6]',z:'din_a[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg882',s:'2',cr:'c',z:'dout_a[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg890',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uvga_console/dout[0-6]',z:'dout_b[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg897',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uvga_console/we',z:'we',h1:'1',h2:'1',c:'G',p:'100.00'}
+t787:{items:[{dummy:0}
+,{id:'cvg790',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uvga_console/rom_addr[0-10]',z:'addr[0-10]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg802',s:'2',cr:'c',z:'addr_reg[10-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg814',s:'2',cr:'c',z:'data[7-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
-t519:{items:[{dummy:0}
-,{id:'cvg557',s:'2',cr:'c',z:'addr_r[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg570',s:'2',cr:'c',z:'addr_w[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg582',s:'2',cr:'m',z:'back_space',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg584',s:'2',cr:'c',z:'bit_addr[0-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg588',s:'2',cr:'c',z:'char_addr[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg596',s:'2',cr:'c',z:'cur_x_next[0-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg601',s:'2',cr:'m',z:'cur_x_next[5-6]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg604',s:'2',cr:'m',z:'cur_x_reg[6-5]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg606',s:'2',cr:'c',z:'cur_x_reg[4-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg612',s:'2',cr:'c',z:'cur_y_next[0-3]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg616',s:'2',z:'cur_y_next[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg618',s:'2',z:'cur_y_reg[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg619',s:'2',cr:'c',z:'cur_y_reg[3-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg623',s:'2',cr:'c',z:'current_state',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg625',s:'2',cr:'c',z:'din[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg633',s:'2',cr:'c',z:'dout[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg640',s:'2',cr:'c',z:'font_bit',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg642',s:'2',cr:'c',z:'font_data[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg651',s:'2',cr:'m',z:'font_inv_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg653',s:'2',cr:'c',z:'font_inv_rgb[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg656',s:'2',cr:'m',z:'font_inv_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg660',s:'2',cr:'m',z:'font_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg662',s:'2',cr:'c',z:'font_rgb[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg665',s:'2',cr:'m',z:'font_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg668',s:'2',cr:'c',z:'font_we',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg670',s:'2',cr:'c',z:'font_word[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg678',s:'2',cr:'c',z:'new_line',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg679',s:'2',cr:'c',z:'next_state',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg681',s:'2',cr:'c',z:'pixel_x1[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg692',s:'2',cr:'c',z:'pixel_x2[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg704',s:'2',cr:'m',z:'pixel_y1[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg705',s:'2',cr:'c',z:'pixel_y1[8-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg715',s:'2',cr:'m',z:'pixel_y2[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg716',s:'2',cr:'c',z:'pixel_y2[8-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg726',s:'2',cr:'m',z:'return_key',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg728',s:'2',cr:'c',z:'rom_addr[0-10]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg740',s:'2',cr:'c',z:'row_addr[0-3]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg744',s:'2',cr:'c',z:'scroll',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg745',s:'2',cr:'c',z:'scroll_next',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg747',s:'2',cr:'m',z:'text_rgb[7-5]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg750',s:'2',cr:'c',z:'text_rgb[4-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg753',s:'2',cr:'m',z:'text_rgb[1-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg755',s:'2',cr:'c',z:'we',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg757',s:'2',cr:'c',z:'xn[6-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg765',s:'2',cr:'c',z:'xn_next[6-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg773',s:'2',z:'yn[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg774',s:'2',cr:'c',z:'yn[3-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg779',s:'2',z:'yn_next[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg780',s:'2',cr:'c',z:'yn_next[3-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+t822:{items:[{dummy:0}
+,{id:'cvg825',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uvga_console/addr_w[0-11]',z:'addr_a[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg838',s:'2',cr:'c',z:'addr_a_reg[11-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg851',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uvga_console/addr_r[0-11]',z:'addr_b[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg864',s:'2',cr:'c',z:'addr_b_reg[11-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg877',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uvga_console/din[0-6]',z:'din_a[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg885',s:'2',cr:'c',z:'dout_a[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg893',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uvga_console/dout[0-6]',z:'dout_b[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg900',s:'2',cr:'c',t:'/\\tb_top /DUT_primary/uvga_console/we',z:'we',h1:'1',h2:'1',c:'G',p:'100.00'}
+]
+,footnote:1
+},
+t522:{items:[{dummy:0}
+,{id:'cvg560',s:'2',cr:'c',z:'addr_r[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg573',s:'2',cr:'c',z:'addr_w[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg585',s:'2',cr:'m',z:'back_space',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg587',s:'2',cr:'c',z:'bit_addr[0-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg591',s:'2',cr:'c',z:'char_addr[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg599',s:'2',cr:'c',z:'cur_x_next[0-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg604',s:'2',cr:'m',z:'cur_x_next[5-6]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg607',s:'2',cr:'m',z:'cur_x_reg[6-5]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg609',s:'2',cr:'c',z:'cur_x_reg[4-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg615',s:'2',cr:'c',z:'cur_y_next[0-3]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg619',s:'2',z:'cur_y_next[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg621',s:'2',z:'cur_y_reg[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg622',s:'2',cr:'c',z:'cur_y_reg[3-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg626',s:'2',cr:'c',z:'current_state',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg628',s:'2',cr:'c',z:'din[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg636',s:'2',cr:'c',z:'dout[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg643',s:'2',cr:'c',z:'font_bit',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg645',s:'2',cr:'c',z:'font_data[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg654',s:'2',cr:'m',z:'font_inv_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg656',s:'2',cr:'c',z:'font_inv_rgb[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg659',s:'2',cr:'m',z:'font_inv_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg663',s:'2',cr:'m',z:'font_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg665',s:'2',cr:'c',z:'font_rgb[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg668',s:'2',cr:'m',z:'font_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg671',s:'2',cr:'c',z:'font_we',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg673',s:'2',cr:'c',z:'font_word[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg681',s:'2',cr:'c',z:'new_line',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg682',s:'2',cr:'c',z:'next_state',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg684',s:'2',cr:'c',z:'pixel_x1[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg695',s:'2',cr:'c',z:'pixel_x2[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg707',s:'2',cr:'m',z:'pixel_y1[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg708',s:'2',cr:'c',z:'pixel_y1[8-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg718',s:'2',cr:'m',z:'pixel_y2[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg719',s:'2',cr:'c',z:'pixel_y2[8-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg729',s:'2',cr:'m',z:'return_key',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg731',s:'2',cr:'c',z:'rom_addr[0-10]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg743',s:'2',cr:'c',z:'row_addr[0-3]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg747',s:'2',cr:'c',z:'scroll',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg748',s:'2',cr:'c',z:'scroll_next',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg750',s:'2',cr:'m',z:'text_rgb[7-5]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg753',s:'2',cr:'c',z:'text_rgb[4-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg756',s:'2',cr:'m',z:'text_rgb[1-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg758',s:'2',cr:'c',z:'we',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg760',s:'2',cr:'c',z:'xn[6-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg768',s:'2',cr:'c',z:'xn_next[6-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg776',s:'2',z:'yn[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg777',s:'2',cr:'c',z:'yn[3-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg782',s:'2',z:'yn_next[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg783',s:'2',cr:'c',z:'yn_next[3-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 },
-t911:{items:[{dummy:0}
-,{id:'cvg915',s:'2',cr:'m',z:'addr_a_reg[14-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg932',s:'2',cr:'m',z:'addr_b_reg[14]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg933',s:'2',cr:'c',z:'addr_b_reg[13-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg949',s:'2',cr:'m',z:'dout_a[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+t914:{items:[{dummy:0}
+,{id:'cvg918',s:'2',cr:'m',z:'addr_a_reg[14-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg935',s:'2',cr:'m',z:'addr_b_reg[14]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg936',s:'2',cr:'c',z:'addr_b_reg[13-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg952',s:'2',cr:'m',z:'dout_a[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
 ]
 },
 t189:{items:[{dummy:0}
@@ -180,224 +180,224 @@ t189:{items:[{dummy:0}
 ,{id:'cvg345',s:'2',cr:'c',z:'sel_image',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 },
-t1287:{items:[{dummy:0}
-,{id:'cvg1297',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'CLK',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1299',s:'2',cr:'c',z:'COUNT[0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1300',s:'2',cr:'m',z:'ENABLE_IN',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1301',s:'2',t:'/\\tb_top /DUT_redundant/uVGAInterface/reset',z:'RESET',h1:'0',h2:'1',c:'Y',p:'50.00'}
-,{id:'cvg1302',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uVGAInterface/TrigDiv',z:'TRIG_OUT',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1304',s:'2',cr:'c',z:'counter[0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1305',s:'2',cr:'c',z:'triggerout',h1:'1',h2:'1',c:'G',p:'100.00'}
+t1293:{items:[{dummy:0}
+,{id:'cvg1303',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'CLK',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1305',s:'2',cr:'c',z:'COUNT[0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1306',s:'2',cr:'m',z:'ENABLE_IN',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1307',s:'2',t:'/\\tb_top /DUT_redundant/uVGAInterface/reset',z:'RESET',h1:'0',h2:'1',c:'Y',p:'50.00'}
+,{id:'cvg1308',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uVGAInterface/TrigDiv',z:'TRIG_OUT',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1310',s:'2',cr:'c',z:'counter[0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1311',s:'2',cr:'c',z:'triggerout',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
-t1306:{items:[{dummy:0}
-,{id:'cvg1316',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'CLK',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1318',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uVGAInterface/HorzCount[0-9]',z:'COUNT[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1328',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uVGAInterface/TrigDiv',z:'ENABLE_IN',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1329',s:'2',t:'/\\tb_top /DUT_redundant/uVGAInterface/reset',z:'RESET',h1:'0',h2:'1',c:'Y',p:'50.00'}
-,{id:'cvg1330',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uVGAInterface/TrigHOut',z:'TRIG_OUT',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1332',s:'2',cr:'c',z:'counter[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1342',s:'2',cr:'c',z:'triggerout',h1:'1',h2:'1',c:'G',p:'100.00'}
+t1312:{items:[{dummy:0}
+,{id:'cvg1322',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'CLK',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1324',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uVGAInterface/HorzCount[0-9]',z:'COUNT[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1334',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uVGAInterface/TrigDiv',z:'ENABLE_IN',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1335',s:'2',t:'/\\tb_top /DUT_redundant/uVGAInterface/reset',z:'RESET',h1:'0',h2:'1',c:'Y',p:'50.00'}
+,{id:'cvg1336',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uVGAInterface/TrigHOut',z:'TRIG_OUT',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1338',s:'2',cr:'c',z:'counter[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1348',s:'2',cr:'c',z:'triggerout',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
-t1343:{items:[{dummy:0}
-,{id:'cvg1353',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'CLK',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1355',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uVGAInterface/VertCount[0-9]',z:'COUNT[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1365',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uVGAInterface/TrigHOut',z:'ENABLE_IN',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1366',s:'2',t:'/\\tb_top /DUT_redundant/uVGAInterface/reset',z:'RESET',h1:'0',h2:'1',c:'Y',p:'50.00'}
-,{id:'cvg1367',s:'2',cr:'c',z:'TRIG_OUT',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1369',s:'2',cr:'c',z:'counter[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1379',s:'2',cr:'c',z:'triggerout',h1:'1',h2:'1',c:'G',p:'100.00'}
+t1349:{items:[{dummy:0}
+,{id:'cvg1359',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'CLK',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1361',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uVGAInterface/VertCount[0-9]',z:'COUNT[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1371',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uVGAInterface/TrigHOut',z:'ENABLE_IN',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1372',s:'2',t:'/\\tb_top /DUT_redundant/uVGAInterface/reset',z:'RESET',h1:'0',h2:'1',c:'Y',p:'50.00'}
+,{id:'cvg1373',s:'2',cr:'c',z:'TRIG_OUT',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1375',s:'2',cr:'c',z:'counter[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1385',s:'2',cr:'c',z:'triggerout',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
-t1202:{items:[{dummy:0}
-,{id:'cvg1218',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'CLK',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1220',s:'2',cr:'m',z:'COLOUR_IN[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1222',s:'2',cr:'c',z:'COLOUR_IN[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1225',s:'2',cr:'m',z:'COLOUR_IN[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1229',s:'2',cr:'c',z:'HorzCount[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1239',s:'2',cr:'c',z:'TrigDiv',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1240',s:'2',cr:'c',z:'TrigHOut',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1242',s:'2',cr:'c',z:'VertCount[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1253',s:'2',cr:'c',z:'addrh[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1264',s:'2',cr:'m',z:'addrv[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1265',s:'2',cr:'c',z:'addrv[8-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1275',s:'2',cr:'m',z:'cout[7-5]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1278',s:'2',cr:'c',z:'cout[4-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1281',s:'2',cr:'m',z:'cout[1-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1283',s:'2',cr:'c',z:'hs',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1284',s:'2',z:'reset',h1:'0',h2:'1',c:'Y',p:'50.00'}
-,{id:'cvg1285',s:'2',t:'/\\tb_top /DUT_redundant/HRESETn',z:'resetn',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg1286',s:'2',cr:'c',z:'vs',h1:'1',h2:'1',c:'G',p:'100.00'}
+t1208:{items:[{dummy:0}
+,{id:'cvg1224',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'CLK',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1226',s:'2',cr:'m',z:'COLOUR_IN[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1228',s:'2',cr:'c',z:'COLOUR_IN[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1231',s:'2',cr:'m',z:'COLOUR_IN[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1235',s:'2',cr:'c',z:'HorzCount[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1245',s:'2',cr:'c',z:'TrigDiv',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1246',s:'2',cr:'c',z:'TrigHOut',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1248',s:'2',cr:'c',z:'VertCount[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1259',s:'2',cr:'c',z:'addrh[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1270',s:'2',cr:'m',z:'addrv[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1271',s:'2',cr:'c',z:'addrv[8-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1281',s:'2',cr:'m',z:'cout[7-5]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1284',s:'2',cr:'c',z:'cout[4-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1287',s:'2',cr:'m',z:'cout[1-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1289',s:'2',cr:'c',z:'hs',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1290',s:'2',z:'reset',h1:'0',h2:'1',c:'Y',p:'50.00'}
+,{id:'cvg1291',s:'2',t:'/\\tb_top /DUT_redundant/HRESETn',z:'resetn',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg1292',s:'2',cr:'c',z:'vs',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
-t1667:{items:[{dummy:0}
-,{id:'cvg1670',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_console/rom_addr[0-10]',z:'addr[0-10]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1682',s:'2',cr:'c',z:'addr_reg[10-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1693',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1695',s:'2',cr:'c',z:'data[7-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+t1673:{items:[{dummy:0}
+,{id:'cvg1676',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_console/rom_addr[0-10]',z:'addr[0-10]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1688',s:'2',cr:'c',z:'addr_reg[10-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1699',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1701',s:'2',cr:'c',z:'data[7-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
-t1703:{items:[{dummy:0}
-,{id:'cvg1706',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_console/addr_w[0-11]',z:'addr_a[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1719',s:'2',cr:'c',z:'addr_a_reg[11-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1732',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_console/addr_r[0-11]',z:'addr_b[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1745',s:'2',cr:'c',z:'addr_b_reg[11-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1757',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1759',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_console/din[0-6]',z:'din_a[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1767',s:'2',cr:'c',z:'dout_a[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1775',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_console/dout[0-6]',z:'dout_b[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1782',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_console/we',z:'we',h1:'1',h2:'1',c:'G',p:'100.00'}
+t1709:{items:[{dummy:0}
+,{id:'cvg1712',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_console/addr_w[0-11]',z:'addr_a[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1725',s:'2',cr:'c',z:'addr_a_reg[11-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1738',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_console/addr_r[0-11]',z:'addr_b[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1751',s:'2',cr:'c',z:'addr_b_reg[11-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1763',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1765',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_console/din[0-6]',z:'din_a[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1773',s:'2',cr:'c',z:'dout_a[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1781',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_console/dout[0-6]',z:'dout_b[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1788',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_console/we',z:'we',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
-t1380:{items:[{dummy:0}
-,{id:'cvg1418',s:'2',cr:'c',z:'addr_r[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1431',s:'2',cr:'c',z:'addr_w[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1443',s:'2',cr:'m',z:'back_space',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1445',s:'2',cr:'c',z:'bit_addr[0-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1449',s:'2',cr:'c',z:'char_addr[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1456',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1458',s:'2',cr:'c',z:'cur_x_next[0-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1463',s:'2',cr:'m',z:'cur_x_next[5-6]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1466',s:'2',cr:'m',z:'cur_x_reg[6-5]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1468',s:'2',cr:'c',z:'cur_x_reg[4-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1474',s:'2',cr:'c',z:'cur_y_next[0-3]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1478',s:'2',z:'cur_y_next[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg1480',s:'2',z:'cur_y_reg[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg1481',s:'2',cr:'c',z:'cur_y_reg[3-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1485',s:'2',cr:'c',z:'current_state',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1487',s:'2',cr:'c',z:'din[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1495',s:'2',cr:'c',z:'dout[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1502',s:'2',cr:'c',z:'font_bit',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1504',s:'2',cr:'c',z:'font_data[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1513',s:'2',cr:'m',z:'font_inv_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1515',s:'2',cr:'c',z:'font_inv_rgb[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1518',s:'2',cr:'m',z:'font_inv_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1522',s:'2',cr:'m',z:'font_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1524',s:'2',cr:'c',z:'font_rgb[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1527',s:'2',cr:'m',z:'font_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1530',s:'2',cr:'c',z:'font_we',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1532',s:'2',cr:'c',z:'font_word[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1540',s:'2',cr:'c',z:'new_line',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1541',s:'2',cr:'c',z:'next_state',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1543',s:'2',cr:'c',z:'pixel_x1[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1554',s:'2',cr:'c',z:'pixel_x2[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1565',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/pixel_x[0-9]',z:'pixel_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1576',s:'2',cr:'m',z:'pixel_y1[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1577',s:'2',cr:'c',z:'pixel_y1[8-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1587',s:'2',cr:'m',z:'pixel_y2[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1588',s:'2',cr:'c',z:'pixel_y2[8-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1598',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/pixel_y[0-8]',z:'pixel_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1607',s:'2',cr:'m',t:'/\\tb_top /DUT_redundant/pixel_y[9]',z:'pixel_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1608',s:'2',t:'/\\tb_top /DUT_redundant/HRESETn',z:'resetn',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg1609',s:'2',cr:'m',z:'return_key',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1611',s:'2',cr:'c',z:'rom_addr[0-10]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1623',s:'2',cr:'c',z:'row_addr[0-3]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1627',s:'2',cr:'c',z:'scroll',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1628',s:'2',cr:'c',z:'scroll_next',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1630',s:'2',cr:'m',z:'text_rgb[7-5]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1633',s:'2',cr:'c',z:'text_rgb[4-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1636',s:'2',cr:'m',z:'text_rgb[1-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1638',s:'2',cr:'c',z:'we',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1640',s:'2',cr:'c',z:'xn[6-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1648',s:'2',cr:'c',z:'xn_next[6-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1656',s:'2',z:'yn[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg1657',s:'2',cr:'c',z:'yn[3-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1662',s:'2',z:'yn_next[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg1663',s:'2',cr:'c',z:'yn_next[3-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+t1386:{items:[{dummy:0}
+,{id:'cvg1424',s:'2',cr:'c',z:'addr_r[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1437',s:'2',cr:'c',z:'addr_w[0-11]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1449',s:'2',cr:'m',z:'back_space',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1451',s:'2',cr:'c',z:'bit_addr[0-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1455',s:'2',cr:'c',z:'char_addr[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1462',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1464',s:'2',cr:'c',z:'cur_x_next[0-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1469',s:'2',cr:'m',z:'cur_x_next[5-6]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1472',s:'2',cr:'m',z:'cur_x_reg[6-5]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1474',s:'2',cr:'c',z:'cur_x_reg[4-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1480',s:'2',cr:'c',z:'cur_y_next[0-3]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1484',s:'2',z:'cur_y_next[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg1486',s:'2',z:'cur_y_reg[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg1487',s:'2',cr:'c',z:'cur_y_reg[3-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1491',s:'2',cr:'c',z:'current_state',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1493',s:'2',cr:'c',z:'din[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1501',s:'2',cr:'c',z:'dout[0-6]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1508',s:'2',cr:'c',z:'font_bit',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1510',s:'2',cr:'c',z:'font_data[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1519',s:'2',cr:'m',z:'font_inv_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1521',s:'2',cr:'c',z:'font_inv_rgb[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1524',s:'2',cr:'m',z:'font_inv_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1528',s:'2',cr:'m',z:'font_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1530',s:'2',cr:'c',z:'font_rgb[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1533',s:'2',cr:'m',z:'font_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1536',s:'2',cr:'c',z:'font_we',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1538',s:'2',cr:'c',z:'font_word[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1546',s:'2',cr:'c',z:'new_line',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1547',s:'2',cr:'c',z:'next_state',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1549',s:'2',cr:'c',z:'pixel_x1[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1560',s:'2',cr:'c',z:'pixel_x2[9-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1571',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/pixel_x[0-9]',z:'pixel_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1582',s:'2',cr:'m',z:'pixel_y1[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1583',s:'2',cr:'c',z:'pixel_y1[8-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1593',s:'2',cr:'m',z:'pixel_y2[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1594',s:'2',cr:'c',z:'pixel_y2[8-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1604',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/pixel_y[0-8]',z:'pixel_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1613',s:'2',cr:'m',t:'/\\tb_top /DUT_redundant/pixel_y[9]',z:'pixel_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1614',s:'2',t:'/\\tb_top /DUT_redundant/HRESETn',z:'resetn',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg1615',s:'2',cr:'m',z:'return_key',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1617',s:'2',cr:'c',z:'rom_addr[0-10]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1629',s:'2',cr:'c',z:'row_addr[0-3]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1633',s:'2',cr:'c',z:'scroll',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1634',s:'2',cr:'c',z:'scroll_next',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1636',s:'2',cr:'m',z:'text_rgb[7-5]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1639',s:'2',cr:'c',z:'text_rgb[4-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1642',s:'2',cr:'m',z:'text_rgb[1-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1644',s:'2',cr:'c',z:'we',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1646',s:'2',cr:'c',z:'xn[6-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1654',s:'2',cr:'c',z:'xn_next[6-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1662',s:'2',z:'yn[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg1663',s:'2',cr:'c',z:'yn[3-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1668',s:'2',z:'yn_next[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg1669',s:'2',cr:'c',z:'yn_next[3-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
-t1934:{items:[{dummy:0}
-,{id:'cvg1937',s:'2',cr:'m',t:'/\\tb_top /DUT_redundant/uvga_image/addr_w[0-14]',z:'addr_a[0-14]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1953',s:'2',cr:'m',z:'addr_a_reg[14-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1969',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_image/addr_r[0-13]',z:'addr_b[0-13]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1983',s:'2',cr:'m',t:'/\\tb_top /DUT_redundant/uvga_image/addr_r[14]',z:'addr_b[14]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1985',s:'2',cr:'m',z:'addr_b_reg[14]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1986',s:'2',cr:'c',z:'addr_b_reg[13-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2000',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2002',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_image/din[0-7]',z:'din_a[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2011',s:'2',cr:'m',z:'dout_a[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2020',s:'2',cr:'m',t:'/\\tb_top /DUT_redundant/uvga_image/dout[0-7]',z:'dout_b[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2028',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_image/image_we',z:'we',h1:'1',h2:'1',c:'G',p:'100.00'}
+t1940:{items:[{dummy:0}
+,{id:'cvg1943',s:'2',cr:'m',t:'/\\tb_top /DUT_redundant/uvga_image/addr_w[0-14]',z:'addr_a[0-14]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1959',s:'2',cr:'m',z:'addr_a_reg[14-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1975',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_image/addr_r[0-13]',z:'addr_b[0-13]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1989',s:'2',cr:'m',t:'/\\tb_top /DUT_redundant/uvga_image/addr_r[14]',z:'addr_b[14]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1991',s:'2',cr:'m',z:'addr_b_reg[14]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1992',s:'2',cr:'c',z:'addr_b_reg[13-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2006',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2008',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_image/din[0-7]',z:'din_a[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2017',s:'2',cr:'m',z:'dout_a[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2026',s:'2',cr:'m',t:'/\\tb_top /DUT_redundant/uvga_image/dout[0-7]',z:'dout_b[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2034',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/uvga_image/image_we',z:'we',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
-t1783:{items:[{dummy:0}
-,{id:'cvg1785',s:'2',cr:'c',z:'addr_r[0-13]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1799',s:'2',cr:'m',z:'addr_r[14-15]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1802',s:'2',cr:'m',z:'addr_w[0-14]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1818',s:'2',cr:'c',z:'address[0-13]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1832',s:'2',cr:'m',z:'address[14-15]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1835',s:'2',cr:'m',z:'address_reg[15-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1851',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1853',s:'2',cr:'c',z:'din[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1862',s:'2',cr:'m',z:'dout[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1871',s:'2',cr:'c',z:'image_data[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1880',s:'2',cr:'m',t:'/\\tb_top /DUT_redundant/image_rgb[0-7]',z:'image_rgb[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1888',s:'2',cr:'c',z:'image_we',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1890',s:'2',cr:'c',z:'img_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1901',s:'2',cr:'c',z:'img_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1910',s:'2',cr:'m',z:'img_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1912',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/pixel_x[0-9]',z:'pixel_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1923',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/pixel_y[0-8]',z:'pixel_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1932',s:'2',cr:'m',t:'/\\tb_top /DUT_redundant/pixel_y[9]',z:'pixel_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1933',s:'2',t:'/\\tb_top /DUT_redundant/HRESETn',z:'resetn',h1:'1',h2:'0',c:'Y',p:'50.00'}
+t1789:{items:[{dummy:0}
+,{id:'cvg1791',s:'2',cr:'c',z:'addr_r[0-13]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1805',s:'2',cr:'m',z:'addr_r[14-15]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1808',s:'2',cr:'m',z:'addr_w[0-14]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1824',s:'2',cr:'c',z:'address[0-13]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1838',s:'2',cr:'m',z:'address[14-15]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1841',s:'2',cr:'m',z:'address_reg[15-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1857',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/HCLK',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1859',s:'2',cr:'c',z:'din[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1868',s:'2',cr:'m',z:'dout[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1877',s:'2',cr:'c',z:'image_data[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1886',s:'2',cr:'m',t:'/\\tb_top /DUT_redundant/image_rgb[0-7]',z:'image_rgb[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1894',s:'2',cr:'c',z:'image_we',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1896',s:'2',cr:'c',z:'img_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1907',s:'2',cr:'c',z:'img_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1916',s:'2',cr:'m',z:'img_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1918',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/pixel_x[0-9]',z:'pixel_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1929',s:'2',cr:'c',t:'/\\tb_top /DUT_redundant/pixel_y[0-8]',z:'pixel_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1938',s:'2',cr:'m',t:'/\\tb_top /DUT_redundant/pixel_y[9]',z:'pixel_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1939',s:'2',t:'/\\tb_top /DUT_redundant/HRESETn',z:'resetn',h1:'1',h2:'0',c:'Y',p:'50.00'}
 ]
 ,footnote:1
 },
-t958:{items:[{dummy:0}
-,{id:'cvg974',s:'2',cr:'c',z:'HADDR[0-23]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg998',s:'2',cr:'m',z:'HADDR[24]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg999',s:'2',z:'HADDR[25]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg1000',s:'2',cr:'m',z:'HADDR[26-27]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1002',s:'2',z:'HADDR[28]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg1003',s:'2',cr:'m',z:'HADDR[29]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1004',s:'2',z:'HADDR[30]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg1005',s:'2',cr:'m',z:'HADDR[31]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1006',s:'2',cr:'c',z:'HCLK',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1008',s:'2',cr:'m',z:'HRDATA[0-31]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1040',s:'2',cr:'c',z:'HREADY',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1041',s:'2',cr:'c',z:'HREADYOUT',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1042',s:'2',z:'HRESETn',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg1043',s:'2',cr:'c',z:'HSEL',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1044',s:'2',cr:'c',z:'HSYNC',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1046',s:'2',cr:'m',z:'HTRANS[0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1047',s:'2',cr:'c',z:'HTRANS[1]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1049',s:'2',cr:'c',z:'HWDATA[0-31]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1081',s:'2',cr:'c',z:'HWRITE',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1083',s:'2',cr:'m',z:'RGB[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1085',s:'2',cr:'c',z:'RGB[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1088',s:'2',cr:'m',z:'RGB[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1091',s:'2',cr:'c',z:'VSYNC',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1093',s:'2',cr:'m',z:'cin[7-5]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1096',s:'2',cr:'c',z:'cin[4-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1099',s:'2',cr:'m',z:'cin[1-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1102',s:'2',cr:'m',z:'console_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1104',s:'2',cr:'c',z:'console_rgb[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1107',s:'2',cr:'m',z:'console_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1111',s:'2',cr:'c',z:'console_wdata[7-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1119',s:'2',cr:'c',z:'console_write',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1121',s:'2',cr:'m',z:'image_rgb[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1130',s:'2',cr:'c',z:'image_wdata[7-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1138',s:'2',cr:'c',z:'image_write',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1140',s:'2',cr:'m',z:'last_HADDR[31-24]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1148',s:'2',cr:'c',z:'last_HADDR[23-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1172',s:'2',cr:'m',z:'last_HSEL',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1174',s:'2',cr:'m',z:'last_HTRANS[1-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1176',s:'2',cr:'m',z:'last_HWRITE',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1178',s:'2',cr:'c',z:'pixel_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1189',s:'2',cr:'c',z:'pixel_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1198',s:'2',cr:'m',z:'pixel_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1199',s:'2',cr:'c',z:'scroll',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1200',s:'2',cr:'c',z:'sel_console',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1201',s:'2',cr:'c',z:'sel_image',h1:'1',h2:'1',c:'G',p:'100.00'}
+t961:{items:[{dummy:0}
+,{id:'cvg977',s:'2',cr:'c',z:'HADDR[0-23]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1001',s:'2',cr:'m',z:'HADDR[24]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1002',s:'2',z:'HADDR[25]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg1003',s:'2',cr:'m',z:'HADDR[26-27]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1005',s:'2',z:'HADDR[28]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg1006',s:'2',cr:'m',z:'HADDR[29]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1007',s:'2',z:'HADDR[30]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg1008',s:'2',cr:'m',z:'HADDR[31]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1009',s:'2',cr:'c',z:'HCLK',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1011',s:'2',cr:'m',z:'HRDATA[0-31]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1043',s:'2',cr:'c',z:'HREADY',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1044',s:'2',cr:'c',z:'HREADYOUT',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1045',s:'2',z:'HRESETn',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg1046',s:'2',cr:'c',z:'HSEL',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1047',s:'2',cr:'c',z:'HSYNC',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1049',s:'2',cr:'m',z:'HTRANS[0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1050',s:'2',cr:'c',z:'HTRANS[1]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1052',s:'2',cr:'c',z:'HWDATA[0-31]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1084',s:'2',cr:'c',z:'HWRITE',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1086',s:'2',cr:'m',z:'RGB[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1088',s:'2',cr:'c',z:'RGB[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1091',s:'2',cr:'m',z:'RGB[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1094',s:'2',cr:'c',z:'VSYNC',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1096',s:'2',cr:'m',z:'cin[7-5]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1099',s:'2',cr:'c',z:'cin[4-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1102',s:'2',cr:'m',z:'cin[1-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1105',s:'2',cr:'m',z:'console_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1107',s:'2',cr:'c',z:'console_rgb[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1110',s:'2',cr:'m',z:'console_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1114',s:'2',cr:'c',z:'console_wdata[7-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1122',s:'2',cr:'c',z:'console_write',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1124',s:'2',cr:'m',z:'image_rgb[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1133',s:'2',cr:'c',z:'image_wdata[7-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1141',s:'2',cr:'c',z:'image_write',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1143',s:'2',cr:'m',z:'last_HADDR[31-24]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1151',s:'2',cr:'c',z:'last_HADDR[23-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1175',s:'2',cr:'m',z:'last_HSEL',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1177',s:'2',cr:'m',z:'last_HTRANS[1-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1179',s:'2',cr:'m',z:'last_HWRITE',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1181',s:'2',cr:'c',z:'pixel_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1192',s:'2',cr:'c',z:'pixel_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1201',s:'2',cr:'m',z:'pixel_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1202',s:'2',cr:'c',z:'scroll',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1203',s:'2',cr:'c',z:'sel_console',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1204',s:'2',cr:'c',z:'sel_image',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 },
 t2:{items:[{dummy:0}
@@ -411,216 +411,216 @@ t12:{items:[{dummy:0}
 ]
 },
 t3:{items:[{dummy:0}
-,{id:'cvg2039',s:'2',cr:'c',z:'HADDR[0-23]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2063',s:'2',cr:'c',z:'HCLK',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2066',s:'2',cr:'c',z:'HREADY',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2067',s:'2',cr:'c',z:'HREADYOUT',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2068',s:'2',cr:'c',z:'HREADYOUT_redundant',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2069',s:'2',z:'HRESETn',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg2070',s:'2',cr:'c',z:'HSEL',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2071',s:'2',cr:'c',z:'HSYNC',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2072',s:'2',cr:'c',z:'HSYNC_redundant',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2074',s:'2',cr:'c',z:'HTRANS[1]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2076',s:'2',cr:'c',z:'HWDATA[0-31]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2108',s:'2',cr:'c',z:'HWRITE',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2110',s:'2',cr:'m',z:'RGB[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2112',s:'2',cr:'c',z:'RGB[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2115',s:'2',cr:'m',z:'RGB[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2119',s:'2',cr:'m',z:'RGB_redundant[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2121',s:'2',cr:'c',z:'RGB_redundant[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2124',s:'2',cr:'m',z:'RGB_redundant[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2127',s:'2',cr:'c',z:'VSYNC',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2128',s:'2',cr:'c',z:'VSYNC_redundant',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2129',s:'2',cr:'c',z:'change_char',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2131',s:'2',cr:'c',z:'console_wdata[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2045',s:'2',cr:'c',z:'HADDR[0-23]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2069',s:'2',cr:'c',z:'HCLK',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2072',s:'2',cr:'c',z:'HREADY',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2073',s:'2',cr:'c',z:'HREADYOUT',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2074',s:'2',cr:'c',z:'HREADYOUT_redundant',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2075',s:'2',z:'HRESETn',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg2076',s:'2',cr:'c',z:'HSEL',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2077',s:'2',cr:'c',z:'HSYNC',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2078',s:'2',cr:'c',z:'HSYNC_redundant',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2080',s:'2',cr:'c',z:'HTRANS[1]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2082',s:'2',cr:'c',z:'HWDATA[0-31]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2114',s:'2',cr:'c',z:'HWRITE',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2116',s:'2',cr:'m',z:'RGB[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2118',s:'2',cr:'c',z:'RGB[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2121',s:'2',cr:'m',z:'RGB[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2125',s:'2',cr:'m',z:'RGB_redundant[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2127',s:'2',cr:'c',z:'RGB_redundant[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2130',s:'2',cr:'m',z:'RGB_redundant[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2133',s:'2',cr:'c',z:'VSYNC',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2134',s:'2',cr:'c',z:'VSYNC_redundant',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2135',s:'2',cr:'c',z:'change_char',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2137',s:'2',cr:'c',z:'console_wdata[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 },
 t4:{items:[{dummy:0}
-,{id:'cvg2185',s:'2',cr:'c',z:'HADDR[0-23]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2209',s:'2',cr:'m',z:'HADDR[24]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2210',s:'2',z:'HADDR[25]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg2211',s:'2',cr:'m',z:'HADDR[26-27]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2213',s:'2',z:'HADDR[28]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg2214',s:'2',cr:'m',z:'HADDR[29]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2215',s:'2',z:'HADDR[30]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg2216',s:'2',cr:'m',z:'HADDR[31]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2217',s:'2',cr:'c',z:'HCLK',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2219',s:'2',cr:'m',z:'HRDATA[0-31]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2251',s:'2',cr:'c',z:'HREADY',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2252',s:'2',cr:'c',z:'HREADYOUT',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2253',s:'2',z:'HRESETn',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg2254',s:'2',cr:'c',z:'HSEL',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2255',s:'2',cr:'c',z:'HSYNC',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2257',s:'2',cr:'m',z:'HTRANS[0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2258',s:'2',cr:'c',z:'HTRANS[1]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2260',s:'2',cr:'c',z:'HWDATA[0-31]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2292',s:'2',cr:'c',z:'HWRITE',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2294',s:'2',cr:'m',z:'RGB[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2296',s:'2',cr:'c',z:'RGB[2-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2299',s:'2',cr:'m',z:'RGB[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2302',s:'2',cr:'c',z:'VSYNC',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2304',s:'2',cr:'m',z:'cin[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2306',s:'2',cr:'c',z:'cin[2-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2309',s:'2',cr:'m',z:'cin[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2313',s:'2',cr:'m',z:'console_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2315',s:'2',cr:'c',z:'console_rgb[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2318',s:'2',cr:'m',z:'console_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2322',s:'2',cr:'c',z:'console_wdata[0-7]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2330',s:'2',cr:'c',z:'console_write',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2332',s:'2',cr:'m',z:'image_rgb[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2341',s:'2',cr:'c',z:'image_wdata[0-7]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2349',s:'2',cr:'c',z:'image_write',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2351',s:'2',cr:'c',z:'last_HADDR[0-23]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2375',s:'2',cr:'m',z:'last_HADDR[24-31]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2383',s:'2',cr:'m',z:'last_HSEL',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2385',s:'2',cr:'m',z:'last_HTRANS[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2387',s:'2',cr:'m',z:'last_HWRITE',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2389',s:'2',cr:'c',z:'pixel_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2400',s:'2',cr:'c',z:'pixel_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2409',s:'2',cr:'m',z:'pixel_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2410',s:'2',cr:'c',z:'scroll',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2411',s:'2',cr:'c',z:'sel_console',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2412',s:'2',cr:'c',z:'sel_image',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2191',s:'2',cr:'c',z:'HADDR[0-23]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2215',s:'2',cr:'m',z:'HADDR[24]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2216',s:'2',z:'HADDR[25]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg2217',s:'2',cr:'m',z:'HADDR[26-27]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2219',s:'2',z:'HADDR[28]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg2220',s:'2',cr:'m',z:'HADDR[29]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2221',s:'2',z:'HADDR[30]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg2222',s:'2',cr:'m',z:'HADDR[31]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2223',s:'2',cr:'c',z:'HCLK',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2225',s:'2',cr:'m',z:'HRDATA[0-31]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2257',s:'2',cr:'c',z:'HREADY',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2258',s:'2',cr:'c',z:'HREADYOUT',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2259',s:'2',z:'HRESETn',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg2260',s:'2',cr:'c',z:'HSEL',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2261',s:'2',cr:'c',z:'HSYNC',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2263',s:'2',cr:'m',z:'HTRANS[0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2264',s:'2',cr:'c',z:'HTRANS[1]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2266',s:'2',cr:'c',z:'HWDATA[0-31]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2298',s:'2',cr:'c',z:'HWRITE',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2300',s:'2',cr:'m',z:'RGB[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2302',s:'2',cr:'c',z:'RGB[2-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2305',s:'2',cr:'m',z:'RGB[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2308',s:'2',cr:'c',z:'VSYNC',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2310',s:'2',cr:'m',z:'cin[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2312',s:'2',cr:'c',z:'cin[2-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2315',s:'2',cr:'m',z:'cin[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2319',s:'2',cr:'m',z:'console_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2321',s:'2',cr:'c',z:'console_rgb[2-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2324',s:'2',cr:'m',z:'console_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2328',s:'2',cr:'c',z:'console_wdata[0-7]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2336',s:'2',cr:'c',z:'console_write',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2338',s:'2',cr:'m',z:'image_rgb[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2347',s:'2',cr:'c',z:'image_wdata[0-7]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2355',s:'2',cr:'c',z:'image_write',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2357',s:'2',cr:'c',z:'last_HADDR[0-23]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2381',s:'2',cr:'m',z:'last_HADDR[24-31]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2389',s:'2',cr:'m',z:'last_HSEL',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2391',s:'2',cr:'m',z:'last_HTRANS[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2393',s:'2',cr:'m',z:'last_HWRITE',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2395',s:'2',cr:'c',z:'pixel_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2406',s:'2',cr:'c',z:'pixel_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2415',s:'2',cr:'m',z:'pixel_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2416',s:'2',cr:'c',z:'scroll',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2417',s:'2',cr:'c',z:'sel_console',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2418',s:'2',cr:'c',z:'sel_image',h1:'2',h2:'2',c:'G',p:'100.00'}
 ]
 },
 t5:{items:[{dummy:0}
-,{id:'cvg2429',s:'2',cr:'c',z:'CLK',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2431',s:'2',cr:'m',z:'COLOUR_IN[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2433',s:'2',cr:'c',z:'COLOUR_IN[2-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2436',s:'2',cr:'m',z:'COLOUR_IN[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2440',s:'2',cr:'c',z:'HorzCount[0-9]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2450',s:'2',cr:'c',z:'TrigDiv',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2451',s:'2',cr:'c',z:'TrigHOut',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2453',s:'2',cr:'c',z:'VertCount[0-9]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2464',s:'2',cr:'c',z:'addrh[0-9]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2475',s:'2',cr:'c',z:'addrv[0-8]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2484',s:'2',cr:'m',z:'addrv[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2486',s:'2',cr:'m',z:'cout[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2488',s:'2',cr:'c',z:'cout[2-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2491',s:'2',cr:'m',z:'cout[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2494',s:'2',cr:'c',z:'hs',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2495',s:'2',z:'reset',h1:'0',h2:'2',c:'Y',p:'50.00'}
-,{id:'cvg2496',s:'2',z:'resetn',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg2497',s:'2',cr:'c',z:'vs',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2438',s:'2',cr:'c',z:'CLK',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2440',s:'2',cr:'m',z:'COLOUR_IN[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2442',s:'2',cr:'c',z:'COLOUR_IN[2-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2445',s:'2',cr:'m',z:'COLOUR_IN[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2449',s:'2',cr:'c',z:'HorzCount[0-9]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2459',s:'2',cr:'c',z:'TrigDiv',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2460',s:'2',cr:'c',z:'TrigHOut',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2462',s:'2',cr:'c',z:'VertCount[0-9]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2473',s:'2',cr:'c',z:'addrh[0-9]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2484',s:'2',cr:'c',z:'addrv[0-8]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2493',s:'2',cr:'m',z:'addrv[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2495',s:'2',cr:'m',z:'cout[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2497',s:'2',cr:'c',z:'cout[2-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2500',s:'2',cr:'m',z:'cout[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2503',s:'2',cr:'c',z:'hs',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2504',s:'2',z:'reset',h1:'0',h2:'2',c:'Y',p:'50.00'}
+,{id:'cvg2505',s:'2',z:'resetn',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg2506',s:'2',cr:'c',z:'vs',h1:'2',h2:'2',c:'G',p:'100.00'}
 ]
 },
 t6:{items:[{dummy:0}
-,{id:'cvg2508',s:'2',cr:'c',z:'CLK',h1:'3',h2:'3',c:'G',p:'100.00'}
-,{id:'cvg2510',s:'2',cr:'c',z:'COUNT[0]',h1:'6',h2:'6',c:'G',p:'100.00'}
-,{id:'cvg2511',s:'2',cr:'c',z:'COUNT[1-9]',h1:'4',h2:'4',c:'G',p:'100.00'}
-,{id:'cvg2520',s:'2',cr:'c',z:'ENABLE_IN',h1:'4',h2:'4',c:'G',p:'100.00'}
-,{id:'cvg2521',s:'2',z:'RESET',h1:'0',h2:'6',c:'Y',p:'50.00'}
-,{id:'cvg2522',s:'2',cr:'c',z:'TRIG_OUT',h1:'6',h2:'6',c:'G',p:'100.00'}
-,{id:'cvg2524',s:'2',cr:'c',z:'counter[0]',h1:'6',h2:'6',c:'G',p:'100.00'}
-,{id:'cvg2525',s:'2',cr:'c',z:'counter[1-9]',h1:'4',h2:'4',c:'G',p:'100.00'}
-,{id:'cvg2534',s:'2',cr:'c',z:'triggerout',h1:'6',h2:'6',c:'G',p:'100.00'}
+,{id:'cvg2517',s:'2',cr:'c',z:'CLK',h1:'3',h2:'3',c:'G',p:'100.00'}
+,{id:'cvg2519',s:'2',cr:'c',z:'COUNT[0]',h1:'6',h2:'6',c:'G',p:'100.00'}
+,{id:'cvg2520',s:'2',cr:'c',z:'COUNT[1-9]',h1:'4',h2:'4',c:'G',p:'100.00'}
+,{id:'cvg2529',s:'2',cr:'c',z:'ENABLE_IN',h1:'4',h2:'4',c:'G',p:'100.00'}
+,{id:'cvg2530',s:'2',z:'RESET',h1:'0',h2:'6',c:'Y',p:'50.00'}
+,{id:'cvg2531',s:'2',cr:'c',z:'TRIG_OUT',h1:'6',h2:'6',c:'G',p:'100.00'}
+,{id:'cvg2533',s:'2',cr:'c',z:'counter[0]',h1:'6',h2:'6',c:'G',p:'100.00'}
+,{id:'cvg2534',s:'2',cr:'c',z:'counter[1-9]',h1:'4',h2:'4',c:'G',p:'100.00'}
+,{id:'cvg2543',s:'2',cr:'c',z:'triggerout',h1:'6',h2:'6',c:'G',p:'100.00'}
 ]
 },
 t7:{items:[{dummy:0}
-,{id:'cvg2573',s:'2',cr:'c',z:'addr_r[0-11]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2586',s:'2',cr:'c',z:'addr_w[0-11]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2598',s:'2',cr:'m',z:'back_space',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2600',s:'2',cr:'c',z:'bit_addr[0-2]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2604',s:'2',cr:'c',z:'char_addr[0-6]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2611',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2613',s:'2',cr:'c',z:'cur_x_next[0-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2618',s:'2',cr:'m',z:'cur_x_next[5-6]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2621',s:'2',cr:'c',z:'cur_x_reg[0-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2626',s:'2',cr:'m',z:'cur_x_reg[5-6]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2629',s:'2',cr:'c',z:'cur_y_next[0-3]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2633',s:'2',z:'cur_y_next[4]',h1:'2',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg2635',s:'2',cr:'c',z:'cur_y_reg[0-3]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2639',s:'2',z:'cur_y_reg[4]',h1:'2',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg2640',s:'2',cr:'c',z:'current_state',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2642',s:'2',cr:'c',z:'din[0-6]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2650',s:'2',cr:'c',z:'dout[0-6]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2657',s:'2',cr:'c',z:'font_bit',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2659',s:'2',cr:'c',z:'font_data[0-7]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2668',s:'2',cr:'m',z:'font_inv_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2670',s:'2',cr:'c',z:'font_inv_rgb[2-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2673',s:'2',cr:'m',z:'font_inv_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2677',s:'2',cr:'m',z:'font_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2679',s:'2',cr:'c',z:'font_rgb[2-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2682',s:'2',cr:'m',z:'font_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2685',s:'2',cr:'c',z:'font_we',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2687',s:'2',cr:'c',z:'font_word[0-7]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2695',s:'2',cr:'c',z:'new_line',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2696',s:'2',cr:'c',z:'next_state',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2698',s:'2',cr:'c',z:'pixel_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2709',s:'2',cr:'c',z:'pixel_x1[0-9]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2720',s:'2',cr:'c',z:'pixel_x2[0-9]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2731',s:'2',cr:'c',z:'pixel_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2740',s:'2',cr:'m',z:'pixel_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2742',s:'2',cr:'c',z:'pixel_y1[0-8]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2751',s:'2',cr:'m',z:'pixel_y1[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2753',s:'2',cr:'c',z:'pixel_y2[0-8]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2762',s:'2',cr:'m',z:'pixel_y2[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2763',s:'2',z:'resetn',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg2764',s:'2',cr:'m',z:'return_key',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2766',s:'2',cr:'c',z:'rom_addr[0-10]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2778',s:'2',cr:'c',z:'row_addr[0-3]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2782',s:'2',cr:'c',z:'scroll',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2783',s:'2',cr:'c',z:'scroll_next',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2785',s:'2',cr:'m',z:'text_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2787',s:'2',cr:'c',z:'text_rgb[2-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2790',s:'2',cr:'m',z:'text_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2793',s:'2',cr:'c',z:'we',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2795',s:'2',cr:'c',z:'xn[0-6]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2803',s:'2',cr:'c',z:'xn_next[0-6]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2811',s:'2',cr:'c',z:'yn[0-3]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2815',s:'2',z:'yn[4]',h1:'2',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg2817',s:'2',cr:'c',z:'yn_next[0-3]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2821',s:'2',z:'yn_next[4]',h1:'2',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg2582',s:'2',cr:'c',z:'addr_r[0-11]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2595',s:'2',cr:'c',z:'addr_w[0-11]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2607',s:'2',cr:'m',z:'back_space',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2609',s:'2',cr:'c',z:'bit_addr[0-2]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2613',s:'2',cr:'c',z:'char_addr[0-6]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2620',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2622',s:'2',cr:'c',z:'cur_x_next[0-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2627',s:'2',cr:'m',z:'cur_x_next[5-6]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2630',s:'2',cr:'c',z:'cur_x_reg[0-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2635',s:'2',cr:'m',z:'cur_x_reg[5-6]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2638',s:'2',cr:'c',z:'cur_y_next[0-3]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2642',s:'2',z:'cur_y_next[4]',h1:'2',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg2644',s:'2',cr:'c',z:'cur_y_reg[0-3]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2648',s:'2',z:'cur_y_reg[4]',h1:'2',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg2649',s:'2',cr:'c',z:'current_state',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2651',s:'2',cr:'c',z:'din[0-6]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2659',s:'2',cr:'c',z:'dout[0-6]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2666',s:'2',cr:'c',z:'font_bit',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2668',s:'2',cr:'c',z:'font_data[0-7]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2677',s:'2',cr:'m',z:'font_inv_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2679',s:'2',cr:'c',z:'font_inv_rgb[2-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2682',s:'2',cr:'m',z:'font_inv_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2686',s:'2',cr:'m',z:'font_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2688',s:'2',cr:'c',z:'font_rgb[2-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2691',s:'2',cr:'m',z:'font_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2694',s:'2',cr:'c',z:'font_we',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2696',s:'2',cr:'c',z:'font_word[0-7]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2704',s:'2',cr:'c',z:'new_line',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2705',s:'2',cr:'c',z:'next_state',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2707',s:'2',cr:'c',z:'pixel_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2718',s:'2',cr:'c',z:'pixel_x1[0-9]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2729',s:'2',cr:'c',z:'pixel_x2[0-9]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2740',s:'2',cr:'c',z:'pixel_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2749',s:'2',cr:'m',z:'pixel_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2751',s:'2',cr:'c',z:'pixel_y1[0-8]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2760',s:'2',cr:'m',z:'pixel_y1[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2762',s:'2',cr:'c',z:'pixel_y2[0-8]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2771',s:'2',cr:'m',z:'pixel_y2[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2772',s:'2',z:'resetn',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg2773',s:'2',cr:'m',z:'return_key',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2775',s:'2',cr:'c',z:'rom_addr[0-10]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2787',s:'2',cr:'c',z:'row_addr[0-3]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2791',s:'2',cr:'c',z:'scroll',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2792',s:'2',cr:'c',z:'scroll_next',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2794',s:'2',cr:'m',z:'text_rgb[0-1]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2796',s:'2',cr:'c',z:'text_rgb[2-4]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2799',s:'2',cr:'m',z:'text_rgb[5-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2802',s:'2',cr:'c',z:'we',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2804',s:'2',cr:'c',z:'xn[0-6]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2812',s:'2',cr:'c',z:'xn_next[0-6]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2820',s:'2',cr:'c',z:'yn[0-3]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2824',s:'2',z:'yn[4]',h1:'2',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg2826',s:'2',cr:'c',z:'yn_next[0-3]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2830',s:'2',z:'yn_next[4]',h1:'2',h2:'0',c:'Y',p:'50.00'}
 ]
 },
 t8:{items:[{dummy:0}
-,{id:'cvg2825',s:'2',cr:'c',z:'addr[0-10]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2837',s:'2',cr:'c',z:'addr_reg[0-10]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2848',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2850',s:'2',cr:'c',z:'data[0-7]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2834',s:'2',cr:'c',z:'addr[0-10]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2846',s:'2',cr:'c',z:'addr_reg[0-10]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2857',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2859',s:'2',cr:'c',z:'data[0-7]',h1:'2',h2:'2',c:'G',p:'100.00'}
 ]
 },
 t9:{items:[{dummy:0}
-,{id:'cvg2861',s:'2',cr:'c',z:'addr_a[0-11]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2873',s:'2',cr:'m',z:'addr_a[12-14]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2877',s:'2',cr:'c',z:'addr_a_reg[0-11]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2889',s:'2',cr:'m',z:'addr_a_reg[12-14]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2893',s:'2',cr:'c',z:'addr_b[0-11]',h1:'3',h2:'3',c:'G',p:'100.00'}
-,{id:'cvg2905',s:'2',cr:'c',z:'addr_b[12-13]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2907',s:'2',cr:'m',z:'addr_b[14]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2909',s:'2',cr:'c',z:'addr_b_reg[0-11]',h1:'4',h2:'4',c:'G',p:'100.00'}
-,{id:'cvg2921',s:'2',cr:'c',z:'addr_b_reg[12-13]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2923',s:'2',cr:'m',z:'addr_b_reg[14]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2924',s:'2',cr:'c',z:'clk',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2926',s:'2',cr:'c',z:'din_a[0-6]',h1:'3',h2:'3',c:'G',p:'100.00'}
-,{id:'cvg2933',s:'2',cr:'c',z:'din_a[7]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2935',s:'2',cr:'c',z:'dout_a[0-6]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2942',s:'2',cr:'m',z:'dout_a[7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2944',s:'2',cr:'c',z:'dout_b[0-6]',h1:'2',h2:'2',c:'G',p:'100.00'}
-,{id:'cvg2951',s:'2',cr:'m',z:'dout_b[7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2952',s:'2',cr:'c',z:'we',h1:'3',h2:'3',c:'G',p:'100.00'}
+,{id:'cvg2870',s:'2',cr:'c',z:'addr_a[0-11]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2882',s:'2',cr:'m',z:'addr_a[12-14]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2886',s:'2',cr:'c',z:'addr_a_reg[0-11]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2898',s:'2',cr:'m',z:'addr_a_reg[12-14]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2902',s:'2',cr:'c',z:'addr_b[0-11]',h1:'3',h2:'3',c:'G',p:'100.00'}
+,{id:'cvg2914',s:'2',cr:'c',z:'addr_b[12-13]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2916',s:'2',cr:'m',z:'addr_b[14]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2918',s:'2',cr:'c',z:'addr_b_reg[0-11]',h1:'4',h2:'4',c:'G',p:'100.00'}
+,{id:'cvg2930',s:'2',cr:'c',z:'addr_b_reg[12-13]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2932',s:'2',cr:'m',z:'addr_b_reg[14]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2933',s:'2',cr:'c',z:'clk',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2935',s:'2',cr:'c',z:'din_a[0-6]',h1:'3',h2:'3',c:'G',p:'100.00'}
+,{id:'cvg2942',s:'2',cr:'c',z:'din_a[7]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2944',s:'2',cr:'c',z:'dout_a[0-6]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2951',s:'2',cr:'m',z:'dout_a[7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2953',s:'2',cr:'c',z:'dout_b[0-6]',h1:'2',h2:'2',c:'G',p:'100.00'}
+,{id:'cvg2960',s:'2',cr:'m',z:'dout_b[7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2961',s:'2',cr:'c',z:'we',h1:'3',h2:'3',c:'G',p:'100.00'}
 ]
 },
 t10:{items:[{dummy:0}
-,{id:'cvg2955',s:'2',cr:'c',z:'addr_r[0-13]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg2969',s:'2',cr:'m',z:'addr_r[14-15]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2972',s:'2',cr:'m',z:'addr_w[0-14]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg2988',s:'2',cr:'c',z:'address[0-13]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg3002',s:'2',cr:'m',z:'address[14-15]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg3005',s:'2',cr:'m',z:'address_reg[0-15]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg3021',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg3023',s:'2',cr:'c',z:'din[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg3032',s:'2',cr:'m',z:'dout[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg3041',s:'2',cr:'c',z:'image_data[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg3050',s:'2',cr:'m',z:'image_rgb[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg3058',s:'2',cr:'c',z:'image_we',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg3060',s:'2',cr:'c',z:'img_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg3071',s:'2',cr:'c',z:'img_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg3080',s:'2',cr:'m',z:'img_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg3082',s:'2',cr:'c',z:'pixel_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg3093',s:'2',cr:'c',z:'pixel_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg3102',s:'2',cr:'m',z:'pixel_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg3103',s:'2',z:'resetn',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg2964',s:'2',cr:'c',z:'addr_r[0-13]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg2978',s:'2',cr:'m',z:'addr_r[14-15]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2981',s:'2',cr:'m',z:'addr_w[0-14]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg2997',s:'2',cr:'c',z:'address[0-13]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg3011',s:'2',cr:'m',z:'address[14-15]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg3014',s:'2',cr:'m',z:'address_reg[0-15]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg3030',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg3032',s:'2',cr:'c',z:'din[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg3041',s:'2',cr:'m',z:'dout[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg3050',s:'2',cr:'c',z:'image_data[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg3059',s:'2',cr:'m',z:'image_rgb[0-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg3067',s:'2',cr:'c',z:'image_we',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg3069',s:'2',cr:'c',z:'img_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg3080',s:'2',cr:'c',z:'img_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg3089',s:'2',cr:'m',z:'img_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg3091',s:'2',cr:'c',z:'pixel_x[0-9]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg3102',s:'2',cr:'c',z:'pixel_y[0-8]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg3111',s:'2',cr:'m',z:'pixel_y[9]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg3112',s:'2',z:'resetn',h1:'1',h2:'0',c:'Y',p:'50.00'}
 ]
 },
 dummyEnd:0

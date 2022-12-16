@@ -50,7 +50,7 @@ s50:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'tbench/vga_intf.sv:133',h:'4',c:'g'}
 ]}
 ],
-s429:[{dummy:0},{items:[{dummy:0},
+s432:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:58',h:'850933',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:60',h:'2',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:64',h:'425465',c:'g'},
@@ -61,7 +61,7 @@ s429:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:78',h:'425466',c:'g'}
 ]}
 ],
-s447:[{dummy:0},{items:[{dummy:0},
+s450:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:58',h:'850932',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:60',h:'2',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:64',h:'531',c:'g'},
@@ -72,7 +72,7 @@ s447:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:78',h:'850399',c:'g'}
 ]}
 ],
-s483:[{dummy:0},{items:[{dummy:0},
+s486:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:58',h:'1065',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:60',h:'2',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:64',h:'1',c:'g'},
@@ -83,7 +83,7 @@ s483:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:78',h:'1063',c:'g'}
 ]}
 ],
-s346:[{dummy:0},{items:[{dummy:0},
+s349:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/vga_sync.sv:99',h:'426530',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/vga_sync.sv:101',h:'51604',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/vga_sync.sv:103',h:'374926',c:'g'},
@@ -100,7 +100,7 @@ s346:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/vga_sync.sv:132',h:'55',c:'g'}
 ]}
 ],
-s784:[{dummy:0},{items:[{dummy:0},
+s787:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/font_rom.sv:48',h:'28712',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/font_rom.sv:49',h:'28712',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/font_rom.sv:51',h:'14678',c:'g'},
@@ -2154,7 +2154,7 @@ s784:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/font_rom.sv:2228',h:'18',c:'g'}
 ]}
 ],
-s819:[{dummy:0},{items:[{dummy:0},
+s822:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:57',h:'86745',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:60',h:'86663',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:61',h:'86745',c:'g'},
@@ -2163,7 +2163,7 @@ s819:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:66',h:'44240',c:'g'}
 ]}
 ],
-s519:[{dummy:0},{items:[{dummy:0},
+s522:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/vga_console.sv:118',h:'681931',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/vga_console.sv:122',h:'3',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/vga_console.sv:123',h:'3',c:'g'},
@@ -2214,7 +2214,7 @@ s519:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/vga_console.sv:236',h:'43507',c:'g'}
 ]}
 ],
-s911:[{dummy:0},{items:[{dummy:0},
+s914:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:57',h:'170226',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:60',h:'47',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:61',h:'170226',c:'g'},
@@ -2223,7 +2223,7 @@ s911:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:66',h:'85083',c:'g'}
 ]}
 ],
-s898:[{dummy:0},{items:[{dummy:0},
+s901:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/vga_image.sv:61',h:'83',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/vga_image.sv:62',h:'83',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/vga_image.sv:77',h:'1',c:'g'},
@@ -2259,7 +2259,7 @@ s189:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/AHBVGASYS.sv:188',h:'243205',c:'g'}
 ]}
 ],
-s1287:[{dummy:0},{items:[{dummy:0},
+s1293:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:58',h:'850933',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:60',h:'2',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:64',h:'425465',c:'g'},
@@ -2270,7 +2270,7 @@ s1287:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:78',h:'425466',c:'g'}
 ]}
 ],
-s1306:[{dummy:0},{items:[{dummy:0},
+s1312:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:58',h:'850932',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:60',h:'2',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:64',h:'531',c:'g'},
@@ -2281,7 +2281,7 @@ s1306:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:78',h:'850399',c:'g'}
 ]}
 ],
-s1343:[{dummy:0},{items:[{dummy:0},
+s1349:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:58',h:'1065',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:60',h:'2',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:64',h:'1',c:'g'},
@@ -2292,7 +2292,7 @@ s1343:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/counter.sv:78',h:'1063',c:'g'}
 ]}
 ],
-s1202:[{dummy:0},{items:[{dummy:0},
+s1208:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/vga_sync.sv:99',h:'426530',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/vga_sync.sv:101',h:'51604',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/vga_sync.sv:103',h:'374926',c:'g'},
@@ -2309,7 +2309,7 @@ s1202:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/vga_sync.sv:132',h:'55',c:'g'}
 ]}
 ],
-s1667:[{dummy:0},{items:[{dummy:0},
+s1673:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/font_rom.sv:48',h:'28712',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/font_rom.sv:49',h:'28712',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/font_rom.sv:51',h:'14678',c:'g'},
@@ -4363,7 +4363,7 @@ s1667:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/font_rom.sv:2228',h:'18',c:'g'}
 ]}
 ],
-s1703:[{dummy:0},{items:[{dummy:0},
+s1709:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:57',h:'86745',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:60',h:'86663',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:61',h:'86745',c:'g'},
@@ -4372,7 +4372,7 @@ s1703:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:66',h:'44240',c:'g'}
 ]}
 ],
-s1380:[{dummy:0},{items:[{dummy:0},
+s1386:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/vga_console.sv:118',h:'681931',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/vga_console.sv:122',h:'3',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/vga_console.sv:123',h:'3',c:'g'},
@@ -4423,7 +4423,7 @@ s1380:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/vga_console.sv:236',h:'43507',c:'g'}
 ]}
 ],
-s1934:[{dummy:0},{items:[{dummy:0},
+s1940:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:57',h:'170226',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:60',h:'47',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:61',h:'170226',c:'g'},
@@ -4432,7 +4432,7 @@ s1934:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/dual_port_ram_sync.sv:66',h:'85083',c:'g'}
 ]}
 ],
-s1783:[{dummy:0},{items:[{dummy:0},
+s1789:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/vga_image.sv:61',h:'83',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/vga_image.sv:62',h:'83',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/vga_image.sv:77',h:'1',c:'g'},
@@ -4440,7 +4440,7 @@ s1783:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/vga_image.sv:83',h:'85083',c:'g'}
 ]}
 ],
-s958:[{dummy:0},{items:[{dummy:0},
+s961:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'rtl/AHB_VGA/AHBVGASYS.sv:88',h:'167',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/AHBVGASYS.sv:91',h:'164',c:'g'},
 {cr:'c',z:'rtl/AHB_VGA/AHBVGASYS.sv:92',h:'164',c:'g'},
@@ -4475,7 +4475,7 @@ s11:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'tbench/test.sv:14',h:'1',c:'g'}
 ]}
 ],
-s2029:[{dummy:0},{items:[{dummy:0},
+s2035:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'tbench/test.sv:8',h:'1',c:'g'},
 {cr:'c',z:'tbench/test.sv:10',h:'1',c:'g'},
 {cr:'c',z:'tbench/test.sv:11',h:'1',c:'g'},
@@ -4494,7 +4494,7 @@ s12:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'tbench/tb_top.sv:23',h:'799',c:'g'}
 ]}
 ],
-s2155:[{dummy:0},{items:[{dummy:0},
+s2161:[{dummy:0},{items:[{dummy:0},
 {cr:'c',z:'tbench/vga_intf.sv:91',h:'107786',c:'g'},
 {cr:'c',z:'tbench/vga_intf.sv:92',h:'743145',c:'g'}
 ]}

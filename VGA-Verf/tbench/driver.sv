@@ -82,7 +82,7 @@ class driver;
             transaction trans;
             
             vga_mail.get(trans);
-            $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
+            //$display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
             if(trans.inject_wrong_address) begin
                 vga_vif.cb_DRIV.HADDR <= trans.HADDR_inject;
                 @vga_vif.cb_DRIV;
@@ -95,7 +95,7 @@ class driver;
                 @vga_vif.cb_DRIV;
             end 
 
-            $display("----------[DRIVER-END-OF-TRANSFER]----------");
+            //$display("----------[DRIVER-END-OF-TRANSFER]----------");
             no_transactions++;
         end
     endtask
@@ -106,6 +106,7 @@ class driver;
         vga_vif.cb_DRIV.HWRITE <= 'b0;
         vga_vif.cb_DRIV.HTRANS[1] <= 'b0;
         vga_vif.cb_DRIV.HREADY <= 'b0;
+        $display("----------[DRIVER-STOP-WRITING]----------");
     endtask
 
 

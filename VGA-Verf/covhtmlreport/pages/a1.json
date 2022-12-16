@@ -1,0 +1,25 @@
+var g_data = {
+a189:{
+scopes:[{s:'12',b:'1',val:'\\tb_top '},{link:'z.htm?f=0&s=189',val:'DUT_primary'}]
+,assertions:[{dummy:0},{cr:'c',c:'g',z:'rgb_sync',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'console_data',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'console_data0',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+],
+},
+a961:{
+scopes:[{s:'12',b:'1',val:'\\tb_top '},{link:'z.htm?f=0&s=961',val:'DUT_redundant'}]
+,assertions:[{dummy:0},{cr:'c',c:'g',z:'rgb_sync',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'console_data',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+,{cr:'c',c:'g',z:'console_data0',fc:'Gr',pc:'Gr',h0:'0',h1:'1'}
+],
+},
+a4:{
+scopes:[{link:'z.htm?f=0&s=4',val:'work.AHBVGA'}]
+,assertions:[{dummy:0},{cr:'c',c:'g',z:'rgb_sync',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
+,{cr:'c',c:'g',z:'console_data',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
+,{cr:'c',c:'g',z:'console_data0',fc:'Gr',pc:'Gr',h0:'0',h1:'2'}
+],
+},
+dummyEnd:0
+};
+processAssertionsData(g_data,1);
