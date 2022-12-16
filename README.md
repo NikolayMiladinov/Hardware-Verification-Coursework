@@ -116,11 +116,24 @@ Sampling of parity injection is done on next cycle after gpio_dir is 0 (keeps sa
 Sampling of parity injection during reset happens every cycle.
 Sampling of parity_gen_and_check happens every cycle if HRESETn is high.
 
+Code coverage was done automatically by questasim using the command *vlog +cover +fcover* and *vsim -coverage -voptargs="+cover=bcefst"*
+Toggle coverage was diabled for HREADYOUT, HRDATA[31:16], HTRANS[0], HADDR[31:24].
 
-## GPIO Architecture
+### 5. Assertions
 
-![GPIO Architecture](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/GPIO%20Architecture.jpg)
+The following assertions were embedded in the GPIO rtl, all sampled on positive edge of HCLK and disabled if HRESETn is low:
+[Link to GPIO rtl](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/GPIO-Verf/rtl/AHB_GPIO/AHBGPIO.sv)
+1. If gpio_dir==0, on the next cycle HRDATA[15:0]==$past(GPIOIN[15:0])
+2. If conditions for write to GPIOOUT were satisfied, on the next cycle GPIOOUT[15:0]==$past(HWDATA[15:0])
+3. GPIOOUT changes only when writing conditions are met on previous cycle (similar to 2.)
+4. If conditions for write to gpio_dir were satisfied, on the next cycle gpio_dir[15:0]==$past(HWDATA[15:0])
+5. gpio_dir changes only when writing conditions are met on previous cycle (similar to 4.)
+6. If GPIOOUT changes, it's parity is correct depending on PARITYSEL in previous cycle
+7. If gpio_dir==0, on next cycle checks whether PARITYERR is correct using previous cycle values of GPIOIN and PARITYSEL
+8. PARITYERR changes only if on previous cycle gpio_dir==0
 
 
-## VGA Architecture
-![VGA Architecture](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/VGA%20Architecture.jpg)
+![GPIO Formal Verification](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/Formal%20Verification%20of%20GPIO%20assertions.jpg)
+
+
+
