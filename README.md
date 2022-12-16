@@ -64,7 +64,7 @@ Indeed, most of the code was reused for the VGA verification.
 
 ----
 
-The transaction class randomises the following signals:
+The transaction class randomises the following signals [Transaction File](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/GPIO-Verf/tbench/transaction.sv):
 1. PARITYSEL 
 2. write_cycle -> 1 will drive GPIOOUT, 0 will drive GPIOIN
 3. inject_parity_error -> when high, GPIOIN will have an incorrect parity bit (injected in post randomise function)
@@ -83,7 +83,7 @@ A copy function was created, so that the copied transaction is put into the mail
 
 ----
 
-The driver has the following main tasks:
+The driver has the following main tasks [Driver File](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/GPIO-Verf/tbench/driver.sv):
 1. Reset task that resets the driving signals for one cycle and asserts the HRESETn signal for a specified number of cycles.
 2. Random reset task that forever asserts the reset signal for a random number of cycles with a random delay between reset assertions
 3. Main drive task, which has inputs to choose whether random reset is active and what type of drive procedure to use
@@ -101,7 +101,7 @@ Scoreboard also uses PARITYSEL of previous cycle to check whether PARITYERR has 
 
 ### 4. Functional and code coverage
 
-Coverage report can be inspected by opening the html file covsummary.html in folder GPIO-Verf/covhtmlreport: [Coverage Report link](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/tree/master/GPIO-Verf/covhtmlreport)
+Coverage report can be inspected by downloading the folder GPIO-Verf/covhtmlreport and opening the html file covsummary.html: [Coverage Report link](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/tree/master/GPIO-Verf/covhtmlreport)
 
 Functional coverage was done in the interface to simplify sampling and access to signals.
 The covergroups are:
@@ -121,6 +121,9 @@ Sampling of parity_gen_and_check happens every cycle if HRESETn is high.
 Code coverage was done automatically by questasim using the command *vlog +cover +fcover* and *vsim -coverage -voptargs="+cover=bcefst"*
 Toggle coverage was diabled for HREADYOUT, HRDATA[31:16], HTRANS[0], HADDR[31:24].
 
+NOTE: The coverage report contains only 1 test, which is using random reset, and produces 100% coverage. We did try to merge it with the other test coverages,
+but kept getting an error that they had different sourcing files and did not have time to fix that.
+
 ### 5. Assertions
 
 The following assertions were embedded in the GPIO rtl, all sampled on positive edge of HCLK and disabled if HRESETn is low:
@@ -139,3 +142,100 @@ The following assertions were embedded in the GPIO rtl, all sampled on positive 
 
 
 
+# VGA Verification
+### 1. Dual lock-step
+
+
+
+### 2. Verification plan for VGA
+
+[VGA Verification Plan](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/VGA%20Verification%20Plan.pdf)
+
+### 3. Testbench for VGA
+
+The testbench architecture is divided into subblocks:
+1. A transaction class that contains the constrained stimulus and a generator that generates a specified number of transactions and puts them in a mailbox.
+2. A driver that gets transactions from the mailbox and drives the VGA. The driver has multiple tasks, where each one drives the DUT in a different way
+to test its functionality and get 100% functional coverage.
+3. A monitor that gets information from VGA every cycle and puts the relevant information in a mailbox. The monitor also tracks the coordinates(pixel_x,pixel_y)
+and prints the output of the VGA into a file [VGA output](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/VGA-Verf/out.txt)
+4. A scoreboard that gets the information from the monitor's mailbox and flags DLS_ERROR if DUT_primary and DUT_redundant have different outputs.
+5. Interface that connects to the driver, monitor and DUT(s)
+6. Environment that connects and instantiates all of the subblocks (except interface, which is instatiated in top-level) and contains higher level tasks
+that can be used to create different tests. 
+7. Multiple test files that test the functionality of the VGA. The number of transactions is specified in the test block.
+8. Top-level file that creates the clock, instantiates an interface, DUT and test block. The bug injection also takes place in the top-level. 
+HWDATA for DUT_primary is: 
+```
+assign HWDATA_primary = (intf.HWDATA=='h07) ? 'h17 : intf.HWDATA;
+```
+
+We decided to use this architecture to learn how to write readable and reusable code, which has powerful functionality and flexibility. 
+Indeed, most of the code was reused for the VGA verification. 
+
+----
+
+The transaction class randomises the following signals [Transaction File](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/VGA-Verf/tbench/transaction.sv):
+4. command_signals[2:0] ->    [0]->HREADY, [1]->HSEL, [2]->HTRANS[1]
+7. HWDATA -> data that will be put into console_wdata, HWDATA is constrained so that it does not hit the return or new line ASCII characters
+8. HWDATA_upper_bits -> upper 24 bits are not used in VGA, so most of the time they are zero, but sometimes they are not zero
+10. inject_wrong_address 
+11. HADDR_inject -> value to inject if inject_wrong_address is high
+
+Moreover, the class has a counter, so that every X cycles, max or min of a signal is applied. To avoid constraint contradiction, min values are soft constraints.
+The generator does not create a new class everytime, but randomises the same one in order for the counter inside the class to work.
+A copy function was created, so that the copied transaction is put into the mailbox.
+
+----
+
+The driver has the following main tasks [Driver File](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/VGA-Verf/tbench/driver.sv):
+1. Reset task that resets the driving signals for one cycle and asserts the HRESETn signal for a specified number of cycles.
+2. Random reset task that forever asserts the reset signal for a random number of cycles with a random delay between reset assertions
+3. Main drive task, which has inputs to choose whether random reset is active and what type of drive procedure to use
+4. Simple drive procedure, which drives new character using HWDATA every cycle after write signals are setup.
+5. Task that stops makes HWDATA = 0 and HWRITE = 0, after all transactions were driven (uses an event)
+6. Task that drives 3 symbols of choice and stops writing after.
+
+----
+
+The checker consists of both the monitor and the scoreboard. Monitor tracks the current position of writing to the display using pixel_x and pixel_y.
+The monitor also prints the output of the VGA into a file using:
+```
+if(vga_vif.cb_MON.RGB == 'h1C) $fwrite(fd, "*");
+else if(vga_vif.cb_MON.RGB == 0) $fwrite(fd, " ");
+else if(vga_vif.cb_MON.RGB === 8'hx || vga_vif.cb_MON.RGB === 8'hz) $fwrite(fd, "!");
+else $fwrite(fd, "X");
+```
+Since the image display part is not active, RGB = 'hx in the image area
+Scoreboard compares the outputs of DUT_primary and DUT_redundant and flags DLS_ERROR signal if outputs do not match.
+Outputs are compared every cycle.
+
+### 4. Functional and code coverage
+
+Coverage report can be inspected by downloading the folder VGA-Verf/covhtmlreport and opening the html file covsummary.html: [Coverage Report link]()
+
+Functional coverage was done in the interface to simplify sampling and access to signals.
+The covergroups are:
+1. Separate coverpoints (no cross coverage) for HWDATA, RGB , HADDR, console_wdata
+2. Cross coverage of HSYNC and VSYNC and function that checks if RGB is 0 when HSYNC and VSYNC are low
+
+Sampling of HWDATA and HADDR (has illegal bin for invalid VGA addresses) is done only when HRESETn and HSEL is high because that is when the peripheral is selected.
+Sampling of console_wdata happens on the next cycle after a value is written to it.
+Sampling of HSYNC, VSYNC and RGB happens every cycle if HRESETn is high
+
+
+Code coverage was done automatically by questasim using the command *vlog +cover +fcover* and *vsim -coverage -voptargs="+cover=bcefst"*
+Toggle coverage was diabled for HRDATA, HTRANS[0], HADDR[31:24].
+
+NOTE: The coverage report contains only 1 test, which is using random reset, and produces 100% coverage. We did try to merge it with the other test coverages,
+but kept getting an error that they had different sourcing files and did not have time to fix that.
+
+### 5. Assertions
+
+The following assertions were embedded in the VGA rtl, all sampled on positive edge of HCLK and disabled if HRESETn is low:
+[Link to VGA rtl]()
+1. RGB is 0 when pixel_x and pixel_y are 0, which verifies nothing is displayed in front/back porches
+2. Assertions for scroll, backspace and return key (not done in this coursework, but a useful way to verify part of their functionality)
+3. Console_wdata has the correct value – 0 if the write conditions are not met and HWDATA on next cycle if write conditions are met
+
+![VGA Formal Verification]()
