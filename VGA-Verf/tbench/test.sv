@@ -6,11 +6,11 @@ program test(vga_intf.DRIV intf_driv, vga_intf.MON intf_mon);
     initial begin
     //creating environment
     env = new(intf_driv, intf_mon);
-
-    env.gen.trans_count = 1000;
+    
+    env.gen.trans_count = 100;
     env.reset_test();
-    env.initial_check();
+    // env.initial_check();
     // env.reset_test();
-    // env.run(1);
+    env.run();
     end
 endprogram

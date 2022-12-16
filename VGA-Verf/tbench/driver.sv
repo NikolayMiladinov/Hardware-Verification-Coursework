@@ -69,73 +69,33 @@ class driver;
 
     //drive the transaction items to interface signals
     task vga_drive();
+        reset();
+        
+        vga_vif.cb_DRIV.HREADY <= 'b1;
+        @vga_vif.cb_DRIV;
+        vga_vif.cb_DRIV.HTRANS <= 'd2;
+        vga_vif.cb_DRIV.HWRITE <= 'b1;
+        vga_vif.cb_DRIV.HSEL <= 'b1;
+        vga_vif.cb_DRIV.HADDR <= 32'h5200_0000; 
+        @vga_vif.cb_DRIV;
         forever begin
             transaction trans;
             
             vga_mail.get(trans);
             $display("--------- [DRIVER-TRANSFER: %0d] ---------",no_transactions);
-
-            // if(driver_rstn) begin
-            //     if(trans.inject_parity_error && !trans.write_cycle) $display("[Driver] Parity error injection in transaction %0d, vgaIN: %0h", no_transactions, trans.vgaIN);
-            //     // first if HREADY needs to change because it needs an additional clock cycle
-            //     if(vga_vif.cb_DRIV.HREADY!=trans.command_signals[0]) begin
-            //         vga_vif.cb_DRIV.HREADY <= trans.command_signals[0];
-            //         @vga_vif.cb_DRIV;
-            //     end
-            // end else begin
-            //     $display("[DRIVER] Driver is being reset");
-            // end
-
-            // if(driver_rstn) begin
-            //     //start address phase
-            //     vga_vif.cb_DRIV.HSEL <= trans.command_signals[1];
-            //     vga_vif.cb_DRIV.HTRANS <= {trans.command_signals[2],1'b0};
-            //     vga_vif.cb_DRIV.HWRITE <= 'b1;
-
-            //     if(trans.inject_wrong_address[0]) begin
-            //         vga_vif.cb_DRIV.HADDR <= trans.HADDR_inject;
-            //         $display("[Driver] Wrong HADDR injection in address phase: transaction %0d", no_transactions);
-            //     end else vga_vif.cb_DRIV.HADDR <= 32'h5300_0004; 
-            // end else begin
-            //     $display("[DRIVER] Driver is being reset");
-            // end
-            
-            // @vga_vif.cb_DRIV; 
-
-            // if(driver_rstn) begin
-            //     //write to direction register, direction determined by write_cycle variable
-            //     if(trans.dir_inject) begin
-            //         vga_vif.cb_DRIV.HWDATA <= trans.HWDATA_dir_inject;
-            //         $display("[Driver] Wrong direction injection in transaction %0d", no_transactions);
-            //     end else vga_vif.cb_DRIV.HWDATA <= {31'b0, trans.write_cycle};
-
-            //     if(trans.inject_wrong_address[1]) begin 
-            //         vga_vif.cb_DRIV.HADDR <= trans.HADDR_inject;
-            //         $display("[Driver] Wrong HADDR injection in data phase: transaction %0d", no_transactions);
-            //     end else vga_vif.cb_DRIV.HADDR <= 32'h5300_0000; //start data phase
-
-            //     if(trans.write_cycle == 1'b0) vga_vif.cb_DRIV.HWRITE <= 'b0; //write signal can be low during data phase of input direction
-            // end else begin
-            //     $display("[DRIVER] Driver is being reset");
-            // end
-
-            // @vga_vif.cb_DRIV;
-            
-
-            // if(driver_rstn) begin
-            //     //transfer data
-            //     if(trans.write_cycle == 1'b1) vga_vif.cb_DRIV.HWDATA <= {trans.HWDATA_data_upper_bits,trans.HWDATA_data};
-            //     else begin 
-            //         vga_vif.cb_DRIV.PARITYSEL <= trans.PARITYSEL;
-            //         vga_vif.cb_DRIV.vgaIN <= trans.vgaIN;
-            //     end
-            // end else begin
-            //     $display("[DRIVER] Driver is being reset");
-            // end
+            if(no_transactions<899) begin
+                vga_vif.cb_DRIV.HWDATA <= trans.HWDATA;
+                @vga_vif.cb_DRIV;
+            end 
 
             $display("----------[DRIVER-END-OF-TRANSFER]----------");
             no_transactions++;
         end
+    endtask
+
+    task stop_drive();
+        vga_vif.cb_DRIV.HWDATA <= 'h00;
+        vga_vif.cb_DRIV.HSEL <= 'b0;
     endtask
 
 
@@ -143,8 +103,8 @@ class driver;
 	begin
         $display("----------[DRIVER-INITIAL-CHECK-START]----------");
         //-------Check Write command--------
+        reset();
         
-        //Setup variables for address phase
         vga_vif.cb_DRIV.HREADY <= 'b1;
         @vga_vif.cb_DRIV;
         vga_vif.cb_DRIV.HTRANS <= 'd2;
@@ -158,10 +118,10 @@ class driver;
 
         repeat(10) @vga_vif.cb_DRIV;
 
-        vga_vif.cb_DRIV.HWRITE <= 'b0;
+        vga_vif.cb_DRIV.HWDATA <= 'h00;
         vga_vif.cb_DRIV.HSEL <= 'b0;
 
-        repeat(1000000) @vga_vif.cb_DRIV;
+        repeat(1750000) @vga_vif.cb_DRIV;
 
         -> ended_1mil;
         

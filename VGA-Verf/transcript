@@ -13,8 +13,8 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# vsim -onfinish stop work_opt -gui 
-# Start time: 12:26:47 on Dec 15,2022
+# vsim -onfinish stop work_opt -do "setup.do" -gui 
+# Start time: 22:57:45 on Dec 15,2022
 # Loading sv_std.std
 # Loading work.tb_top_sv_unit(fast)
 # Loading work.tb_top(fast)
@@ -35,7 +35,7 @@
 #    Time: 0 ps  Iteration: 0  Instance: /tb_top/DUT/uvga_image File: rtl/AHB_VGA/AHBVGASYS.sv Line: 125
 # ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'addr_b'. The port definition is at: rtl/AHB_VGA/dual_port_ram_sync.sv(46).
 #    Time: 0 ps  Iteration: 0  Instance: /tb_top/DUT/uvga_image/uimage_ram File: rtl/AHB_VGA/vga_image.sv Line: 67
-do setup.do
+# do setup.do
 # 0 ps
 # 2 ns
 # 0 ps
@@ -54,12 +54,215 @@ do setup.do
 # --------- [DRIVER] Reset driver end --------- at 10000
 # --------- [DRIVER] Reset Ended --------- at 31000
 # Opened the file
-# ----------[DRIVER-INITIAL-CHECK-START]----------
+# --------- [DRIVER] Reset Started --------- at 31000
 # ------[MONITOR STARTED]------
-# VSYNC t = 16724990000
+# --------- [DRIVER] Reset driver end --------- at 50000
+# --------- [DRIVER] Reset Ended --------- at 71000
+# --------- [DRIVER-TRANSFER: 1] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 2] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 3] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 4] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 5] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 6] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 7] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 8] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 9] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 10] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 11] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 12] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 13] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 14] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 15] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 16] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 17] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 18] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 19] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 20] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 21] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 22] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 23] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 24] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 25] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 26] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 27] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 28] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 29] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 30] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 31] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 32] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 33] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 34] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 35] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 36] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 37] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 38] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 39] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 40] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 41] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 42] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 43] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 44] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 45] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 46] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 47] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 48] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 49] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 50] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 51] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 52] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 53] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 54] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 55] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 56] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 57] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 58] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 59] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 60] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 61] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 62] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 63] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 64] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 65] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 66] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 67] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 68] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 69] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 70] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 71] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 72] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 73] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 74] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 75] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 76] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 77] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 78] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 79] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 80] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 81] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 82] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 83] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 84] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 85] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 86] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 87] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 88] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 89] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 90] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 91] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 92] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 93] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 94] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 95] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 96] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 97] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 98] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 99] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# --------- [DRIVER-TRANSFER: 100] ---------
+# ----------[DRIVER-END-OF-TRANSFER]----------
+# Reset row t = 16725030000
+# VSYNC t = 16725030000
 # Closed the file
-# ** Note: $stop    : tbench/env.sv(41)
-#    Time: 20000070 ns  Iteration: 2  Instance: /tb_top/t1
-# Break in Task tb_top_sv_unit/environment::initial_check at tbench/env.sv line 41
-# End time: 12:41:19 on Dec 15,2022, Elapsed time: 0:14:32
+# ** Note: $stop    : tbench/env.sv(87)
+#    Time: 17002090 ns  Iteration: 2  Instance: /tb_top/t1
+# Break in Task tb_top_sv_unit/environment::run at tbench/env.sv line 87
+# End time: 23:10:54 on Dec 15,2022, Elapsed time: 0:13:09
 # Errors: 0, Warnings: 2
