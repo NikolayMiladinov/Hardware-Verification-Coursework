@@ -28,16 +28,23 @@ class environment;
         driv.reset();
     endtask
 
-    task initial_check();
+    task open_file();
         mon.fd = $fopen("./out.txt","w");
         if(mon.fd) $display("Opened the file");
+    endtask
+
+    task close_file();
+        $fclose(mon.fd);
+        $display("Closed the file");
+    endtask
+
+    task initial_check();
+        
         fork
             driv.initial_check();
             mon.run();
         join_none
         wait(driv.ended_1mil.triggered);
-        $fclose(mon.fd);
-        $display("Closed the file");
         $stop;
     endtask
 
@@ -54,7 +61,7 @@ class environment;
         fork
             gen.gen();
             driv.drive(1'b1);
-            // mon.run();
+            mon.run();
             // scor.run();
         join_none
     endtask
@@ -62,9 +69,7 @@ class environment;
     task wait_test_end();
         wait(gen.ended_gen.triggered);
         wait(gen.trans_count == driv.no_transactions);
-        // mon.print_error();
-        // scor.print_error();
-        $stop;
+        driv.stop_drive();
     endtask
 
     task run_reset();
@@ -74,8 +79,12 @@ class environment;
     endtask
 
     task run();
+        open_file();
         test();
         wait_test_end();
+        repeat(850000) @vga_driv_vif.cb_DRIV;
+        close_file();
+        $stop;
     endtask
 
     task run_rst_rand();
