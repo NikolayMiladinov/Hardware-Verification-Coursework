@@ -14,7 +14,7 @@ Module: ELEC70056 - Hardware and Software Verification
 7. Write functional coverage and demonstrate it has been achieved
 8. Demonstrate integration and verification at the Cortex-M0 SOC level
 
-## GPIO Verification
+# GPIO Verification
 ### 1. RTL for parity generation and checking
 
 An input PARITYSEL and an output PARITYERR were added. GPIOIN and GPIOOUT were made to be 17 bits, where the MSB is reserved for parity bit.
@@ -133,7 +133,7 @@ The following assertions were embedded in the GPIO rtl, all sampled on positive 
 8. PARITYERR changes only if on previous cycle gpio_dir==0
 
 
-![GPIO Formal Verification](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/Formal%20Verification%20of%20GPIO%20assertions.jpg)
+![GPIO Formal Verification](https://github.com/NikolayMiladinov/Hardware-Verification-Coursework/blob/master/Formal%20Verification%20of%20GPIO%20assertions.png)
 
 
 
